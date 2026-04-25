@@ -1,0 +1,223 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #003366;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background: #003366;
+    color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* =========================
+   HERO (PREMIUM)
+========================= */
+#hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+}
+
+.hero-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   SECTION WRAPPER (FLOW)
+========================= */
+section {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 35px 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-4px);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+/* =========================
+   LISTS
+========================= */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+/* liten visuell bullet upgrade */
+li::marker {
+    color: #003366;
+}
+
+/* =========================
+   FEATURE BLOCK (NEXT LEVEL)
+========================= */
+.feature-box {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background: #f5f9ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* ikon (valfri emoji eller svg) */
+.feature-icon {
+    font-size: 1.5rem;
+}
+
+/* =========================
+   PRICE BOX
+========================= */
+.price-box {
+    background: #f5f9ff;
+    border-left: 4px solid #003366;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* =========================
+   CTA BUTTON (PRO)
+========================= */
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: #003366;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #002244;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+ .back-footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    background: #003366;
+    position: relative;
+    z-index: 1001; /* 🔥 över overlay */
+ }
+
+.back-button {
+    display: inline-block;
+    border: 2px solid #ffffff;   /* vit kant */
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #ffffff;              /* vit text */
+    transition: 0.3s;
+}
+
+.back-button {
+    position: relative;
+    z-index: 1002;
+}
+
+/* =========================
+   SECTION VARIATION (DEPTH)
+========================= */
+section:nth-of-type(even) {
+    background: #f8fbff;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+    #hero {
+        min-height: 300px;
+        padding: 30px 15px;
+    }
+
+    .hero-container h1 {
+        font-size: 1.6rem;
+    }
+
+    section {
+        margin: 12px;
+        padding: 25px 20px;
+    }
+
+    section:hover {
+        transform: none;
+    }
+
+    .feature-box {
+        flex-direction: column;
+    }
+}
