@@ -209,6 +209,11 @@ team
     line-height: 1.8;
 }
 
+.about-insurance {
+    margin-top: 15px;
+    font-weight: 500;
+    opacity: 0.85;
+}
 .about-section .cta-button {
     display: inline-block;
     margin-top: 25px;
