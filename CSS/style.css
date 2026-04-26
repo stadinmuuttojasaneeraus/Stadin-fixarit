@@ -137,6 +137,11 @@ header {
     line-height: 1.4;
 }
 
+.highlight-text {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: #111;
+}
 /* =========================
 team
 ========================= */
