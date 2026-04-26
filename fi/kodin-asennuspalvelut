@@ -61,41 +61,84 @@
 </header>
 
 <div class="menu-overlay" id="overlay"></div>
-
 <!-- HERO -->
 <section id="hero" style="background-image:url('../images/kodin-asennuspalvelut.jpg');">
     <div class="hero-container">
-        <h1>Kodin-asennuspalvelut Helsingissä</h1>
-        <p>Palvelu kuvaus tulee lang.js:stä myöhemmin</p>
+
+        <h1>Kodin asennuspalvelut Helsingissä</h1>
+
+        <p>
+            Apua arjen pienissä askareissa – nopeat ja ammattitaitoiset asennukset pääkaupunkiseudulla.
+        </p>
 
         <a href="../fi/index.html#yhteystiedot" class="cta-button">
             Pyydä tarjous
         </a>
+
     </div>
 </section>
 
 <!-- SECTION 1 -->
 <section>
-    <h2>Otsikko 1</h2>
-    <p>Teksti lisätään myöhemmin lang.js:stä</p>
+    <h2>Kokonaisratkaisu kodin asennuksiin</h2>
+
+    <p>
+        Haluatteko kodin kuntoon ilman stressiä? Tarjoamme kodin asennuspalvelut Helsingissä ja pääkaupunkiseudulla kokonaisratkaisuna – 
+        hoidamme kaiken huonekalujen kokoamisesta ja taulujen kiinnityksestä aina valaisimien ja kodinkoneiden asennuksiin. Lopputuloksena siisti ja käyttövalmis koti.
+    </p>
+
+    <p>
+        Pyydä ilmainen tarjous – tulemme nopeasti paikalle ja hoidamme työn sovitusti.
+    </p>
 </section>
 
 <!-- SECTION 2 -->
 <section>
-    <h2>Otsikko 2</h2>
-    <p>Teksti + lista myöhemmin</p>
+    <h2>Asennusapu ja pienet työt</h2>
 
-    <ul>
-        <li>Kohta 1</li>
-        <li>Kohta 2</li>
-        <li>Kohta 3</li>
-    </ul>
+    <p>
+        Tarvitsetko apua yksittäisiin asennuksiin? Hoidamme asennustyöt nopeasti Helsingissä – esimerkiksi verhotankojen ja kiskojen asennus, 
+        hyllyjen ja peilien kiinnitys sekä huonekalujen kokoaminen. Tulemme paikalle silloin kun sinulle sopii.
+    </p>
 </section>
 
 <!-- SECTION 3 -->
 <section>
-    <h2>Otsikko 3</h2>
-    <p>Lisä sisältö myöhemmin</p>
+    <h2>Raskaat ja vaativat asennukset</h2>
+
+    <p>
+        Hoidamme myös vaativammat asennukset, kuten kodinkoneiden asennukset ja painavien huonekalujen siirrot turvallisesti ja ammattitaidolla. 
+        Käytössämme on oikeat työvälineet ja kokemus haastaviin kohteisiin.
+    </p>
+</section>
+
+<!-- SECTION 4 -->
+<section>
+    <h2>Kodin asennuspalvelut</h2>
+
+    <p>
+        Tarjoamme kodin asennuspalvelut Helsingissä ja pääkaupunkiseudulla nopeasti ja luotettavasti. 
+        Hoidamme huonekalujen kokoamisen, taulujen ja hyllyjen kiinnityksen, valaisimien asennukset sekä kodinkoneiden käyttöönoton. 
+        Teemme kodistasi toimivan ja valmiin arkeen.
+    </p>
+</section>
+
+<!-- PRICING -->
+<section>
+    <h2>Hinnasto</h2>
+
+    <ul>
+        <li>Asennustyöt: alkaen 60€/h</li>
+        <li>Huonekalujen kokoaminen: alkaen 50€</li>
+        <li>Kodinkoneasennukset: sopimuksen mukaan</li>
+    </ul>
+</section>
+
+<!-- CTA -->
+<section>
+    <a href="../fi/index.html#yhteystiedot" class="cta-button">
+        Pyydä tarjous
+    </a>
 </section>
 
 <!-- TRUST -->
@@ -127,16 +170,6 @@
     </div>
 </section>
 
-<!-- PRICING -->
-<section>
-    <h2>Hinnasto</h2>
-
-    <ul>
-        <li>Palvelu 1</li>
-        <li>Palvelu 2</li>
-        <li>Palvelu 3</li>
-    </ul>
-</section>
 
 <!-- CTA -->
 <section>
