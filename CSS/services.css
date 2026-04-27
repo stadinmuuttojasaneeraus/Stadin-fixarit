@@ -221,3 +221,13 @@ section:nth-of-type(even) {
         flex-direction: column;
     }
 }
+.cta-subtext {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: rgba(0, 51, 102, 0.75);
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
