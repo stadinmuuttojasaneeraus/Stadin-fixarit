@@ -220,28 +220,35 @@ section:nth-of-type(even) {
     .feature-box {
         flex-direction: column;
     }
-}
+   
 .cta-subtext {
     margin-top: 14px;
-    font-size: 0.85rem;
-    color: rgba(0, 51, 102, 0.78);
+    font-size: 0.9rem;
+    color: rgba(0, 51, 102, 0.85);
     text-align: center;
     max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
 
-    /* premium highlight-känsla */
     padding: 10px 14px;
     background: rgba(0, 51, 102, 0.05);
     border-left: 3px solid #003366;
     border-radius: 6px;
 
-    /* liten visuell “lyft” */
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+    font-weight: 600; /* 👈 lite mer “vikt” */
 }
+
+/* ikon */
 .cta-subtext i {
     margin-right: 8px;
     color: #003366;
-    font-size: 0.95rem;
+    font-size: 1rem;
+}
+
+/* gör texten lite mer tydlig utan att bli större */
+.cta-subtext span {
+    font-weight: 600;
 }
