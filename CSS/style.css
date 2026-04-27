@@ -65,7 +65,6 @@ header {
 }
 
 
-
 /* =========================
    HERO (INDEX LIGHT VERSION)
 ========================= */
@@ -98,51 +97,127 @@ header {
 /* =========================
    SERVICES (INDEX CARDS)
 ========================= */
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+.services-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
 }
 
+/* GRID SYSTEM (ENDA SANNINGEN) */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* CARD BASE */
 .service-item {
-    flex: 1 1 250px;
-    background: #e6f0ff;
-    padding: 20px;
-    border-radius: 10px;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 14px;
+    padding: 28px 22px;
     text-align: center;
     text-decoration: none;
     color: #003366;
-    transition: 0.3s;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* HOVER (premium feel) */
 .service-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-7px);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+    border-color: rgba(0,51,102,0.18);
 }
 
+/* ICON */
 .service-item .icon {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    color: #003366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* TITLE */
+.service-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+}
+
+/* TEXT */
+.service-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    opacity: 0.9;
+}
+
+/* LIST */
 .service-item ul {
     text-align: left;
     padding-left: 18px;
     margin-top: 10px;
+    width: 100%;
 }
 
 .service-item li {
-    text-align: left;
     margin-bottom: 6px;
-    line-height: 1.4;
+    line-height: 1.45;
+    font-size: 0.92rem;
 }
 
+/* CTA BUTTON INSIDE CARD */
+.service-item .cta-button {
+    margin-top: 16px;
+}
+
+/* HIGHLIGHT TEXT */
 .highlight-text {
     font-weight: 700;
-    font-size: 1.1em;
-    padding: 6px 10px;
-    border-left: 3px solid #000;
-    background: rgba(0,0,0,0.03);
+    font-size: 1.05em;
+    padding: 8px 12px;
+    border-left: 3px solid #003366;
+    background: rgba(0,51,102,0.06);
+    margin-top: 12px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+/* SECTION TITLE */
+.services-section h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+/* SECTION TEXT */
+.services-section p {
+    max-width: 700px;
+    margin: 0 auto 10px auto;
+    opacity: 0.9;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .service-item {
+        padding: 22px 16px;
+    }
+
+    .service-item h3 {
+        font-size: 1.05rem;
+    }
 }
 /* =========================
 team
@@ -516,7 +591,7 @@ body.hautakivipalvelut #hero {
 .lang-switch a:hover {
     transform: scale(1.2);
 }
-/* SIDEMENU */
+
 /* SIDEBAR MENU */
 .menu {
     position: fixed;
@@ -586,28 +661,6 @@ section:hover {
     transform: translateY(-2px);
 }
 
-/* =========================
-   PALVELUT / SERVICES GRID UPGRADE
-========================= */
-
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
-}
-
-/* Lite mer “card premium” */
-.service-item {
-    background: #ffffff;
-    border: 1px solid #e6e6e6;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-}
-
-/* hover förbättring */
-.service-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-}
 
 /* =========================
    MEISTÄ / ABOUT SECTION
@@ -700,10 +753,9 @@ section:hover {
 }
 /*icon*/
 .trust-card i {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 12px;
     color: #003366;
-    display: block;
 }
 /* TEXT */
 .trust-card p {
