@@ -222,12 +222,26 @@ section:nth-of-type(even) {
     }
 }
 .cta-subtext {
-    margin-top: 12px;
+    margin-top: 14px;
     font-size: 0.85rem;
-    color: rgba(0, 51, 102, 0.75);
+    color: rgba(0, 51, 102, 0.78);
     text-align: center;
-    max-width: 600px;
+    max-width: 650px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
+
+    /* premium highlight-känsla */
+    padding: 10px 14px;
+    background: rgba(0, 51, 102, 0.05);
+    border-left: 3px solid #003366;
+    border-radius: 6px;
+
+    /* liten visuell “lyft” */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.cta-subtext i {
+    margin-right: 8px;
+    color: #003366;
+    font-size: 0.95rem;
 }
