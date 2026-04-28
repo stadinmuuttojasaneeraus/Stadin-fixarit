@@ -473,62 +473,111 @@ h2 {
     }
 }
 /* =========================
-   CONTACT (PREMIUM LAYOUT)
+   CONTACT - PREMIUM UPGRADE
 ========================= */
 
 .contact-container {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     align-items: stretch;
     flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* FORMULÄR */
+/* =========================
+   FORM CARD
+========================= */
+
 .contact-container form {
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
     background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
+    border: 1px solid rgba(0,51,102,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* INPUT FIELDS */
+/* subtle lift effect */
+.contact-container form:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
 .contact-container input,
 .contact-container textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 14px 14px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
     font-size: 1rem;
     outline: none;
-    transition: 0.3s;
-    font-family: Arial, sans-serif;
+    transition: 0.25s ease;
+    font-family: inherit;
+    background: #fafafa;
 }
 
+/* focus state (premium feel) */
 .contact-container input:focus,
 .contact-container textarea:focus {
     border-color: #003366;
-    box-shadow: 0 0 0 3px rgba(0,51,102,0.1);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(0,51,102,0.12);
 }
 
-/* KNAPP (form submit) */
+/* textarea nicer spacing */
+.contact-container textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* =========================
+   BUTTON (CTA STYLE UPGRADE)
+========================= */
+
 .contact-container button {
-    padding: 12px;
+    padding: 14px;
     background: #003366;
     color: #ffffff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.25s ease;
+    letter-spacing: 0.3px;
 }
 
 .contact-container button:hover {
     background: #002244;
+    transform: translateY(-2px);
+}
+
+/* button active feel */
+.contact-container button:active {
+    transform: translateY(0px);
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 768px) {
+    .contact-container {
+        gap: 20px;
+    }
+
+    .contact-container form {
+        padding: 22px;
+    }
 }
 
 /* GOOGLE MAPS */
