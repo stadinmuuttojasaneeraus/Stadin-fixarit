@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Basic -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stadin Fixarit Oy | Kodin, piha- ja remonttipalvelut Helsingissä</title>
 
-<meta name="description" content="Stadin Fixarit Oy tarjoaa luotettavat kodin asennuspalvelut, pihatyöt, remontit ja kiinteistöhuollon Helsingissä ja pääkaupunkiseudulla.">
+    <title>Helsinki ja pääkaupunkiseudun Kodin-asennuspalvelut, pihatyöt, hautakivipalvelut, remonttipalvelut ja kiinteistöhuolto | Stadin Fixarit Oy</title>
 
-<meta name="keywords" content="remontti Helsinki, pihapalvelut, kodin asennus, kiinteistöhuolto, handyman Helsinki, rakennuspalvelut">
+    <meta name="description" content="Stadin Fixarit Oy tarjoaa luotettavat kodin asennuspalvelut, pihatyöt, remontit ja kiinteistöhuollon Helsingissä ja pääkaupunkiseudulla.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Stadin Fixarit Oy">
 
-<meta name="author" content="Stadin Fixarit Oy">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stadin Fixarit Oy">
+    <meta property="og:description" content="Luotettavat kodin, pihan ja remontin palvelut Helsingissä.">
+    <meta property="og:image" content="https://stadin-fixarit.fi/images/og-image.jpg">
+    <meta property="og:url" content="https://stadin-fixarit.fi">
 
-<meta name="robots" content="index, follow">
+    <!-- Performance: Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<meta property="og:title" content="Stadin Fixarit Oy">
-<meta property="og:description" content="Luotettavat kodin, pihan ja remontin palvelut Helsingissä.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://stadin-fixarit.fi/images/og-image.jpg">
-<meta property="og:url" content="https://stadin-fixarit.fi">
-    
+    <!-- CSS -->
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <script type="text/javascript">
+    <!-- Schema (SEO boost) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Stadin Fixarit Oy",
+      "image": "https://stadin-fixarit.fi/images/logo2.png",
+      "url": "https://stadin-fixarit.fi",
+      "telephone": "+358468036951",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Helsinki",
+        "addressCountry": "FI"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Helsinki ja pääkaupunkiseutu"
+      },
+      "description": "Remontit, pihatyöt, kodin asennukset ja kiinteistöhuolto Helsingissä.",
+      "priceRange": "€€",
+      "openingHours": "Mo-Su 08:00-20:00"
+    }
+    </script>
+
+    <!-- Crisp chat -->
+    <script>
         window.$crisp = [];
         window.CRISP_WEBSITE_ID = "c980afcf-02e9-4bbd-a864-83d0c5dd70b5";
         (function () {
-            d = document;
-            s = d.createElement("script");
+            const d = document;
+            const s = d.createElement("script");
             s.src = "https://client.crisp.chat/l.js";
-            s.async = 1;
-            d.getElementsByTagName("head")[0].appendChild(s);
+            s.async = true;
+            d.head.appendChild(s);
         })();
     </script>
 </head>
