@@ -221,6 +221,62 @@ header {
     }
 }
 /* =========================
+   QUICK ACTION SECTION
+========================= */
+
+.quick-action {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 50px 20px;
+    text-align: center;
+    background: #f6f9ff;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.quick-action h2 {
+    font-size: 1.9rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.quick-action p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    line-height: 1.7;
+    color: #003366;
+    opacity: 0.9;
+}
+
+/* TRUST BLOCK */
+.quick-trust {
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.quick-trust p {
+    font-weight: 600;
+    line-height: 1.9;
+    font-size: 1rem;
+}
+
+/* CTA spacing fix (matchar din CTA-button) */
+.quick-action .cta-button {
+    margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .quick-action {
+        padding: 35px 15px;
+        margin: 30px 10px;
+    }
+
+    .quick-action h2 {
+        font-size: 1.5rem;
+    }
+}
+/* =========================
 team
 ========================= */
 .team-section {
