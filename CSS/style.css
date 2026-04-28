@@ -15,12 +15,11 @@ section {
   scroll-margin-top: 90px;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Inter", Arial, sans-serif;
     background: #ffffff;
     color: #003366;
     line-height: 1.6;
 }
-
 /* =========================
    HEADER
 ========================= */
@@ -411,7 +410,7 @@ h2 {
     #hero h1 {
         font-size: 1.6rem;
     }
-}
+
 /* LOGO MOBILE */
     .logo img {
         height: 65px;
