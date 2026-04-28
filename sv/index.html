@@ -210,13 +210,26 @@
 
 </section>
 <!-- CONTACT -->
-<section id="yhteystiedot">
+<section id="yhteystiedot" class="contact-section">
 
-<h2>Kontakt</h2>
+    <h2>Kontakt</h2>
 
-<p>info@stadin-fixarit.fi</p>
-<p>+358 46 803 6951</p>
+    <div class="contact-container">
 
+        <div class="contact-info">
+            <p><strong>E-post:</strong> info@stadin-fixarit.fi</p>
+            <p><strong>Telefon:</strong>:</strong> +358 46 803 6951</p>
+            <p><strong>Plats:</strong> Helsingfors</p>
+        </div>
+
+        <form action="https://formspree.io/f/xwvarbkg" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="phone" placeholder="Phone" required>
+            <textarea name="message" placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Skicka</button>
+        </form>
+    </div> 
 </section>
    <!-- GOOGLE MAPS -->
     <div class="map">
