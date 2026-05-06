@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ROOT -->
+  <url>
+    <loc>https://stadin-fixarit.fi/</loc>
+  </url>
+
+  <!-- FI -->
+  <url><loc>https://stadin-fixarit.fi/fi/index.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/fi/about.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/fi/kodin-asennuspalvelut.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/fi/pihapalvelut.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/fi/remontti.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/fi/yrityksille.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/fi/hautakivipalvelut.html</loc></url>
+
+  <!-- SV -->
+  <url><loc>https://stadin-fixarit.fi/se/index.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/se/about.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/se/kodin-asennuspalvelut.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/se/pihapalvelut.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/se/remontti.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/se/yrityksille.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/se/hautakivipalvelut.html</loc></url>
+
+  <!-- EN -->
+  <url><loc>https://stadin-fixarit.fi/en/index.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/en/about.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/en/kodin-asennuspalvelut.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/en/pihapalvelut.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/en/remontti.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/en/yrityksille.html</loc></url>
+  <url><loc>https://stadin-fixarit.fi/en/hautakivipalvelut.html</loc></url>
+
+</urlset>
