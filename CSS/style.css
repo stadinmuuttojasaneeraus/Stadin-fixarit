@@ -410,6 +410,27 @@ team
     margin-top: 25px;
 }
 
+.about-trust {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    text-align: center;
+    background: #f6f9ff;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.about-trust .about-highlight {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.8;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.about-trust .cta-button {
+    margin-top: 10px;
+}
 
 section {
     padding: 40px 20px;
