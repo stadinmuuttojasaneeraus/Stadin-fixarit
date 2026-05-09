@@ -621,6 +621,9 @@ h2 {
     color: #003366;
     line-height: 1.6;
 }
+.contact-info {
+    margin-bottom: 10px;
+}
 /* GOOGLE MAPS */
 .map {
     flex: 1 1 320px;
