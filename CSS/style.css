@@ -92,7 +92,14 @@ header {
     font-size: 1.1rem;
     margin-bottom: 20px;
 }
+.hero-subtitle {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
 
+.hero-trust {
+    font-weight: 600;
+}
 /* =========================
    SERVICES (INDEX CARDS)
 ========================= */
