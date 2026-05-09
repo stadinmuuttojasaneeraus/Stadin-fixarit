@@ -263,14 +263,9 @@ header {
     }
 }
 /* =========================
+/* =========================
    QUICK ACTION SECTION
 ========================= */
-.quick-action {
-    margin-top: 25px;
-    padding: 15px;
-    background: #f6f9ff;
-    border-radius: 12px;
-   
 .quick-action {
     max-width: 1000px;
     margin: 60px auto;
@@ -294,7 +289,6 @@ header {
     color: #003366;
     opacity: 0.9;
 }
-
 /* CTA spacing fix (matchar din CTA-button) */
 .quick-action .cta-button {
     margin-top: 10px;
