@@ -100,6 +100,41 @@ header {
 .hero-trust {
     font-weight: 600;
 }
+/* TRUST BLOCK */
+.quick-trust {
+    margin-top: 25px;
+    padding: 15px;
+    background: #f6f9ff;
+    border-radius: 12px;
+}
+.quick-trust {
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.quick-trust ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-trust li {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 24px;
+}
+
+/* checkmark */
+.quick-trust li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #1a73e8;
+    font-weight: 700;
+}
 /* =========================
    SERVICES (INDEX CARDS)
 ========================= */
@@ -253,18 +288,6 @@ header {
     line-height: 1.7;
     color: #003366;
     opacity: 0.9;
-}
-
-/* TRUST BLOCK */
-.quick-trust {
-    margin-top: 25px;
-    padding: 15px;
-}
-
-.quick-trust p {
-    font-weight: 600;
-    line-height: 1.9;
-    font-size: 1rem;
 }
 
 /* CTA spacing fix (matchar din CTA-button) */
