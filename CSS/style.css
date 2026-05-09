@@ -533,9 +533,11 @@ h2 {
 }
 
 /* subtle lift effect */
-.contact-container form:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+@media (hover: hover) {
+    .contact-container form:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    }
 }
 
 /* =========================
@@ -574,6 +576,7 @@ h2 {
 ========================= */
 
 .contact-container button {
+    width: 100%;
     padding: 14px;
     background: #003366;
     color: #ffffff;
@@ -583,6 +586,7 @@ h2 {
     cursor: pointer;
     transition: 0.25s ease;
     letter-spacing: 0.3px;
+    font-size: 1rem;
 }
 
 .contact-container button:hover {
@@ -611,7 +615,7 @@ h2 {
 
 /* GOOGLE MAPS */
 .map {
-    flex: 1;
+    flex: 1 1 320px;
     min-width: 280px;
     border-radius: 12px;
     overflow: hidden;
@@ -635,6 +639,26 @@ h2 {
         min-height: 250px;
     }
 }
+
+.contact-form-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-wrapper h3 {
+    font-size: 1.4rem;
+    color: #003366;
+    margin-bottom: 6px;
+}
+
+.form-hint {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    margin-bottom: 14px;
+}
+
 #hero {
     position: relative;
     min-height: 450px;
