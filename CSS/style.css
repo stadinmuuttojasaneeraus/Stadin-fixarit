@@ -20,6 +20,10 @@ body {
     color: #003366;
     line-height: 1.6;
 }
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 /* =========================
    HEADER
 ========================= */
@@ -974,16 +978,4 @@ section:hover {
     .trust-section h2 {
         font-size: 1.4rem;
     }
-}
-.quick-trust {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-.quick-trust ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-    text-align: left;
 }
