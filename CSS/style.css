@@ -612,7 +612,15 @@ h2 {
         padding: 22px;
     }
 }
-
+.contact-lead {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #003366;
+    line-height: 1.6;
+}
 /* GOOGLE MAPS */
 .map {
     flex: 1 1 320px;
@@ -648,15 +656,19 @@ h2 {
 }
 
 .contact-form-wrapper h3 {
+    text-align: center;
     font-size: 1.4rem;
     color: #003366;
     margin-bottom: 6px;
 }
 
 .form-hint {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #003366;
     opacity: 0.75;
     margin-bottom: 14px;
+    text-align: center;
 }
 
 #hero {
