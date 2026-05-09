@@ -101,7 +101,6 @@ header {
     font-weight: 600;
 }
 /* TRUST BLOCK */
-.quick-action,
 .quick-trust {
     margin-top: 25px;
     padding: 15px;
@@ -266,7 +265,12 @@ header {
 /* =========================
    QUICK ACTION SECTION
 ========================= */
-
+.quick-action {
+    margin-top: 25px;
+    padding: 15px;
+    background: #f6f9ff;
+    border-radius: 12px;
+   
 .quick-action {
     max-width: 1000px;
     margin: 60px auto;
