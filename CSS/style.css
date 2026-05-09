@@ -979,22 +979,21 @@ section:hover {
         font-size: 1.4rem;
     }
 }
-@media (max-height: 500px) and (orientation: landscape) {
-    header {
-        padding: 8px 16px;
-    }
 
-    .logo img {
-        height: 55px;
-    }
+html, body {
+    overflow-x: hidden;
+}
 
-    .hamburger {
-        width: 28px;
-        height: 22px;
-    }
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 @media (max-height: 500px) and (orientation: landscape) {
-    header {
-        backdrop-filter: blur(6px);
+    .logo img {
+        height: 55px;
     }
 }
