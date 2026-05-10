@@ -198,3 +198,20 @@
         padding: 12px 14px;
     }
 }
+.service-cta-band {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 16px;
+}
+
+.service-cta-band h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.service-cta-band p {
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 25px;
+}
