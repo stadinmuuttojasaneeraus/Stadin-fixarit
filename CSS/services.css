@@ -198,22 +198,85 @@
         padding: 12px 14px;
     }
 }
+
+/* =========================
+   SERVICE CTA BAND
+========================= */
+
 .service-cta-band {
-    background: #003366;
-    color: white;
+    background: linear-gradient(135deg, #003366 0%, #004080 100%);
+
     text-align: center;
-    padding: 60px 20px;
-    border-radius: 16px;
+
+    padding: 38px 24px;
+
+    border-radius: 18px;
+
+    margin: 50px auto;
+
+    max-width: 1000px;
+
+    box-shadow: 0 14px 35px rgba(0,0,0,0.12);
 }
 
 .service-cta-band h2 {
-    color: white;
-    margin-bottom: 15px;
+    color: #ffffff;
+
+    font-size: 2rem;
+
+    margin-bottom: 12px;
+
+    line-height: 1.2;
 }
 
 .service-cta-band p {
-    color: rgba(255,255,255,0.9);
-    margin-bottom: 25px;
+    color: rgba(255,255,255,0.92);
+
+    font-size: 1.05rem;
+
+    margin-bottom: 24px;
+}
+
+/* CTA BUTTON */
+.service-cta-band .cta-button {
+    background: #ffffff;
+
+    color: #003366;
+
+    font-weight: 700;
+
+    padding: 14px 30px;
+
+    border-radius: 10px;
+
+    display: inline-block;
+
+    transition: all 0.25s ease;
+
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.service-cta-band .cta-button:hover {
+    transform: translateY(-3px);
+
+    background: #f2f6ff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .service-cta-band {
+        padding: 30px 18px;
+    }
+
+    .service-cta-band h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-cta-band p {
+        font-size: 0.95rem;
+    }
+
 }
 /* =========================
    QUICK TRUST SERVICES
