@@ -423,34 +423,26 @@
 
 .what-we-do .service-item--full {
     grid-column: 1 / -1;
-
+    display: flex;
     justify-content: center;
-    text-align: center;
-
-    max-width: 600px;
-    margin: 0 auto;
-
-    background: #fff;
 }
 
 /* =========================
    MOBILE = 2 COLS
-========================= */
+===========================*/
 
 @media (max-width: 768px) {
+
     .what-we-do .service-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 12px;
     }
-}
 
-/* =========================
-   RESPONSIVE (MOBILE = 2 COLS)
-========================= */
-
-@media (max-width: 768px) {
-    .what-we-do .service-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
+    .what-we-do .service-item--full {
+        grid-column: 1 / -1;
+        
+        /* detta är nyckeln */
+        width: calc(200% + 20px);
+        max-width: 100%;
+        justify-self: center;
     }
 }
