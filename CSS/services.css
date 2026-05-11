@@ -374,7 +374,11 @@
     }
 
     }
-/* GRID LAYOUT */
+/* =========================
+   WHAT WE DO - SERVICES GRID
+   (isolated, no conflicts)
+========================= */
+
 .what-we-do .service-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -382,76 +386,93 @@
     margin-top: 20px;
 }
 
-/* LIST STYLE BLOCKS */
+/* reset lists */
 .what-we-do ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* CARD STYLE (LI) */
 .what-we-do li {
-    background: #fff;
+    background: #ffffff;
     border: 1px solid rgba(0,51,102,0.08);
     border-radius: 12px;
-    padding: 14px 16px 14px 42px;
+
+    padding: 14px 16px;
     margin-bottom: 12px;
-    position: relative;
-    font-weight: 600;
-    color: #003366;
-    transition: all 0.2s ease;
-}
 
-/* ICON CHECK */
-.what-we-do li::before {
-    content: "✔";
-    position: absolute;
-    left: 16px;
-    color: #1a73e8;
-    font-weight: bold;
-}
-
-/* HOVER EFFECT */
-.what-we-do li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-
-/* EXTRA BOTTOM ITEM */
-.service-extra {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.service-extra p {
-    display: inline-block;
-    background: #003366;
-    color: #fff;
-    padding: 12px 18px;
-    border-radius: 999px;
-    font-weight: 600;
-}
-
-/* RESPONSIVE (MOBIL = fortfarande 2 kolumner som du ville) */
-@media (max-width: 768px) {
-    .what-we-do .service-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-}
-/* ICON STYLING */
-.what-we-do li {
     display: flex;
     align-items: center;
     gap: 10px;
+
+    font-weight: 600;
+    color: #003366;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
 }
 
+/* ICON */
 .what-we-do li i {
     color: #1a73e8;
     font-size: 1.1rem;
     min-width: 22px;
 }
 
-/* extra block icon */
-.service-extra p i {
-    margin-right: 8px;
+/* HOVER */
+.what-we-do li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+    border-color: rgba(0,51,102,0.15);
+}
+
+/* =========================
+   EXTRA FULL WIDTH BLOCK
+========================= */
+
+.what-we-do .service-extra {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.what-we-do .service-extra p {
+    background: #ffffff;
+    border: 1px solid rgba(0,51,102,0.08);
+    border-radius: 12px;
+
+    padding: 14px 16px;
+    font-weight: 600;
+    color: #003366;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: all 0.2s ease;
+}
+
+/* icon */
+.what-we-do .service-extra p i {
+    color: #1a73e8;
+}
+
+/* hover */
+.what-we-do .service-extra p:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+}
+
+/* =========================
+   RESPONSIVE (MOBILE = 2 COLS)
+========================= */
+
+@media (max-width: 768px) {
+    .what-we-do .service-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
 }
