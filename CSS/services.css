@@ -416,7 +416,13 @@
     transform: translateY(-3px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.10);
 }
-
+.what-we-do p {
+    font-weight: 500;
+    color: #1f2d3d;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-top: 14px;
+}
 /* =========================
    FULL WIDTH ITEM (SAME STYLE)
 ========================= */
