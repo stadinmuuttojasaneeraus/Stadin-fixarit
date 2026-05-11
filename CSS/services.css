@@ -418,13 +418,16 @@
 }
 
 /* =========================
-   FULL WIDTH CENTER BLOCK
+   FULL WIDTH ITEM (SAME STYLE)
 ========================= */
 
 .what-we-do .service-item--full {
     grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
+
+    max-width: 520px;
+    width: 100%;
+
+    justify-self: center;
 }
 
 /* =========================
@@ -439,10 +442,11 @@
 
     .what-we-do .service-item--full {
         grid-column: 1 / -1;
-        
-        /* detta är nyckeln */
-        width: calc(200% + 20px);
-        max-width: 100%;
+
+        /* viktig del: håll samma system även på mobil */
+        max-width: 520px;
+        width: 100%;
+
         justify-self: center;
     }
 }
