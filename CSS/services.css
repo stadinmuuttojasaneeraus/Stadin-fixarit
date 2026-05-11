@@ -22,7 +22,7 @@
 .feature-box {
     display: flex;
     gap: 18px;
-    align-items: flex-start;
+    align-items: center; 
     background: #f5f9ff;
     padding: 22px;
     border-radius: 14px;
