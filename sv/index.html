@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <!-- Basic -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Stadin Fixarit Oy | hem-installations-, trädgårds-, renoveringstjänster och fastighetsskötsel i Helsingfors</title>
+    <title>Hemservice, trädgårdsarbete, gravstensservice, renovering och fastighetsservice i Helsingfors och huvudstadsregionen | Stadin Fixarit Oy</title>
 
-    <meta name="description" content="Stadin Fixarit Oy erbjuder pålitliga heminstallationer, trädgårdsarbeten, renoveringar och fastighetsskötsel i Helsingfors och huvudstadsregionen.">
-
-    <meta name="keywords" content="renovering Helsingfors, trädgårdstjänster, hemmontering, fastighetsskötsel, handyman Helsingfors, byggtjänster">
-
-    <meta name="author" content="Stadin Fixarit Oy">
+    <meta name="description" content="Stadin Fixarit Oy erbjuder pålitlig hemservice, trädgårdsarbete, renoveringar och fastighetsservice i Helsingfors och huvudstadsregionen.">
     <meta name="robots" content="index, follow">
+    <meta name="author" content="Stadin Fixarit Oy">
 
-    <!-- ✅ Canonical -->
+    <!-- Canonical -->
     <link rel="canonical" href="https://stadin-fixarit.fi/sv/index.html">
 
-    <!-- ✅ Hreflang -->
+    <!-- Hreflang -->
     <link rel="alternate" hreflang="fi" href="https://stadin-fixarit.fi/fi/index.html">
     <link rel="alternate" hreflang="sv" href="https://stadin-fixarit.fi/sv/index.html">
     <link rel="alternate" hreflang="en" href="https://stadin-fixarit.fi/en/index.html">
     <link rel="alternate" hreflang="x-default" href="https://stadin-fixarit.fi/fi/index.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Stadin Fixarit Oy">
-    <meta property="og:description" content="Pålitliga hem-, trädgårds- och renoveringstjänster i Helsingfors.">
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Stadin Fixarit Oy">
+    <meta property="og:description" content="Pålitliga tjänster för hem, trädgård och renovering i Helsingfors.">
     <meta property="og:image" content="https://stadin-fixarit.fi/images/og-image.jpg">
-
-    <!-- ✅ FIXAD OG URL -->
     <meta property="og:url" content="https://stadin-fixarit.fi/sv/index.html">
+
+    <!-- Performance: Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Stadin Fixarit Oy",
+      "image": "https://stadin-fixarit.fi/images/logo2.png",
+      "url": "https://stadin-fixarit.fi/sv/index.html",
+      "telephone": "+358468036951",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Helsingfors",
+        "addressCountry": "FI"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Helsingfors och huvudstadsregionen"
+      },
+      "description": "Renoveringar, trädgårdsarbete, hemservice och fastighetsservice i Helsingfors.",
+      "priceRange": "€€",
+      "openingHours": "Mo-Su 08:00-20:00"
+    }
+    </script>
+
     <!-- Crisp chat -->
-    <script type="text/javascript">
+    <script>
         window.$crisp = [];
         window.CRISP_WEBSITE_ID = "c980afcf-02e9-4bbd-a864-83d0c5dd70b5";
         (function () {
-            var d = document;
-            var s = d.createElement("script");
+            const d = document;
+            const s = d.createElement("script");
             s.src = "https://client.crisp.chat/l.js";
-            s.async = 1;
+            s.async = true;
             d.head.appendChild(s);
         })();
     </script>
@@ -59,86 +78,124 @@
 
 <header>
     <div class="logo">
-        <a href="index.html">
+        <a href="../sv/index.html">
             <img src="../images/logo2.png" alt="Stadin Fixarit Oy">
         </a>
     </div>
 
-    <!-- SPRÅKBYTE -->
-    <div class="lang-switch">
-        <a href="../fi/index.html">🇫🇮</a>
-        <a href="../sv/index.html">🇸🇪</a>
-        <a href="../en/index.html">🇬🇧</a>
-    </div>
+    <a href="../fi/index.html">🇫🇮</a>
+    <a href="../sv/index.html">🇸🇪</a>
+    <a href="../en/index.html">🇬🇧</a>
 
     <nav>
+        <div class="menu" id="menu">
 
-    <div class="menu" id="menu">
+            <a href="../sv/index.html">Startsida</a>
 
-        <div class="menu-section">Tjänster</div>
+            <div class="menu-section">Tjänster</div>
 
-        <a href="../sv/kodin-asennuspalvelut.html">Installationstjänster</a>
-        <a href="../sv/pihapalvelut.html">Gårdstjänster</a>
-        <a href="../sv/remontti.html">Renovering</a>
-        <a href="../sv/hautakivipalvelut.html">Gravvårdstjänster</a>
+            <a href="../sv/kodin-asennuspalvelut.html">Heminstallationstjänster</a>
+            <a href="../sv/pihapalvelut.html">Trädgårdstjänster</a>
+            <a href="../sv/remontti.html">Renovering</a>
+            <a href="../sv/hautakivipalvelut.html">Gravstensservice</a>
 
-        <div class="menu-section">Företag</div>
+            <div class="menu-section">Företagstjänster</div>
 
-        <a href="../sv/yrityksille.html">Företagstjänster</a>
+            <a href="../sv/yrityksille.html">För företag</a>
 
-        <div class="menu-section">Om oss</div>
+            <div class="menu-section">Information</div>
 
-        <a href="../sv/about.html">Om oss</a>
-        <a href="../sv/index.html#yhteystiedot">Kontakt</a>
+            <a href="../sv/about.html">Om oss</a>
+            <a href="../sv/index.html#yhteystiedot">Kontakt</a>
 
-        <a href="../sv/index.html#yhteystiedot" class="menu-cta">
-            Begär offert
-        </a>
+            <a href="../sv/index.html#yhteystiedot" class="menu-cta">
+                Begär offert
+            </a>
 
-        <a href="../sv/index.html" class="menu-back">
-            ← Tillbaka
-        </a>
+            <a href="../sv/index.html" class="menu-back">
+                ← Tillbaka
+            </a>
 
-    </div>
+        </div>
 
-    <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
-
 </header>
 
 <div class="menu-overlay" id="overlay"></div>
 
-<!-- HERO -->
 <section id="hero" style="background-image: url('../images/hero1-index.jpg');">
     <div class="hero-container">
+        <div class="hero-content">
 
-        <h1>Snabb och pålitlig multiservice i Helsingfors</h1>
-<p class="hero-highlight">
-Du får oftast en utförare redan samma dag eller följande dag.
-</p>
-        <p>Handyman, fastighetsskötsel, trädgårdsarbete och renoveringar.</p>
+            <h1>
+                Tjänster för hem och fastigheter i Helsingfors – pålitligt och enligt överenskommelse
+            </h1>
 
-        <a href="#yhteystiedot" class="cta-button">Begär offert</a>
+            <p class="hero-subtitle">
+                Installationer, trädgårdsarbete, renoveringar och fastighetsservice – snabbt och professionellt utfört.
+            </p>
 
+            <a href="#yhteystiedot" class="cta-button">
+                Begär en kostnadsfri offert
+            </a>
+
+        </div>
     </div>
 </section>
 
-<!-- SERVICES -->
+<section class="quick-trust">
+    <ul>
+        <li>Arbete berättigar till hushållsavdrag</li>
+        <li>Tjänster från 55 €/h</li>
+        <li>Försäkrad och ansvarsfull verksamhet</li>
+        <li>Snabb service – ofta samma eller följande dag</li>
+        <li>Tydlig prissättning och överenskomna tidtabeller</li>
+        <li>Alla tjänster från samma företag</li>
+    </ul>
+</section>
+
+<section class="quick-action">
+
+    <h2>Varför välja oss?</h2>
+
+    <h2>Alla tjänster för fastigheter och hem från ett och samma ställe</h2>
+
+    <p>
+       Vi erbjuder omfattande tjänster för hem och fastigheter i Helsingfors och huvudstadsregionen.
+    </p>
+
+    <p>
+        Vi utför både små vardagsarbeten och större projekt snabbt, noggrant och enligt överenskommelse – utan onödiga mellanhänder.
+    </p>
+
+    <p>
+        Tydlig prissättning, snabb service och pålitligt arbete.
+    </p>
+
+    <div style="text-align:center; margin-top:30px;">
+        <a href="#yhteystiedot" class="cta-button">
+            Begär offert enkelt
+        </a>
+    </div>
+
+</section>
+
 <section id="palvelut" class="services-section">
 
 <h2>Tjänster</h2>
 
 <p>
-    Stadin Fixarit Oy erbjuder mångsidiga tjänster för privatpersoner, bostadsrättsföreningar och företag i Helsingfors och hela huvudstadsregionen.
+Vi erbjuder praktiska och snabba tjänster för hushåll,
+bostadsbolag och företag i Helsingfors och huvudstadsregionen.
 </p>
 
 <p class="highlight-text">
-    Vissa av våra tjänster berättigar hushållsavdrag.
+    En del av våra tjänster berättigar till hushållsavdrag.
 </p>
 
 <div class="services-container">
@@ -147,17 +204,17 @@ Du får oftast en utförare redan samma dag eller följande dag.
 
         <div class="icon"><i class="fa-solid fa-house"></i></div>
 
-        <h3>Monteringstjänster för hemmet</h3>
+        <h3>Heminstallationstjänster</h3>
 
         <p class="highlight-text">
-            Snabba och noggranna tjänster för hemmets behov – små uppdrag som underlättar vardagen.
+            Snabba och noggranna installationer för vardagens behov – från mindre uppgifter till kompletta möbelinstallationer.
         </p>
 
         <ul>
             <li>Montering av tavlor, hyllor och speglar</li>
             <li>Montering, flytt och demontering av möbler</li>
-            <li>Installation och igångsättning av vitvaror</li>
-            <li>Montering av gardinstänger, skenor och belysning</li>
+            <li>Installation och igångsättning av hushållsmaskiner</li>
+            <li>Montering av gardinstänger, skenor och lampor</li>
             <li>Övriga mindre installationer i hemmet</li>
         </ul>
 
@@ -171,14 +228,14 @@ Du får oftast en utförare redan samma dag eller följande dag.
         <h3>Trädgårdstjänster</h3>
 
         <p class="highlight-text">
-            Skötsel av trädgård och utemiljö året runt – pålitligt och enligt överenskommen tidsplan.
+            Trädgårdsskötsel och utomhusområden i ordning året runt – pålitligt och enligt tidtabell.
         </p>
 
         <ul>
-            <li>Rensning av trädgård och lövkrattning</li>
-            <li>Gräsklippning och beskärning av buskar</li>
+            <li>Städning av gård och lövräfsning</li>
+            <li>Klippning av gräsmattor och buskar</li>
             <li>Trädfällning och röjningsarbete</li>
-            <li>Snöröjning och halkbekämpning</li>
+            <li>Snöskottning och halkbekämpning</li>
         </ul>
 
         <button class="cta-button">Läs mer</button>
@@ -191,14 +248,14 @@ Du får oftast en utförare redan samma dag eller följande dag.
         <h3>Renoveringstjänster</h3>
 
         <p class="highlight-text">
-            Snygga och välplanerade renoveringar utförda i tid – från mindre reparationer till större projekt.
+            Snygga renoveringar utförda enligt tidtabell och med yrkesskicklighet – från mindre reparationer till kompletta renoveringar.
         </p>
 
         <ul>
-            <li>Golvinstallationer och ytskiktsrenoveringar</li>
+            <li>Golvläggning och förnyelse av ytor</li>
             <li>Montering av dörrar, lister och inredning</li>
             <li>Mindre badrums- och köksrenoveringar</li>
-            <li>Målnings- och ytskiktsarbeten</li>
+            <li>Målning och ytrenoveringar</li>
             <li>Rivnings- och reparationsarbeten</li>
         </ul>
 
@@ -209,16 +266,16 @@ Du får oftast en utförare redan samma dag eller följande dag.
 
         <div class="icon"><i class="fa-solid fa-monument"></i></div>
 
-        <h3>Gravstenstjänster</h3>
+        <h3>Gravstensservice</h3>
 
         <p class="highlight-text">
-            Värdig och noggrann skötsel av gravstenar – utfört med respekt och yrkesskicklighet.
+            Värdig och noggrann skötsel av gravstenar – utförd med respekt och yrkesskicklighet.
         </p>
 
         <ul>
-            <li>Rätning av lutande eller fallna gravstenar</li>
-            <li>Rengöring och underhåll av gravstenar</li>
-            <li>Skötsel och underhåll av gravplats</li>
+            <li>Riktning och underhåll av gravstenar</li>
+            <li>Rengöring och restaurering av gravstenar</li>
+            <li>Skötsel och underhåll av gravplatsen</li>
         </ul>
 
         <button class="cta-button">Läs mer</button>
@@ -231,101 +288,76 @@ Du får oftast en utförare redan samma dag eller följande dag.
         <h3>Företagstjänster</h3>
 
         <p class="highlight-text">
-            Flexibla och pålitliga tjänstelösningar för företag – både för akuta behov och långsiktiga samarbeten.
+            Flexibla och pålitliga servicelösningar för företag – både för akuta behov och långsiktiga samarbeten.
         </p>
 
         <ul>
-            <li>Löpande fastighetsunderhåll</li>
+            <li>Löpande underhåll av fastigheter</li>
             <li>Fastighetsskötsel och servicearbeten</li>
             <li>Renoveringar och reparationsarbeten</li>
-            <li>Trädgårdsarbete och skötsel av utemiljöer</li>
+            <li>Trädgårdsarbete och skötsel av utomhusområden</li>
         </ul>
 
         <button class="cta-button">Gå till företagstjänster</button>
     </a>
-    
-<a href="../sv/about.html" class="service-item">
+
+    <a href="../sv/about.html" class="service-item">
 
     <div class="icon"><i class="fa-solid fa-handshake"></i></div>
 
     <h3>Om oss</h3>
 
     <p class="highlight-text">
-        En pålitlig och snabb partner för hem, gård och fastighetstjänster i Helsingfors och huvudstadsregionen.
-        Vi utför arbetet effektivt, professionellt och utan onödiga mellanhänder.
+        En pålitlig och snabb partner för arbeten i hem, trädgårdar och fastigheter i Helsingfors – vi utför arbetet effektivt och utan onödiga mellanhänder.
     </p>
 
     <ul>
         <li>Snabba och pålitliga tjänster</li>
         <li>Utbildad och erfaren personal</li>
         <li>God kommunikation – vi talar flytande svenska, finska och engelska vid behov</li>
-        <li>Noggrant och professionellt utförande</li>
+        <li>Noggrant och professionellt utfört arbete</li>
     </ul>
 
     <button class="cta-button">Läs mer om oss</button>
 
-</a>
+    </a>
 </div>
 
 </section>
 
-    <section class="quick-action">
-
-    <h2>Alla fastighets- och handyman-tjänster på ett och samma ställe i Helsingfors</h2>
-
-    <p>
-        Stadin Fixarit Oy erbjuder ett komplett utbud av tjänster: installationer i hemmet, trädgårdsarbete,
-        renoveringar, fastighetsskötsel samt gravvårdstjänster i Helsingfors och hela huvudstadsregionen.
-    </p>
-
-    <p>
-        Hos oss får du en snabb och pålitlig hantverkare för både mindre vardagsjobb och större projekt –
-        utan mellanhänder och utan onödig väntetid.
-    </p>
-
-    <div class="quick-trust">
-
-        <p>
-            ✔ Arbete berättigat till hushållsavdrag  
-            ✔ Försäkrad och ansvarsfull verksamhet  
-            ✔ Snabb respons – ofta samma eller nästa dag  
-            ✔ Tydlig prissättning och överenskomna tidsplaner  
-            ✔ Alla tjänster från en och samma aktör
-        </p>
-
-    </div>
-
-    <div style="text-align:center; margin-top:30px;">
-        <a href="#yhteystiedot" class="cta-button">
-            Begär offert enkelt
-        </a>
-    </div>
-
-    </section>
-    
-<!-- CONTACT -->
 <section id="yhteystiedot" class="contact-section">
 
     <h2>Kontakt</h2>
 
+    <p class="contact-lead">
+    Berätta vad du behöver hjälp med – vi svarar snabbt och ger dig en tydlig offert utan förpliktelser.
+    </p>
+
     <div class="contact-container">
 
-        <div class="contact-info">
-            <p><strong>E-post:</strong> info@stadin-fixarit.fi</p>
-            <p><strong>Telefon:</strong>:</strong> +358 46 803 6951</p>
-            <p><strong>Plats:</strong> Helsingfors</p>
-        </div>
+    <div class="contact-info">
+        <p><strong>E-post:</strong> info@stadin-fixarit.fi</p>
+        <p><strong>Telefon:</strong> +358 46 803 6951</p>
+        <p><strong>Adress:</strong> Helsingfors</p>
+    </div>
+
+    <div class="contact-form-wrapper">
+
+        <h3>Begär offert enkelt</h3>
+        <p class="form-hint">
+            Fyll i formuläret – vi återkommer snabbt till dig.
+        </p>
 
         <form action="https://formspree.io/f/xwvarbkg" method="POST">
             <input type="text" name="name" placeholder="Namn" required>
             <input type="email" name="email" placeholder="E-post" required>
-            <input type="text" name="phone" placeholder="Telefon" required>
+            <input type="text" name="phone" placeholder="Telefonnummer" required>
             <textarea name="message" placeholder="Meddelande" rows="5" required></textarea>
             <button type="submit">Skicka</button>
         </form>
-    </div> 
-</section>
-   <!-- GOOGLE MAPS -->
+
+    </div>
+
     <div class="map">
         <iframe 
             src="https://www.google.com/maps?q=Helsinki&output=embed"
@@ -333,6 +365,10 @@ Du får oftast en utförare redan samma dag eller följande dag.
             loading="lazy">
         </iframe>
     </div>
+
+    </div>
+</section>
+
 <footer class="footer">
 
     <div class="footer-container">
@@ -344,18 +380,17 @@ Du får oftast en utförare redan samma dag eller följande dag.
         </div>
 
         <div class="footer-block">
-            <h3>Kontaktuppgifter</h3>
+            <h3>Kontakt</h3>
 
             <a href="tel:+358468036951">📞 +358 46 803 6951</a>
             <a href="mailto:info@stadin-fixarit.fi">✉️ info@stadin-fixarit.fi</a>
             <a href="https://wa.me/358468036951" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
         </div>
 
         <div class="footer-block">
             <h3>Följ oss</h3>
-
             <a href="https://www.facebook.com/stadinfixarit">Facebook</a>
             <a href="https://www.instagram.com/stadin_fixarit">Instagram</a>
         </div>
@@ -367,8 +402,8 @@ Du får oftast en utförare redan samma dag eller följande dag.
     </div>
 
 </footer>
-    
+
 <script src="../js/script.js"></script>
 
 </body>
-</html>
+                </html>
