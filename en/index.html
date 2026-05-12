@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Fonts -->
+    <!-- Basic -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Installation Services, Garden Maintenance, Renovation Services and Property Maintenance in Helsinki | Stadin Fixarit Oy</title>
+
+    <meta name="description" content="Stadin Fixarit Oy provides reliable home installation services, garden maintenance, renovations and property maintenance in Helsinki and the Greater Helsinki area.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Stadin Fixarit Oy">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://stadin-fixarit.fi/en/index.html">
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="fi" href="https://stadin-fixarit.fi/fi/index.html">
+    <link rel="alternate" hreflang="sv" href="https://stadin-fixarit.fi/sv/index.html">
+    <link rel="alternate" hreflang="en" href="https://stadin-fixarit.fi/en/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://stadin-fixarit.fi/en/index.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stadin Fixarit Oy">
+    <meta property="og:description" content="Reliable home, garden and renovation services in Helsinki.">
+    <meta property="og:image" content="https://stadin-fixarit.fi/images/og-image.jpg">
+
+    <meta property="og:url" content="https://stadin-fixarit.fi/en/index.html">
+
+    <!-- Performance: Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Basic -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Stadin Fixarit Oy | Home-instalments-, yardwork-, renovation services and facility maintenance in Helsinki</title>
-
-    <meta name="description" content="Stadin Fixarit Oy offers reliable home installation services, yard work, renovations and property maintenance in Helsinki and the capital region.">
-
-    <meta name="keywords" content="renovation Helsinki, yard services, home installation, property maintenance, handyman Helsinki, construction services">
-
-    <meta name="author" content="Stadin Fixarit Oy">
-    <meta name="robots" content="index, follow">
-
-    <!-- ✅ Canonical -->
-    <link rel="canonical" href="https://stadin-fixarit.fi/en/index.html">
-
-    <!-- ✅ Hreflang -->
-    <link rel="alternate" hreflang="fi" href="https://stadin-fixarit.fi/fi/index.html">
-    <link rel="alternate" hreflang="sv" href="https://stadin-fixarit.fi/sv/index.html">
-    <link rel="alternate" hreflang="en" href="https://stadin-fixarit.fi/en/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://stadin-fixarit.fi/fi/index.html">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Stadin Fixarit Oy">
-    <meta property="og:description" content="Reliable home, yard and renovation services in Helsinki.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://stadin-fixarit.fi/images/og-image.jpg">
-
-    <!-- ✅ FIXAD OG URL -->
-    <meta property="og:url" content="https://stadin-fixarit.fi/en/index.html">
-    
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Stadin Fixarit Oy",
+      "image": "https://stadin-fixarit.fi/images/logo2.png",
+      "url": "https://stadin-fixarit.fi/en/index.html",
+      "telephone": "+358468036951",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Helsinki",
+        "addressCountry": "FI"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Helsinki and the Greater Helsinki area"
+      },
+      "description": "Renovations, garden maintenance, home installations and property maintenance in Helsinki.",
+      "priceRange": "€€",
+      "openingHours": "Mo-Su 08:00-20:00"
+    }
+    </script>
+
     <!-- Crisp chat -->
-    <script type="text/javascript">
+    <script>
         window.$crisp = [];
         window.CRISP_WEBSITE_ID = "c980afcf-02e9-4bbd-a864-83d0c5dd70b5";
         (function () {
-            d = document;
-            s = d.createElement("script");
+            const d = document;
+            const s = d.createElement("script");
             s.src = "https://client.crisp.chat/l.js";
-            s.async = 1;
-            d.getElementsByTagName("head")[0].appendChild(s);
+            s.async = true;
+            d.head.appendChild(s);
         })();
     </script>
 </head>
@@ -59,7 +79,7 @@
 
 <header>
     <div class="logo">
-        <a href="../fi/index.html">
+        <a href="../en/index.html">
             <img src="../images/logo2.png" alt="Stadin Fixarit Oy">
         </a>
     </div>
@@ -68,44 +88,43 @@
     <a href="../sv/index.html">🇸🇪</a>
     <a href="../en/index.html">🇬🇧</a>
 
-<nav>
+    <nav>
+        <div class="menu" id="menu">
 
-    <div class="menu" id="menu">
+            <a href="../en/index.html">Home</a>
 
-        <div class="menu-section">Services</div>
+            <div class="menu-section">Services</div>
 
-        <a href="../en/kodin-asennuspalvelut.html">Installation Services</a>
-        <a href="../en/pihapalvelut.html">Garden Services</a>
-        <a href="../en/remontti.html">Renovation</a>
-        <a href="../en/hautakivipalvelut.html">Grave Maintenance Services</a>
+            <a href="../en/kodin-asennuspalvelut.html">Home Installation Services</a>
+            <a href="../en/pihapalvelut.html">Garden Services</a>
+            <a href="../en/remontti.html">Renovation Services</a>
+            <a href="../en/hautakivipalvelut.html">Gravestone Services</a>
 
-        <div class="menu-section">Business</div>
+            <div class="menu-section">Business Services</div>
 
-        <a href="../en/yrityksille.html">Business Services</a>
+            <a href="../en/yrityksille.html">For Businesses</a>
 
-        <div class="menu-section">About</div>
+            <div class="menu-section">Information</div>
 
-        <a href="../en/about.html">About Us</a>
-        <a href="../en/index.html#yhteystiedot">Contact</a>
+            <a href="../en/about.html">About Us</a>
+            <a href="../en/index.html#yhteystiedot">Contact</a>
 
-        <a href="../en/index.html#yhteystiedot" class="menu-cta">
-            Request a Quote
-        </a>
+            <a href="../en/index.html#yhteystiedot" class="menu-cta">
+                Request a Quote
+            </a>
 
-        <a href="../en/index.html" class="menu-back">
-            ← Back
-        </a>
+            <a href="../en/index.html" class="menu-back">
+                ← Back
+            </a>
 
-    </div>
+        </div>
 
-    <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-
-</nav>
-    
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
 </header>
 
 <div class="menu-overlay" id="overlay"></div>
@@ -115,21 +134,56 @@
         <div class="hero-content">
 
             <h1>
-                Fast and reliable multi-service company for private customers and businesses in Helsinki and the capital region.
+                Home and Property Services in Helsinki – Reliable and Professionally Delivered
             </h1>
-<p class="hero-highlight">
-You can usually get a worker on the same day or the next day.
-</p>
-            <p>
-                Home installations, property maintenance, yard work and renovations – simple and hassle-free.
+
+            <p class="hero-subtitle">
+                Installations, garden maintenance, renovations and property maintenance completed quickly and as agreed.
             </p>
 
             <a href="#yhteystiedot" class="cta-button">
-                Request a quote
+                Request a Free Quote
             </a>
 
         </div>
     </div>
+</section>
+
+<section class="quick-trust">
+    <ul>
+        <li>Household tax deduction eligible work</li>
+        <li>Services starting from €55 per hour</li>
+        <li>Fully insured and responsible service</li>
+        <li>Fast response – often available the same or next day</li>
+        <li>Clear pricing and agreed schedules</li>
+        <li>All services from one reliable provider</li>
+    </ul>
+</section>
+
+<section class="quick-action">
+
+    <h2>Why Choose Us?</h2>
+
+    <h2>All Property and Handyman Services in One Place</h2>
+
+    <p>
+        We provide comprehensive home and property services throughout Helsinki and the Greater Helsinki area.
+    </p>
+
+    <p>
+        We handle both small everyday tasks and larger projects quickly, professionally and according to schedule – without unnecessary middlemen.
+    </p>
+
+    <p>
+        Clear pricing, fast service and reliable workmanship.
+    </p>
+
+    <div style="text-align:center; margin-top:30px;">
+        <a href="#yhteystiedot" class="cta-button">
+            Request a Quote Easily
+        </a>
+    </div>
+
 </section>
 
 <section id="palvelut" class="services-section">
@@ -137,11 +191,12 @@ You can usually get a worker on the same day or the next day.
 <h2>Services</h2>
 
 <p>
-    Stadin Fixarit Oy provides versatile services for households, housing companies and businesses in Helsinki and the capital region.
+We provide practical and fast services for households,
+housing associations and businesses in Helsinki and the Greater Helsinki area.
 </p>
 
 <p class="highlight-text">
-    Some of our services are eligible for household tax credit.
+    Many of our services qualify for household tax deductions.
 </p>
 
 <div class="services-container">
@@ -150,189 +205,169 @@ You can usually get a worker on the same day or the next day.
 
         <div class="icon"><i class="fa-solid fa-house"></i></div>
 
-        <h3>Home installation services</h3>
+        <h3>Home Installation Services</h3>
 
         <p class="highlight-text">
-            Fast and careful installations for everyday needs – from small tasks to full furniture setups.
+            Fast and careful installations for everyday needs – from small tasks to complete furniture setups.
         </p>
 
         <ul>
-            <li>Mounting of paintings, shelves and mirrors</li>
+            <li>Mounting pictures, shelves and mirrors</li>
             <li>Furniture assembly, moving and disassembly</li>
             <li>Appliance installation and setup</li>
-            <li>Curtain rods, rails and lighting installation</li>
-            <li>Other small household installations</li>
+            <li>Installing curtain rails, curtain poles and lighting</li>
+            <li>Other small home installation work</li>
         </ul>
 
-        <button class="cta-button">Read more</button>
+        <button class="cta-button">Read More</button>
     </a>
 
     <a href="../en/pihapalvelut.html" class="service-item">
 
         <div class="icon"><i class="fa-solid fa-leaf"></i></div>
 
-        <h3>Yard services</h3>
+        <h3>Garden Services</h3>
 
         <p class="highlight-text">
-            Yard maintenance and outdoor areas kept clean all year round – reliably and on schedule.
+            Keeping gardens and outdoor areas tidy throughout the year – reliably and on schedule.
         </p>
 
         <ul>
-            <li>Yard cleaning and leaf removal</li>
-            <li>Lawn and hedge trimming</li>
-            <li>Tree cutting and clearing work</li>
-            <li>Snow removal and sanding</li>
+            <li>Garden cleaning and leaf removal</li>
+            <li>Lawn mowing and hedge trimming</li>
+            <li>Tree felling and clearing work</li>
+            <li>Snow removal and gritting</li>
         </ul>
 
-        <button class="cta-button">Read more</button>
+        <button class="cta-button">Read More</button>
     </a>
 
     <a href="../en/remontti.html" class="service-item">
 
         <div class="icon"><i class="fa-solid fa-hammer"></i></div>
 
-        <h3>Renovation services</h3>
+        <h3>Renovation Services</h3>
 
         <p class="highlight-text">
-            Clean and well-planned renovations – from small repairs to full interior projects.
+            Clean and professionally completed renovations delivered on schedule – from minor repairs to full room renovations.
         </p>
 
         <ul>
             <li>Floor installation and surface renewal</li>
-            <li>Doors, trims and fixtures installation</li>
-            <li>Bathroom and kitchen small renovations</li>
-            <li>Painting and surface work</li>
+            <li>Installation of doors, trims and fittings</li>
+            <li>Bathroom and kitchen refurbishments</li>
+            <li>Painting and interior surface work</li>
             <li>Demolition and repair work</li>
         </ul>
 
-        <button class="cta-button">Read more</button>
+        <button class="cta-button">Read More</button>
     </a>
 
     <a href="../en/hautakivipalvelut.html" class="service-item">
 
         <div class="icon"><i class="fa-solid fa-monument"></i></div>
 
-        <h3>Gravestone services</h3>
+        <h3>Gravestone Services</h3>
 
         <p class="highlight-text">
-            Respectful and careful gravestone maintenance – done professionally and with dignity.
+            Respectful and carefully carried out gravestone maintenance completed professionally and with dignity.
         </p>
 
         <ul>
             <li>Gravestone straightening and maintenance</li>
-            <li>Cleaning and restoration</li>
-            <li>Grave site upkeep and maintenance</li>
+            <li>Gravestone cleaning and restoration</li>
+            <li>Gravesite cleaning and upkeep</li>
         </ul>
 
-        <button class="cta-button">Read more</button>
+        <button class="cta-button">Read More</button>
     </a>
 
     <a href="../en/yrityksille.html" class="service-item">
 
         <div class="icon"><i class="fa-solid fa-building"></i></div>
 
-        <h3>Business services</h3>
+        <h3>Business Services</h3>
 
         <p class="highlight-text">
             Flexible and reliable service solutions for businesses – for urgent needs and long-term partnerships.
         </p>
 
         <ul>
-            <li>Continuous property maintenance</li>
+            <li>Ongoing property maintenance</li>
             <li>Property care and maintenance work</li>
-            <li>Renovations and repairs</li>
-            <li>Yard work and outdoor maintenance</li>
+            <li>Renovation and repair services</li>
+            <li>Garden and outdoor area maintenance</li>
         </ul>
 
-        <button class="cta-button">Go to business services</button>
+        <button class="cta-button">Go to Business Services</button>
     </a>
-    
-<a href="../en/about.html" class="service-item">
 
-    <div class="icon"><i class="fa-solid fa-handshake"></i></div>
+    <a href="../en/about.html" class="service-item">
 
-    <h3>About Us</h3>
+        <div class="icon"><i class="fa-solid fa-handshake"></i></div>
 
-    <p class="highlight-text">
-        A reliable and fast partner for home, property, and maintenance services in Helsinki and the surrounding area.
-        We deliver efficient, professional work without unnecessary middlemen.
-    </p>
+        <h3>About Us</h3>
 
-    <ul>
-        <li>Fast and reliable services</li>
-        <li>Trained and experienced professionals</li>
-        <li>Clear communication – we speak Finnish, Swedish, and English when needed</li>
-        <li>Precise and professional workmanship</li>
-    </ul>
+        <p class="highlight-text">
+            A reliable and responsive partner for home, garden and property work in Helsinki – we complete every job efficiently and professionally.
+        </p>
 
-    <button class="cta-button">Learn more about us</button>
+        <ul>
+            <li>Fast and reliable services</li>
+            <li>Experienced and skilled professionals</li>
+            <li>Clear communication in Finnish, Swedish and English when needed</li>
+            <li>Accurate and professional workmanship</li>
+        </ul>
 
-</a>
+        <button class="cta-button">Read More About Us</button>
+
+    </a>
 </div>
 
 </section>
 
-    <section class="quick-action">
-
-    <h2>All property and handyman services in one place in Helsinki</h2>
-
-    <p>
-        Stadin Fixarit Oy offers a complete range of services: home installations, garden work,
-        renovations, property maintenance, and grave care services in Helsinki and the wider capital region.
-    </p>
-
-    <p>
-        With us, you get a fast and reliable professional for both small everyday tasks and larger projects –
-        without intermediaries and without unnecessary waiting times.
-    </p>
-
-    <div class="quick-trust">
-
-        <p>
-            ✔ Work eligible for household tax deduction  
-            ✔ Insured and responsible operations  
-            ✔ Fast response – often same or next day  
-            ✔ Clear pricing and agreed schedules  
-            ✔ All services from a single provider
-        </p>
-
-    </div>
-
-    <div style="text-align:center; margin-top:30px;">
-        <a href="#yhteystiedot" class="cta-button">
-            Request a quote easily
-        </a>
-    </div>
-
-    </section>
-    
 <section id="yhteystiedot" class="contact-section">
 
     <h2>Contact</h2>
 
+    <p class="contact-lead">
+        Tell us what you need – we will respond quickly and provide a clear quote without obligation.
+    </p>
+
     <div class="contact-container">
 
-        <div class="contact-info">
-            <p><strong>Email:</strong> info@stadin-fixarit.fi</p>
-            <p><strong>Phone:</strong> +358 46 803 6951</p>
-            <p><strong>Location:</strong> Helsinki</p>
-        </div>
+    <div class="contact-info">
+        <p><strong>Email:</strong> info@stadin-fixarit.fi</p>
+        <p><strong>Phone:</strong> +358 46 803 6951</p>
+        <p><strong>Location:</strong> Helsinki</p>
+    </div>
+
+    <div class="contact-form-wrapper">
+
+        <h3>Request a Quote Easily</h3>
+
+        <p class="form-hint">
+            Fill in the form and we will get back to you quickly.
+        </p>
 
         <form action="https://formspree.io/f/xwvarbkg" method="POST">
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="phone" placeholder="Phone" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
             <textarea name="message" placeholder="Message" rows="5" required></textarea>
             <button type="submit">Send</button>
         </form>
-    </div> 
-   <!-- GOOGLE MAPS -->
+
+    </div>
+
     <div class="map">
         <iframe 
             src="https://www.google.com/maps?q=Helsinki&output=embed"
             allowfullscreen
             loading="lazy">
         </iframe>
+    </div>
+
     </div>
 </section>
 
@@ -342,8 +377,8 @@ You can usually get a worker on the same day or the next day.
 
         <div class="footer-block">
             <h3>Stadin Fixarit Oy</h3>
-            <p>Helsinki & capital region</p>
-            <p>Reliable services</p>
+            <p>Helsinki & Greater Helsinki Area</p>
+            <p>Reliable Services</p>
         </div>
 
         <div class="footer-block">
@@ -351,21 +386,25 @@ You can usually get a worker on the same day or the next day.
 
             <a href="tel:+358468036951">📞 +358 46 803 6951</a>
             <a href="mailto:info@stadin-fixarit.fi">✉️ info@stadin-fixarit.fi</a>
+
             <a href="https://wa.me/358468036951" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a>
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
         </div>
 
         <div class="footer-block">
-            <h3>Follow us</h3>
+            <h3>Follow Us</h3>
+
             <a href="https://www.facebook.com/stadinfixarit">Facebook</a>
             <a href="https://www.instagram.com/stadin_fixarit">Instagram</a>
         </div>
 
     </div>
- <div class="footer-bottom">
+
+    <div class="footer-bottom">
         <p>© Stadin Fixarit Oy</p>
     </div>
+
 </footer>
 
 <script src="../js/script.js"></script>
