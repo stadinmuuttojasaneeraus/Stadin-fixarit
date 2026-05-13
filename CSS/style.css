@@ -106,7 +106,6 @@ header {
 }
 /* TRUST BLOCK */
 .quick-trust {
-.quick-trust {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
