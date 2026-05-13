@@ -142,30 +142,23 @@ HERO (BASE ONLY)
 }
 
 /* =========================
-QUICK TRUST (FINAL 2-COLUMN)
+QUICK TRUST
 ========================= */
 .quick-trust {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 14px;
     max-width: 1100px;
     margin: 40px auto;
 }
 
 .quick-trust span {
     display: flex;
-    align-items: center;
     gap: 12px;
-    padding: 18px;
-    background: #f5f9ff;
+    padding: 16px;
+    background: #fff;
     border-radius: 14px;
-    border: 1px solid #e6e6e6;
-    font-weight: 600;
-}
-
-.quick-trust i {
-    color: #003366;
-    font-size: 18px;
+    border: 1px solid #e5e5e5;
 }
 
 /* =========================
@@ -252,7 +245,7 @@ CONTACT
 }
 
 /* =========================
-FAQ UNIFIED (INDEX + SERVICES)
+FAQ (BASE)
 ========================= */
 .faq-section {
     max-width: 1000px;
@@ -260,31 +253,8 @@ FAQ UNIFIED (INDEX + SERVICES)
 }
 
 .faq-item {
-    background: #ffffff;
-    border: 1px solid #e6e6e6;
-    border-radius: 12px;
-    padding: 18px 20px;
-    margin-bottom: 12px;
-    transition: 0.2s ease;
-}
-
-.faq-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-}
-
-.faq-item h3 {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    color: #003366;
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.faq-item p {
-    color: #333;
-    line-height: 1.6;
+    border-bottom: 1px solid #eee;
+    padding: 16px 0;
 }
 
 /* =========================
