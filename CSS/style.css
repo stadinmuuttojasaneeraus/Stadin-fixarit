@@ -16,8 +16,6 @@ body {
     background: #ffffff;
     color: #003366;
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
 }
 
@@ -25,17 +23,17 @@ body {
 GLOBAL SECTIONS
 ========================= */
 section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: 20px auto;
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 /* =========================
-HEADER
+HEADER + NAV
 ========================= */
 header {
     background: #003366;
-    color: #ffffff;
+    color: #fff;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -43,18 +41,32 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    width: 100%;
 }
 
 .logo img {
-    height: 90px;
+    height: 70px;
     width: auto;
-    display: block;
 }
 
 /* =========================
-MENU
+HAMBURGER MENU
 ========================= */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger div {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* SIDE MENU */
 .menu {
     position: fixed;
     top: 0;
@@ -64,28 +76,42 @@ MENU
     background: #003366;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     padding: 80px 20px;
-    transition: 0.3s ease;
-    z-index: 1000;
+    transition: 0.3s;
 }
 
-.menu.active { right: 0; }
+.menu.active {
+    right: 0;
+}
 
 .menu a {
     color: #fff;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
+}
+
+.menu-section {
+    color: #ccc;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.menu-cta {
+    background: #fff;
+    color: #003366 !important;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
 }
 
 .menu-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.5);
     opacity: 0;
     pointer-events: none;
     transition: 0.3s;
-    z-index: 900;
 }
 
 .menu-overlay.active {
@@ -94,51 +120,42 @@ MENU
 }
 
 /* =========================
-HAMBURGER
-========================= */
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 32px;
-    height: 26px;
-    cursor: pointer;
-    z-index: 1100;
-}
-
-.hamburger div {
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
-}
-
-/* =========================
-HERO (BASE ONLY)
+HERO
 ========================= */
 #hero {
-    position: relative;
-    min-height: 450px;
+    min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-    color: #fff;
     background-size: cover;
     background-position: center;
+    position: relative;
+    color: #fff;
+    text-align: center;
 }
 
 #hero::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,51,102,0.45);
+    background: rgba(0,0,0,0.45);
 }
 
 .hero-container {
     position: relative;
     z-index: 1;
-    text-align: center;
-    max-width: 900px;
+    max-width: 800px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #003366;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 /* =========================
@@ -146,44 +163,115 @@ QUICK TRUST
 ========================= */
 .quick-trust {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    max-width: 1100px;
-    margin: 40px auto;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
 }
 
 .quick-trust span {
-    display: flex;
-    gap: 12px;
-    padding: 16px;
     background: #fff;
-    border-radius: 14px;
     border: 1px solid #e5e5e5;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 /* =========================
 QUICK ACTION
 ========================= */
 .quick-action {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 50px 20px;
-    text-align: center;
     background: #f6f9ff;
-    border-radius: 14px;
+    padding: 60px 20px;
+    border-radius: 12px;
+    text-align: center;
 }
 
 /* =========================
-CTA BUTTON
+SERVICES
 ========================= */
-.cta-button {
-    display: inline-block;
-    padding: 12px 25px;
+.services-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    display: block;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+}
+
+.service-item .icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.service-item ul {
+    margin-top: 10px;
+    padding-left: 18px;
+    font-size: 14px;
+}
+
+/* =========================
+TESTIMONIALS
+========================= */
+.testimonials {
+    text-align: center;
+}
+
+.testimonial-item {
+    margin-top: 20px;
+    padding: 20px;
+    border-left: 4px solid #003366;
+    background: #f9f9f9;
+}
+
+/* =========================
+CONTACT
+========================= */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.contact-form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 12px;
     background: #003366;
     color: #fff;
+    border: none;
     border-radius: 6px;
-    font-weight: 700;
-    text-decoration: none;
+    cursor: pointer;
+}
+
+/* =========================
+FAQ
+========================= */
+.faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
 }
 
 /* =========================
@@ -192,93 +280,38 @@ FOOTER
 .footer {
     background: #003366;
     color: #fff;
-    padding: 60px 20px 20px;
+    padding: 40px 20px;
 }
 
 .footer-container {
-    max-width: 1100px;
-    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
-/* =========================
-CONTACT
-========================= */
-.contact-container {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
 }
 
-/* FORM */
-.contact-container form {
-    flex: 1;
-    min-width: 300px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 16px;
-}
-
-/* INPUT */
-.contact-container input,
-.contact-container textarea {
-    width: 100%;
-    padding: 14px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-}
-
-/* MAP */
-.map {
-    flex: 0 0 260px;
-    max-width: 260px;
-}
-
-.map iframe {
-    width: 100%;
-    height: 220px;
-    border: 0;
-}
-
-/* =========================
-FAQ (BASE)
-========================= */
-.faq-section {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    border-bottom: 1px solid #eee;
-    padding: 16px 0;
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
 }
 
 /* =========================
 MOBILE
 ========================= */
 @media (max-width: 768px) {
+
     section {
-        margin: 10px;
-        padding: 25px 15px;
-    }
-
-    .quick-trust {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .map {
-        max-width: 100%;
+        padding: 30px 15px;
     }
 
     .logo img {
-        height: 65px;
+        height: 55px;
     }
 }
