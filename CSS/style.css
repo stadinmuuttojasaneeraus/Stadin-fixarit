@@ -321,3 +321,32 @@ MOBILE
         height: 55px;
     }
 }
+@media (max-width: 900px) and (orientation: landscape) {
+
+    .menu {
+        width: 100%;
+        right: -100%;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px 30px;
+
+        padding: 80px 30px 30px;
+
+        align-content: start;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    .menu-section {
+        grid-column: span 2;
+    }
+
+    .menu-cta,
+    .menu-back {
+        grid-column: span 2;
+    }
+}
