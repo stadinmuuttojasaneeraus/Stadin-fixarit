@@ -71,24 +71,26 @@ HAMBURGER MENU
     position: fixed;
     top: 0;
     right: -300px;
+
     width: 260px;
-    height: 100dvh; /* bättre än 100% på mobil */
+    height: 100vh;
+
     background: #003366;
 
     display: flex;
     flex-direction: column;
+
     gap: 15px;
 
-    padding: 80px 20px 30px;
+    padding: 80px 20px 40px;
 
-    transition: 0.3s;
+    transition: right 0.3s ease;
 
-    overflow-y: auto; /* VIKTIGT */
+    overflow-y: auto;
+
     -webkit-overflow-scrolling: touch;
-}
 
-.menu.active {
-    right: 0;
+    z-index: 1200;
 }
 
 .menu a {
@@ -321,32 +323,11 @@ MOBILE
         height: 55px;
     }
 }
-@media (max-width: 900px) and (orientation: landscape) {
 
-    .menu {
-        width: 100%;
-        right: -100%;
+.menu.active {
+    right: 0;
+}
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        gap: 12px 30px;
-
-        padding: 80px 30px 30px;
-
-        align-content: start;
-    }
-
-    .menu.active {
-        right: 0;
-    }
-
-    .menu-section {
-        grid-column: span 2;
-    }
-
-    .menu-cta,
-    .menu-back {
-        grid-column: span 2;
-    }
+body.menu-open {
+    overflow: hidden;
 }
