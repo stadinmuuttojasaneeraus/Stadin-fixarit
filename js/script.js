@@ -12,22 +12,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (hamburger && menu && overlay) {
 
-        hamburger.addEventListener("click", () => {
-            menu.classList.toggle("active");
-            overlay.classList.toggle("active");
-        });
+    hamburger.addEventListener("click", () => {
 
-        overlay.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        overlay.classList.toggle("active");
+
+        document.body.classList.toggle("menu-open");
+    });
+
+    overlay.addEventListener("click", () => {
+
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+
+        document.body.classList.remove("menu-open");
+    });
+
+    menu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
             menu.classList.remove("active");
             overlay.classList.remove("active");
-        });
 
-        menu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                menu.classList.remove("active");
-                overlay.classList.remove("active");
-            });
+            document.body.classList.remove("menu-open");
         });
+    });
     }
 
     // FORM
