@@ -292,6 +292,11 @@ SERVICES
 .service-item .cta-button {
     align-self: center;
 }
+
+.service-item h3 {
+    text-align: center;
+}
+
 /* =========================
 TESTIMONIALS
 ========================= */
