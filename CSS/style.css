@@ -409,7 +409,9 @@ FOOTER
 }
 
 .footer a i {
-    margin-right: 8px;
+    width: 18px;
+    text-align: center;
+    display: inline-block;
 }
 
 .footer-bottom {
