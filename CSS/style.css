@@ -131,17 +131,23 @@ HAMBURGER MENU
 HERO
 ========================= */
 #hero {
-    min-height: 500px;
+    min-height: 420px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     background-size: cover;
     background-position: center;
+
     position: relative;
+
     color: #fff;
     text-align: center;
-}
 
+    padding: 60px 20px;
+}
+    
 #hero::before {
     content: "";
     position: absolute;
@@ -193,6 +199,11 @@ QUICK ACTION
     padding: 60px 20px;
     border-radius: 12px;
     text-align: center;
+}
+
+.quick-action p {
+    max-width: 800px;
+    margin: 0 auto 18px;
 }
 
 /* =========================
