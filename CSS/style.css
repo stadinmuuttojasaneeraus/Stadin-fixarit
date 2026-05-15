@@ -265,7 +265,9 @@ SERVICES
 }
 
 .service-item {
-    display: block;
+    display: flex;
+    flex-direction: column;
+
     padding: 20px;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
@@ -277,6 +279,8 @@ SERVICES
 .service-item .icon {
     font-size: 28px;
     margin-bottom: 10px;
+
+    text-align: center;
 }
 
 .service-item ul {
@@ -285,6 +289,9 @@ SERVICES
     font-size: 14px;
 }
 
+.service-item .cta-button {
+    align-self: center;
+}
 /* =========================
 TESTIMONIALS
 ========================= */
