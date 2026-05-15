@@ -280,8 +280,22 @@ FAQ
 .faq-item {
     border-bottom: 1px solid #eee;
     padding: 15px 0;
+    display: none;
 }
 
+.faq-item.visible {
+    display: block;
+}
+
+.faq-button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
 /* =========================
 FOOTER
 ========================= */
