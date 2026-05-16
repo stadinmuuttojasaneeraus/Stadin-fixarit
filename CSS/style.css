@@ -471,3 +471,111 @@ MOBILE
 body.menu-open {
     overflow: hidden;
 }
+
+/* =========================
+BEFORE / AFTER SECTION (ISOLATED)
+========================= */
+
+.ba-section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ba-header h2 {
+    margin-bottom: 8px;
+}
+
+.ba-header p {
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+/* SLIDER WRAPPER */
+.ba-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+/* TRACK */
+.ba-track {
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 100%;
+}
+
+/* EACH SLIDE */
+.ba-item {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* IMAGE BLOCK */
+.ba-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ba-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* LABELS */
+.ba-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.ba-label.before {
+    background: #b00020;
+}
+
+.ba-label.after {
+    background: #007a3d;
+}
+
+/* BUTTONS */
+.ba-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.ba-btn.prev {
+    left: 10px;
+}
+
+.ba-btn.next {
+    right: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .ba-item {
+        grid-template-columns: 1fr;
+    }
+
+    .ba-image img {
+        height: 220px;
+    }
+}
