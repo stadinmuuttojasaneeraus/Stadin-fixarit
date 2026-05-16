@@ -380,6 +380,11 @@ FAQ
     border-radius: 6px;
     cursor: pointer;
 }
+/* CENTER FAQ BUTTON (ADD ON - SAFE) */
+.faq-button {
+    display: block;
+    margin: 25px auto 0 auto;
+}
 
 /* =========================
 FOOTER
