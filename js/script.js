@@ -81,6 +81,39 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+  // =========================
+// BEFORE / AFTER SLIDER (SAFE GLOBAL)
+// =========================
+
+const baSection = document.querySelector(".ba-section");
+
+if (baSection) {
+
+    let index = 0;
+
+    const track = baSection.querySelector(".ba-track");
+    const items = baSection.querySelectorAll(".ba-item");
+    const nextBtn = baSection.querySelector(".ba-btn.next");
+    const prevBtn = baSection.querySelector(".ba-btn.prev");
+
+    if (track && items.length && nextBtn && prevBtn) {
+
+        function update() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        nextBtn.addEventListener("click", () => {
+            index = (index + 1) % items.length;
+            update();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + items.length) % items.length;
+            update();
+        });
+
+    }
+}
     // FORM
     const form = document.querySelector("form");
     if (form) {
