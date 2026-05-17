@@ -68,14 +68,37 @@ WHAT WE DO GRID
     border-radius: 12px;
     background: #fff;
 }
+/* Mobilanpassning för skärmar under 768px */
+@media (max-width: 768px) {
+    
+    /* 1. Monteringslistan (Huonekalut, TV, etc.) - Behåller 2 kolumner men minskar gap för små skärmar */
+    .what-we-do .service-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 10px !important; 
+    }
 
-/* =========================
-FAQ ENHANCED
-========================= */
-.faq-item h3 {
-    display: flex;
-    gap: 10px;
-    color: #003366;
+    .what-we-do .service-item {
+        padding: 10px !important;
+        font-size: 14px; /* Gör texten aningen mindre så allt ryms på en rad i boxen */
+        flex-direction: column; /* Lägger ikonen ovanför texten så det blir symmetriskt */
+        text-align: center;
+        align-items: center;
+    }
+
+    /* 2. "Näin palvelu toimii" (Steg 1, 2, 3) - Tvingas till EN rak rad (vertikalt staplade) */
+    .quick-action .services-container {
+        display: flex !important;
+        flex-direction: column !important; /* Staplar stegen under varandra */
+        gap: 15px !important;
+    }
+
+    .quick-action .service-item {
+        display: block !important;
+        width: 100% !important;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+        background: #fff !important;
+        border-bottom: none !important;
+    }
 }
 
 /* =========================
