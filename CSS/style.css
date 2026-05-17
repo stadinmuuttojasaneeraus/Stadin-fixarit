@@ -362,6 +362,11 @@ button {
 FAQ
 ========================= */
 
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 30px; /* Ger lite luft ner till första frågan */
+}
+
 .faq-item {
     border-bottom: 1px solid #eee;
     padding: 15px 0;
