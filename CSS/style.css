@@ -380,6 +380,9 @@ FAQ
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #222222; /* Tvingar texten att bli mörk och synlig */
+    line-height: 1.4;
+    padding: 5px 0;
 }
 
 .faq-answer {
