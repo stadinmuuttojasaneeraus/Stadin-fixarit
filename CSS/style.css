@@ -250,6 +250,23 @@ QUICK ACTION
     margin: 0 auto 18px;
 }
 
+/* Mobilanpassning för just denna container (skärmar under 768px) */
+@media (max-width: 768px) {
+    .quick-action .services-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Tvingar fram exakt 2 kolumner */
+        gap: 10px !important; /* Ger ett litet mellanrum mellan rutorna */
+    }
+
+    .quick-action .service-item {
+        padding: 10px !important; /* Krymper paddingen något så att allt får plats på bredden */
+        border-bottom: none !important; /* Tar bort linjen under eftersom de nu ligger i ett rutnät */
+        background: #fdfdfd; /* Valfritt: ger en svag bakgrund till varje ruta så de syns tydligt */
+        border-radius: 4px;
+        text-align: center; /* Centrerar texten för ett snyggare utseende i små rutor */
+    }
+}
+
 /* =========================
 SERVICES
 ========================= */
