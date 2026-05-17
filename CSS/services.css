@@ -52,54 +52,128 @@ SERVICE CTA BAND
     border-radius: 18px;
 }
 
-/* =========================
-WHAT WE DO GRID
-========================= */
-.what-we-do .service-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+/* ==========================================================================
+   SERVICES UNDERSIDA - SPECIFIK STYLING (Ingen påverkan på index.html)
+   ========================================================================== */
+
+/* --- 1. Monteringslistan (Mitä kodin asennuspalveluihin kuuluu?) --- */
+.installation-grid {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-.what-we-do .service-item {
-    display: flex;
-    gap: 10px;
-    padding: 14px;
-    border-radius: 12px;
-    background: #fff;
+.installation-item {
+    flex: 1;
+    min-width: 280px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
 }
-/* Mobilanpassning för skärmar under 768px */
+
+.installation-item p {
+    margin: 0;
+}
+
+.installation-item i {
+    margin-right: 10px;
+    color: #003366;
+}
+
+/* --- 2. Processen (Näin palvelu toimii) --- */
+.how-it-works-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.how-it-works-section h2 {
+    margin-bottom: 30px;
+}
+
+.how-it-works-section .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.how-it-works-section .service-item {
+    flex: 1;
+    min-width: 250px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.how-it-works-section .service-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.how-it-works-section .service-item h3 i {
+    color: #003366;
+    margin-right: 10px;
+}
+
+.how-it-works-section .service-item p {
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================================
+   ISOLERAD MOBILANPASSNING (Endast för skärmar under 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
     
-    /* 1. Monteringslistan (Huonekalut, TV, etc.) - Behåller 2 kolumner men minskar gap för små skärmar */
-    .what-we-do .service-grid {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 10px !important; 
+    /* Monteringslistan tvingas till 2 kolumner på mobilen */
+    .installation-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
     }
 
-    .what-we-do .service-item {
-        padding: 10px !important;
-        font-size: 14px; /* Gör texten aningen mindre så allt ryms på en rad i boxen */
-        flex-direction: column; /* Lägger ikonen ovanför texten så det blir symmetriskt */
-        text-align: center;
-        align-items: center;
+    .installation-item {
+        padding: 12px 8px !important;
+        background: #fdfdfd !important;
+        border-radius: 6px !important;
+        border-bottom: none !important;
+        text-align: center !important;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
     }
 
-    /* 2. "Näin palvelu toimii" (Steg 1, 2, 3) - Tvingas till EN rak rad (vertikalt staplade) */
-    .quick-action .services-container {
+    .installation-item p strong {
         display: flex !important;
-        flex-direction: column !important; /* Staplar stegen under varandra */
+        flex-direction: column !important; /* Lägger ikonen ovanför texten på mobilen */
+        align-items: center !important;
+        gap: 6px !important;
+        font-size: 13px !important; /* Skyddar texten från att bli för stor i små rutor */
+    }
+
+    .installation-item i {
+        margin-right: 0 !important; /* Nollställer sidomarginalen då ikonen centrerats */
+        font-size: 18px !important;
+    }
+
+    /* Processen (Steg 1, 2, 3) tvingas till EN enda rak rad (vertikalt staplade) */
+    .how-it-works-section .services-container {
+        display: flex !important;
+        flex-direction: column !important;
         gap: 15px !important;
     }
 
-    .quick-action .service-item {
-        display: block !important;
+    .how-it-works-section .service-item {
         width: 100% !important;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
-        background: #fff !important;
-        border-bottom: none !important;
+        box-sizing: border-box !important;
     }
 }
+
 
 /* =========================
 CTA SUBTEXT
