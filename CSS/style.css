@@ -365,10 +365,7 @@ FAQ
 .faq-item {
     border-bottom: 1px solid #eee;
     padding: 15px 0;
-}
-
-.faq-item.visible {
-    display: block;
+    display: block; /* Säkerställer att alla frågor alltid syns */
 }
 
 .faq-question {
@@ -386,18 +383,21 @@ FAQ
 }
 
 .faq-answer {
-    display: none;
+    display: none; /* Döljer svaren som standard */
     padding-top: 15px;
 }
 
 .faq-answer p {
     line-height: 1.7;
     color: #555;
+    margin: 0;
 }
 
+/* Visar svaret när man klickat på frågan */
 .faq-item.active .faq-answer {
-    display: block;
+    display: block; 
 }
+
 
 .faq-button {
     margin-top: 20px;
