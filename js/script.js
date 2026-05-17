@@ -42,46 +42,86 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // =========================
-    // FAQ (GLOBAL - ALL SITES)
-    // =========================
-    const faqSections = document.querySelectorAll(".faq-section");
+// FAQ (GLOBAL - ALL SITES)
+// =========================
 
-    faqSections.forEach(section => {
+const faqSections = document.querySelectorAll(".faq-section");
 
-        const items = section.querySelectorAll(".faq-item");
-        const button = section.querySelector(".js-faq-toggle");
+faqSections.forEach(section => {
 
-        if (!button || !items.length) return;
+    const items = section.querySelectorAll(".faq-item");
+    const button = section.querySelector(".js-faq-toggle");
 
-        const limit = parseInt(section.dataset.faq) || 3;
+    if (!items.length) return;
 
-        let expanded = false;
+    const limit = parseInt(section.dataset.faq) || 4;
 
-        items.forEach((item, index) => {
-            if (index < limit) {
-                item.classList.add("visible");
-            }
-        });
+    let expanded = false;
+
+    // Show first items
+    items.forEach((item, index) => {
+
+        if (index < limit) {
+            item.classList.add("visible");
+        }
+
+    });
+
+    // Hide button if too few items
+    if (button && items.length <= limit) {
+        button.style.display = "none";
+    }
+
+    // Show more button
+    if (button) {
 
         button.addEventListener("click", () => {
 
             expanded = !expanded;
 
             items.forEach((item, index) => {
+
                 if (expanded) {
+
                     item.classList.add("visible");
                     button.textContent = "Näytä vähemmän";
+
                 } else {
+
                     if (index >= limit) {
+
                         item.classList.remove("visible");
+                        item.classList.remove("active");
+
                     }
+
                     button.textContent = "Näytä lisää kysymyksiä";
                 }
+
             });
+
         });
+
+    }
+
+    // Accordion
+    items.forEach(item => {
+
+        const question = item.querySelector(".faq-question");
+
+        if (!question) return;
+
+        question.addEventListener("click", () => {
+
+            item.classList.toggle("active");
+
+        });
+
     });
 
-  // =========================
+});
+  
+// =========================
 // BEFORE / AFTER SLIDER (SAFE GLOBAL)
 // =========================
 
