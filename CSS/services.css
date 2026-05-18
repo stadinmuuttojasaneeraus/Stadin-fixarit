@@ -977,3 +977,18 @@ section .highlight-text {
     opacity: 1 !important;     /* Tar bort eventuell transparens */
 }
     
+/* ==========================================================================
+   LANDSCAPE FIX: OVERRIDE WHITE MEDIA QUERIES FROM STYLE.CSS
+   ========================================================================== */
+@media (max-width: 900px) and (orientation: landscape), (max-width: 768px) {
+    body, 
+    section.quick-action, 
+    section.how-it-works-section, 
+    section.faq-section,
+    section.service-trust-section {
+        background-color: #002b5c !important; /* Tvingar tillbaka din mörkblå färg */
+        background-image: linear-gradient(180deg, #00234a 0%, #00336c 100%) !important;
+        background-attachment: fixed !important;
+    }
+}
+    
