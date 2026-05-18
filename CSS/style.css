@@ -216,19 +216,19 @@ HERO LANDSCAPE MOBILE
         font-size: 16px;
     }
 }
-/* ==========================================================================
-   QUICK TRUST & QUICK ACTION (PREMIUM UPDATE)
-   ========================================================================== */
 
-/* --- 1. QUICK TRUST (Övre sektionen) --- */
+/* ==========================================================================
+   QUICK TRUST (ULTRA-PREMIUM ALIVE BLUE UPDATE)
+   ========================================================================== */
 .quick-trust {
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
     gap: 20px !important;
-    padding: 30px 20px !important;
-    background-color: #002b5c !important; /* Elegant mörkblå bakgrund */
-    border-radius: 16px !important;
-    margin-bottom: 40px !important;
+    padding: 35px 25px !important;
+    background-color: #002b5c !important;
+    border-radius: 24px !important;
+    margin-bottom: 45px !important;
+    box-shadow: 0 20px 40px rgba(0, 43, 92, 0.15) !important;
     box-sizing: border-box !important;
 }
 
@@ -237,34 +237,67 @@ HERO LANDSCAPE MOBILE
 }
 
 .quick-trust span {
-    background: rgba(255, 255, 255, 0.08) !important; /* Subtil, modern glaseffekt */
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    padding: 18px 20px !important;
-    border-radius: 12px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-left: 4px solid rgba(56, 189, 248, 0.3) !important; 
+    padding: 20px 22px !important;
+    border-radius: 16px !important;
     display: flex !important;
-    gap: 14px !important;
+    gap: 15px !important;
     align-items: center !important;
-    color: #ffffff !important; /* Vit text på den blå bakgrunden */
-    font-size: 0.95rem !important;
+    color: #ffffff !important;
+    font-size: 0.98rem !important;
     font-weight: 500 !important;
     line-height: 1.4 !important;
     font-family: system-ui, -apple-system, sans-serif !important;
-    transition: background 0.3s ease, transform 0.3s ease !important;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-/* Litet lyft när man hovrar över tillitsboxarna */
 .quick-trust span:hover {
-    background: rgba(255, 255, 255, 0.14) !important;
-    transform: translateY(-3px) !important;
+    transform: translateY(-4px) !important;
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+    border-left-color: #38bdf8 !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Ikonerna i den övre sektionen */
 .quick-trust span i {
-    color: #38bdf8 !important; /* Ljusblå/cyan accentfärg för att ikonerna ska poppa */
-    font-size: 1.3rem !important;
+    color: #38bdf8 !important; 
+    font-size: 1.35rem !important;
     flex-shrink: 0 !important;
+    width: 35px !important;
+    height: 35px !important;
+    background-color: rgba(0, 43, 92, 0.4) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
 }
 
+.quick-trust span:hover i {
+    transform: scale(1.08) !important;
+    background-color: rgba(0, 43, 92, 0.6) !important;
+}
+
+@media (max-width: 768px) {
+    .quick-trust {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        padding: 25px 15px !important;
+        border-radius: 20px !important;
+        margin-bottom: 35px !important;
+    }
+    .quick-trust span {
+        padding: 16px 18px !important;
+        border-left-width: 3px !important;
+    }
+    .quick-trust span i {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 1.15rem !important;
+    }
+}
 
 /* --- 2. QUICK ACTION (Nedre sektionen med premium inramning) --- */
 .quick-action {
@@ -340,17 +373,7 @@ HERO LANDSCAPE MOBILE
 
 /* --- 3. RESPONSIVITET & MOBILANPASSNING --- */
 @media (max-width: 768px) {
-    .quick-trust {
-        grid-template-columns: 1fr !important; /* Enkel rak rad på mobilen för läsbarhet */
-        gap: 12px !important;
-        padding: 20px 15px !important;
-    }
-    
-    .quick-trust span {
-        padding: 14px 16px !important;
-    }
-
-    .quick-action {
+ .quick-action {
         padding: 40px 20px !important;
         margin-left: 10px !important;
         margin-right: 10px !important;
