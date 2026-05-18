@@ -216,54 +216,164 @@ HERO LANDSCAPE MOBILE
         font-size: 16px;
     }
 }
-/* =========================
-QUICK TRUST
-========================= */
+/* ==========================================================================
+   QUICK TRUST & QUICK ACTION (PREMIUM UPDATE)
+   ========================================================================== */
+
+/* --- 1. QUICK TRUST (Övre sektionen) --- */
 .quick-trust {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    gap: 20px !important;
+    padding: 30px 20px !important;
+    background-color: #002b5c !important; /* Elegant mörkblå bakgrund */
+    border-radius: 16px !important;
+    margin-bottom: 40px !important;
+    box-sizing: border-box !important;
+}
+
+.quick-trust *, .quick-trust *::before, .quick-trust *::after {
+    box-sizing: border-box !important;
 }
 
 .quick-trust span {
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    padding: 15px;
-    border-radius: 10px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
+    background: rgba(255, 255, 255, 0.08) !important; /* Subtil, modern glaseffekt */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 18px 20px !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    gap: 14px !important;
+    align-items: center !important;
+    color: #ffffff !important; /* Vit text på den blå bakgrunden */
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+    transition: background 0.3s ease, transform 0.3s ease !important;
 }
 
-/* =========================
-QUICK ACTION
-========================= */
+/* Litet lyft när man hovrar över tillitsboxarna */
+.quick-trust span:hover {
+    background: rgba(255, 255, 255, 0.14) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* Ikonerna i den övre sektionen */
+.quick-trust span i {
+    color: #38bdf8 !important; /* Ljusblå/cyan accentfärg för att ikonerna ska poppa */
+    font-size: 1.3rem !important;
+    flex-shrink: 0 !important;
+}
+
+
+/* --- 2. QUICK ACTION (Nedre sektionen med premium inramning) --- */
 .quick-action {
-    background: #f6f9ff;
-    padding: 60px 20px;
-    border-radius: 12px;
-    text-align: center;
+    background: #ffffff !important; /* Vit bas för kontrast */
+    background-image: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important; /* Mycket mjuk toning */
+    border: 1px solid #e2e8f0 !important; /* Elegant, ljusgrå ram runt hela sektionen */
+    padding: 60px 40px !important;
+    border-radius: 20px !important; /* Extra mjukt rundade hörn */
+    text-align: center !important;
+    box-shadow: 0 15px 40px rgba(0, 43, 92, 0.04) !important; /* Subtil mörkblåtonad skugga för djup */
+    max-width: 1000px !important;
+    margin: 0 auto 40px auto !important;
+    box-sizing: border-box !important;
 }
 
+.quick-action *, .quick-action *::before, .quick-action *::after {
+    box-sizing: border-box !important;
+}
+
+/* Huvudrubriken - Mörkblå och kraftfull */
+.quick-action h2 {
+    color: #002b5c !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 30px 0 !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+/* Brödtexten */
 .quick-action p {
-    max-width: 800px;
-    margin: 0 auto 18px;
+    max-width: 800px !important;
+    margin: 0 auto 20px auto !important;
+    color: #4a5568 !important; /* Mjukare mörkgrå text för ökad premiumkänsla */
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
 }
 
-/* Mobilanpassning för just denna container (skärmar under 768px) */
+/* Sista stycket får lite extra karaktär */
+.quick-action p:last-of-type {
+    margin-bottom: 35px !important;
+    font-weight: 500 !important;
+    color: #2d3748 !important;
+}
+
+/* CTA-knappen i botten */
+.quick-action .cta-button {
+    display: inline-block !important;
+    background-color: #002b5c !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    padding: 16px 45px !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 15px rgba(0, 43, 92, 0.2) !important;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+    border: none !important;
+}
+
+.quick-action .cta-button:hover {
+    background-color: #001f42 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.3) !important;
+}
+
+.quick-action .cta-button:active {
+    transform: translateY(0) !important;
+}
+
+
+/* --- 3. RESPONSIVITET & MOBILANPASSNING --- */
 @media (max-width: 768px) {
+    .quick-trust {
+        grid-template-columns: 1fr !important; /* Enkel rak rad på mobilen för läsbarhet */
+        gap: 12px !important;
+        padding: 20px 15px !important;
+    }
+    
+    .quick-trust span {
+        padding: 14px 16px !important;
+    }
+
+    .quick-action {
+        padding: 40px 20px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+
+    .quick-action h2 {
+        font-size: 1.75rem !important;
+    }
+
+    /* Behåller din specifika container-anpassning om den används i HTML */
     .quick-action .services-container {
         display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important; /* Tvingar fram exakt 2 kolumner */
-        gap: 10px !important; /* Ger ett litet mellanrum mellan rutorna */
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
     }
 
     .quick-action .service-item {
-        padding: 10px !important; /* Krymper paddingen något så att allt får plats på bredden */
-        border-bottom: none !important; /* Tar bort linjen under eftersom de nu ligger i ett rutnät */
-        background: #fdfdfd; /* Valfritt: ger en svag bakgrund till varje ruta så de syns tydligt */
-        border-radius: 4px;
-        text-align: center; /* Centrerar texten för ett snyggare utseende i små rutor */
+        padding: 12px !important;
+        border-bottom: none !important;
+        background: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
+        border-radius: 8px !important;
+        text-align: center !important;
     }
 }
 
