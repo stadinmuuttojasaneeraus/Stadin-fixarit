@@ -486,11 +486,11 @@ button {
 }
 
 /* ==========================================================================
-   FAQ SECTION (UNIFORM BLUE PREMIUM UPDATE)
+   FAQ SECTION (EXCLUSIVE ULTRA-PREMIUM BLUE UPDATE)
    ========================================================================== */
 
 .faq-section {
-    padding: 60px 20px !important;
+    padding: 80px 20px !important; /* Lite mer luft i topp/botten för premiumkänsla */
     max-width: 900px !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
@@ -503,130 +503,174 @@ button {
     box-sizing: border-box !important;
 }
 
-/* Huvudrubrik - Centrerad och mörkblå */
+/* Huvudrubrik - Centrerad, mörkblå och lite mer distinkt */
 .faq-section h2 {
     text-align: center !important;
     color: #002b5c !important;
-    font-size: 2.2rem !important;
+    font-size: 2.4rem !important;
     font-weight: 700 !important;
-    margin: 0 0 40px 0 !important;
+    margin: 0 0 50px 0 !important;
+    letter-spacing: -0.02em !important;
 }
 
-/* Varje enskilt FAQ-kort */
+/* Varje enskilt FAQ-kort - Uppdaterad med exklusivt djup och vänsterkant */
 .faq-section .faq-item {
     background: #ffffff !important;
-    border: 1px solid #eef2f5 !important;
-    border-radius: 12px !important;
-    margin-bottom: 15px !important;
+    border: 1px solid #e2e8f0 !important;
+    border-left: 4px solid rgba(0, 43, 92, 0.1) !important; /* Subtil blå ton på vänsterkanten */
+    border-radius: 16px !important; /* Något mjukare hörn */
+    margin-bottom: 18px !important;
     overflow: hidden !important;
-    box-shadow: 0 4px 15px rgba(0, 43, 92, 0.02) !important;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
-    display: none; /* Dölj alla frågor som standard så JavaScript kan styra via .visible */
+    
+    /* Elegant, djupare premiumskugga */
+    box-shadow: 0 10px 25px rgba(0, 43, 92, 0.03) !important;
+    
+    /* Mjuka övergångar för alla animationer */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
+    display: none; /* Styrs fortfarande av JavaScript via .visible */
 }
 
-/* Visar endast de frågor som JavaScript godkänner (de 4 första, samt resten vid klick) */
+/* Visar de frågor som JavaScript godkänner */
 .faq-section .faq-item.visible {
     display: block !important;
 }
 
-/* Subtil ram-effekt när man hovrar över ett kort */
+/* Elegant lyft och skuggförstärkning när man hovrar över ett stängt kort */
 .faq-section .faq-item:hover {
-    border-color: #d1d9e0 !important;
-    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.04) !important;
+    transform: translateY(-2px) !important;
+    border-color: #cbd5e1 !important;
+    border-left-color: #002b5c !important; /* Vänsterkanten blir mörkblå vid hover */
+    box-shadow: 0 14px 35px rgba(0, 43, 92, 0.06) !important;
 }
 
-/* Frågeknappen - Helt mörkblå text och generös klickyta */
+/* --- AKTIVT/ÖPPET STATUS (När JavaScript lägger till .active) --- */
+.faq-section .faq-item.active {
+    border-color: #002b5c !important;
+    border-left-color: #002b5c !important; /* Solid mörkblå kant när den är öppen */
+    background-color: #f8fafc !important; /* Mycket exklusiv, ljusgrå/blå bakgrundston i hela kortet */
+    box-shadow: 0 12px 30px rgba(0, 43, 92, 0.05) !important;
+}
+
+/* Frågeknappen - Exklusiv klickyta */
 .faq-section .faq-question {
     width: 100% !important;
-    background: #ffffff !important;
+    background: transparent !important;
     border: none !important;
-    padding: 22px 25px !important;
+    padding: 24px 28px !important;
     text-align: left !important;
-    font-size: 1.1rem !important;
+    font-size: 1.15rem !important;
     font-weight: 600 !important;
-    color: #002b5c !important; /* Enhetlig mörkblå */
+    color: #002b5c !important;
     cursor: pointer !important;
     display: flex !important;
     align-items: center !important;
-    gap: 15px !important;
+    gap: 18px !important;
     line-height: 1.4 !important;
-    transition: background-color 0.2s ease !important;
 }
 
-/* Ikonerna inuti frågan - Blir automatiskt mörkblå */
+/* Ikonerna inuti frågan - Får en lyxig bakgrundscirkel */
 .faq-section .faq-question i {
     color: #002b5c !important;
-    font-size: 1.2rem !important;
-    width: 24px !important;
-    text-align: center !important;
+    font-size: 1.1rem !important;
+    width: 44px !important;
+    height: 44px !important;
+    background-color: #f1f5f9 !important; /* Ljus diskret cirkel runt ikonen */
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     flex-shrink: 0 !important;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease !important;
 }
 
-/* Svarsboxen - Döljs som standard */
+/* Ikonerna lyser upp i vitt/mörkblått när kortet är aktivt eller hovras */
+.faq-section .faq-item:hover .faq-question i,
+.faq-section .faq-item.active .faq-question i {
+    background-color: #002b5c !important;
+    color: #ffffff !important;
+    transform: scale(1.05) !important;
+}
+
+/* Svarsboxen - Öppnas via JavaScript (.active) */
 .faq-section .faq-answer {
     display: none; 
-    padding: 0 25px 22px 64px !important; /* Indrag så svaret ligger snyggt i linje under texten */
+    padding: 0 28px 24px 90px !important; /* Indrag så att svaret linjerar perfekt under texten, förbi ikon-cirkeln */
 }
 
-/* Brödtexten i svaret - Enhetlig mörkblå med mjuk opacitet för långa texter */
+/* Brödtexten i svaret - Kristallklar mörkblå läsbarhet */
 .faq-section .faq-answer p {
-    line-height: 1.6 !important;
+    line-height: 1.7 !important;
     color: #002b5c !important;
     margin: 0 !important;
-    font-size: 1rem !important;
-    opacity: 0.9 !important;
+    font-size: 1.02rem !important;
+    opacity: 0.95 !important;
 }
 
-/* Visar svaret när klassen .active läggs till via JavaScript */
+/* Visar svaret när klassen .active läggs till */
 .faq-section .faq-item.active .faq-answer {
     display: block !important;
 }
 
-/* Valfritt: Ger en svag, fräsch bakgrund till frågan när den är öppen/aktiv */
-.faq-section .faq-item.active .faq-question {
-    background-color: rgba(0, 43, 92, 0.01) !important;
-}
 
-/* "Näytä lisää" -knappen längst ner - Mörkblå ram, vit inuti (Inverterad premium) */
+/* --- "NÄYTÄ LISÄÄ" KNAPPEN --- */
+/* Gjorts om till en solid, modern mörkblå premiumknapp */
 .faq-section .faq-button {
     display: block !important;
-    background: transparent !important;
-    border: 2px solid #002b5c !important;
-    color: #002b5c !important;
-    font-size: 1rem !important;
-    font-weight: 600 !important;
-    padding: 12px 35px !important;
-    border-radius: 25px !important;
-    cursor: pointer !important;
-    margin: 30px auto 0 auto !important;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease !important;
-}
-
-/* Knappen fylls med färg när man hovrar */
-.faq-section .faq-button:hover {
     background-color: #002b5c !important;
+    border: none !important;
     color: #ffffff !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    padding: 16px 45px !important;
+    border-radius: 30px !important; /* Elegant rundad */
+    cursor: pointer !important;
+    margin: 40px auto 0 auto !important;
+    box-shadow: 0 4px 15px rgba(0, 43, 92, 0.2) !important;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-/* Mobilanpassning för små skärmar */
+/* Litet lyft och djupare skugga vid hover */
+.faq-section .faq-button:hover {
+    background-color: #001f42 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.3) !important;
+}
+
+.faq-section .faq-button:active {
+    transform: translateY(0) !important;
+}
+
+
+/* --- MOBILANPASSNING --- */
 @media (max-width: 768px) {
     .faq-section {
-        padding: 40px 15px !important;
+        padding: 50px 15px !important;
     }
 
     .faq-section h2 {
-        font-size: 1.75rem !important;
-        margin-bottom: 25px !important;
+        font-size: 1.8rem !important;
+        margin-bottom: 30px !important;
+    }
+
+    .faq-section .faq-item {
+        border-left-width: 3px !important; /* Lite smalare kant på mobilen */
+        border-radius: 14px !important;
     }
 
     .faq-section .faq-question {
-        padding: 18px 20px !important;
-        font-size: 1rem !important;
-        gap: 12px !important;
+        padding: 20px 18px !important;
+        font-size: 1.05rem !important;
+        gap: 14px !important;
+    }
+
+    .faq-section .faq-question i {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 0.95rem !important;
     }
 
     .faq-section .faq-answer {
-        padding: 0 20px 18px 20px !important; /* Tar bort det stora indraget på mobilen så texten får plats */
+        padding: 0 18px 20px 18px !important; /* Tar bort det stora vänsterindraget på mobilen för optimal textbredd */
     }
 }
 
