@@ -502,3 +502,35 @@ CTA SUBTEXT
     border-radius: 8px;
 }
 
+/* ==========================================================================
+   TILLÄGG: CENTRERADE RUBRIKER OCH ENHETLIG BLÅ TEXT
+   ========================================================================== */
+
+/* 1. Centrerar alla rubriker i quick-action och why-choose-us */
+.quick-action h2,
+.why-choose-us-section h2,
+.quick-action h3,
+.why-choose-us-section h3 {
+    text-align: center !important;
+    color: #002b5c !important;
+}
+
+/* 2. Gör all brödtext inuti quick-action mörkblå (ersätter den grå färgen) */
+.quick-action p,
+.quick-action span,
+.quick-action li {
+    color: #002b5c !important;
+}
+
+/* 3. Uppdaterar din service-item text och ikoner till den nya mörkblå premiumfärgen */
+.service-item,
+.service-item h3,
+.service-item p,
+.service-item i {
+    color: #002b5c !important;
+}
+
+/* Undantag: Säkerställer att texten inuti den blå quick-trust-boxen förblir vit */
+.quick-trust span {
+    color: #ffffff !important;
+}
