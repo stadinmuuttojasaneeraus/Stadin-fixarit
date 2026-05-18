@@ -512,12 +512,11 @@ body {
         font-size: 1rem !important;
     }
 }
-
 /* ==========================================================================
-   GLOBAL SERVICES MASTER: SEKTION 4 (SERVICE PRICING SECTION)
+   GLOBAL SERVICES MASTER: UNIFIED PREMIUM SERVICE PRICING
    ========================================================================== */
 
-/* Bakgrunden utanför hålls transparent så den stora blå gradienten flyter med */
+/* Huvudcontainer - inställd på transparent för att låta din blå gradient lysa igenom */
 .service-pricing-section {
     background: transparent !important;
     border: none !important;
@@ -535,8 +534,8 @@ body {
     box-sizing: border-box !important;
 }
 
-/* Huvudrubriken (Krispigt vit mot den blå bakgrunden) */
-.service-pricing-section h2 {
+/* Huvudrubriken (Krispigt vit) */
+.service-pricing-section .pricing-main-title {
     color: #ffffff !important;
     font-size: 2.4rem !important;
     font-weight: 700 !important;
@@ -545,225 +544,72 @@ body {
     text-align: center !important;
 }
 
-/* Introtexten under rubriken (Krispigt vit) */
+/* Introtexten under rubriken */
 .service-pricing-section .pricing-intro {
     max-width: 800px !important;
-    margin: 0 auto 30px auto !important;
+    margin: 0 auto 40px auto !important;
     color: #ffffff !important;
     font-size: 1.05rem !important;
     line-height: 1.7 !important;
-    opacity: 0.9 !important;
+    opacity: 0.95 !important;
     text-align: center !important;
 }
 
-/* Centrerar priskortet */
+/* Innehållsomslag för struktur */
+.service-pricing-section .pricing-content-wrapper {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+}
+
+/* Centrerar priskortets placering */
 .service-pricing-section .pricing-card-container {
     max-width: 500px !important;
-    margin: 35px auto 25px auto !important;
+    margin: 0 auto 30px auto !important;
     width: 100% !important;
 }
 
-/* Premium-design för priskortet (Krispigt ljusblå med mörkblå text) */
+/* Premium-design för priskortet (Ljust tema inuti den mörka gradienten) */
 .service-pricing-section .pricing-card {
-    background: #f0f7fd !important; /* Krispig ljusblå */
+    background: #f0f7fd !important; 
     border: 1px solid #e2edf8 !important;
-    border-left: 5px solid #38bdf8 !important; /* Ljusblå ram på vänster sida */
-    border-radius: 16px !important;
-    padding: 35px 25px !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25) !important;
+    border-left: 6px solid #38bdf8 !important; 
+    border-radius: 20px !important;
+    padding: 40px 30px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
     text-align: center !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-/* Lyft-effekt på priskortet vid hover */
+/* Hover-effekt på priskortet */
 .service-pricing-section .pricing-card:hover {
     transform: translateY(-5px) !important;
     background-color: #e3f0fc !important;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Stor, elegant euro-ikon (Blir mörkblå cirkel konstant) */
-.service-pricing-section .pricing-card i {
-    font-size: 1.2rem !important;
-    color: #ffffff !important;
+/* Ikonen i priskortet (Mörkblå cirkel med vit euro) */
+.service-pricing-section .pricing-card .card-icon-circle {
+    width: 50px !important;
+    height: 50px !important;
     background-color: #002b5c !important;
-    width: 44px !important;
-    height: 44px !important;
     border-radius: 50% !important;
     display: inline-flex !important;
     justify-content: center !important;
     align-items: center !important;
     margin-bottom: 20px !important;
-    box-shadow: 0 4px 10px rgba(0, 43, 92, 0.15) !important;
-    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
-    font-weight: 900 !important;
+    box-shadow: 0 4px 15px rgba(0, 43, 92, 0.2) !important;
 }
 
-/* Prisrubriken inuti kortet (Mörkblå) */
-.service-pricing-section .pricing-card h3 {
-    font-size: 1.6rem !important;
-    font-weight: 700 !important;
-    color: #002b5c !important;
-    margin: 0 0 12px 0 !important;
-}
-
-/* Brödtexten inuti kortet (Mörkblå) */
-.service-pricing-section .pricing-card p {
-    color: #002b5c !important;
-    font-size: 1rem !important;
-    line-height: 1.6 !important;
-    margin: 0 !important;
-    opacity: 0.9 !important;
-}
-
-/* Boxen för Kotitalousvähennys (Snyggt anpassad för det mörka temat) */
-.service-pricing-section .tax-deduction-box {
-    max-width: 700px !important;
-    margin: 30px auto !important;
-    background: rgba(56, 189, 248, 0.08) !important; /* Ljusblå genomskinlig skattebox */
-    border: 1px dashed #38bdf8 !important; /* Ljusblå streckad ram */
-    border-radius: 12px !important;
-    padding: 20px 25px !important;
-    display: flex !important;
-    align-items: center !important;
-    text-align: left !important;
-    gap: 20px !important;
-}
-
-/* Procent-ikonen i skatteboxen */
-.service-pricing-section .tax-deduction-box i {
-    font-size: 1.8rem !important;
-    color: #38bdf8 !important;
-    flex-shrink: 0 !important;
-    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
-    font-weight: 900 !important;
-    display: inline-block !important;
-}
-
-/* Texten inuti skatteboxen (Lyser i ljusblått mot den mörka bakgrunden) */
-.service-pricing-section .tax-deduction-box p {
-    margin: 0 !important;
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    color: #38bdf8 !important;
-}
-
-/* Highlight-texten längst ner (Krispigt vit) */
-.service-pricing-section .pricing-highlight-text {
-    margin-top: 35px !important;
-    font-weight: 600 !important;
+.service-pricing-section .pricing-card .card-icon-circle i {
+    font-size: 1.4rem !important;
     color: #ffffff !important;
-    font-size: 1.15rem !important;
-    text-align: center !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
-}
-
-/* Bock-ikonen i botten-texten (Behåller den gröna bocken) */
-.service-pricing-section .pricing-highlight-text i {
-    color: #22c55e !important; 
-    margin-right: 6px !important;
     font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
     font-weight: 900 !important;
-    display: inline-block !important;
 }
 
-/* --- ISOLERAD MOBILANPASSNING (Helt stängd med måsvingar) --- */
-@media (max-width: 768px) {
-    .service-pricing-section {
-        padding: 40px 20px !important;
-        margin: 30px 10px !important;
-    }
-
-    .service-pricing-section h2 {
-        font-size: 1.75rem !important;
-    }
-
-    .service-pricing-section .tax-deduction-box {
-        flex-direction: column !important;
-        text-align: center !important;
-        gap: 12px !important;
-        padding: 20px 15px !important;
-    }
-}
-
-
-/* Huvudcontainer för prissektionen */
-.service-pricing-section {
-    background: #ffffff !important;
-    background-image: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
-    border: 1px solid #e2e8f0 !important;
-    padding: 60px 40px !important;
-    border-radius: 20px !important;
-    text-align: center !important;
-    box-shadow: 0 15px 40px rgba(0, 43, 92, 0.04) !important;
-    max-width: 1100px !important;
-    margin: 40px auto !important;
-    box-sizing: border-box !important;
-    font-family: system-ui, -apple-system, sans-serif !important;
-}
-
-.service-pricing-section *, 
-.service-pricing-section *::before, 
-.service-pricing-section *::after {
-    box-sizing: border-box !important;
-}
-
-/* Huvudrubriken (Mörkblå) */
-.service-pricing-section h2 {
-    color: #002b5c !important;
-    font-size: 2.2rem !important;
-    font-weight: 700 !important;
-    margin: 0 0 20px 0 !important;
-    line-height: 1.3 !important;
-}
-
-/* Introtexten under rubriken */
-.service-pricing-section .pricing-intro {
-    max-width: 800px !important;
-    margin: 0 auto 30px auto !important;
-    color: #002b5c !important;
-    font-size: 1.05rem !important;
-    line-height: 1.7 !important;
-    opacity: 0.9 !important;
-}
-
-/* Centrerar priskortet */
-.service-pricing-section .pricing-card-container {
-    max-width: 500px !important;
-    margin: 35px auto 25px auto !important;
-    width: 100% !important;
-}
-
-/* Premium-design för priskortet */
-.service-pricing-section .pricing-card {
-    background: #ffffff !important;
-    border: 1px solid #eef2f5 !important;
-    border-radius: 16px !important;
-    padding: 35px 25px !important;
-    box-shadow: 0 10px 30px rgba(0, 43, 92, 0.03) !important;
-    text-align: center !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-
-/* Lyft-effekt på priskortet vid hover */
-.service-pricing-section .pricing-card:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 15px 35px rgba(0, 43, 92, 0.07) !important;
-}
-
-/* Stor, elegant mörkblå euro-ikon */
-.service-pricing-section .pricing-card i {
-    font-size: 2rem !important;
-    color: #002b5c !important;
-    margin-bottom: 15px !important;
-    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
-    font-weight: 900 !important;
-    display: inline-block !important;
-}
-
-/* Prisrubriken inuti kortet */
+/* Prisrubriken (Mörkblå) */
 .service-pricing-section .pricing-card h3 {
-    font-size: 1.5rem !important;
+    font-size: 1.65rem !important;
     font-weight: 700 !important;
     color: #002b5c !important;
     margin: 0 0 12px 0 !important;
@@ -775,74 +621,138 @@ body {
     font-size: 1rem !important;
     line-height: 1.6 !important;
     margin: 0 !important;
-    opacity: 0.85 !important;
+    opacity: 0.95 !important;
 }
 
-/* Boxen för Kotitalousvähennys */
+/* Skatteboxen (Anpassad för den mörka bakgrunden) */
 .service-pricing-section .tax-deduction-box {
     max-width: 700px !important;
-    margin: 30px auto !important;
-    background: rgba(0, 43, 92, 0.03) !important;
-    border: 1px dashed #002b5c !important;
-    border-radius: 12px !important;
-    padding: 20px 25px !important;
+    margin: 0 auto 50px auto !important;
+    background: rgba(56, 189, 248, 0.08) !important; 
+    border: 1px dashed #38bdf8 !important; 
+    border-radius: 14px !important;
+    padding: 25px 30px !important;
     display: flex !important;
     align-items: center !important;
     text-align: left !important;
-    gap: 20px !important;
+    gap: 25px !important;
 }
 
-/* Procent-ikonen i skatteboxen */
+/* Procent-ikonen */
 .service-pricing-section .tax-deduction-box i {
-    font-size: 1.8rem !important;
-    color: #002b5c !important;
+    font-size: 2rem !important;
+    color: #38bdf8 !important;
     flex-shrink: 0 !important;
     font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
     font-weight: 900 !important;
-    display: inline-block !important;
 }
 
-/* Texten inuti skatteboxen */
+/* Texten i skatteboxen */
 .service-pricing-section .tax-deduction-box p {
     margin: 0 !important;
     font-size: 0.95rem !important;
     line-height: 1.6 !important;
-    color: #002b5c !important;
+    color: #38bdf8 !important;
 }
 
-/* Highlight-texten längst ner */
-.service-pricing-section .pricing-highlight-text {
-    margin-top: 30px !important;
+/* ==========================================================================
+   INTEGRERAD CTA BLOCK (Gammal sektion 2)
+   ========================================================================== */
+.service-pricing-section .pricing-quick-action {
+    margin-top: 20px !important;
+    padding-top: 40px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    text-align: center !important;
+}
+
+.service-pricing-section .pricing-quick-action h2 {
+    color: #ffffff !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+}
+
+.service-pricing-section .pricing-quick-action .cta-subtitle {
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+    opacity: 0.9 !important;
+    margin: 0 0 30px 0 !important;
+}
+
+/* Centrering av knappen */
+.service-pricing-section .cta-container-bottom {
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 25px !important;
+}
+
+/* Premium Knapp-styling (Grön säljande eller Matchande Kontrastfärg) */
+.service-pricing-section .cta-button {
+    display: inline-block !important;
+    background: #22c55e !important; /* Premium klargrön för konvertering */
+    color: #ffffff !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    padding: 16px 45px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease !important;
+}
+
+.service-pricing-section .cta-button:hover {
+    transform: scale(1.03) !important;
+    background: #16a34a !important;
+    box-shadow: 0 15px 35px rgba(34, 197, 94, 0.5) !important;
+}
+
+/* Grön Trygghetstext längst ner */
+.service-pricing-section .form-hint {
+    margin: 0 !important;
     font-weight: 600 !important;
-    color: #002b5c !important;
-    font-size: 1.05rem !important;
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
 }
 
-/* Bock-ikonen i botten-texten */
-.service-pricing-section .pricing-highlight-text i {
-    color: #22c55e !important; /* Modern grön bock */
+.service-pricing-section .form-hint i {
+    color: #22c55e !important; 
     margin-right: 6px !important;
     font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
     font-weight: 900 !important;
-    display: inline-block !important;
 }
 
-/* --- MOBILANPASSNING --- */
+/* ==========================================================================
+   RESPONSIV MOBILANPASSNING 
+   ========================================================================== */
 @media (max-width: 768px) {
     .service-pricing-section {
-        padding: 40px 20px !important;
-        margin: 30px 10px !important;
+        padding: 40px 15px !important;
     }
 
-    .service-pricing-section h2 {
-        font-size: 1.75rem !important;
+    .service-pricing-section .pricing-main-title {
+        font-size: 1.8rem !important;
+    }
+
+    .service-pricing-section .pricing-card {
+        padding: 30px 20px !important;
     }
 
     .service-pricing-section .tax-deduction-box {
         flex-direction: column !important;
         text-align: center !important;
-        gap: 12px !important;
-        padding: 20px 15px !important;
+        gap: 15px !important;
+        padding: 20px 20px !important;
+    }
+    
+    .service-pricing-section .pricing-quick-action h2 {
+        font-size: 1.6rem !important;
+    }
+    
+    .service-pricing-section .cta-button {
+        width: 100% !important;
+        max-width: 320px !important;
+        padding: 14px 30px !important;
     }
 }
 
@@ -986,97 +896,6 @@ CTA SUBTEXT
     }
 }
  
-    
-/* ==========================================================================
-   DETALJ 1: SERVICES GRID BLOCK (TVÅ KOLUMNER & KONSTANTA IKONER)
-   ========================================================================== */
-
-/* Tvingar fram exakt 2 jämna kolumner på BÅDE desktop och mobil */
-.services-grid-block .services-container {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; 
-    gap: 20px !important;
-    margin: 40px auto 0 auto !important;
-    max-width: 1000px !important;
-}
-
-/* Styling för rutorna med ljusblå ram till vänster */
-.services-grid-block .service-item {
-    background-color: #f0f7fd !important; /* Krispig ljusblå bakgrund */
-    border: 1px solid #e2edf8 !important;
-    border-left: 5px solid #38bdf8 !important; /* Ljusblå ram på vänster sida */
-    border-radius: 16px !important;
-    padding: 24px 28px !important;
-    display: flex !important;
-    align-items: center !important;
-    text-align: left !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
-}
-
-/* Hovrandet när man drar muspekaren över rutan behålls */
-.services-grid-block .service-item:hover {
-    transform: translateY(-4px) !important;
-    background-color: #e3f0fc !important; /* Aningen djupare ljusblå vid hover */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35) !important;
-}
-
-/* KONSTANT BLÅ IKON-CIRKEL: Ikonen har den mörkblå färgen och vit symbol hela tiden */
-.services-grid-block .service-item i {
-    background-color: #002b5c !important; /* Mörkblå bakgrund konstant */
-    color: #ffffff !important; /* Vit symbol konstant */
-    font-size: 1.2rem !important;
-    margin-right: 18px !important;
-    width: 42px !important;
-    height: 42px !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-shrink: 0 !important;
-    box-shadow: 0 4px 10px rgba(0, 43, 92, 0.15) !important;
-    transition: transform 0.3s ease !important;
-}
-
-/* Liten extra effekt: Ikonen skalar upp subtilt vid hover på kortet */
-.services-grid-block .service-item:hover i {
-    transform: scale(1.05) !important;
-}
-
-/* Texten inuti rutorna förblir enhetligt mörkblå för perfekt läsbarhet */
-.services-grid-block .service-item span {
-    color: #002b5c !important;
-    font-weight: 600 !important;
-    font-size: 1.05rem !important;
-    line-height: 1.4 !important;
-}
-
-/* KRISPIGT VIT HIGHLIGHT-TEXT: Centrerad nedanför rutorna */
-.services-grid-block .highlight-text {
-    color: #ffffff !important; /* Helt vit text */
-    text-align: center !important; /* Centrerad */
-    font-weight: 600 !important;
-    margin-top: 35px !important;
-    font-size: 1.15rem !important;
-    width: 100% !important;
-}
-
-/* Mobil-justering för extremt små skärmar (under 480px) så att texten inte krockar i 2 kolumner */
-@media (max-width: 480px) {
-    .services-grid-block .service-item {
-        padding: 16px 14px !important;
-        gap: 10px !important;
-    }
-    .services-grid-block .service-item i {
-        width: 36px !important;
-        height: 36px !important;
-        font-size: 1rem !important;
-        margin-right: 10px !important;
-    }
-    .services-grid-block .service-item span {
-        font-size: 0.9rem !important;
-    }
-}
     
 
     
