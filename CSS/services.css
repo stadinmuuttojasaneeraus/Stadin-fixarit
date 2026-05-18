@@ -738,15 +738,16 @@ CTA SUBTEXT
    ULTRA-PREMIUM ALIVE: MÖRKBLÅ BAKGRUND MED KRISPIGT LJUSBLÅ RUTOR
    ========================================================================== */
 
-/* 1. Sätter hela sidans stora bakgrund till djupt midnattsblå */
+/* 1. Sätter hela sidans stora bakgrund till din enhetliga mörkblå färg (#002b5c) */
 body, 
 .quick-action, 
 .how-it-works-section, 
 .faq-section,
 .service-trust-section {
-    background-color: #001731 !important; /* Djup, lyxig midnattsblå */
-    background-image: linear-gradient(180deg, #001124 0%, #001f42 100%) !important;
+    background-color: #002b5c !important; /* Exakt samma blå som din CTA-knapp */
+    background-image: linear-gradient(180deg, #00234a 0%, #00336c 100%) !important; /* En subtil och mjukare toning för att lyfta sidan */
 }
+    
 
 /* 2. Tvingar alla stora rubriker och fristående introduktionstexter att bli krispigt vita */
 .quick-action h2, 
