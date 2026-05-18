@@ -185,15 +185,167 @@ SERVICE GRID (INDEX)
     }
 }
 
+/* ==========================================================================
+   SERVICE PAGES: PRICING SECTION (ISOLATED & UNIFORM)
+   ========================================================================== */
 
-/* =========================
-PRICE BOX
-========================= */
-.price-box {
-    background: #f5f9ff;
-    border-left: 4px solid #003366;
-    padding: 20px;
-    border-radius: 10px;
+/* Huvudcontainer för prissektionen */
+.service-pricing-section {
+    background: #ffffff !important;
+    background-image: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%) !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 60px 40px !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    box-shadow: 0 15px 40px rgba(0, 43, 92, 0.04) !important;
+    max-width: 1100px !important;
+    margin: 40px auto !important;
+    box-sizing: border-box !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+.service-pricing-section *, 
+.service-pricing-section *::before, 
+.service-pricing-section *::after {
+    box-sizing: border-box !important;
+}
+
+/* Huvudrubriken (Mörkblå) */
+.service-pricing-section h2 {
+    color: #002b5c !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 20px 0 !important;
+    line-height: 1.3 !important;
+}
+
+/* Introtexten under rubriken */
+.service-pricing-section .pricing-intro {
+    max-width: 800px !important;
+    margin: 0 auto 30px auto !important;
+    color: #002b5c !important;
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+    opacity: 0.9 !important;
+}
+
+/* Centrerar priskortet */
+.service-pricing-section .pricing-card-container {
+    max-width: 500px !important;
+    margin: 35px auto 25px auto !important;
+    width: 100% !important;
+}
+
+/* Premium-design för priskortet */
+.service-pricing-section .pricing-card {
+    background: #ffffff !important;
+    border: 1px solid #eef2f5 !important;
+    border-radius: 16px !important;
+    padding: 35px 25px !important;
+    box-shadow: 0 10px 30px rgba(0, 43, 92, 0.03) !important;
+    text-align: center !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Lyft-effekt på priskortet vid hover */
+.service-pricing-section .pricing-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 35px rgba(0, 43, 92, 0.07) !important;
+}
+
+/* Stor, elegant mörkblå euro-ikon */
+.service-pricing-section .pricing-card i {
+    font-size: 2rem !important;
+    color: #002b5c !important;
+    margin-bottom: 15px !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    display: inline-block !important;
+}
+
+/* Prisrubriken inuti kortet */
+.service-pricing-section .pricing-card h3 {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: #002b5c !important;
+    margin: 0 0 12px 0 !important;
+}
+
+/* Brödtexten inuti kortet */
+.service-pricing-section .pricing-card p {
+    color: #002b5c !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    opacity: 0.85 !important;
+}
+
+/* Boxen för Kotitalousvähennys */
+.service-pricing-section .tax-deduction-box {
+    max-width: 700px !important;
+    margin: 30px auto !important;
+    background: rgba(0, 43, 92, 0.03) !important;
+    border: 1px dashed #002b5c !important;
+    border-radius: 12px !important;
+    padding: 20px 25px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 20px !important;
+}
+
+/* Procent-ikonen i skatteboxen */
+.service-pricing-section .tax-deduction-box i {
+    font-size: 1.8rem !important;
+    color: #002b5c !important;
+    flex-shrink: 0 !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    display: inline-block !important;
+}
+
+/* Texten inuti skatteboxen */
+.service-pricing-section .tax-deduction-box p {
+    margin: 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: #002b5c !important;
+}
+
+/* Highlight-texten längst ner */
+.service-pricing-section .pricing-highlight-text {
+    margin-top: 30px !important;
+    font-weight: 600 !important;
+    color: #002b5c !important;
+    font-size: 1.05rem !important;
+}
+
+/* Bock-ikonen i botten-texten */
+.service-pricing-section .pricing-highlight-text i {
+    color: #22c55e !important; /* Modern grön bock */
+    margin-right: 6px !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    display: inline-block !important;
+}
+
+/* --- MOBILANPASSNING --- */
+@media (max-width: 768px) {
+    .service-pricing-section {
+        padding: 40px 20px !important;
+        margin: 30px 10px !important;
+    }
+
+    .service-pricing-section h2 {
+        font-size: 1.75rem !important;
+    }
+
+    .service-pricing-section .tax-deduction-box {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 12px !important;
+        padding: 20px 15px !important;
+    }
 }
 
 /* =========================
