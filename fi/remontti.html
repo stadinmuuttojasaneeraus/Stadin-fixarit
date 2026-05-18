@@ -191,30 +191,28 @@
     <span><i class="fa-solid fa-location-dot"></i> Pääkaupunkiseutu</span>
 </section>
 
-<!-- WHAT WE DO (CSS MATCHED TO QUICK-ACTION) -->
-<section class="quick-action">
+<!-- MITÄ REMONTTIPALVELUIHIN KUULUU? (Helt unikt klassnamn för att slippa konflikt) -->
+<section class="remontti-services-section">
     <h2>Mitä remonttipalveluihin kuuluu?</h2>
-    <p>
-        Autamme kodin pienissä ja suuremmissa remonttitöissä nopeasti, siististi och rautaisella ammattitaidolla.
+    <p class="remontti-intro">
+        Autamme kodin pienissä ja suuremmissa remonttitöissä nopeasti, siististi ja rautaisella ammattitaidolla.
     </p>
 
-    <div class="services-container" style="margin-top: 30px;">
-        <div class="service-item"><i class="fa-solid fa-paint-roller"></i> Sisämaalaukset</div>
-        <div class="service-item"><i class="fa-solid fa-house"></i> Huoneremontit</div>
-        <div class="service-item"><i class="fa-solid fa-sink"></i> Keittiöremontit</div>
-        <div class="service-item"><i class="fa-solid fa-bath"></i> Kylpyhuoneremontit</div>
-        <div class="service-item"><i class="fa-solid fa-border-all"></i> Lattiat ja listat</div>
-        <div class="service-item"><i class="fa-solid fa-door-open"></i> Ovien ja ikkunoiden vaihdot</div>
+    <!-- Alla 7 tjänster ligger nu samlade i en och samma container -->
+    <div class="services-container">
+        <div class="service-item"><i class="fas fa-paint-roller"></i> <span>Sisä- ja ulkopuolisetmaalaukset</span></div>
+        <div class="service-item"><i class="fas fa-home"></i> <span>Seinät, lattiat ja listat</span></div>
+        <div class="service-item"><i class="fas fa-sink"></i> <span>Keittiöremontit</span></div>
+        <div class="service-item"><i class="fas fa-bath"></i> <span>Kylpyhuoneremontit</span></div>
+        <div class="service-item"><i class="fas fa-door-open"></i> <span>Ovien ja ikkunoiden vaihdot</span></div>
+        <div class="service-item full-width"><i class="fas fa-cogs"></i> <span>Sekä muut kodin pienremontit ja korjaustyöt</span></div>
     </div>
     
-    <div class="services-container" style="margin-top: 10px; max-width: 100%;">
-        <div class="service-item" style="flex: 1; text-align: center;"><i class="fa-solid fa-gear"></i> Sekä muut kodin pienremontit ja korjaustyöt</div>
-    </div>
-    
-    <p class="highlight-text" style="font-weight: 600; margin-top: 20px;">
+    <p class="highlight-text">
         Saat remonttityöt hoidettua yhdellä yhteydenotolla – helposti ja luotettavasti.
     </p>
 </section>
+    
 
     <!-- HOW IT WORKS (CSS-KLASS MATCHAD FRÅN MASTER) -->
 <section class="how-it-works-section">
@@ -293,39 +291,53 @@
     </p>
 </section>
     
-<!-- PRICING (STYLAD SOM QUICK-ACTION FÖR ENHETLIGHET) -->
-<section class="quick-action" style="background-color: #f9f9f9; padding: 40px 20px; text-align: center;">
-    <h2>Hinnasto</h2>
-    <p style="max-width: 600px; margin: 0 auto 20px auto; color: #555;">
-        Sovimme aina hinnan etukäteen – joko tuntiveloituksella tai kiinteällä kokonaishinnalla työn laajuuden mukaan.
+<!-- UNIK TJÄNSTESIDA-PRISSEKTION (Helt konfliktfri) -->
+<section class="service-pricing-section">
+    <h2>Selkeä ja joustava hinnoittelu</h2>
+    <p class="pricing-intro">
+        Meillä maksat vain tehdystä työstä – ilman piilokuluja tai yllätyksiä. Räätälöimme hinnoittelun aina projektin laajuuden mukaan joko joustavana tuntityönä tai kiinteänä kokonaisurakkana.
     </p>
 
-    <div class="services-container" style="max-width: 500px; margin: 0 auto 20px auto;">
-        <div class="service-item" style="background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-            <p style="font-size: 22px; font-weight: 700; color: #003366; margin-bottom: 10px;">Remonttityöt alkaen 55 €/h</p>
-            <p style="color: #666; margin: 0;">Voimme sopia joko tuntiveloituksen tai kiinteän kokonaishinnan työn mukaan.</p>
+    <!-- Centrerad prisbox -->
+    <div class="pricing-card-container">
+        <div class="pricing-card">
+            <i class="fas fa-euro-sign"></i>
+            <h3>Palvelut alkaen 55 €/h</h3>
+            <p>Hinta sisältää alv:n. Ennen työn aloitusta saat aina selkeän kustannusarvion tai sitovan kiinteän tarjouksen.</p>
         </div>
     </div>
     
-    <p class="highlight-text" style="font-weight: 600;">
-        Ei piilokuluja – sovittu hinta ennen työn aloitusta tai selkeä tuntiveloitus.
+    <!-- Starkt säljargument om hushållsavdraget -->
+    <div class="tax-deduction-box">
+        <i class="fas fa-percentage"></i>
+        <p>
+            <strong>Muista hyödyntää kotitalousvähennys!</strong> 
+            Kaikki tekemämme piha-, asennus- ja kunnossapitotyöt oikeuttavat merkittävään veroetuun. Raportointimme on selkeää, joten vähennyksen hakeminen Verohallinnolta on sinulle erittäin helppoa ja vaivatonta.
+        </p>
+    </div>
+
+    <p class="pricing-highlight-text">
+        <i class="fas fa-check-circle"></i> Vastuuvakuutettu toiminta • Kirjallinen sopimus • Ei piilokuluja
     </p>
 </section>
 
-<!-- FINAL CTA (MATCHING INDEX.HTML STYLE) -->
-<section class="quick-action" style="text-align: center; padding: 50px 20px;">
+<!-- SEKTION: REMONTTI CTA (PREMIUM STYLAD UTAN INLINE-STILAR) -->
+<section class="quick-action">
     <h2>Valmis aloittamaan remontin?</h2>
-    <p style="max-width: 600px; margin: 0 auto 25px auto; color: #555;">Pyydä tarjous nyt – vastaamme nopeasti.</p>
+    <p>Pyydä tarjous nyt – vastaamme nopeasti.</p>
 
-    <a href="../fi/index.html#yhteystiedot" class="cta-button">
-        Pyydä tarjous
-    </a>
+    <div class="cta-container-bottom">
+        <a href="../fi/index.html#yhteystiedot" class="cta-button">
+            Pyydä tarjous
+        </a>
+    </div>
 
-    <p class="form-hint" style="margin-top: 15px; font-size: 14px; color: #666;">
-        <i class="fa-solid fa-circle-check" style="color: green; margin-right: 5px;"></i>
+    <p class="form-hint">
+        <i class="fas fa-check-circle"></i>
         Nopea vastaus • Vakuutettu työ • Selkeä hinta
     </p>
 </section>
+    
 
 <!-- FAQ SECTION -->
 <section class="faq-section" data-faq="4" style="padding: 50px 20px;">
@@ -379,52 +391,54 @@
     <button class="faq-button js-faq-toggle" type="button">Näytä lisää kysymyksiä</button>
 </section>
 
-<!-- TRUST (MATCHING INDEX.HTML STYLE AND TEXT-ALIGN) -->
-<section class="quick-action" style="background-color: #f9f9f9; padding: 50px 20px;">
-    <h2 style="text-align: center; margin-bottom: 30px;">Miksi valita meidät</h2>
+<!-- 12. WHY CHOOSE US (Helt unikt klassnamn för att slippa konflikt) -->
+<section class="why-choose-us-section">
+    <h2>Miksi valita meidät</h2>
 
-    <div class="services-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <div class="services-container">
 
-        <div class="service-item" style="flex: 1; min-width: 220px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;">
-            <i class="fa-solid fa-comments" style="font-size: 30px; color: #003366; margin-bottom: 15px;"></i>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Kommunikointi</h3>
-            <p style="color: #555; font-size: 15px; margin: 0;">Nopea, ystävällinen och selkeä viestintä alusta aina remontin valmistumiseen asti.</p>
+        <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h3>Kommunikointi</h3>
+            <p>Nopea, selkeä ja sujuva viestintä alusta loppuun.</p>
         </div>
 
-        <div class="service-item" style="flex: 1; min-width: 220px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;">
-            <i class="fa-solid fa-graduation-cap" style="font-size: 30px; color: #003366; margin-bottom: 15px;"></i>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Ammattitaito</h3>
-            <p style="color: #555; font-size: 15px; margin: 0;">Vahva kokemus ja vankka osaaminen erilaisista remontti- ja rakennustöistä.</p>
+        <div class="service-item">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Ammattitaito</h3>
+            <p>Vahva ja monipuolinen kokemus erilaisista rakennustöistä.</p>
         </div>
 
-        <div class="service-item" style="flex: 1; min-width: 220px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;">
-            <i class="fa-solid fa-shield-halved" style="font-size: 30px; color: #003366; margin-bottom: 15px;"></i>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Laatu</h3>
-            <p style="color: #555; font-size: 15px; margin: 0;">Huolellinen työnjälki, siisti viimeistely och kestävä lopputulos arjessa.</p>
+        <div class="service-item">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Laatu</h3>
+            <p>Siisti, kestävä ja aina turvallinen lopputulos.</p>
         </div>
 
-        <div class="service-item" style="flex: 1; min-width: 220px; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); text-align: center;">
-            <i class="fa-solid fa-bolt" style="font-size: 30px; color: #003366; margin-bottom: 15px;"></i>
-            <h3 style="font-size: 18px; margin-bottom: 10px;">Nopeus</h3>
-            <p style="color: #555; font-size: 15px; margin: 0;">Joustava palvelu, nopea reagointi och tehokas aikataulussa pysyminen.</p>
+        <div class="service-item">
+            <i class="fas fa-bolt"></i>
+            <h3>Nopeus</h3>
+            <p>Reagoimme nopeasti ja tulemme usein jo saman päivän aikana.</p>
         </div>
 
     </div>
 </section>
 
-<!-- FINAL CONTACT CTA -->
-<section class="quick-action" style="text-align: center; padding: 50px 20px;">
-    <h2>Tarvitsetko luotettavan remonttitekijän?</h2>
-    <p style="max-width: 600px; margin: 0 auto 25px auto; color: #555;">
-        Ota yhteyttä helposti – vastaamme nopeasti ja suunnittelemme remontin tarkasti sinun tarpeidesi mukaan.
+<!-- 13. FINAL CONTACT CTA (Ärver den vanliga, centrerade stilen från din .quick-action) -->
+<section class="quick-action">
+    <h2>Tarvitsetko apua kodin asennuksissa?</h2>
+    <p>
+        Ota yhteyttä helposti – vastaamme nopeasti ja sovimme työn juuri sinun tarpeidesi mukaan.
     </p>
 
-    <a href="../fi/index.html#yhteystiedot" class="cta-button">
-        Pyydä tarjous
-    </a>
+    <div class="cta-container-bottom">
+        <a href="../fi/index.html#yhteystiedot" class="cta-button">
+            Pyydä tarjous
+        </a>
+    </div>
 
-    <p class="form-hint" style="margin-top: 15px; font-size: 14px; color: #666;">
-        <i class="fa-solid fa-circle-check" style="color: green; margin-right: 5px;"></i>
+    <p class="form-hint">
+        <i class="fas fa-check-circle"></i>
         Nopea vastaus • Selkeä hinta • Vakuutettu työ
     </p>
 </section>
