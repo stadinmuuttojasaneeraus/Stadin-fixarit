@@ -949,3 +949,31 @@ body,
     }
 }
     
+/* ==========================================================================
+   AKUT FIX: LANDSCAPE-BAKGRUND & VIT HIGHLIGHT-TEXT
+   ========================================================================== */
+
+/* 1. Fixar så att den mörkblå bakgrunden ALDRIG försvinner eller kapas i landscape */
+body, 
+.quick-action, 
+.how-it-works-section, 
+.faq-section,
+.service-trust-section {
+    background-color: #002b5c !important; /* Din enhetliga mörkblå färg */
+    background-image: linear-gradient(180deg, #00234a 0%, #00336c 100%) !important;
+    background-attachment: fixed !important; /* Tvingar gradienten att stanna kvar när man skrollar */
+    background-size: cover !important;       /* Täcker hela skärmen oavsett rotation */
+    background-repeat: no-repeat !important;
+    min-height: 100vh !important;            /* Säkerställer full höjd alltid */
+}
+
+/* 2. Låser highlight-texten till krispigt vit med maximal specifikations-styrka */
+.quick-action .highlight-text,
+.quick-action p.highlight-text,
+.services-grid-block .highlight-text,
+section .highlight-text {
+    color: #ffffff !important; /* Tvingar texten att bli helt vit */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important; /* Ger en svag skugga så den poppar ännu mer */
+    opacity: 1 !important;     /* Tar bort eventuell transparens */
+}
+    
