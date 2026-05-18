@@ -222,6 +222,123 @@ body {
     }
 }
 
+/* ==========================================================================
+   GLOBAL SERVICES MASTER: SEKTION 3 (HOW IT WORKS SECTION)
+   ========================================================================== */
+
+/* Bakgrunden utanför hålls transparent så den stora blå gradienten flyter med */
+.how-it-works-section {
+    background: transparent !important;
+    padding: 60px 20px !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+}
+
+/* Den nya inbjudande meningen (Krispigt vit) */
+.how-it-works-section .section-lead-text {
+    color: #ffffff !important;
+    text-align: center !important;
+    font-size: 1.08rem !important;
+    line-height: 1.75 !important;
+    max-width: 750px !important;
+    margin: 0 auto 40px auto !important;
+    opacity: 0.95 !important;
+}
+
+/* Steg-rutorna: Krispigt ljusblå bakgrund med ljusblå/cyan vänsterkant */
+.how-it-works-section .service-item {
+    background-color: #f0f7fd !important;
+    border: 1px solid #e2edf8 !important;
+    border-left: 5px solid #38bdf8 !important; /* Ljusblå ram på vänster sida */
+    border-radius: 16px !important;
+    padding: 35px 25px !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Mjuk lyft-effekt vid hover */
+.how-it-works-section .service-item:hover {
+    transform: translateY(-5px) !important;
+    background-color: #e3f0fc !important;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Rubriken inuti rutorna - Enhetligt mörkblå */
+.how-it-works-section .service-item h3 {
+    color: #002b5c !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 15px !important;
+}
+
+/* Ikonerna inuti rubrikerna - Blir mörkblå cirklar konstant */
+.how-it-works-section .service-item h3 i {
+    background-color: #002b5c !important;
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 0 4px 10px rgba(0, 43, 92, 0.15) !important;
+    margin-bottom: 12px !important;
+}
+
+/* Brödtexten inuti rutorna - Enhetligt mörkblå */
+.how-it-works-section .service-item p {
+    color: #002b5c !important;
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+    opacity: 0.9 !important;
+}
+
+/* --- PREMIUM CTA-KNAPP I BOTTEN --- */
+.how-it-works-section .cta-container-bottom {
+    text-align: center !important;
+    width: 100% !important;
+    margin-top: 45px !important;
+}
+
+.how-it-works-section .cta-button {
+    display: inline-block !important;
+    background-color: #ffffff !important; /* Vit knapp som poppar starkt mot den blå bakgrunden */
+    color: #002b5c !important; /* Mörkblå text */
+    text-decoration: none !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    padding: 16px 45px !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+    border: none !important;
+}
+
+/* Hover-effekt för knappen */
+.how-it-works-section .cta-button:hover {
+    background-color: #f0f7fd !important; /* Ljusblå vid hover */
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Mobilanpassning för stegen (Tvingar vertikal lista på små skärmar) */
+@media (max-width: 768px) {
+    .how-it-works-section .services-container {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    .how-it-works-section .section-lead-text {
+        font-size: 1rem !important;
+        margin-bottom: 30px !important;
+    }
+    .how-it-works-section .cta-button {
+        padding: 14px 30px !important;
+        font-size: 1rem !important;
+        width: 100% !important; /* Knappen tar hela bredden på mobilen för smidigare klick */
+    }
+}
+
 /* =========================
 SERVICE GRID (INDEX)
 ========================= */
