@@ -858,3 +858,94 @@ body,
     color: #22c55e !important; /* Behåller den gröna bocken */
 }
     
+/* ==========================================================================
+   DETALJ 1: SERVICES GRID BLOCK (TVÅ KOLUMNER & KONSTANTA IKONER)
+   ========================================================================== */
+
+/* Tvingar fram exakt 2 jämna kolumner på BÅDE desktop och mobil */
+.services-grid-block .services-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 20px !important;
+    margin: 40px auto 0 auto !important;
+    max-width: 1000px !important;
+}
+
+/* Styling för rutorna med ljusblå ram till vänster */
+.services-grid-block .service-item {
+    background-color: #f0f7fd !important; /* Krispig ljusblå bakgrund */
+    border: 1px solid #e2edf8 !important;
+    border-left: 5px solid #38bdf8 !important; /* Ljusblå ram på vänster sida */
+    border-radius: 16px !important;
+    padding: 24px 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Hovrandet när man drar muspekaren över rutan behålls */
+.services-grid-block .service-item:hover {
+    transform: translateY(-4px) !important;
+    background-color: #e3f0fc !important; /* Aningen djupare ljusblå vid hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* KONSTANT BLÅ IKON-CIRKEL: Ikonen har den mörkblå färgen och vit symbol hela tiden */
+.services-grid-block .service-item i {
+    background-color: #002b5c !important; /* Mörkblå bakgrund konstant */
+    color: #ffffff !important; /* Vit symbol konstant */
+    font-size: 1.2rem !important;
+    margin-right: 18px !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 4px 10px rgba(0, 43, 92, 0.15) !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Liten extra effekt: Ikonen skalar upp subtilt vid hover på kortet */
+.services-grid-block .service-item:hover i {
+    transform: scale(1.05) !important;
+}
+
+/* Texten inuti rutorna förblir enhetligt mörkblå för perfekt läsbarhet */
+.services-grid-block .service-item span {
+    color: #002b5c !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.4 !important;
+}
+
+/* KRISPIGT VIT HIGHLIGHT-TEXT: Centrerad nedanför rutorna */
+.services-grid-block .highlight-text {
+    color: #ffffff !important; /* Helt vit text */
+    text-align: center !important; /* Centrerad */
+    font-weight: 600 !important;
+    margin-top: 35px !important;
+    font-size: 1.15rem !important;
+    width: 100% !important;
+}
+
+/* Mobil-justering för extremt små skärmar (under 480px) så att texten inte krockar i 2 kolumner */
+@media (max-width: 480px) {
+    .services-grid-block .service-item {
+        padding: 16px 14px !important;
+        gap: 10px !important;
+    }
+    .services-grid-block .service-item i {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 1rem !important;
+        margin-right: 10px !important;
+    }
+    .services-grid-block .service-item span {
+        font-size: 0.9rem !important;
+    }
+}
+    
