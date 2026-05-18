@@ -20,16 +20,77 @@ SERVICE GRID (INDEX)
     align-items: center;
 }
 
-/* =========================
-FEATURE BOX
-========================= */
+/* ==========================================================================
+   FEATURE BOXES SECTION - STYLING
+   ========================================================================== */
+.feature-box-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-box-section h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.feature-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .feature-box {
     display: flex;
-    gap: 18px;
-    padding: 22px;
-    background: #f5f9ff;
-    border-radius: 14px;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 10px 0;
 }
+
+.feature-icon {
+    font-size: 28px;
+    color: #003366;
+    min-width: 40px;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.feature-text h3 {
+    font-size: 20px;
+    margin: 0 0 8px 0;
+    color: #222;
+}
+
+.feature-text p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.feature-lead {
+    margin-top: 35px;
+    text-align: left;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Mobilanpassning för Feature Boxes */
+@media (max-width: 768px) {
+    .feature-box {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    .feature-icon {
+        margin-top: 0;
+    }
+    .feature-lead {
+        text-align: center;
+    }
+}
+
 
 /* =========================
 PRICE BOX
@@ -53,33 +114,6 @@ SERVICE CTA BAND
 }
 
 /* ==========================================================================
-   SERVICES UNDERSIDA - SPECIFIK STYLING (Ingen påverkan på index.html)
-   ========================================================================== */
-
-/* --- 1. Monteringslistan (Mitä kodin asennuspalveluihin kuuluu?) --- */
-.installation-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.installation-item {
-    flex: 1;
-    min-width: 280px;
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.installation-item p {
-    margin: 0;
-}
-
-.installation-item i {
-    margin-right: 10px;
-    color: #003366;
-}
 
 /* --- 2. Processen (Näin palvelu toimii) --- */
 .how-it-works-section {
@@ -131,36 +165,7 @@ SERVICE CTA BAND
    ISOLERAD MOBILANPASSNING (Endast för skärmar under 768px)
    ========================================================================== */
 @media (max-width: 768px) {
-    
-    /* Monteringslistan tvingas till 2 kolumner på mobilen */
-    .installation-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-    }
-
-    .installation-item {
-        padding: 12px 8px !important;
-        background: #fdfdfd !important;
-        border-radius: 6px !important;
-        border-bottom: none !important;
-        text-align: center !important;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.02) !important;
-    }
-
-    .installation-item p strong {
-        display: flex !important;
-        flex-direction: column !important; /* Lägger ikonen ovanför texten på mobilen */
-        align-items: center !important;
-        gap: 6px !important;
-        font-size: 13px !important; /* Skyddar texten från att bli för stor i små rutor */
-    }
-
-    .installation-item i {
-        margin-right: 0 !important; /* Nollställer sidomarginalen då ikonen centrerats */
-        font-size: 18px !important;
-    }
-
+  
     /* Processen (Steg 1, 2, 3) tvingas till EN enda rak rad (vertikalt staplade) */
     .how-it-works-section .services-container {
         display: flex !important;
@@ -174,6 +179,10 @@ SERVICE CTA BAND
     }
 }
 
+  .what-we-do .service-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 /* =========================
 CTA SUBTEXT
@@ -185,16 +194,3 @@ CTA SUBTEXT
     border-radius: 8px;
 }
 
-/* =========================
-MOBILE
-========================= */
-@media (max-width: 768px) {
-
-    .feature-box {
-        flex-direction: column;
-    }
-
-    .what-we-do .service-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
