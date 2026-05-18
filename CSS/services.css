@@ -20,59 +20,153 @@ SERVICE GRID (INDEX)
     align-items: center;
 }
 
-/* ==========================================================================
-   FEATURE BOXES SECTION - STYLING
-   ========================================================================== */
+
+/* ==========================================
+   FEATURE BOX SECTION (PREMIUM LAYOUT)
+   ========================================== */
+
+/* Huvudcontainer för hela sektionen */
 .feature-box-section {
-    padding: 50px 20px;
-    background-color: #fff;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 60px 20px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    box-sizing: border-box !important;
 }
 
+/* Säkerställer box-sizing för alla element inuti sektionen */
+.feature-box-section *, 
+.feature-box-section *::before, 
+.feature-box-section *::after {
+    box-sizing: border-box !important;
+}
+
+/* Centrerad mörkblå huvudrubrik */
 .feature-box-section h2 {
-    text-align: center;
-    margin-bottom: 35px;
+    text-align: center !important;
+    font-size: 2.2rem !important;
+    color: #002b5c !important;
+    margin: 0 0 40px 0 !important;
+    font-weight: 700 !important;
+    line-height: 1.3 !important;
 }
 
-.feature-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+/* Flexibelt och responsivt grid för rutorna */
+.feature-box-section .feature-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    margin: 0 0 50px 0 !important;
+    padding: 0 !important;
 }
 
-.feature-box {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    padding: 10px 0;
+/* Premium-design för varje enskild ruta */
+.feature-box-section .feature-box {
+    background: #ffffff !important;
+    border: 1px solid #eef2f5 !important;
+    border-radius: 16px !important;
+    padding: 35px 25px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
 }
 
-.feature-icon {
-    font-size: 28px;
-    color: #003366;
-    min-width: 40px;
-    text-align: center;
-    margin-top: 4px;
+/* Lyft-effekt vid hover på rutorna */
+.feature-box-section .feature-box:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+    border-color: #d1d9e0 !important;
 }
 
-.feature-text h3 {
-    font-size: 20px;
-    margin: 0 0 8px 0;
-    color: #222;
+/* Premium-styling för ikon-cirklarna */
+.feature-box-section .feature-icon {
+    width: 70px !important;
+    height: 70px !important;
+    background-color: #f4f7f6 !important;
+    color: #002b5c !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 1.6rem !important;
+    margin: 0 0 25px 0 !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
 }
 
-.feature-text p {
-    margin: 0;
-    color: #555;
-    line-height: 1.6;
+/* FontAwesome-ikonen inuti cirkeln */
+.feature-box-section .feature-icon i {
+    color: #002b5c !important;
+    font-size: 1.6rem !important;
+    transition: color 0.3s ease !important;
 }
 
-.feature-lead {
-    margin-top: 35px;
-    text-align: left;
-    color: #333;
-    line-height: 1.6;
+/* Färgskifte på cirkel och ikon vid hover */
+.feature-box-section .feature-box:hover .feature-icon {
+    background-color: #002b5c !important;
+}
+.feature-box-section .feature-box:hover .feature-icon i {
+    color: #ffffff !important;
+}
+
+/* Container för texten inuti rutan */
+.feature-box-section .feature-text {
+    width: 100% !important;
+}
+
+/* Mörkblå rubriker inuti rutorna */
+.feature-box-section .feature-text h3 {
+    font-size: 1.3rem !important;
+    color: #002b5c !important;
+    margin: 0 0 12px 0 !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+}
+
+/* Löpande brödtext inuti rutorna */
+.feature-box-section .feature-text p {
+    font-size: 0.95rem !important;
+    color: #5a6578 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Container för CTA-knappen */
+.feature-box-section .cta-container {
+    text-align: center !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+}
+
+/* Premium Mörkblå CTA-knapp */
+.feature-box-section .feature-cta-btn {
+    display: inline-block !important;
+    background-color: #002b5c !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    padding: 16px 40px !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 15px rgba(0, 43, 92, 0.2) !important;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+/* Hover-effekt för knappen */
+.feature-box-section .feature-cta-btn:hover {
+    background-color: #001f42 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.3) !important;
+}
+
+/* Klick-effekt för knappen */
+.feature-box-section .feature-cta-btn:active {
+    transform: translateY(0) !important;
 }
 
 /* Mobilanpassning för Feature Boxes */
