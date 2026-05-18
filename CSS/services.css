@@ -734,3 +734,85 @@ CTA SUBTEXT
         gap: 15px !important;
     }
 }
+
+/* ==========================================================================
+   TEST: GLOBAL MÖRKBLÅ PREMIUMBAKGRUND (LÄGG TILL LÄNGST NER)
+   ========================================================================== */
+
+/* 1. Sätter hela sidans bakgrund till djupt mörkblå */
+body, 
+.quick-action, 
+.how-it-works-section, 
+.faq-section {
+    background-color: #001f42 !important; /* En aningen mörkare midnattsblå än din logofärg */
+    background-image: linear-gradient(180deg, #001731 0%, #00254d 100%) !important; /* Ger ett fantastiskt lyxigt djup */
+    color: #ffffff !important;
+}
+
+/* 2. Tvingar ALLA rubriker, brödtexter och spans i dessa sektioner att bli krispigt vita */
+.quick-action h2, 
+.quick-action h3, 
+.how-it-works-section h2, 
+.how-it-works-section h3,
+.faq-section h2,
+.quick-action p,
+.quick-action span,
+.quick-action li,
+.how-it-works-section p,
+.how-it-works-section span,
+.faq-section p,
+.faq-section span,
+.faq-section .faq-question {
+    color: #ffffff !important;
+}
+
+/* 3. Gör om dina .service-item till eleganta "glaskort" (Glassmorphism) */
+.quick-action .service-item,
+.how-it-works-section .service-item,
+.faq-section .faq-item {
+    background: rgba(255, 255, 255, 0.03) !important; /* Genomskinlig vit */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-left: 4px solid #38bdf8 !important; /* Lysande ljusblå kant */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 4. Läcker hover-effekt på glaskorten */
+.quick-action .service-item:hover,
+.how-it-works-section .service-item:hover,
+.faq-section .faq-item:hover {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    border-left-color: #38bdf8 !important;
+}
+
+/* 5. Justerar ikonerna inuti rutorna så de lyser upp i ljusblått */
+.quick-action .service-item i,
+.how-it-works-section .service-item i,
+.faq-section .faq-question i {
+    background-color: rgba(0, 23, 49, 0.6) !important;
+    color: #38bdf8 !important;
+}
+
+/* 6. Fixar priskortet och kotitalousvähennys-boxen för mörkt tema */
+.quick-action .pricing-card {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.quick-action .tax-deduction-box {
+    background: rgba(56, 189, 248, 0.05) !important;
+    border: 1px dashed #38bdf8 !important;
+}
+.quick-action .tax-deduction-box p,
+.quick-action .tax-deduction-box i {
+    color: #38bdf8 !important;
+}
+
+/* 7. Justerar texterna inuti prismatrisen */
+.quick-action .price-name,
+.quick-action .price-amount {
+    color: #ffffff !important;
+}
+.quick-action .price-name i {
+    color: #38bdf8 !important;
+}
+    
