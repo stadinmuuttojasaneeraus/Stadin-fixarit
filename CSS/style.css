@@ -485,69 +485,151 @@ button {
     gap: 40px;
 }
 
-/* =========================
-FAQ
-========================= */
+/* ==========================================================================
+   FAQ SECTION (UNIFORM BLUE PREMIUM UPDATE)
+   ========================================================================== */
 
+.faq-section {
+    padding: 60px 20px !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+.faq-section *, 
+.faq-section *::before, 
+.faq-section *::after {
+    box-sizing: border-box !important;
+}
+
+/* Huvudrubrik - Centrerad och mörkblå */
 .faq-section h2 {
-    text-align: center;
-    margin-bottom: 30px; /* Ger lite luft ner till första frågan */
+    text-align: center !important;
+    color: #002b5c !important;
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 40px 0 !important;
 }
 
-.faq-item {
-    border-bottom: 1px solid #eee;
-    padding: 15px 0;
-    display: none; /* ÄNDRAD: Dölj alla frågor som standard så JavaScript kan styra */
+/* Varje enskilt FAQ-kort */
+.faq-section .faq-item {
+    background: #ffffff !important;
+    border: 1px solid #eef2f5 !important;
+    border-radius: 12px !important;
+    margin-bottom: 15px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 15px rgba(0, 43, 92, 0.02) !important;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+    display: none; /* Dölj alla frågor som standard så JavaScript kan styra via .visible */
 }
 
-.faq-item.visible {
-    display: block; /* NY: Visar endast de 4 första frågorna som JavaScript godkänner */
+/* Visar endast de frågor som JavaScript godkänner (de 4 första, samt resten vid klick) */
+.faq-section .faq-item.visible {
+    display: block !important;
 }
 
-.faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 0;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #222222; /* Tvingar texten att bli mörk och synlig */
-    line-height: 1.4;
-    padding: 5px 0;
+/* Subtil ram-effekt när man hovrar över ett kort */
+.faq-section .faq-item:hover {
+    border-color: #d1d9e0 !important;
+    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.04) !important;
 }
 
-.faq-answer {
-    display: none; /* Döljer svaren som standard */
-    padding-top: 15px;
+/* Frågeknappen - Helt mörkblå text och generös klickyta */
+.faq-section .faq-question {
+    width: 100% !important;
+    background: #ffffff !important;
+    border: none !important;
+    padding: 22px 25px !important;
+    text-align: left !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: #002b5c !important; /* Enhetlig mörkblå */
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+    line-height: 1.4 !important;
+    transition: background-color 0.2s ease !important;
 }
 
-.faq-answer p {
-    line-height: 1.7;
-    color: #555;
-    margin: 0;
+/* Ikonerna inuti frågan - Blir automatiskt mörkblå */
+.faq-section .faq-question i {
+    color: #002b5c !important;
+    font-size: 1.2rem !important;
+    width: 24px !important;
+    text-align: center !important;
+    flex-shrink: 0 !important;
 }
 
-/* Visar svaret när man klickat på frågan */
-.faq-item.active .faq-answer {
-    display: block; 
+/* Svarsboxen - Döljs som standard */
+.faq-section .faq-answer {
+    display: none; 
+    padding: 0 25px 22px 64px !important; /* Indrag så svaret ligger snyggt i linje under texten */
 }
 
-.faq-button {
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: #003366;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    display: block;
-    margin: 25px auto 0 auto;
+/* Brödtexten i svaret - Enhetlig mörkblå med mjuk opacitet för långa texter */
+.faq-section .faq-answer p {
+    line-height: 1.6 !important;
+    color: #002b5c !important;
+    margin: 0 !important;
+    font-size: 1rem !important;
+    opacity: 0.9 !important;
 }
+
+/* Visar svaret när klassen .active läggs till via JavaScript */
+.faq-section .faq-item.active .faq-answer {
+    display: block !important;
+}
+
+/* Valfritt: Ger en svag, fräsch bakgrund till frågan när den är öppen/aktiv */
+.faq-section .faq-item.active .faq-question {
+    background-color: rgba(0, 43, 92, 0.01) !important;
+}
+
+/* "Näytä lisää" -knappen längst ner - Mörkblå ram, vit inuti (Inverterad premium) */
+.faq-section .faq-button {
+    display: block !important;
+    background: transparent !important;
+    border: 2px solid #002b5c !important;
+    color: #002b5c !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    padding: 12px 35px !important;
+    border-radius: 25px !important;
+    cursor: pointer !important;
+    margin: 30px auto 0 auto !important;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease !important;
+}
+
+/* Knappen fylls med färg när man hovrar */
+.faq-section .faq-button:hover {
+    background-color: #002b5c !important;
+    color: #ffffff !important;
+}
+
+/* Mobilanpassning för små skärmar */
+@media (max-width: 768px) {
+    .faq-section {
+        padding: 40px 15px !important;
+    }
+
+    .faq-section h2 {
+        font-size: 1.75rem !important;
+        margin-bottom: 25px !important;
+    }
+
+    .faq-section .faq-question {
+        padding: 18px 20px !important;
+        font-size: 1rem !important;
+        gap: 12px !important;
+    }
+
+    .faq-section .faq-answer {
+        padding: 0 20px 18px 20px !important; /* Tar bort det stora indraget på mobilen så texten får plats */
+    }
+}
+
 
 /* =========================
 FOOTER
