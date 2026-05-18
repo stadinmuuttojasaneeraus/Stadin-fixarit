@@ -339,57 +339,34 @@ body {
     }
 }
 
-/* =========================
-SERVICE GRID (INDEX)
-========================= */
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
+/* ==========================================================================
+   GLOBAL SERVICES MASTER: FEATURE BOX SECTION (UNIFORM ALIVE BLUE)
+   ========================================================================== */
 
-.service-item {
-    background: #fff;
-    border: 1px solid #e6e6e6;
-    border-radius: 14px;
-    padding: 28px;
-    text-decoration: none;
-    color: #003366;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* ==========================================
-   FEATURE BOX SECTION (PREMIUM LAYOUT)
-   ========================================== */
-
-/* Huvudcontainer för hela sektionen */
+/* Bakgrunden utanför hålls transparent så den stora blå gradienten flyter med */
 .feature-box-section {
     padding: 60px 20px !important;
     max-width: 1200px !important;
     margin: 0 auto !important;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     box-sizing: border-box !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
 }
 
-/* Säkerställer box-sizing för alla element inuti sektionen */
 .feature-box-section *, 
 .feature-box-section *::before, 
 .feature-box-section *::after {
     box-sizing: border-box !important;
 }
 
-/* Centrerad mörkblå huvudrubrik */
+/* Huvudrubriken - Centrerad och krispigt vit mot den blå bakgrunden */
 .feature-box-section h2 {
     text-align: center !important;
-    font-size: 2.2rem !important;
-    color: #002b5c !important;
-    margin: 0 0 40px 0 !important;
+    font-size: 2.4rem !important;
+    color: #ffffff !important;
+    margin: 0 0 50px 0 !important;
     font-weight: 700 !important;
     line-height: 1.3 !important;
+    letter-spacing: -0.01em !important;
 }
 
 /* Flexibelt och responsivt grid för rutorna */
@@ -397,59 +374,57 @@ SERVICE GRID (INDEX)
     display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
     gap: 30px !important;
-    margin: 0 0 50px 0 !important;
+    margin: 0 0 40px 0 !important;
     padding: 0 !important;
 }
 
-/* Premium-design för varje enskild ruta */
+/* Premium-design för varje enskild ruta: Krispigt ljusblå med ljusblå vänsterkant */
 .feature-box-section .feature-box {
-    background: #ffffff !important;
-    border: 1px solid #eef2f5 !important;
+    background-color: #f0f7fd !important; /* Krispig ljusblå */
+    border: 1px solid #e2edf8 !important;
+    border-left: 5px solid #38bdf8 !important; /* Lysande ljusblå/cyan kant på vänster sida */
     border-radius: 16px !important;
     padding: 35px 25px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25) !important;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease, background-color 0.3s ease !important;
 }
 
-/* Lyft-effekt vid hover på rutorna */
+/* Hover-effekt: Kortet lyfter mjukt och bakgrunden blir aningen djupare */
 .feature-box-section .feature-box:hover {
-    transform: translateY(-8px) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
-    border-color: #d1d9e0 !important;
+    transform: translateY(-5px) !important;
+    background-color: #e3f0fc !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* Premium-styling för ikon-cirklarna */
+/* Premium-styling för ikon-cirklarna - Blir mörkblå cirkel konstant */
 .feature-box-section .feature-icon {
-    width: 70px !important;
-    height: 70px !important;
-    background-color: #f4f7f6 !important;
-    color: #002b5c !important;
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #002b5c !important; /* Mörkblå konstant */
+    color: #ffffff !important; /* Vit symbol konstant */
     border-radius: 50% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    font-size: 1.6rem !important;
-    margin: 0 0 25px 0 !important;
-    transition: background-color 0.3s ease, color 0.3s ease !important;
+    font-size: 1.4rem !important;
+    margin: 0 0 20px 0 !important;
+    box-shadow: 0 4px 10px rgba(0, 43, 92, 0.15) !important;
+    transition: transform 0.3s ease !important;
 }
 
 /* FontAwesome-ikonen inuti cirkeln */
 .feature-box-section .feature-icon i {
-    color: #002b5c !important;
-    font-size: 1.6rem !important;
-    transition: color 0.3s ease !important;
+    color: #ffffff !important;
+    font-size: 1.4rem !important;
 }
 
-/* Färgskifte på cirkel och ikon vid hover */
+/* Ikonen skalar upp subtilt vid hover på kortet */
 .feature-box-section .feature-box:hover .feature-icon {
-    background-color: #002b5c !important;
-}
-.feature-box-section .feature-box:hover .feature-icon i {
-    color: #ffffff !important;
+    transform: scale(1.05) !important;
 }
 
 /* Container för texten inuti rutan */
@@ -466,16 +441,17 @@ SERVICE GRID (INDEX)
     line-height: 1.4 !important;
 }
 
-/* Löpande brödtext inuti rutorna */
+/* Löpande brödtext inuti rutorna - Enhetligt mörkblå */
 .feature-box-section .feature-text p {
-    font-size: 0.95rem !important;
-    color: #5a6578 !important;
+    font-size: 0.98rem !important;
+    color: #002b5c !important;
     line-height: 1.6 !important;
     margin: 0 !important;
     padding: 0 !important;
+    opacity: 0.9 !important;
 }
 
-/* Container för CTA-knappen */
+/* Container för CTA-knappen (om den används i HTML) */
 .feature-box-section .cta-container {
     text-align: center !important;
     width: 100% !important;
@@ -485,50 +461,231 @@ SERVICE GRID (INDEX)
 /* Premium Mörkblå CTA-knapp */
 .feature-box-section .feature-cta-btn {
     display: inline-block !important;
-    background-color: #002b5c !important;
-    color: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #002b5c !important;
     text-decoration: none !important;
     font-size: 1.1rem !important;
     font-weight: 600 !important;
     padding: 16px 40px !important;
     border-radius: 30px !important;
-    box-shadow: 0 4px 15px rgba(0, 43, 92, 0.2) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
     border: none !important;
     cursor: pointer !important;
 }
 
-/* Hover-effekt för knappen */
 .feature-box-section .feature-cta-btn:hover {
-    background-color: #001f42 !important;
+    background-color: #f0f7fd !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.3) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Klick-effekt för knappen */
-.feature-box-section .feature-cta-btn:active {
-    transform: translateY(0) !important;
+/* Den avslutande ledtexten längst ner - Krispigt vit på den mörka bakgrunden */
+.feature-box-section .feature-lead {
+    color: #ffffff !important;
+    text-align: center !important;
+    max-width: 850px !important;
+    margin: 30px auto 0 auto !important;
+    font-size: 1.15rem !important;
+    line-height: 1.75 !important;
+    font-weight: 600 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
 }
 
-/* Mobilanpassning för Feature Boxes */
+/* --- ISOLERAD MOBILANPASSNING (Helt stängd med måsvingar) --- */
 @media (max-width: 768px) {
-    .feature-box {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        align-items: center;
+    .feature-box-section {
+        padding: 40px 15px !important;
     }
-    .feature-icon {
-        margin-top: 0;
+    .feature-box-section h2 {
+        font-size: 1.85rem !important;
+        margin-bottom: 35px !important;
     }
-    .feature-lead {
-        text-align: center;
+    .feature-box-section .feature-container {
+        gap: 20px !important;
+    }
+    .feature-box-section .feature-box {
+        padding: 30px 20px !important;
+        border-left-width: 4px !important;
+    }
+    .feature-box-section .feature-lead {
+        font-size: 1rem !important;
     }
 }
 
 /* ==========================================================================
-   SERVICE PAGES: PRICING SECTION (ISOLATED & UNIFORM)
+   GLOBAL SERVICES MASTER: SEKTION 4 (SERVICE PRICING SECTION)
    ========================================================================== */
+
+/* Bakgrunden utanför hålls transparent så den stora blå gradienten flyter med */
+.service-pricing-section {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 60px 20px !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+}
+
+.service-pricing-section *, 
+.service-pricing-section *::before, 
+.service-pricing-section *::after {
+    box-sizing: border-box !important;
+}
+
+/* Huvudrubriken (Krispigt vit mot den blå bakgrunden) */
+.service-pricing-section h2 {
+    color: #ffffff !important;
+    font-size: 2.4rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 20px 0 !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+}
+
+/* Introtexten under rubriken (Krispigt vit) */
+.service-pricing-section .pricing-intro {
+    max-width: 800px !important;
+    margin: 0 auto 30px auto !important;
+    color: #ffffff !important;
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+    opacity: 0.9 !important;
+    text-align: center !important;
+}
+
+/* Centrerar priskortet */
+.service-pricing-section .pricing-card-container {
+    max-width: 500px !important;
+    margin: 35px auto 25px auto !important;
+    width: 100% !important;
+}
+
+/* Premium-design för priskortet (Krispigt ljusblå med mörkblå text) */
+.service-pricing-section .pricing-card {
+    background: #f0f7fd !important; /* Krispig ljusblå */
+    border: 1px solid #e2edf8 !important;
+    border-left: 5px solid #38bdf8 !important; /* Ljusblå ram på vänster sida */
+    border-radius: 16px !important;
+    padding: 35px 25px !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25) !important;
+    text-align: center !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* Lyft-effekt på priskortet vid hover */
+.service-pricing-section .pricing-card:hover {
+    transform: translateY(-5px) !important;
+    background-color: #e3f0fc !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Stor, elegant euro-ikon (Blir mörkblå cirkel konstant) */
+.service-pricing-section .pricing-card i {
+    font-size: 1.2rem !important;
+    color: #ffffff !important;
+    background-color: #002b5c !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 4px 10px rgba(0, 43, 92, 0.15) !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Prisrubriken inuti kortet (Mörkblå) */
+.service-pricing-section .pricing-card h3 {
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    color: #002b5c !important;
+    margin: 0 0 12px 0 !important;
+}
+
+/* Brödtexten inuti kortet (Mörkblå) */
+.service-pricing-section .pricing-card p {
+    color: #002b5c !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    opacity: 0.9 !important;
+}
+
+/* Boxen för Kotitalousvähennys (Snyggt anpassad för det mörka temat) */
+.service-pricing-section .tax-deduction-box {
+    max-width: 700px !important;
+    margin: 30px auto !important;
+    background: rgba(56, 189, 248, 0.08) !important; /* Ljusblå genomskinlig skattebox */
+    border: 1px dashed #38bdf8 !important; /* Ljusblå streckad ram */
+    border-radius: 12px !important;
+    padding: 20px 25px !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 20px !important;
+}
+
+/* Procent-ikonen i skatteboxen */
+.service-pricing-section .tax-deduction-box i {
+    font-size: 1.8rem !important;
+    color: #38bdf8 !important;
+    flex-shrink: 0 !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    display: inline-block !important;
+}
+
+/* Texten inuti skatteboxen (Lyser i ljusblått mot den mörka bakgrunden) */
+.service-pricing-section .tax-deduction-box p {
+    margin: 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    color: #38bdf8 !important;
+}
+
+/* Highlight-texten längst ner (Krispigt vit) */
+.service-pricing-section .pricing-highlight-text {
+    margin-top: 35px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    font-size: 1.15rem !important;
+    text-align: center !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+/* Bock-ikonen i botten-texten (Behåller den gröna bocken) */
+.service-pricing-section .pricing-highlight-text i {
+    color: #22c55e !important; 
+    margin-right: 6px !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free" !important;
+    font-weight: 900 !important;
+    display: inline-block !important;
+}
+
+/* --- ISOLERAD MOBILANPASSNING (Helt stängd med måsvingar) --- */
+@media (max-width: 768px) {
+    .service-pricing-section {
+        padding: 40px 20px !important;
+        margin: 30px 10px !important;
+    }
+
+    .service-pricing-section h2 {
+        font-size: 1.75rem !important;
+    }
+
+    .service-pricing-section .tax-deduction-box {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 12px !important;
+        padding: 20px 15px !important;
+    }
+}
+
 
 /* Huvudcontainer för prissektionen */
 .service-pricing-section {
@@ -700,127 +857,7 @@ SERVICE CTA BAND
     border-radius: 18px;
 }
 
-/* ==========================================
-   HOW IT WORKS SECTION (PREMIUM UPDATE)
-   ========================================== */
-
-/* Huvudcontainer med ett fräscht, ljust premium-djup */
-.how-it-works-section {
-    background-color: #f8fafc !important;
-    padding: 80px 20px !important;
-    text-align: center !important;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    box-sizing: border-box !important;
-}
-
-/* Säkerställer box-sizing för alla underliggande element */
-.how-it-works-section *, 
-.how-it-works-section *::before, 
-.how-it-works-section *::after {
-    box-sizing: border-box !important;
-}
-
-/* Centrerad mörkblå huvudrubrik */
-.how-it-works-section h2 {
-    color: #002b5c !important;
-    font-size: 2.2rem !important;
-    font-weight: 700 !important;
-    margin: 0 0 50px 0 !important;
-    text-align: center !important;
-    line-height: 1.3 !important;
-}
-
-/* Flexibel och modern container för stegen */
-.how-it-works-section .services-container {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 30px !important;
-    justify-content: center !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-}
-
-/* Premium-design för varje enskilt steg (kort) */
-.how-it-works-section .service-item {
-    flex: 1 !important;
-    min-width: 280px !important;
-    background: #ffffff !important;
-    padding: 40px 30px !important;
-    border-radius: 16px !important;
-    border: 1px solid #eef2f5 !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03) !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
-    position: relative !important;
-}
-
-/* Elegant lyft-effekt vid hover */
-.how-it-works-section .service-item:hover {
-    transform: translateY(-6px) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07) !important;
-    border-color: #d1d9e0 !important;
-}
-
-/* Steg-rubriken (Mörkblå) */
-.how-it-works-section .service-item h3 {
-    font-size: 1.3rem !important;
-    color: #002b5c !important;
-    font-weight: 600 !important;
-    margin: 0 0 15px 0 !important;
-    line-height: 1.4 !important;
-    display: flex !important;
-    flex-direction: column !important; /* Staplar ikon/nummer över texten för ett renare utseende */
-    align-items: center !important;
-}
-
-/* Premium-styling för ikonen inuti rubriken */
-.how-it-works-section .service-item h3 i {
-    color: #002b5c !important;
-    font-size: 1.8rem !important;
-    margin: 0 0 15px 0 !important; /* Ger luft ner till texten istället för till höger */
-    transition: transform 0.3s ease !important;
-}
-
-/* Ikonen får en subtil animation när man hovrar över kortet */
-.how-it-works-section .service-item:hover h3 i {
-    transform: scale(1.1) !important;
-}
-
-/* Beskrivande text under rubriken */
-.how-it-works-section .service-item p {
-    color: #5a6578 !important;
-    font-size: 0.95rem !important;
-    margin: 0 !important;
-    line-height: 1.6 !important;
-}
-
-/* ==========================================================================
-   ISOLERAD MOBILANPASSNING (Helt konfliktfri)
-   ========================================================================== */
-@media (max-width: 768px) {
-    .how-it-works-section {
-        padding: 50px 20px !important;
-    }
-    
-    .how-it-works-section h2 {
-        font-size: 1.8rem !important;
-        margin-bottom: 35px !important;
-    }
-
-    /* Processen tvingas till en snygg vertikal rad på mobilen */
-    .how-it-works-section .services-container {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 20px !important;
-    }
-
-    .how-it-works-section .service-item {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 30px 20px !important;
-    }
-}
-
+ 
 /* Fix för din andra grid-layout i slutet av din kod */
 @media (max-width: 768px) {
     .what-we-do .service-grid {
@@ -843,10 +880,6 @@ CTA SUBTEXT
     border-radius: 8px;
 }
 
-/* Undantag: Säkerställer att texten inuti den blå quick-trust-boxen förblir vit */
-.quick-trust span {
-    color: #ffffff !important;
-}
 /* ==========================================================================
    GLOBAL SERVICES: MIKSI VALITA MEIDÄT (GENERELL & KONFLIKTFRI)
    ========================================================================== */
