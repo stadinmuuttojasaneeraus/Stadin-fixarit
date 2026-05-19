@@ -289,119 +289,181 @@ body {
 }
 
 /* ==========================================================================
-   GLOBAL SERVICES MASTER: SEKTION 3 (HOW IT WORKS SECTION)
+   GLOBAL SERVICES MASTER: SEKTION 3 (HOW IT WORKS SECTION) - PREMIUM REVISION
    ========================================================================== */
 
 /* Bakgrunden utanför hålls transparent så den stora blå gradienten flyter med */
 .how-it-works-section {
     background: transparent !important;
-    padding: 60px 20px !important;
+    padding: 45px 15px !important; /* Kompakt och matchar förra sektionen */
     max-width: 1100px !important;
     margin: 0 auto !important;
+    box-sizing: border-box !important;
 }
 
-/* Den nya inbjudande meningen (Krispigt vit) */
+.how-it-works-section *, 
+.how-it-works-section *::before, 
+.how-it-works-section *::after {
+    box-sizing: border-box !important;
+}
+
+/* Header-wrapper */
+.how-it-works-section .how-it-works-header-wrapper {
+    text-align: center !important;
+    margin-bottom: 35px !important;
+}
+
+/* Huvudrubriken - Centrerad, krispigt vit och exakt samma storlek som förra sektionen */
+.how-it-works-section h2 {
+    color: #ffffff !important;
+    text-align: center !important;
+    font-size: 1.8rem !important; /* Exakt matchning för enhetlighet */
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Den inbjudande meningen (Krispigt vit) */
 .how-it-works-section .section-lead-text {
     color: #ffffff !important;
     text-align: center !important;
-    font-size: 1.08rem !important;
-    line-height: 1.75 !important;
-    max-width: 750px !important;
-    margin: 0 auto 40px auto !important;
-    opacity: 0.95 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    opacity: 0.9 !important;
 }
 
-/* Steg-rutorna: Krispigt ljusblå bakgrund med ljusblå/cyan vänsterkant */
+/* 3-kolumners layout på dator för ett lyxigt, symmetriskt flöde */
+.how-it-works-section .services-container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    max-width: 1050px !important;
+}
+
+/* Steg-rutorna: Krispigt ljusblå bakgrund med ljusblå/cyan överkant för modern touch */
 .how-it-works-section .service-item {
-    background-color: #f0f7fd !important;
-    border: 1px solid #e2edf8 !important;
-    border-left: 5px solid #38bdf8 !important; /* Ljusblå ram på vänster sida */
+    background-color: #ffffff !important; /* Ren vit för absolut bästa premiumkontrast */
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-top: 5px solid #38bdf8 !important; /* Flyttad till toppen för bättre balans när ikonerna centrerats */
     border-radius: 16px !important;
-    padding: 35px 25px !important;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2) !important;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
+    padding: 30px 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Centrerar allt innehåll */
+    text-align: center !important;
+    box-shadow: 0 8px 25px rgba(0, 43, 92, 0.12) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 /* Mjuk lyft-effekt vid hover */
 .how-it-works-section .service-item:hover {
-    transform: translateY(-5px) !important;
-    background-color: #e3f0fc !important;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 15px 35px rgba(0, 43, 92, 0.2) !important;
+}
+
+/* CENTRERAD, STÖRRE IKON-CIRKEL */
+.how-it-works-section .step-icon-circle {
+    background-color: #002b5c !important; /* Mörkblå konstant */
+    color: #ffffff !important; /* Vit symbol konstant */
+    width: 50px !important; /* Större cirkel */
+    height: 50px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 0 4px 12px rgba(0, 43, 92, 0.15) !important;
+    margin-bottom: 18px !important;
+    transition: transform 0.3s ease !important;
+}
+
+.how-it-works-section .step-icon-circle i {
+    font-size: 1.4rem !important; /* Större ikon för premiumkänsla */
+}
+
+.how-it-works-section .service-item:hover .step-icon-circle {
+    transform: scale(1.08) !important;
 }
 
 /* Rubriken inuti rutorna - Enhetligt mörkblå */
 .how-it-works-section .service-item h3 {
     color: #002b5c !important;
     font-weight: 700 !important;
-    font-size: 1.25rem !important;
-    margin-bottom: 15px !important;
+    font-size: 1.2rem !important;
+    margin: 0 0 12px 0 !important;
 }
 
-/* Ikonerna inuti rubrikerna - Blir mörkblå cirklar konstant */
-.how-it-works-section .service-item h3 i {
-    background-color: #002b5c !important;
-    color: #ffffff !important;
-    font-size: 1.1rem !important;
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    box-shadow: 0 4px 10px rgba(0, 43, 92, 0.15) !important;
-    margin-bottom: 12px !important;
-}
-
-/* Brödtexten inuti rutorna - Enhetligt mörkblå */
+/* Brödtexten inuti rutorna - Tjockare och tydligare finska */
 .how-it-works-section .service-item p {
     color: #002b5c !important;
-    font-size: 0.98rem !important;
-    line-height: 1.6 !important;
-    opacity: 0.9 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    font-weight: 600 !important; /* Tjockare text för optimal läsbarhet */
+    margin: 0 !important;
+    opacity: 1 !important; /* Full synlighet */
 }
 
 /* --- PREMIUM CTA-KNAPP I BOTTEN --- */
 .how-it-works-section .cta-container-bottom {
     text-align: center !important;
     width: 100% !important;
-    margin-top: 45px !important;
+    margin-top: 35px !important;
 }
 
 .how-it-works-section .cta-button {
-    display: inline-block !important;
-    background-color: #ffffff !important; /* Vit knapp som poppar starkt mot den blå bakgrunden */
-    color: #002b5c !important; /* Mörkblå text */
+    display: inline-flex !important; /* inline-flex för att centrera ikonen snyggt brevid texten */
+    align-items: center !important;
+    gap: 10px !important;
+    background-color: #ffffff !important; 
+    color: #002b5c !important; 
     text-decoration: none !important;
-    font-size: 1.1rem !important;
-    font-weight: 600 !important;
-    padding: 16px 45px !important;
-    border-radius: 30px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    padding: 15px 40px !important;
+    border-radius: 12px !important; /* Matchar rutorna istället för helt runda pillerknappar */
+    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.15) !important;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
     border: none !important;
+}
+
+.how-it-works-section .cta-button i {
+    font-size: 1.1rem !important;
 }
 
 /* Hover-effekt för knappen */
 .how-it-works-section .cta-button:hover {
-    background-color: #f0f7fd !important; /* Ljusblå vid hover */
+    background-color: #f0f4f8 !important; 
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 10px 25px rgba(0, 43, 92, 0.25) !important;
 }
 
-/* Mobilanpassning för stegen (Tvingar vertikal lista på små skärmar) */
+/* --- MOBILANPASSNING (1 KOLUMN FÖR STEG SÅ TEXTEN INTE BLIR TRÅNG) --- */
 @media (max-width: 768px) {
+    .how-it-works-section {
+        padding: 30px 10px !important;
+    }
+    .how-it-works-section h2 {
+        font-size: 1.5rem !important;
+    }
+    /* På mobilen läggs stegen under varandra i 1 kolumn så att den finska texten har gott om plats och inte blir ihoptryckt */
     .how-it-works-section .services-container {
-        flex-direction: column !important;
-        gap: 20px !important;
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+    .how-it-works-section .service-item {
+        padding: 24px 20px !important;
     }
     .how-it-works-section .section-lead-text {
-        font-size: 1rem !important;
-        margin-bottom: 30px !important;
+        font-size: 0.95rem !important;
     }
     .how-it-works-section .cta-button {
-        padding: 14px 30px !important;
+        padding: 14px 24px !important;
         font-size: 1rem !important;
-        width: 100% !important; /* Knappen tar hela bredden på mobilen för smidigare klick */
+        width: 100% !important; 
+        justify-content: center !important;
     }
 }
 
