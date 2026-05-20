@@ -12,144 +12,115 @@ body {
     min-height: 100vh !important;
 }
 
-/* Central nollställning för denna sektions containers */
+ /* ==========================================================================
+   GLOBAL SERVICES: MITEN VOIMME OLLA AVUKSI (SLIM & CLEAN INTRO)
+   ========================================================================== */
+
+/* Central nollställning och mer kompakt padding */
 .quick-action.services-grid-block {
-    background: transparent !important; /* Tar bort det gamla vita/gråa blocket */
+    background: transparent !important; 
     border: none !important;
     box-shadow: none !important;
-    padding: 60px 20px !important;
+    padding: 50px 20px 30px 20px !important; /* Minskat bottenavstånd eftersom rutorna är borta */
     max-width: 1100px !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
 }
 
-/* Säkerställer box-sizing för alla element inuti sektionen */
 .services-grid-block *, 
 .services-grid-block *::before, 
 .services-grid-block *::after {
     box-sizing: border-box !important;
 }
 
-/* Huvudrubriken - Centrerad och krispigt vit mot den blå bakgrunden */
-.services-grid-block h2 {
+/* Header-wrapper */
+.services-grid-block .services-header-wrapper {
+    margin-bottom: 25px !important;
     text-align: center !important;
-    color: #ffffff !important;
-    font-size: 2.4rem !important;
-    font-weight: 700 !important;
-    margin: 0 0 15px 0 !important;
-    letter-spacing: -0.01em !important;
 }
 
-/* Introduktionstexten under rubriken - Krispigt vit */
-.services-grid-block p {
+/* Huvudrubriken - Centrerad, krispigt vit och balanserad storlek */
+.services-grid-block h2 {
+    color: #ffffff !important;
+    font-size: 1.8rem !important; 
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+    letter-spacing: -0.01em !important;
+    text-align: center !important;
+}
+
+/* Introduktionstexten under rubriken */
+.services-grid-block p.services-intro-text {
     color: #ffffff !important;
     text-align: center !important;
-    font-size: 1.08rem !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    max-width: 720px !important;
+    margin: 0 auto !important;
+    opacity: 0.9 !important;
+}
+
+/* DET NYA PREMIUM TEXTSTYCKET */
+.services-grid-block .services-premium-intro-paragraph {
+    max-width: 750px !important; /* Håller textraderna korta och lyxiga för ögat */
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+.services-grid-block .services-premium-intro-paragraph p {
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
     line-height: 1.75 !important;
-    max-width: 850px !important;
-    margin: 0 auto 40px auto !important;
+    font-weight: 400 !important;
+    margin: 0 0 20px 0 !important;
     opacity: 0.95 !important;
 }
 
-/* Tvingar fram exakt 2 jämna kolumner på dator och surfplatta */
-.services-grid-block .services-container {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important; 
-    gap: 20px !important;
-    margin: 0 auto !important;
-    padding: 0 !important;
-    max-width: 1000px !important;
-}
-
-/* Premium-rutorna: Krispigt ljusblå bakgrund med en ljusblå/cyan vänsterkant */
-.services-grid-block .service-item {
-    background-color: #f0f7fd !important; /* Krispig ljusblå */
-    border: 1px solid #e2edf8 !important;
-    border-left: 5px solid #38bdf8 !important; /* Ljusblå/cyan ram på vänster sida */
-    border-radius: 16px !important;
-    padding: 24px 28px !important;
-    display: flex !important;
-    align-items: center !important;
-    text-align: left !important;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2) !important;
-    text-decoration: none !important;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease !important;
-}
-
-/* Hover-effekt: Kortet lyfter mjukt och bakgrunden blir aningen djupare */
-.services-grid-block .service-item:hover {
-    transform: translateY(-4px) !important;
-    background-color: #e3f0fc !important;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35) !important;
-}
-
-/* KONSTANT BLÅ IKON-CIRKEL: Mörkblå bakgrund och vit symbol hela tiden */
-.services-grid-block .service-item i {
-    background-color: #002b5c !important; /* Mörkblå konstant */
-    color: #ffffff !important; /* Vit symbol konstant */
-    font-size: 1.2rem !important;
-    margin-right: 18px !important;
-    width: 42px !important;
-    height: 42px !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-shrink: 0 !important;
-    box-shadow: 0 4px 10px rgba(0, 43, 92, 0.15) !important;
-    transition: transform 0.3s ease !important;
-}
-
-/* Ikonen skalar upp subtilt vid hover på kortet */
-.services-grid-block .service-item:hover i {
-    transform: scale(1.05) !important;
-}
-
-/* Texten inuti rutorna - Enhetligt mörkblå för maximal läsbarhet mot ljusblått */
-.services-grid-block .service-item span {
-    color: #002b5c !important;
-    font-weight: 600 !important;
-    font-size: 1.05rem !important;
-    line-height: 1.4 !important;
-}
-
-/* KRISPIGT VIT HIGHLIGHT-TEXT: Centrerad spikrakt nedanför rutorna */
-.services-grid-block .highlight-text {
+/* Gör den viktiga meningen lite fetare och mer poppande */
+.services-grid-block .services-premium-intro-paragraph strong {
+    font-weight: 700 !important;
     color: #ffffff !important;
-    text-align: center !important;
-    font-weight: 600 !important;
-    margin-top: 35px !important;
-    font-size: 1.15rem !important;
-    width: 100% !important;
+    display: inline-block !important;
+    margin: 5px 0 !important;
+}
+
+/* Den feta, krispigt vita highlight-texten i botten med en subtil rörelse på pilen */
+.services-grid-block .highlight-text.strong-white-text {
+    color: #38bdf8 !important; /* Din snygga ljusblå/cyan färg så att den drar blicken nedåt */
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    opacity: 1 !important;
+    margin-top: 30px !important;
     display: block !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+    text-align: center !important;
 }
 
-/* --- ISOLERAD MOBILANPASSNING (Helt stängd med måsvingar) --- */
+.services-grid-block .highlight-text.strong-white-text i {
+    animation: bounceArrowSubtle 2s infinite; /* Ger pilen en lyxig och omärklig rörelse */
+    display: inline-block;
+}
+
+/* Enkel och mjuk animation för pilen */
+@keyframes bounceArrowSubtle {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+
+/* --- ISOLERAD MOBILANPASSNING (KOMPAKT & SÖMLÖS) --- */
 @media (max-width: 768px) {
-    .services-grid-block .services-container {
-        grid-template-columns: 1fr !important; /* Lägger sig i en perfekt, ren rad på mobilen */
-        gap: 12px !important;
+    .quick-action.services-grid-block {
+        padding: 35px 15px 15px 15px !important; /* Mycket tightare avstånd på mobilen */
     }
-    .services-grid-block .service-item {
-        padding: 20px 22px !important;
-        border-left-width: 4px !important;
+    .services-grid-block h2 {
+        font-size: 1.5rem !important;
     }
-}
-
-@media (max-width: 480px) {
-    .services-grid-block .service-item {
-        padding: 16px 14px !important;
-        gap: 10px !important;
-    }
-    .services-grid-block .service-item i {
-        width: 36px !important;
-        height: 36px !important;
+    .services-grid-block .services-premium-intro-paragraph p {
         font-size: 1rem !important;
-        margin-right: 10px !important;
+        line-height: 1.65 !important;
     }
-    .services-grid-block .service-item span {
-        font-size: 0.9rem !important;
+    .services-grid-block .highlight-text.strong-white-text {
+        font-size: 0.98rem !important;
+        margin-top: 20px !important;
     }
 }
 
@@ -401,17 +372,19 @@ body {
     }
 }
 
+
 /* ==========================================================================
-   GLOBAL SERVICES MASTER: FEATURE BOX SECTION (UNIFORM ALIVE BLUE)
+   GLOBAL SERVICES MASTER: FEATURE BOXES SECTION (PREMIUM EDIT)
    ========================================================================== */
 
-/* Bakgrunden utanför hålls transparent så den stora blå gradienten flyter med */
 .feature-box-section {
-    padding: 60px 20px !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
+    background: #ffffff !important; /* Vit, krispig premium-bakgrund */
+    padding: 70px 20px !important;
+    max-width: 1100px !important;
+    margin: 40px auto !important;
     box-sizing: border-box !important;
-    font-family: system-ui, -apple-system, sans-serif !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 30px rgba(0, 43, 92, 0.02) !important; /* Mycket mjuk skugga runt sektionen */
 }
 
 .feature-box-section *, 
@@ -420,160 +393,186 @@ body {
     box-sizing: border-box !important;
 }
 
-/* Huvudrubriken - Centrerad och krispigt vit mot den blå bakgrunden */
-.feature-box-section h2 {
+/* Överskrift-wrapper */
+.feature-box-section .feature-section-header {
     text-align: center !important;
-    font-size: 2.4rem !important;
-    color: #ffffff !important;
-    margin: 0 0 50px 0 !important;
+    margin-bottom: 45px !important;
+}
+
+/* Sektionens huvudrubrik - Samma storlek som de övriga för perfekt enhetlighet */
+.feature-box-section h2 {
+    color: #002b5c !important; /* Din mörkblå signaturfärg */
+    font-size: 1.8rem !important;
     font-weight: 700 !important;
-    line-height: 1.3 !important;
+    margin: 0 0 10px 0 !important;
     letter-spacing: -0.01em !important;
+    text-align: center !important;
 }
 
-/* Flexibelt och responsivt grid för rutorna */
+.feature-box-section .feature-section-subtitle {
+    color: #002b5c !important;
+    font-size: 1rem !important;
+    opacity: 0.8 !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+/* Flexibel lista/container för boxarna */
 .feature-box-section .feature-container {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
-    gap: 30px !important;
-    margin: 0 0 40px 0 !important;
-    padding: 0 !important;
-}
-
-/* Premium-design för varje enskild ruta: Krispigt ljusblå med ljusblå vänsterkant */
-.feature-box-section .feature-box {
-    background-color: #f0f7fd !important; /* Krispig ljusblå */
-    border: 1px solid #e2edf8 !important;
-    border-left: 5px solid #38bdf8 !important; /* Lysande ljusblå/cyan kant på vänster sida */
-    border-radius: 16px !important;
-    padding: 35px 25px !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25) !important;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease, background-color 0.3s ease !important;
+    gap: 20px !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
 }
 
-/* Hover-effekt: Kortet lyfter mjukt och bakgrunden blir aningen djupare */
-.feature-box-section .feature-box:hover {
-    transform: translateY(-5px) !important;
-    background-color: #e3f0fc !important;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4) !important;
-}
-
-/* Premium-styling för ikon-cirklarna - Blir mörkblå cirkel konstant */
-.feature-box-section .feature-icon {
-    width: 60px !important;
-    height: 60px !important;
-    background-color: #002b5c !important; /* Mörkblå konstant */
-    color: #ffffff !important; /* Vit symbol konstant */
-    border-radius: 50% !important;
+/* Själva raderna/boxarna */
+.feature-box-section .feature-box {
+    background-color: #f8fafc !important; /* Mycket mjuk, ljusgrå/blå premiumton */
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 24px 28px !important;
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    font-size: 1.4rem !important;
-    margin: 0 0 20px 0 !important;
-    box-shadow: 0 4px 10px rgba(0, 43, 92, 0.15) !important;
-    transition: transform 0.3s ease !important;
+    align-items: flex-start !important; /* Justerar ikonen perfekt vid expandering */
+    text-align: left !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
-/* FontAwesome-ikonen inuti cirkeln */
+.feature-box-section .feature-box:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.03) !important;
+}
+
+/* Den lyxiga ikonen till vänster */
+.feature-box-section .feature-icon {
+    margin-right: 22px !important;
+    margin-top: 2px !important;
+    flex-shrink: 0 !important;
+}
+
 .feature-box-section .feature-icon i {
-    color: #ffffff !important;
-    font-size: 1.4rem !important;
+    color: #38bdf8 !important; /* Din snygga ljusblå/cyan färg som accent */
+    font-size: 1.5rem !important;
 }
 
-/* Ikonen skalar upp subtilt vid hover på kortet */
-.feature-box-section .feature-box:hover .feature-icon {
-    transform: scale(1.05) !important;
-}
-
-/* Container för texten inuti rutan */
+/* Textblocket */
 .feature-box-section .feature-text {
-    width: 100% !important;
+    flex: 1 !important;
 }
 
-/* Mörkblå rubriker inuti rutorna */
 .feature-box-section .feature-text h3 {
-    font-size: 1.3rem !important;
     color: #002b5c !important;
-    margin: 0 0 12px 0 !important;
-    font-weight: 600 !important;
-    line-height: 1.4 !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 8px 0 !important;
 }
 
-/* Löpande brödtext inuti rutorna - Enhetligt mörkblå */
 .feature-box-section .feature-text p {
+    color: #334155 !important;
     font-size: 0.98rem !important;
-    color: #002b5c !important;
-    line-height: 1.6 !important;
+    line-height: 1.55 !important;
     margin: 0 !important;
-    padding: 0 !important;
+}
+
+/* Sammanfattande texten längst ner i sektionen */
+.feature-box-section .feature-lead {
+    text-align: center !important;
+    color: #002b5c !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.6 !important;
+    max-width: 800px !important;
+    margin: 40px auto 0 auto !important;
     opacity: 0.9 !important;
 }
 
-/* Container för CTA-knappen (om den används i HTML) */
-.feature-box-section .cta-container {
-    text-align: center !important;
-    width: 100% !important;
-    margin-top: 20px !important;
+/* ==========================================================================
+   UNIVERSAL EXPANDABLE SECTIONS (INTEGRERAD HÄR)
+   ========================================================================== */
+.feature-box-section .universal-expand-content {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-in-out !important;
 }
 
-/* Premium Mörkblå CTA-knapp */
-.feature-box-section .feature-cta-btn {
-    display: inline-block !important;
-    background-color: #ffffff !important;
-    color: #002b5c !important;
-    text-decoration: none !important;
-    font-size: 1.1rem !important;
-    font-weight: 600 !important;
-    padding: 16px 40px !important;
-    border-radius: 30px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+.feature-box-section .universal-expand-content.is-expanded {
+    max-height: 300px !important;
+    opacity: 1 !important;
+    margin-top: 10px !important;
+}
+
+/* Läs mer-knappen */
+.feature-box-section .universal-trigger {
+    background: transparent !important;
     border: none !important;
+    color: #002b5c !important;
+    font-weight: 700 !important;
+    font-size: 0.88rem !important;
     cursor: pointer !important;
+    padding: 4px 0 !important;
+    margin-top: 10px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    transition: opacity 0.2s ease !important;
 }
 
-.feature-box-section .feature-cta-btn:hover {
-    background-color: #f0f7fd !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+.feature-box-section .universal-trigger:hover {
+    opacity: 0.7 !important;
+    text-decoration: underline !important;
 }
 
-/* Den avslutande ledtexten längst ner - Krispigt vit på den mörka bakgrunden */
-.feature-box-section .feature-lead {
-    color: #ffffff !important;
-    text-align: center !important;
-    max-width: 850px !important;
-    margin: 30px auto 0 auto !important;
-    font-size: 1.15rem !important;
-    line-height: 1.75 !important;
-    font-weight: 600 !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+.feature-box-section .universal-trigger::after {
+    content: '\f107' !important;
+    font-family: 'Font Awesome 6 Free' !important;
+    font-weight: 900 !important;
+    font-size: 0.8rem !important;
+    transition: transform 0.3s ease !important;
 }
 
-/* --- ISOLERAD MOBILANPASSNING (Helt stängd med måsvingar) --- */
+.feature-box-section .universal-trigger.is-active::after {
+    transform: rotate(180deg) !important;
+}
+
+/* --- MOBILANPASSNING (TÄTARE LAYOUT PÅ MOBILEN) --- */
 @media (max-width: 768px) {
     .feature-box-section {
-        padding: 40px 15px !important;
+        padding: 45px 15px !important;
+        margin: 20px auto !important;
     }
+    
     .feature-box-section h2 {
-        font-size: 1.85rem !important;
-        margin-bottom: 35px !important;
+        font-size: 1.5rem !important;
     }
-    .feature-box-section .feature-container {
-        gap: 20px !important;
-    }
+    
     .feature-box-section .feature-box {
-        padding: 30px 20px !important;
-        border-left-width: 4px !important;
+        padding: 18px 16px !important;
+        flex-direction: row !important; /* Behåller ikonen till vänster */
     }
+    
+    .feature-box-section .feature-icon {
+        margin-right: 14px !important;
+    }
+    
+    .feature-box-section .feature-icon i {
+        font-size: 1.3rem !important;
+    }
+    
+    .feature-box-section .feature-text h3 {
+        font-size: 1.05rem !important;
+    }
+    
+    .feature-box-section .feature-text p {
+        font-size: 0.92rem !important;
+    }
+    
     .feature-box-section .feature-lead {
-        font-size: 1rem !important;
+        font-size: 0.95rem !important;
+        margin-top: 30px !important;
     }
 }
+
 /* ==========================================================================
    GLOBAL SERVICES MASTER: UNIFIED PREMIUM SERVICE PRICING
    ========================================================================== */
@@ -1061,3 +1060,311 @@ body {
         justify-content: center !important;
     }
 }
+
+/* ==========================================================================
+   B2B COMPANY SERVICES: YRITYKSILLE MAIN LAYOUT
+   ========================================================================== */
+
+.b2b-main-content {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Universell sektions-wrapper för B2B */
+.b2b-info-section {
+    padding: 70px 20px !important;
+    background: #ffffff !important; /* Krispigt vit som grund */
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Varannan sektion får en mycket mjuk gråblå ton för visuell variation */
+.b2b-info-section.alt-bg {
+    background: #f8fafc !important;
+    border-top: 1px solid #f1f5f9 !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+}
+
+/* Inre container för perfekt centrering och läsvänlighet */
+.b2b-section-inner {
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    text-align: left !important;
+}
+
+/* Rubrikerna för företagstjänsterna */
+.b2b-info-section h2 {
+    color: #002b5c !important; /* Din signaturfärg */
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 20px 0 !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* Brödtexterna */
+.b2b-info-section p {
+    color: #334155 !important; /* Premium mörkgrå för bästa läsbarhet */
+    font-size: 1.05rem !important;
+    line-height: 1.7 !important;
+    margin: 0 0 25px 0 !important;
+}
+
+/* Uppgraderad premium-lista med ikoner istället för tråkiga fyrkanter */
+.b2b-premium-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.b2b-premium-list li {
+    font-size: 1.05rem !important;
+    color: #334155 !important;
+    line-height: 1.6 !important;
+    margin-bottom: 14px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+}
+
+/* Det lilla check-tecknet i listan */
+.b2b-premium-list li i {
+    color: #38bdf8 !important; /* Din snygga cyanblå accentfärg */
+    font-size: 1.15rem !important;
+    margin-top: 2px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Sista sektionen (Joustava kumppanuus) centrerad och lyft */
+.b2b-info-section.partnership-section {
+    background: #ffffff !important;
+    text-align: center !important;
+    padding: 80px 20px !important;
+}
+
+.b2b-info-section.partnership-section .b2b-section-inner {
+    text-align: center !important;
+}
+
+.b2b-info-section .partnership-lead {
+    font-size: 1.15rem !important;
+    font-weight: 500 !important;
+    color: #002b5c !important;
+    max-width: 750px !important;
+    margin: 0 auto !important;
+    line-height: 1.75 !important;
+}
+
+/* --- ISOLERAD MOBILANPASSNING FOR B2B --- */
+@media (max-width: 768px) {
+    .b2b-info-section {
+        padding: 45px 15px !important;
+    }
+    
+    .b2b-info-section h2 {
+        font-size: 1.45rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .b2b-info-section p, 
+    .b2b-premium-list li {
+        font-size: 0.98rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .b2b-info-section .partnership-lead {
+        font-size: 1.05rem !important;
+    }
+}
+/* ==========================================================================
+   B2B PRICING & CTA: YRITYSHINNASTO (PREMIUM LAYOUT)
+   ========================================================================== */
+
+/* Huvudcontainern för prissektionen */
+.service-pricing-section.b2b-pricing {
+    padding: 70px 20px !important;
+    background: #ffffff !important; /* Krispigt vit bakgrund */
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+}
+
+.service-pricing-section.b2b-pricing *, 
+.service-pricing-section.b2b-pricing *::before, 
+.service-pricing-section.b2b-pricing *::after {
+    box-sizing: border-box !important;
+}
+
+/* Rubrik och intro-text */
+.service-pricing-section.b2b-pricing .pricing-main-title {
+    color: #002b5c !important;
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 12px 0 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.service-pricing-section.b2b-pricing .pricing-intro {
+    color: #334155 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.65 !important;
+    max-width: 800px !important;
+    margin: 0 auto 40px auto !important;
+    opacity: 0.9 !important;
+}
+
+/* Prislistans wrapper */
+.b2b-pricing .pricing-content-wrapper {
+    max-width: 750px !important; /* Ger ett centrerat och kompakt intryck för B2B */
+    margin: 0 auto 55px auto !important;
+}
+
+.b2b-pricing .pricing-list-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    width: 100% !important;
+}
+
+/* Raderna i prislistan */
+.b2b-pricing .pricing-row {
+    background: #f8fafc !important; /* Ljus, lyxig gråblå ton */
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    padding: 18px 24px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 15px !important;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.b2b-pricing .pricing-row:hover {
+    transform: translateY(-2px) !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* Tjänstens namn till vänster */
+.b2b-pricing .price-name {
+    font-weight: 600 !important;
+    color: #002b5c !important;
+    font-size: 1.05rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-align: left !important;
+}
+
+/* Ikonerna till vänster på raden */
+.b2b-pricing .price-name i {
+    color: #38bdf8 !important; /* Din snygga cyanblå färg */
+    font-size: 1.15rem !important;
+    flex-shrink: 0 !important;
+}
+
+/* Priset till höger på raden */
+.b2b-pricing .price-amount {
+    font-weight: 700 !important;
+    color: #002b5c !important;
+    font-size: 1.15rem !important;
+    white-space: nowrap !important;
+}
+
+/* Textbaserade priser (Sopimuksen mukaan etc) */
+.b2b-pricing .price-amount.custom-price {
+    font-size: 1.05rem !important;
+    color: #334155 !important;
+    font-weight: 600 !important;
+}
+
+/* Den lilla "+ ALV" texten */
+.b2b-pricing .vat-label {
+    font-size: 0.78rem !important;
+    color: #64748b !important;
+    font-weight: 500 !important;
+    margin-left: 3px !important;
+}
+
+/* CTA Blocket längst ner */
+.b2b-pricing .pricing-quick-action {
+    border-top: 1px solid #f1f5f9 !important;
+    padding-top: 45px !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
+}
+
+.b2b-pricing .pricing-quick-action h2 {
+    color: #002b5c !important;
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+}
+
+.b2b-pricing .cta-subtitle {
+    font-size: 1.05rem !important;
+    color: #334155 !important;
+    margin: 0 0 30px 0 !important;
+}
+
+.b2b-pricing .cta-container-bottom {
+    margin-bottom: 25px !important;
+}
+
+/* Gröna bockar och säljpunkter i botten */
+.b2b-pricing .form-hint {
+    font-size: 0.92rem !important;
+    color: #334155 !important;
+    margin: 0 !important;
+    opacity: 0.9 !important;
+}
+
+.b2b-pricing .form-hint i {
+    color: #28a745 !important; /* Trygg grön färg */
+    margin-right: 4px !important;
+}
+
+/* --- ISOLERAD MOBILANPASSNING --- */
+@media (max-width: 768px) {
+    .service-pricing-section.b2b-pricing {
+        padding: 45px 15px !important;
+    }
+    
+    .service-pricing-section.b2b-pricing .pricing-main-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .service-pricing-section.b2b-pricing .pricing-intro {
+        font-size: 0.98rem !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .b2b-pricing .pricing-content-wrapper {
+        margin-bottom: 40px !important;
+    }
+    
+    .b2b-pricing .pricing-row {
+        flex-direction: column !important; /* Staplar namn och pris vertikalt på mobilen */
+        align-items: flex-start !important;
+        padding: 16px 20px !important;
+        gap: 8px !important;
+    }
+    
+    .b2b-pricing .price-name {
+        font-size: 0.98rem !important;
+    }
+    
+    .b2b-pricing .price-amount {
+        font-size: 1.05rem !important;
+        padding-left: 28px !important; /* Justerar priset så det linjerar snyggt under texten */
+    }
+    
+    .b2b-pricing .pricing-quick-action h2 {
+        font-size: 1.35rem !important;
+    }
+    
+    .b2b-pricing .form-hint {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
