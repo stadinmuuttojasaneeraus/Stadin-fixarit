@@ -169,7 +169,9 @@
 </header>
     
 <div class="menu-overlay" id="overlay"></div>
-    
+
+   <main>
+      
 <section id="hero" style="background-image:url('../images/remontti.jpg');">
     <div class="hero-container">
         <div class="hero-content">
@@ -183,37 +185,26 @@
         </div>
     </div>
 </section>
-    <!-- MITÄ REMONTTIPALVELUIHIN KUULUU? (ENHETLIG QUICK-ACTION STYLING) -->
+    <!-- SEKTION 1: MITEN VOIMME OLLA AVUKSI? (REMONTTI - PREMIUM INTRODUKTIONSTEXT) -->
 <section class="quick-action services-grid-block">
-    <h2>Mitä remonttipalveluihin kuuluu?</h2>
-    <p>
-        Autamme kodin pienissä ja suuremmissa remonttitöissä nopeasti, siististi ja rautaisella ammattitaidolla.
-    </p>
-    <!-- Alla 6 tjänster fördelas nu helt automatiskt via din enhetliga CSS -->
-    <div class="services-container">
-        <div class="service-item">
-            <i class="fa-solid fa-paint-roller"></i> <span>Sisä- ja ulkopuoliset maalaukset</span>
-        </div>
-        <div class="service-item">
-            <i class="fa-solid fa-house"></i> <span>Seinät, lattiat ja listat</span>
-        </div>
-        <div class="service-item">
-            <i class="fa-solid fa-sink"></i> <span>Keittiöremontit</span>
-        </div>
-        <div class="service-item">
-            <i class="fa-solid fa-bath"></i> <span>Kylpyhuoneremontit</span>
-        </div>
-        <div class="service-item">
-            <i class="fa-solid fa-door-open"></i> <span>Ovien ja ikkunoiden vaihdot</span>
-        </div>
-        <div class="service-item">
-            <i class="fa-solid fa-gear"></i> <span>Sekä muut kodin pienremontit ja korjaustyöt</span>
-        </div>
-    </div>
     
-    <p class="highlight-text strong-white-text">
-        <i class="fa-solid fa-check-circle" style="margin-right: 6px;"></i> Saat remonttityöt hoidettua yhdellä yhteydenotolla – helposti ja luotettavasti.
-    </p>
+    <div class="services-header-wrapper">
+        <h2>Miten voimme olla avuksi?</h2>
+        <p class="services-intro-text">
+            Autamme kodin pienissä ja suuremmissa remonttitöissä nopeasti, siististi ja rautaisella ammattitaidolla.
+        </p>
+    </div>
+
+    <!-- Ny lättsam och inbjudande löptext som ersätter rutorna -->
+    <div class="services-premium-intro-paragraph">
+        <p>
+            Suunnitteletteko kenties keittiö- tai kylpyhuoneremonttia, tai kaipaavatko seinät, lattiat ja listat uutta ilmettä? Tarvitsetteko apua ovien ja ikkunoiden vaihdossa tai sisä- ja ulkopuolisissa maalauksissa? 
+            <strong>Siinä tapauksessa olette saapuneet juuri oikeaan paikkaan.</strong> Hoidamme kaikki kodin suuret ja pienet remonttityöt sekä korjaukset yhdellä ja samalla yhteydenotolla – helposti, luotettavasti ja ilman turhaa säätöä. 
+        </p>
+        <p class="highlight-text strong-white-text">
+            Lue lisää monipuolisista palveluistamme alta! <i class="fa-solid fa-arrow-down" style="margin-left: 5px;"></i>
+        </p>
+    </div>
     
 </section>
     
@@ -273,49 +264,89 @@
         </a>
     </div>
 </section>
-
-<!-- FEATURE BOXES SECTION (DÖPTA TILL MASTER-MALLENS KLASSER PÄR CSS) -->
+   
+<!-- FEATURE BOXES SECTION (REMONTTI - PREMIUM VERSION MED FA-ICONS & LUE LISÄÄ) -->
 <section class="feature-box-section">
-    <h2>Remontti- ja korjauspalvelut</h2>
+    
+    <div class="feature-section-header">
+        <h2>Remontti- ja korjauspalvelut</h2>
+        <p class="feature-section-subtitle">Huolellista, siistiä ja kestävää remontointia sekä kodin pintapäivityksiä pääkaupunkiseudulla.</p>
+    </div>
+
     <div class="feature-container">
 
+        <!-- 1. Sisä- ja ulkomaalaukset -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-paint-roller"></i></div>
             <div class="feature-text">
                 <h3>Sisä- ja ulkomaalaukset</h3>
-                <p>Toteutamme seinien, kattojen, listojen, aitojen ja ulkorakennusten maalaukset huolellisesti ja siististi pohjatöistä alkaen. Käytämme laadukkaita materiaaleja ja oikeita menetelmiä, jotta lopputuloksena on tasainen, kestävä ja kauniisti viimeistelty pinta.</p>
+                <p>Toteutamme seinien, kattojen, listojen, aitojen ja ulkorakennusten maalaukset huolellisesti ja siististi pohjatöistä alkaen.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Käytämme laadukkaita materiaaleja ja oikeita menetelmiä, jotta lopputuloksena on tasainen, kestävä ja kauniisti viimeistelty pinta.</p>
+                </div>
+                
+                <!-- Universell trigger-knapp -->
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
 
+        <!-- 2. Kylpyhuone- ja keittiöremontit -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-bath"></i></div>
             <div class="feature-text">
                 <h3>Kylpyhuone- ja keittiöremontit</h3>
-                <p>Päivitämme keittiöt, kylpyhuoneet och wc-tilat toimiviksi, moderneiksi ja viihtyisiksi. Toteutamme pienet ja keskisuuret kalustevaihdot, allaskaappien asennukset, silikonien uusinnat ja pintapäivitykset tehokkaasti ja luotettavasti ilman turhaa pitkittämistä.</p>
+                <p>Päivitämme keittiöt, kylpyhuoneet ja wc-tilat toimiviksi, moderneiksi ja viihtyisiksi. Toteutamme kalustevaihdot ja allaskaappien asennukset tehokkaasti.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Hoidamme myös pienet ja keskisuuret pintapäivitykset samt silikonien uusinnat ja muut kunnostukset luotettavasti ilman turhaa pitkittämistä.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
 
+        <!-- 3. Lattiat ja pintaremontit -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-border-all"></i></div>
             <div class="feature-text">
                 <h3>Lattiat ja pintaremontit</h3>
-                <p>Asennamme laminaatit, vinyylilankut, parketit ja jalkalistat siististi ja ammattitaidolla. Uusimme myös tapetit ja seinäpinnat, jolloin kodin tai huoneen ilme uudistuu nopeasti, raikkaasti ja erittäin tehokkaasti.</p>
+                <p>Asennamme laminaatit, vinyylilankut, parketit ja jalkalistat siististi ja ammattitaidolla. Uusimme myös tapetit ja seinäpinnat huolellisesti.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Pintojen uusimisen avulla kodin tai yksittäisen huoneen ilme uudistuu nopeasti, raikkaasti ja erittäin kustannustehokkaasti ilman raskaita remonttivaiheita.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
 
+        <!-- 4. Pienet korjaustyöt -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-house-circle-check"></i></div>
             <div class="feature-text">
-                <h3>Pienet korjaustyöt och fixaukset</h3>
-                <p>Autamme kaikissa kodin ja taloyhtiön pienissä remontti-, paikkaus- ja korjaustarpeissa – kuten ovien säätämisessä, reikien paikkauksessa tai listoituksissa. Meiltä saat luotettavan ja reippaan ammattilaisen nopeasti paikalle ilman monimutkaista säätöä.</p>
+                <h3>Pienet korjaustyöt ja fixaukset</h3>
+                <p>Autamme kaikissa kodin ja taloyhtiön pienissä remontti-, paikkaus- ja korjaustarpeissa – kuten ovien säätämisessä tai listoituksissa.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Paikkaamme myös seinien reiät ja vauriot siististi umpeen. Meiltä saat luotettavan ja reippaan ammattilaisen nopeasti paikalle ilman monimutkaista säätöä.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
 
     </div>
+
     <p class="feature-lead">
         Palvelumme kattavat laajasti kodin ja kiinteistöjen remontti- ja korjaustyöt – aina pienistä arjen pintaremonteista ja paikkauksista suurempiin toiminnallisiin kokonaisuuksiin.
     </p>
 </section>
+   
     
 <!-- UNIK TJÄNSTESIDA-PRISSEKTION (Helt integrerad & premium) -->
 <section class="service-pricing-section">   
@@ -526,7 +557,7 @@
     </div>
 
 </section>
-    
+   </main>  
 <!-- 14. FOOTER -->
 <footer class="footer">
 
