@@ -142,28 +142,25 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==========================================================================
-    // 5. UNIVERSELL "LUE LISÄÄ" EXPAND-FUNKTION (SÄKER & OPTIMERAD)
+    // 5. UNIVERSELL "LUE LISÄÄ" EXPAND-FUNKTION (KORRIGERAD & DIREKT SÖKNING)
     // ==========================================================================
     const universalTriggers = document.querySelectorAll(".universal-trigger");
 
     universalTriggers.forEach(trigger => {
         trigger.addEventListener("click", function() {
-            // Letar upp närmaste yttre container (t.ex. .feature-box eller .service-text)
-            const parentSection = this.closest('.feature-box, .feature-text, .service-item');
-            
-            if (parentSection) {
-                const expandContent = parentSection.querySelector(".universal-expand-content");
+            // Letar upp det dolda blocket som ligger direkt innan knappen i HTML
+            const expandContent = this.previousElementSibling;
 
-                if (expandContent) {
-                    expandContent.classList.toggle("is-expanded");
-                    this.classList.toggle("is-active");
+            // Kontrollerar att vi hittat rätt block med klassen universal-expand-content
+            if (expandContent && expandContent.classList.contains("universal-expand-content")) {
+                expandContent.classList.toggle("is-expanded");
+                this.classList.toggle("is-active");
 
-                    // Ändrar texten utan att störa FontAwesome-pilen i din CSS
-                    if (expandContent.classList.contains("is-expanded")) {
-                        this.innerHTML = "Sulje ";
-                    } else {
-                        this.innerHTML = "Lue lisää ";
-                    }
+                // Ändrar texten utan att störa FontAwesome-pilen i din CSS
+                if (expandContent.classList.contains("is-expanded")) {
+                    this.innerHTML = "Sulje ";
+                } else {
+                    this.innerHTML = "Lue lisää ";
                 }
             }
         });
