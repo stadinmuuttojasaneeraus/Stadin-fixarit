@@ -115,18 +115,6 @@
     }
     </script>   
 
-    <!-- Crisp chat -->
-    <script>
-        window.$crisp = [];
-        window.CRISP_WEBSITE_ID = "c980afcf-02e9-4bbd-a864-83d0c5dd70b5";
-        (function () {
-            const d = document;
-            const s = d.createElement("script");
-            s.src = "https://client.crisp.chat/l.js";
-            s.async = true;
-            d.head.appendChild(s);
-        })();
-    </script> 
 </head>
 
 <body>
@@ -169,7 +157,8 @@
 </header>
     
 <div class="menu-overlay" id="overlay"></div>
-    
+
+  <main>
 <section id="hero" style="background-image:url('../images/kodin-asennuspalvelut.jpg');">
     <div class="hero-container">
         <div class="hero-content">
@@ -184,44 +173,29 @@
     </div>
 </section>
 
-<!-- SEKTION 1: MITÄ KODIN ASENNUSPALVELUIHIN KUULUU? (4 STRATEGISKA TJÄNSTER) -->
+<!-- SEKTION 1: MITEN VOIMME OLLA AVUKSI? (PREMIUM INTRODUKTIONSTEXT) -->
 <section class="quick-action services-grid-block">
-    <h2>Mitä kodin asennuspalveluihin kuuluu?</h2>
-    <p>
-        Autamme kaikissa kodin pienissä ja suurissa asennuksissa – nopeasti, luotettavasti ja ammattitaidolla.
-    </p>
+    
+    <div class="services-header-wrapper">
+        <h2>Miten voimme olla avuksi?</h2>
+        <p class="services-intro-text">
+            Autamme kaikissa kodin pienissä ja suurissa asennuksissa – nopeasti, luotettavasti ja ammattitaidolla.
+        </p>
+    </div>
 
-    <div class="services-container">
-        <!-- 1. Huonekalujen kokoaminen -->
-        <div class="service-item">
-            <i class="fa-solid fa-screwdriver-wrench"></i> 
-            <span>Huonekalujen asennus ja kokoaminen (IKEA, JYSK)</span>
-        </div>
-
-        <!-- 2. Seinä- ja kattokiinnitykset -->
-        <div class="service-item">
-            <i class="fa-solid fa-tv"></i> 
-            <span>TV-telineet, valaisimet, verhotangot ja peilit</span>
-        </div>
-
-        <!-- 3. Kodinkoneiden kytkennät -->
-        <div class="service-item">
-            <i class="fa-solid fa-plug-circle-bolt"></i> 
-            <span>Pesukoneiden ja astianpesukoneiden asennukset</span>
-        </div>
-
-        <!-- 4. Pienet huoltotyöt ja viemärit -->
-        <div class="service-item">
-            <i class="fa-solid fa-toolbox"></i> 
-            <span>Viemäreiden avaus sekä kodin pienet korjaustyöt</span>
-        </div>
+    <!-- Ny lättsam och inbjudande löptext som ersätter de grötiga rutorna -->
+    <div class="services-premium-intro-paragraph">
+        <p>
+            Tarvitsetteko apua astianpesukoneen vaihdossa, TV:n seinäkiinnityksessä tai onko teillä kenties tukos viemärissä? Kaipaavatko ovenkahvat, listat tai lamput vaihtoa? 
+            <strong>Siinä tapauksessa olette saapuneet juuri oikeaan paikkaan.</strong> Hoidamme kaikki kodin asennus- ja pikkufixityöt yhdellä ja samalla käynnillä, täysin ilman omaa stressiä tai säätöä. 
+        </p>
+        <p class="highlight-text strong-white-text">
+            Lue lisää monipuolisista palveluistamme alta! <i class="fa-solid fa-arrow-down" style="margin-left: 5px;"></i>
+        </p>
     </div>
     
-    <p class="highlight-text strong-white-text">
-        <i class="fa-solid fa-check-circle" style="margin-right: 6px;"></i> Saat kaikki kodin asennus- ja pikkufixityöt hoidettua yhdellä käynnillä.
-    </p>
-    
 </section>
+    
            
 <!-- SEKTION 3: NÄIN PALVELU TOIMII (MED PREMIUM CTA) -->
 <section class="how-it-works-section">
@@ -305,50 +279,104 @@
   </div>
 </section>
 
-<!-- FEATURE BOXES SECTION -->
+<!-- FEATURE BOXES SECTION (PREMIUM VERSION MED FA-ICONS & LUE LISÄÄ) -->
 <section class="feature-box-section">
-    <h2>Kodin asennus- ja huoltopalvelut</h2>
+    
+    <div class="feature-section-header">
+        <h2>Kodin asennus- ja huoltopalvelut</h2>
+        <p class="feature-section-subtitle">Huolellista, vakuutettua ja luotettavaa apua kodin kaikkiin arjen asennuksiin.</p>
+    </div>
+
     <div class="feature-container">
+        
+        <!-- 1. Huonekalujen kokoaminen -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
             <div class="feature-text">
                 <h3>Huonekalujen kokoaminen</h3>
-                <p>Kokoamme IKEA-, JYSK- ja muut huonekalut huolellisesti ja oikein ohjeiden mukaan. Hoidamme kaiken valmiiksi käyttöä varten – täysin ilman stressiä tai omaa säätöä.</p>
+                <p>Kokoamme IKEA-, JYSK- ja muut huonekalut huolellisesti ja oikein ohjeiden mukaan.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Hoidamme kaiken valmiiksi käyttöä varten – täysin ilman stressiä tai omaa säätöä. Viemme tarvittaessa myös pakkausjätteet pois kierrätykseen puolestasi.</p>
+                </div>
+                
+                <!-- Universell trigger-knapp -->
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
+
+        <!-- 2. TV ja seinä- tai kattoasennukset -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-tv"></i></div>
             <div class="feature-text">
-                <h3>TV ja seinä- tai kattoasennukset</h3>
-                <p>Asennamme televisiot, verhotangot, lamput ja raskaat peilit turvallisesti kaikille seinämateriaaleille (kyprok, betoni, tiili ja puu). Käytämme aina kohteen mukaan valittuja ammattitason proppuja ja kiinnikkeitä, jotta asennus kestää painon varmasti ja siististi ilman vaurioita.</p>
+                <h3>Seinä- ja kattoasennukset</h3>
+                <p>Asennamme televisiot, verhotangot, lamput ja raskaat peilit turvallisesti kaikille seinämateriaaleille (kyprok, betoni, tiili ja puu).</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Käytämme aina kohteen mukaan valittuja ammattitason proppuja ja kiinnikkeitä, jotta asennus kestää painon varmasti ja siististi ilman seinävaurioita.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
+
+        <!-- 3. Viemärin avaus ja puhdistus -->
         <div class="feature-box">
            <div class="feature-icon"><i class="fa-solid fa-faucet-drip"></i></div>
            <div class="feature-text">
                 <h3>Viemärin avaus ja puhdistus</h3>
-                <p>Avaamme ja puhdistamme tukkeutuneet viemärit keittiössä, kylpyhuoneessa ja kodinhoitotiloissa nopeasti, tehokkaasti ja siististi ilman sotkua. Varmistamme liitäntöjen tiiveyden vesivahinkojen estämiseksi.</p>
+                <p>Avaamme ja puhdistamme tukkeutuneet viemärit keittiössä, kylpyhuoneessa ja kodinhoitotiloissa nopeasti, tehokkaasti ja siististi ilman sotkua.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Puhdistuksen lisäksi varmistamme aina putkiliitäntöjen täydellisen tiiveyden vesivahinkojen estämiseksi ja sujuvan veden virtauksen takaamiseksi.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
+
+        <!-- 4. Kodinkoneet -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
             <div class="feature-text">
-                <h3>Kodinkoneet</h3>
-                <p>Asennamme pesukoneet ja astianpesukoneet turvallisesti käyttövalmiiksi valmistajan ohjeiden mukaan. Huolehdimme liitännöistä ja varmistamme laitteen oikean asennuksen. Kaikki työmme on täysin vastuuvakuutettua, joten voit luottaa asennukseen arjessa turvallisin mielin.</p>
+                <h3>Kodinkoneiden asennus</h3>
+                <p>Asennamme pesukoneet ja astianpesukoneet turvallisesti käyttövalmiiksi valmistajan ohjeiden mukaan.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Huolehdimme liitännöistä ja varmistamme laitteen oikean asennuksen. Kaikki työmme on täysin vastuuvakuutettua, joten voit luottaa asennukseen arjessa turvallisin mielin.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
+
+        <!-- 5. Pienet huoltotyöt -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-house-circle-check"></i></div>
             <div class="feature-text">
-                <h3>Pienet huoltotyöt</h3>
-                <p>Autamme kaikissa kodin pienissä ongelmissa ja korjauksissa – kuten ovenkahvojen, listojen tai lamppujen vaihdoissa. Meiltä saat apua myös yllättäviin arjen tilanteisiin kotona.</p>
+                <h3>Pienet huoltotyöt och fixit</h3>
+                <p>Autamme kaikissa kodin pienissä ongelmissa ja korjauksissa – kuten ovenkahvojen, listojen tai lamppujen vaihdoissa.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Meiltä saat joustavaa apua myös yllättäviin arjen tilanteisiin kotona. Ei liian pientä työtä – hoidamme kaikki pikkufixit kerralla kuntoon.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
+
     </div>
+
     <p class="feature-lead">
         Palvelumme kattavat laajasti kodin pienet asennus- ja huoltopalvelut – eli lähes kaikki arjessa eteen tulevat pienet fixit, joihin tarvitset nopeaa ja luotettavaa apua.
     </p>
 </section>
+    
 
     <!-- UNIK TJÄNSTESIDA-PRISSEKTION (Helt integrerad & premium) -->
 <section class="service-pricing-section">
@@ -560,7 +588,9 @@
     </div>
 
 </section>
-          
+
+  </main>
+  
 <!-- 14. FOOTER -->
 <footer class="footer">
 
