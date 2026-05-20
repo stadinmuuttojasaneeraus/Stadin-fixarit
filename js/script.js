@@ -144,3 +144,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const universalTriggers = document.querySelectorAll(".universal-trigger");
+
+    universalTriggers.forEach(trigger => {
+        trigger.addEventListener("click", function() {
+            const parentSection = this.parentElement;
+            const expandContent = parentSection.querySelector(".universal-expand-content");
+
+            if (expandContent) {
+                expandContent.classList.toggle("is-expanded");
+                this.classList.toggle("is-active");
+
+                // Ändrar texten på knappen utan att förstöra eventuella ikoner
+                if (expandContent.classList.contains("is-expanded")) {
+                    this.innerHTML = "Sulje ";
+                } else {
+                    this.innerHTML = "Lue lisää ";
+                }
+            }
+        });
+    });
+});
