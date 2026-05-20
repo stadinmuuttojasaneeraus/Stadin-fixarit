@@ -124,74 +124,6 @@ body {
     }
 }
 
-/* ==========================================================================
-   GLOBAL SERVICES MASTER: SEKTION 2 (QUICK TRUST)
-   ========================================================================== */
-
-/* Låser sektionen till exakt 2 jämna kolumner bredvid varandra */
-.quick-trust {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 20px !important;
-    padding: 30px 20px !important;
-    background: transparent !important; /* Släpper igenom den stora blå bakgrunden */
-    box-shadow: none !important;        
-    max-width: 1000px !important;
-    margin: 40px auto 40px auto !important;
-}
-
-/* Anpassar rutorna för att stapla innehållet vertikalt */
-.quick-trust span {
-    background: rgba(255, 255, 255, 0.06) !important; /* Premium-glaseffekt */
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    padding: 22px 15px !important;
-    border-radius: 16px !important; /* Matchar hörnen på sektion 1 */
-    
-    display: flex !important;
-    flex-direction: column !important; /* Tvingar ikonen att lägga sig över texten */
-    align-items: center !important;    /* Centrerar horisontellt */
-    justify-content: center !important;
-    text-align: center !important;     /* Centrerar själva texten */
-    gap: 12px !important;              /* Avstånd mellan ikon och text */
-    
-    color: #ffffff !important; /* Krispigt vit text */
-    font-size: 0.95rem !important;
-    font-weight: 500 !important;
-    transition: transform 0.3s ease, background-color 0.3s ease !important;
-}
-
-/* Subtilt premium-lyft vid hover */
-.quick-trust span:hover {
-    transform: translateY(-3px) !important;
-    background-color: rgba(255, 255, 255, 0.12) !important;
-}
-
-/* IKONSTYLING: Krispigt vita och perfekt centrerade rakt över texten */
-.quick-trust span i {
-    color: #ffffff !important; /* Helt vita ikoner */
-    font-size: 1.4rem !important;
-    background: transparent !important; /* Ingen bakgrundscirkel för en renare stil */
-    width: auto !important;
-    height: auto !important;
-    margin: 0 !important;      /* Nollställer gamla marginaler till höger */
-    display: block !important;
-}
-
-/* Mobiljustering för små skärmar (under 480px) */
-@media (max-width: 480px) {
-    .quick-trust {
-        gap: 12px !important;
-        padding: 20px 10px !important;
-    }
-    .quick-trust span {
-        padding: 16px 10px !important;
-        font-size: 0.85rem !important;
-        gap: 8px !important;
-    }
-    .quick-trust span i {
-        font-size: 1.2rem !important;
-    }
-}
 
 /* ==========================================================================
    GLOBAL SERVICES MASTER: SEKTION 3 (HOW IT WORKS SECTION) - PREMIUM REVISION
@@ -426,21 +358,103 @@ body {
     margin: 0 auto !important;
 }
 
-/* Själva raderna/boxarna */
+/* ==========================================================================
+   UNIVERSAL EXPANDABLE SECTIONS (INTEGRERAD HÄR)
+   ========================================================================== */
+.feature-box-section .universal-expand-content {
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease-in-out !important;
+}
+
+.feature-box-section .universal-expand-content.is-expanded {
+    max-height: 300px !important;
+    opacity: 1 !important;
+    margin-top: 10px !important;
+}
+
+/* Läs mer-knappen */
+.feature-box-section .universal-trigger {
+    background: transparent !important;
+    border: none !important;
+    color: #002b5c !important;
+    font-weight: 700 !important;
+    font-size: 0.88rem !important;
+    cursor: pointer !important;
+/* ==========================================================================
+   GLOBAL SERVICES MASTER: FEATURE BOXES SECTION (PREMIUM BLUE & WHITE EDIT)
+   ========================================================================= */
+
+.feature-box-section {
+    background: transparent !important; /* Gör bakgrunden transparent så den blå gradienten flyter med */
+    padding: 70px 20px !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important; /* Nollat marginaler så den dockar snyggt i flödet */
+    box-sizing: border-box !important;
+    box-shadow: none !important; /* Borttagen skugga eftersom bakgrunden är transparent */
+}
+
+.feature-box-section *, 
+.feature-box-section *::before, 
+.feature-box-section *::after {
+    box-sizing: border-box !important;
+}
+
+/* Överskrift-wrapper */
+.feature-box-section .feature-section-header {
+    text-align: center !important;
+    margin-bottom: 45px !important;
+}
+
+/* Sektionens huvudrubrik - Krispigt vit för maximal kontrast */
+.feature-box-section h2 {
+    color: #ffffff !important; 
+    font-size: 1.8rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 10px 0 !important;
+    letter-spacing: -0.01em !important;
+    text-align: center !important;
+}
+
+/* Undertexten i headern - Mjukare krispig vit */
+.feature-box-section .feature-section-subtitle {
+    color: #ffffff !important;
+    font-size: 1rem !important;
+    opacity: 0.9 !important;
+    margin: 0 !important;
+    text-align: center !important;
+}
+
+/* Flexibel lista/container för boxarna */
+.feature-box-section .feature-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+}
+
+/* Själva raderna/boxarna - Vita inuti med din karakteristiska ljusblå vänsterkant */
 .feature-box-section .feature-box {
-    background-color: #f8fafc !important; /* Mycket mjuk, ljusgrå/blå premiumton */
-    border: 1px solid #e2e8f0 !important;
+    background-color: #ffffff !important; 
+    border: 1px solid #e2e8f0 !important; /* Tunn ljusgrå ram runt om */
+    border-left: 5px solid #38bdf8 !important; /* HÄR ÄR DIN LJUSBLÅ/CYAN VÄNSTERKANT */
     border-radius: 14px !important;
     padding: 24px 28px !important;
     display: flex !important;
-    align-items: flex-start !important; /* Justerar ikonen perfekt vid expandering */
+    align-items: flex-start !important; 
     text-align: left !important;
+    box-shadow: 0 8px 25px rgba(0, 43, 92, 0.12) !important; /* Djupskugga baserad på din blå färg */
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease !important;
 }
 
 .feature-box-section .feature-box:hover {
+    transform: translateY(-3px) !important;
     border-color: #cbd5e1 !important;
-    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.03) !important;
+    /* Behåller den ljusblå kanten intakt även vid hover */
+    border-left-color: #38bdf8 !important; 
+    box-shadow: 0 15px 35px rgba(0, 43, 92, 0.22) !important;
 }
 
 /* Den lyxiga ikonen till vänster */
@@ -451,17 +465,17 @@ body {
 }
 
 .feature-box-section .feature-icon i {
-    color: #38bdf8 !important; /* Din snygga ljusblå/cyan färg som accent */
+    color: #38bdf8 !important; /* Ljusblå/cyan färg även på ikonen */
     font-size: 1.5rem !important;
 }
 
-/* Textblocket */
+/* Textblocket inuti rutorna */
 .feature-box-section .feature-text {
     flex: 1 !important;
 }
 
 .feature-box-section .feature-text h3 {
-    color: #002b5c !important;
+    color: #002b5c !important; /* Din mörkblå signaturfärg */
     font-size: 1.2rem !important;
     font-weight: 700 !important;
     margin: 0 0 8px 0 !important;
@@ -474,16 +488,16 @@ body {
     margin: 0 !important;
 }
 
-/* Sammanfattande texten längst ner i sektionen */
+/* Sammanfattande texten längst ner i sektionen - Krispigt vit */
 .feature-box-section .feature-lead {
     text-align: center !important;
-    color: #002b5c !important;
+    color: #ffffff !important;
     font-weight: 600 !important;
     font-size: 1.05rem !important;
     line-height: 1.6 !important;
     max-width: 800px !important;
-    margin: 40px auto 0 auto !important;
-    opacity: 0.9 !important;
+    margin: 45px auto 0 auto !important;
+    opacity: 1 !important;
 }
 
 /* ==========================================================================
@@ -539,7 +553,7 @@ body {
 @media (max-width: 768px) {
     .feature-box-section {
         padding: 45px 15px !important;
-        margin: 20px auto !important;
+        margin: 0 auto !important;
     }
     
     .feature-box-section h2 {
@@ -548,7 +562,8 @@ body {
     
     .feature-box-section .feature-box {
         padding: 18px 16px !important;
-        flex-direction: row !important; /* Behåller ikonen till vänster */
+        flex-direction: row !important;
+        border-left-width: 4px !important; /* Gör ramen minimalt smalare på mobilen för att spara yta */
     }
     
     .feature-box-section .feature-icon {
@@ -572,6 +587,7 @@ body {
         margin-top: 30px !important;
     }
 }
+   
 
 /* ==========================================================================
    GLOBAL SERVICES MASTER: UNIFIED PREMIUM SERVICE PRICING
