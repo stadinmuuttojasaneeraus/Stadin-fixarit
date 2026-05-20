@@ -7,9 +7,9 @@ const siteConfig = {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =========================
-    // HAMBURGER
-    // =========================
+    // ==========================================================================
+    // 1. HAMBURGERMOBILMENY
+    // ==========================================================================
     const hamburger = document.getElementById("hamburger");
     const menu = document.getElementById("menu");
     const overlay = document.getElementById("overlay");
@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // =========================
-    // FAQ
-    // =========================
+    // ==========================================================================
+    // 2. FAQ ACCORDION (VISA MER / VISA MINDRE FRÅGOR)
+    // ==========================================================================
     const faqSections = document.querySelectorAll(".faq-section");
 
     faqSections.forEach(section => {
@@ -97,10 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // =========================
-    // BEFORE / AFTER SLIDER
-    // =========================
-
+    // ==========================================================================
+    // 3. BEFORE / AFTER SLIDER
+    // ==========================================================================
     const baSection = document.querySelector(".ba-section");
 
     if (baSection) {
@@ -131,10 +130,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // =========================
-    // FORM
-    // =========================
-
+    // ==========================================================================
+    // 4. KONTAKTFORMULÄR TRIGGER
+    // ==========================================================================
     const form = document.querySelector("form");
 
     if (form) {
@@ -143,27 +141,32 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-});
-
-document.addEventListener("DOMContentLoaded", function() {
+    // ==========================================================================
+    // 5. UNIVERSELL "LUE LISÄÄ" EXPAND-FUNKTION (SÄKER & OPTIMERAD)
+    // ==========================================================================
     const universalTriggers = document.querySelectorAll(".universal-trigger");
 
     universalTriggers.forEach(trigger => {
         trigger.addEventListener("click", function() {
-            const parentSection = this.parentElement;
-            const expandContent = parentSection.querySelector(".universal-expand-content");
+            // Letar upp närmaste yttre container (t.ex. .feature-box eller .service-text)
+            const parentSection = this.closest('.feature-box, .feature-text, .service-item');
+            
+            if (parentSection) {
+                const expandContent = parentSection.querySelector(".universal-expand-content");
 
-            if (expandContent) {
-                expandContent.classList.toggle("is-expanded");
-                this.classList.toggle("is-active");
+                if (expandContent) {
+                    expandContent.classList.toggle("is-expanded");
+                    this.classList.toggle("is-active");
 
-                // Ändrar texten på knappen utan att förstöra eventuella ikoner
-                if (expandContent.classList.contains("is-expanded")) {
-                    this.innerHTML = "Sulje ";
-                } else {
-                    this.innerHTML = "Lue lisää ";
+                    // Ändrar texten utan att störa FontAwesome-pilen i din CSS
+                    if (expandContent.classList.contains("is-expanded")) {
+                        this.innerHTML = "Sulje ";
+                    } else {
+                        this.innerHTML = "Lue lisää ";
+                    }
                 }
             }
         });
     });
-});
+
+}); // SLUTET PÅ DOMCONTENTLOADED
