@@ -115,18 +115,6 @@
     }
     </script>   
 
-    <!-- Crisp chat -->
-    <script>
-        window.$crisp = [];
-        window.CRISP_WEBSITE_ID = "c980afcf-02e9-4bbd-a864-83d0c5dd70b5";
-        (function () {
-            const d = document;
-            const s = d.createElement("script");
-            s.src = "https://crisp.chat";
-            s.async = true;
-            d.head.appendChild(s);
-        })();
-    </script> 
 </head>
 
 <body>
@@ -169,6 +157,8 @@
 </header>
     
 <div class="menu-overlay" id="overlay"></div>
+
+    <main>
     
 <section id="hero" style="background-image:url('../images/pihapalvelut.jpg');">
     <div class="hero-container">
@@ -184,43 +174,26 @@
     </div>
 </section>
 
-    <!-- SEKTION 1: MITÄ PIHAPALVELUIHIMME KUULUU? -->
+    <!-- SEKTION 1: MITEN VOIMME OLLA AVUKSI? (PIHAPALVELUT - PREMIUM INTRODUKTIONSTEXT) -->
 <section class="quick-action services-grid-block">
-    <h2>Mitä pihapalveluihimme kuuluu?</h2>
-    <p>
-        Hoidamme pihan hoitoon liittyvät työt tehokkaasti ja luotettavasti – olipa kyseessä säännöllinen ylläpito tai kertaluonteinen siistiminen.
-    </p>
     
-    <div class="services-container">
-        <div class="service-item">
-            <i class="fas fa-tree"></i> <span>Puiden kaato ja karsiminen</span>
-        </div>
-        <div class="service-item">
-            <i class="fas fa-cut"></i> <span>Pensaiden ja puiden leikkaus</span>
-        </div>
-        <div class="service-item">
-            <i class="fas fa-leaf"></i> <span>Nurmikon leikkuu ja pihan hoito</span>
-        </div>
-        <div class="service-item">
-            <i class="fas fa-broom"></i> <span>Pihojen siivous ja haravointi</span>
-        </div>
-        <div class="service-item">
-            <i class="fas fa-shower"></i> <span>Kattojen ja julkisivujen pesu</span>
-        </div>
-        <div class="service-item">
-            <i class="fas fa-snowflake"></i> <span>Lumityöt ja talvikunnossapito</span>
-        </div>
-        <div class="service-item">
-            <i class="fas fa-road"></i> <span>Hiekoitus ja kulkuväylien turvallisuus</span>
-        </div>
-        <div class="service-item">
-            <i class="fas fa-seedling"></i> <span>Muut pihan pienet hoitotyöt</span>
-        </div>
+    <div class="services-header-wrapper">
+        <h2>Miten voimme olla avuksi?</h2>
+        <p class="services-intro-text">
+            Hoidamme pihan hoitoon liittyvät työt tehokkaasti ja luotettavasti – olipa kyseessä säännöllinen ylläpito tai kertaluonteinen siistiminen.
+        </p>
     </div>
-    
-    <p class="highlight-text strong-white-text">
-        <i class="fa-solid fa-check-circle" style="margin-right: 6px;"></i> Saat kaiken tehtyä yhdellä käynnillä – nopeasti ja vaivattomasti.
-    </p>
+
+    <!-- Ny lättsam och inbjudande löptext som ersätter rutorna -->
+    <div class="services-premium-intro-paragraph">
+        <p>
+            Etsittekö apua puiden kaatoon, pensaiden leikkaukseen tai kenties nurmikon leikkuuseen ja pihan yleiseen hoitoon? Kaipaako kiinteistönne kattojen ja julkisivujen pesua, piha-alueiden siivousta ja haravointia, tai kenties luotettavaa tekijää talven lumitöihin ja hiekoitukseen? 
+            <strong>Siinä tapauksessa olette saapuneet juuri oikeaan paikkaan.</strong> Hoidamme kaikki pihan suuret ja pienet hoitotyöt sekä kausittaiset kunnossapidot yhdellä ja samalla käynnillä – nopeasti, vaivattomasti och täysin ilman omaa stressiä. 
+        </p>
+        <p class="highlight-text strong-white-text">
+            Lue lisää monipuolisista palveluistamme alta! <i class="fa-solid fa-arrow-down" style="margin-left: 5px;"></i>
+        </p>
+    </div>
     
 </section>
     
@@ -306,50 +279,88 @@
   </div>
 </section>
 
-<!-- SEKTION 4: FEATURE BOXES SECTION (PIHAPALVELUT) -->
+<!-- FEATURE BOXES SECTION (PIHAPALVELUT - PREMIUM VERSION MED FA-ICONS & LUE LISÄÄ) -->
 <section class="feature-box-section">
-    <h2>Pihan hoito- ja ylläpitopalvelut</h2>
+    
+    <div class="feature-section-header">
+        <h2>Pihapalvelut ja kiinteistöjen ulkoalueiden ylläpito</h2>
+        <p class="feature-section-subtitle">Tehokasta, huolellista ja vastuuvakuutettua piha- ja kunnossapitopalvelua pääkaupunkiseudulla.</p>
+    </div>
+
     <div class="feature-container">
+
+        <!-- 1. Puiden ja pensaiden hoito -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-tree"></i></div>
             <div class="feature-text">
-                <h3>Puiden kaato ja karsiminen</h3>
-                <p>Hoidamme puiden kaadon ja oksien karsinnan turvallisesti ja ammattitaitoisesti kaikilla kiinteistöillä. Työ tehdään aina erittäin huolellisesti, tarkasti ja ympäristöä sekä rakennuksia kunnioittaen.</p>
+                <h3>Puiden ja pensaiden hoitotyöt</h3>
+                <p>Oikeaoppinen puiden ja pensaiden hoito takaa pihan turvallisuuden ja kauniin yleisilmeen. Suoritamme puiden kaadot ja karsimiset sekä pensaiden leikkaukset ammattitaidolla.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Huolehdimme oksien ja runkojen siististä katkonnasta sekä tarvittaessa jätteiden poiskuljetuksesta, jotta piha jää jälkiemme aina siistiksi ja turvalliseksi.</p>
+                </div>
+                
+                <!-- Universell trigger-knapp -->
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
+
+        <!-- 2. Nurmikon ja pihan yleinen ylläpito -->
         <div class="feature-box">
-            <div class="feature-icon"><i class="fa-solid fa-scissors"></i></div>
+            <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
             <div class="feature-text">
-                <h3>Pensaiden ja puiden hoito</h3>
-                <p>Leikkaamme ja siistimme pensasaitojen ja koristepensaiden lisäksi myös pienet puut. Oikeaoppinen ja säännöllinen leikkaus pitää koko pihan raikkaana, siistinä ja elinvoimaisena ympäri vuoden.</p>
+                <h3>Nurmikon leikkuu ja pihan hoito</h3>
+                <p>Säännöllinen ylläpito pitää pihan huoliteltuna läpi kasvukauden. Hoidamme nurmikon leikkuut, trimmeröinnit sekä pihojen suursiivoukset ja haravoinnit tehokkaasti puolestanne.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Olipa kyseessä säännöllinen kausisopimus tai kertaluonteinen pihan raivaus, meiltä saat luotettavaa apua kaikkiin trädgårdin ja kiinteistön pieniin hoitotöihin.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
+
+        <!-- 3. Kattojen ja julkisivujen pesu -->
         <div class="feature-box">
-           <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
-           <div class="feature-text">
-                <h3>Nurmikon hoito ja leikkuu</h3>
-                <p>Suoritamme säännölliset nurmikonleikkuut, reunatrimmaukset ja yleiset pihanhoitotyöt reippaalla otteella. Pidämme huolen siitä, että nurmikkosi pysyy edustuskelpoisena ja hyvin hoidettuna koko kasvukauden ajan.</p>
-            </div>
-        </div>
-        <div class="feature-box">
-            <div class="feature-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+            <div class="feature-icon"><i class="fa-solid fa-broom"></i></div>
             <div class="feature-text">
                 <h3>Kattojen ja julkisivujen pesu</h3>
-                <p>Suoritamme tehokkaat ja pintamateriaaleja säästävät korkeapainepesut katoille, julkisivuille sekä terasseille. Teemme myös suojaavat jälkikäsittelyt, jotka estävät tehokkaasti sammaleen, itsepäisen lian ja kasvuston syntymistä.</p>
+                <p>Lika, sammal ja kasvusto kuluttavat kiinteistön pintoja ja voivat aiheuttaa kalliita vaurioita. Pesemme katot, rännit ja julkisivut huolellisesti ja turvallisesti oikeilla menetelmillä.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Puhdas pinta suojaa rakenteita Suomen vaativilta sääolosuhteilta ja nostaa kiinteistönne arvoa sekä parantaa sen edustavaa ulkonäköä huomattavasti.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
+
+        <!-- 4. Lumityöt ja talvikunnossapito -->
         <div class="feature-box">
             <div class="feature-icon"><i class="fa-solid fa-snowflake"></i></div>
             <div class="feature-text">
-                <h3>Talvityöt ja pihan kunnossapito</h3>
-                <p>Hoidamme lumityöt, kolaukset ja liukkauden torjunnan hiekoituksella puolestasi raskaissa talviolosuhteissa. Varmistamme, että kiinteistön pihat ja tärkeät kulkuväylät pysyvät turvallisina liikkua kaikille asukkaille.</p>
+                <h3>Lumityöt ja talvikunnossapito</h3>
+                <p>Talviolosuhteet vaativat nopeaa reagointia ja huolellisuutta. Hoidamme lumityöt, auraukset sekä kulkuväylien tehokkaat hiekoitukset varmistaen piha-alueiden täydellisen turvallisuuden.</p>
+                
+                <!-- Dold premium-text -->
+                <div class="universal-expand-content">
+                    <p>Huolehdimme liukastumisten estämisestä ja liikkumisen helppoudesta niin kotipihoilla, taloyhtiöissä kuin liiketilojen edustoilla ammattimaisella otteella.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Lue lisää</button>
             </div>
         </div>
+
     </div>
+
     <p class="feature-lead">
-        Tarjoamme kattavat ja huolelliset pihapalvelut Helsingissä ja pääkaupunkiseudulla – aina säännöllisestä kiinteistön ylläpidosta yksittäisiin kausitöihin ja arjen aputarpeisiin.
+        Hoidamme pihan hoitoon liittyvät työt tehokkaasti ja luotettavasti – olipa kyseessä säännöllinen ylläpito tai kertaluonteinen siistiminen. Saat kaiken tehtyä yhdellä käynnillä – nopeasti ja vaivattomasti.
     </p>
 </section>
+        
 
 <!-- UNIK TJÄNSTESIDA-PRISSEKTION (Helt integrerad & premium) -->
 <section class="service-pricing-section">
@@ -565,6 +576,8 @@
     </div>
 
 </section>
+
+      </main>  
     
 <!-- SEKTION 14: FOOTER (STRUKTUR ENLIGT MASTER MED FA-IKONER OCH RÄTT TEXT) -->
 <footer class="footer">
