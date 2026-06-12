@@ -166,4 +166,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // ==========================================================================
+    // 6. MJUK SCROLL TILL TJÄNSTER (PALVELUT)
+    // ==========================================================================
+    const scrollTrigger = document.getElementById('scroll-trigger');
+    const scrollTarget = document.getElementById('palvelut');
+
+    if (scrollTrigger && scrollTarget) {
+        scrollTrigger.addEventListener('click', function () {
+            scrollTarget.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+
 }); // SLUTET PÅ DOMCONTENTLOADED
