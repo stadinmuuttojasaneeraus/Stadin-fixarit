@@ -110,22 +110,32 @@ header, nav {
     margin-top: 10px;
 }
 
-/* CTA-knapp (Med specifik färg som vinner över den vita länkeffekten) */
+/* ==========================================================================
+   ULTRA-SPECIFIK FIX FÖR CTA-KNAPPEN (KROSSAR VIT TEXT)
+   ========================================================================== */
+#menu a.menu-cta,
+nav #menu .menu-cta,
 .menu a.menu-cta {
     background: #ffffff !important;
-    color: #002b5c !important; /* Din mörkblå färg på texten */
-    padding: 10px !important;
+    color: #002b5c !important; /* Tvingar fram din mörkblå textfärg */
+    display: block !important;
+    padding: 12px 15px !important;
     border-radius: 6px !important;
     text-align: center !important;
-    display: block !important; /* Gör den till en ordentlig klickbar knapp */
-    margin-top: 10px;
+    font-weight: 700 !important; /* Gör texten extra tydlig/fet */
+    font-size: 16px !important; /* Garanterar att texten inte har krympt till 0 */
+    text-decoration: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    margin-top: 10px !important;
 }
 
-/* Snygg hover-effekt på knappen som bonus */
-.menu a.menu-cta:hover {
-    background: #cbd5e1 !important; /* Blir lite ljusgrå vid hovring */
+/* Hover-effekt med samma höga prioritet */
+#menu a.menu-cta:hover {
+    background: #cbd5e1 !important;
     color: #002b5c !important;
 }
+
 
 
 /* 4. Bakgrundsmasken (Ligger utanför headern, läggs LÄGRE än headern) */
