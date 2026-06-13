@@ -898,3 +898,41 @@ BEFORE / AFTER SECTION (ISOLATED)
         height: 220px;
     }
 }
+/* ==========================================================================
+   FOOTER ÅTERSTÄLLNING: TVINGA FRAM GENOMGÅENDE CENTRERING
+   ========================================================================== */
+footer, 
+.site-footer, 
+.footer-section, 
+.main-footer,
+footer *,
+.site-footer * {
+    text-align: center !important;
+}
+
+/* Om din footer använder flexbox/grid (t.ex. för ikoner eller länkar), 
+   ser detta till att även de radas upp perfekt i mitten */
+footer .footer-content,
+footer .footer-container,
+footer .footer-grid,
+.site-footer .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    gap: 15px !important;
+}
+
+/* Säkrar att eventuella sociala ikoner eller länklistor också centreras */
+footer ul, 
+footer .social-links, 
+footer .footer-links {
+    display: inline-flex !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    list-style: none !important;
+    gap: 20px !important;
+}
