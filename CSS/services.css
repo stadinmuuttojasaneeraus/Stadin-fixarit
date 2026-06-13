@@ -123,6 +123,43 @@ body {
         margin-top: 20px !important;
     }
 }
+<!-- PORTFOLIO SLIDER SECTION -->
+<section class="portfolio-section">
+  
+  <!-- Här använder vi dina exakta klasser så att layouten matchar resten av sajten -->
+  <div class="feature-section-header">
+    <h2>Galleria & Työnäytteet</h2>
+    <p class="feature-section-subtitle">Katso esimerkkejä laadukkaista lopputuloksistamme</p>
+  </div>
+
+  <div class="portfolio-slider">
+    <button class="portfolio-btn prev" aria-label="Edellinen">‹</button>
+    <div class="portfolio-track-container">
+      <div class="portfolio-track">
+        
+        <!-- Slide 1 -->
+        <div class="portfolio-item">
+          <img src="../images/after1.webp" alt="Työnäyte 1" loading="lazy">
+          <div class="portfolio-caption">Tähän sivukohtainen teksti 1</div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="portfolio-item">
+          <img src="../images/after2.webp" alt="Työnäyte 2" loading="lazy">
+          <div class="portfolio-caption">Tähän sivukohtainen teksti 2</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="portfolio-item">
+          <img src="../images/after1.webp" alt="Työnäyte 3" loading="lazy">
+          <div class="portfolio-caption">Tähän sivukohtainen teksti 3</div>
+        </div>
+
+      </div>
+    </div>
+    <button class="portfolio-btn next" aria-label="Seuraava">›</button>
+  </div>
+</section>
 
 
 /* ==========================================================================
