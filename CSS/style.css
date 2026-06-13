@@ -1,6 +1,6 @@
-/* =========================
-RESET
-========================= */
+/* ==========================================================================
+   RESET & BAS
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -14,26 +14,24 @@ html {
 body {
     font-family: "Inter", Arial, sans-serif;
     background: #ffffff;
-    color: #003366;
+    color: #002b5c; /* Harmoniserad mörkblå */
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* =========================
-GLOBAL SECTIONS
-========================= */
+/* Globala Sektioner */
 section {
     padding: 50px 20px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-/* =========================
-HEADER + NAV
-========================= */
+/* ==========================================================================
+   HEADER & NAVIGATION (OPTIMERAD FÖR KONTRAST)
+   ========================================================================== */
 header {
-    background: #003366;
-    color: #fff;
+    background: #002b5c; /* Enhetlig premium mörkblå */
+    color: #ffffff;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -41,6 +39,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2); /* Säkrar att den syns mot blå bakgrunder */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo img {
@@ -48,9 +48,9 @@ header {
     width: auto;
 }
 
-/* =========================
-HAMBURGER MENU
-========================= */
+/* ==========================================================================
+   HAMBURGER & SIDEBAR MENY (PREMIUM UPDATE)
+   ========================================================================== */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -62,52 +62,45 @@ HAMBURGER MENU
 .hamburger div {
     width: 28px;
     height: 3px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 2px;
 }
 
-/* SIDE MENU */
+/* Sidomeny */
 .menu {
     position: fixed;
     top: 0;
     right: -300px;
-
     width: 260px;
     height: 100vh;
-
-    background: #003366;
-
+    background: #002b5c; /* Samma mörkblå bas */
     display: flex;
     flex-direction: column;
-
     gap: 15px;
-
     padding: 80px 20px 40px;
-
     transition: right 0.3s ease;
-
     overflow-y: auto;
-
     -webkit-overflow-scrolling: touch;
-
     z-index: 1200;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.3); /* Ger perfekt djup över blåa sidor */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .menu a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
 }
 
 .menu-section {
-    color: #ccc;
+    color: #cbd5e1;
     font-size: 14px;
     margin-top: 10px;
 }
 
 .menu-cta {
-    background: #fff;
-    color: #003366 !important;
+    background: #ffffff;
+    color: #002b5c !important;
     padding: 10px;
     border-radius: 6px;
     text-align: center;
@@ -120,6 +113,7 @@ HAMBURGER MENU
     opacity: 0;
     pointer-events: none;
     transition: 0.3s;
+    z-index: 1150;
 }
 
 .menu-overlay.active {
@@ -127,24 +121,27 @@ HAMBURGER MENU
     pointer-events: all;
 }
 
-/* =========================
-HERO
-========================= */
+.menu.active {
+    right: 0;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   HERO BLOCK
+   ========================================================================== */
 #hero {
     min-height: 420px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-size: cover;
     background-position: center;
-
     position: relative;
-
-    color: #fff;
+    color: #ffffff;
     text-align: center;
-
     padding: 60px 20px;
 }
     
@@ -165,60 +162,15 @@ HERO
     display: inline-block;
     margin-top: 20px;
     padding: 12px 24px;
-    background: #003366;
-    color: #fff;
+    background: #002b5c;
+    color: #ffffff;
     border-radius: 6px;
     text-decoration: none;
     font-weight: 700;
 }
-/* =========================
-HERO MOBILE
-========================= */
-@media (max-width: 768px) {
-
-    #hero {
-        min-height: 320px;
-        padding: 40px 15px;
-    }
-
-    .hero-container {
-        max-width: 100%;
-    }
-}
-
-/* =========================
-HERO LANDSCAPE MOBILE
-========================= */
-@media (max-width: 900px) and (orientation: landscape) {
-
-    #hero {
-        min-height: 260px;
-        padding: 30px 20px;
-    }
-
-    .hero-subtitle {
-        margin-top: 10px;
-    }
-
-    .cta-button {
-        margin-top: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    #hero h1 {
-        font-size: 30px;
-        line-height: 1.2;
-    }
-
-    .hero-subtitle {
-        font-size: 16px;
-    }
-}
 
 /* ==========================================================================
-   QUICK TRUST (ULTRA-PREMIUM ALIVE BLUE UPDATE)
+   QUICK TRUST BLOCK
    ========================================================================== */
 .quick-trust {
     display: grid !important;
@@ -250,7 +202,7 @@ HERO LANDSCAPE MOBILE
     font-weight: 500 !important;
     line-height: 1.4 !important;
     font-family: system-ui, -apple-system, sans-serif !important;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+    transition: transform 0.3s ease, background-color 0.3s ease !important;
 }
 
 .quick-trust span:hover {
@@ -272,40 +224,22 @@ HERO LANDSCAPE MOBILE
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    transition: transform 0.3s ease, background-color 0.3s ease !important;
+    transition: transform 0.3s ease !important;
 }
 
 .quick-trust span:hover i {
     transform: scale(1.08) !important;
-    background-color: rgba(0, 43, 92, 0.6) !important;
 }
 
-@media (max-width: 768px) {
-    .quick-trust {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-        padding: 25px 15px !important;
-        border-radius: 20px !important;
-        margin-bottom: 35px !important;
-    }
-    .quick-trust span {
-        padding: 16px 18px !important;
-        border-left-width: 3px !important;
-    }
-    .quick-trust span i {
-        width: 32px !important;
-        height: 32px !important;
-        font-size: 1.15rem !important;
-    }
-}
-
-/* --- 2. QUICK ACTION (Nedre sektionen med premium inramning) --- */
+/* ==========================================================================
+   QUICK ACTION
+   ========================================================================== */
 .quick-action {
-    border: 1px solid #e2e8f0 !important; /* Elegant, ljusgrå ram runt hela sektionen */
+    border: 1px solid #e2e8f0 !important;
     padding: 60px 40px !important;
-    border-radius: 20px !important; /* Extra mjukt rundade hörn */
+    border-radius: 20px !important;
     text-align: center !important;
-    box-shadow: 0 15px 40px rgba(0, 43, 92, 0.04) !important; /* Subtil mörkblåtonad skugga för djup */
+    box-shadow: 0 15px 40px rgba(0, 43, 92, 0.04) !important;
     max-width: 1000px !important;
     margin: 0 auto 40px auto !important;
     box-sizing: border-box !important;
@@ -315,7 +249,6 @@ HERO LANDSCAPE MOBILE
     box-sizing: border-box !important;
 }
 
-/* Huvudrubriken - Mörkblå och kraftfull */
 .quick-action h2 {
     color: #002b5c !important;
     font-size: 2.2rem !important;
@@ -323,27 +256,22 @@ HERO LANDSCAPE MOBILE
     margin: 0 0 30px 0 !important;
     line-height: 1.3 !important;
     text-align: center !important;
-    font-family: system-ui, -apple-system, sans-serif !important;
 }
 
-/* Brödtexten */
 .quick-action p {
     max-width: 800px !important;
     margin: 0 auto 20px auto !important;
-    color: #4a5568 !important; /* Mjukare mörkgrå text för ökad premiumkänsla */
+    color: #4a5568 !important;
     font-size: 1.05rem !important;
     line-height: 1.7 !important;
-    font-family: system-ui, -apple-system, sans-serif !important;
 }
 
-/* Sista stycket får lite extra karaktär */
 .quick-action p:last-of-type {
     margin-bottom: 35px !important;
     font-weight: 500 !important;
     color: #2d3748 !important;
 }
 
-/* CTA-knappen i botten */
 .quick-action .cta-button {
     display: inline-block !important;
     background-color: #002b5c !important;
@@ -354,53 +282,18 @@ HERO LANDSCAPE MOBILE
     padding: 16px 45px !important;
     border-radius: 30px !important;
     box-shadow: 0 4px 15px rgba(0, 43, 92, 0.2) !important;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
     border: none !important;
 }
 
 .quick-action .cta-button:hover {
     background-color: #001f42 !important;
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.3) !important;
 }
 
-.quick-action .cta-button:active {
-    transform: translateY(0) !important;
-}
-
-
-/* --- 3. RESPONSIVITET & MOBILANPASSNING --- */
-@media (max-width: 768px) {
- .quick-action {
-        padding: 40px 20px !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-    }
-
-    .quick-action h2 {
-        font-size: 1.75rem !important;
-    }
-
-    /* Behåller din specifika container-anpassning om den används i HTML */
-    .quick-action .services-container {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 12px !important;
-    }
-
-    .quick-action .service-item {
-        padding: 12px !important;
-        border-bottom: none !important;
-        background: #ffffff !important;
-        border: 1px solid #e2e8f0 !important;
-        border-radius: 8px !important;
-        text-align: center !important;
-    }
-}
-
-/* =========================
-SERVICES
-========================= */
+/* ==========================================================================
+   SERVICES STANDARD GRID
+   ========================================================================== */
 .services-section h2 {
     text-align: center;
     margin-bottom: 10px;
@@ -415,19 +308,17 @@ SERVICES
 .service-item {
     display: flex;
     flex-direction: column;
-
     padding: 20px;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
     text-decoration: none;
     color: inherit;
-    background: #fff;
+    background: #ffffff;
 }
 
 .service-item .icon {
     font-size: 28px;
     margin-bottom: 10px;
-
     text-align: center;
 }
 
@@ -445,9 +336,9 @@ SERVICES
     text-align: center;
 }
 
-/* =========================
-TESTIMONIALS
-========================= */
+/* ==========================================================================
+   TESTIMONIALS & CONTACT
+   ========================================================================== */
 .testimonials {
     text-align: center;
 }
@@ -455,17 +346,14 @@ TESTIMONIALS
 .testimonial-item {
     margin-top: 20px;
     padding: 20px;
-    border-left: 4px solid #003366;
+    border-left: 4px solid #002b5c;
     background: #f9f9f9;
 }
 
-/* =========================
-CONTACT
-========================= */
 .contact-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
 }
 
 .contact-form-wrapper form {
@@ -482,15 +370,14 @@ input, textarea {
 
 button {
     padding: 12px;
-    background: #003366;
-    color: #fff;
+    background: #002b5c;
+    color: #ffffff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
-.contact-section h2,
-.contact-section h3 {
+.contact-section h2, .contact-section h3 {
     text-align: center;
 }
 
@@ -500,55 +387,33 @@ button {
     gap: 40px;
 }
 
-.contact-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-}
-
-
- /* ==========================================================================
-   FAQ SECTION (COMPLETELY CLEANED & ULTRA-PREMIUM BLUE UPDATE)
+/* ==========================================================================
+   FAQ SECTION
    ========================================================================== */
-
 .faq-section {
-    padding: 80px 20px !important; /* Mer luft i topp/botten för premiumkänsla */
+    padding: 80px 20px !important;
     max-width: 900px !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
-    font-family: system-ui, -apple-system, sans-serif !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.15) !important; /* Elegant startlinje */
     text-align: center !important;
 }
 
-.faq-section *, 
-.faq-section *::before, 
-.faq-section *::after {
-    box-sizing: border-box !important;
-}
-
-/* HUVUDRUBRIK - NU CENTRERAD, VIT OCH MED EN SKARP RAM SOM STICKER UT */
 .faq-section h2 {
-    color: #ffffff !important; /* Kritvit text */
+    color: #ffffff !important;
     font-size: 2.2rem !important;
     font-weight: 700 !important;
-    display: block !important; /* Tvingar fram block-status för perfekt centrering */
-    width: max-content !important; /* Gör att ramen kramar om orden precis som inline-block */
-    max-width: 90% !important; /* Säkerhet så den inte kraschar på små mobilskärmar */
-    margin: 0 auto 50px auto !important; /* "auto" på sidorna tvingar den till exakt mitt på skärmen */
-    padding: 15px 40px !important; /* Skönt andrum inuti boxen */
-    
-    /* DESIGNEN PÅ RAMEN */
-    border: 3px solid #ffffff !important; /* Solid, tydlig vit ram */
-    border-radius: 12px !important; /* Snygga, lagom rundade hörn */
-    background-color: rgba(255, 255, 255, 0.08) !important; /* Svagt ljussken bakom texten */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25) !important; /* Skugga för ett exklusivt djup */
-    
-    letter-spacing: -0.01em !important;
+    display: block !important;
+    width: max-content !important;
+    max-width: 90% !important;
+    margin: 0 auto 50px auto !important;
+    padding: 15px 40px !important;
+    border: 3px solid #ffffff !important;
+    border-radius: 12px !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25) !important;
     text-align: center !important;
 }
 
-/* Varje enskilt FAQ-kort */
 .faq-section .faq-item {
     background: #ffffff !important;
     border: 1px solid #e2e8f0 !important;
@@ -557,32 +422,24 @@ button {
     margin-bottom: 18px !important;
     overflow: hidden !important;
     box-shadow: 0 10px 25px rgba(0, 43, 92, 0.03) !important;
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
-    display: none; /* Styrs av JavaScript via .visible */
+    display: none;
 }
 
-/* Visar de frågor som JavaScript godkänner */
 .faq-section .faq-item.visible {
     display: block !important;
 }
 
-/* Hovringseffekt på stängda kort */
 .faq-section .faq-item:hover {
     transform: translateY(-2px) !important;
-    border-color: #cbd5e1 !important;
     border-left-color: #002b5c !important;
-    box-shadow: 0 14px 35px rgba(0, 43, 92, 0.06) !important;
 }
 
-/* Öppet/Aktivt kort */
 .faq-section .faq-item.active {
     border-color: #002b5c !important;
     border-left-color: #002b5c !important;
     background-color: #f8fafc !important;
-    box-shadow: 0 12px 30px rgba(0, 43, 92, 0.05) !important;
 }
 
-/* Frågeknappen */
 .faq-section .faq-question {
     width: 100% !important;
     background: transparent !important;
@@ -596,10 +453,8 @@ button {
     display: flex !important;
     align-items: center !important;
     gap: 18px !important;
-    line-height: 1.4 !important;
 }
 
-/* Ikon-cirkeln i frågan */
 .faq-section .faq-question i {
     color: #002b5c !important;
     font-size: 1.1rem !important;
@@ -611,17 +466,15 @@ button {
     justify-content: center !important;
     align-items: center !important;
     flex-shrink: 0 !important;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease !important;
+    transition: all 0.3s ease !important;
 }
 
 .faq-section .faq-item:hover .faq-question i,
 .faq-section .faq-item.active .faq-question i {
     background-color: #002b5c !important;
     color: #ffffff !important;
-    transform: scale(1.05) !important;
 }
 
-/* Svarsboxen (HÄR VAR DET TRASIGT IDAG - NU LAGAT!) */
 .faq-section .faq-answer {
     display: none; 
     padding: 0 28px 24px 90px !important;
@@ -636,10 +489,8 @@ button {
     color: #002b5c !important;
     margin: 0 !important;
     font-size: 1.02rem !important;
-    opacity: 0.95 !important;
 }
 
-/* --- "NÄYTÄ LISÄÄ" KNAPPEN (HÄR VAR DET OCKSÅ TRASIGT - NU TILLBAKA!) --- */
 .faq-section .faq-button {
     display: block !important;
     background-color: #002b5c !important;
@@ -652,149 +503,11 @@ button {
     cursor: pointer !important;
     margin: 40px auto 0 auto !important;
     box-shadow: 0 4px 15px rgba(0, 43, 92, 0.2) !important;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-.faq-section .faq-button:hover {
-    background-color: #001f42 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 43, 92, 0.3) !important;
-}
-
-.faq-section .faq-button:active {
-    transform: translateY(0) !important;
-}
-
-/* --- MOBILANPASSNING --- */
-@media (max-width: 768px) {
-    .faq-section {
-        padding: 55px 15px !important;
-    }
-
-    .faq-section h2 {
-        font-size: 1.4rem !important; /* Krymper snyggt så den inte krockar med skärmkanten */
-        padding: 10px 20px !important;
-        margin-bottom: 35px !important;
-    }
-
-    .faq-section .faq-item {
-        border-left-width: 3px !important;
-        border-radius: 14px !important;
-    }
-
-    .faq-section .faq-question {
-        padding: 20px 18px !important;
-        font-size: 1.05rem !important;
-        gap: 14px !important;
-    }
-
-    .faq-section .faq-question i {
-        width: 36px !important;
-        height: 36px !important;
-        font-size: 0.95rem !important;
-    }
-
-    .faq-section .faq-answer {
-        padding: 0 18px 20px 18px !important;
-    }
-}
-
-
-/* =========================
-FOOTER
-========================= */
-.footer {
-    background: #003366;
-    color: #fff;
-
-    padding: 40px 20px;
-
-    text-align: center;
-}
-
-.footer-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-    gap: 30px;
-
-    align-items: start;
-}
-
-.footer-block h3 {
-    margin-bottom: 12px;
-
-    font-size: 18px;
-}
-
-.footer-block p {
-    margin-top: 8px;
-
-    opacity: 0.95;
-}
-
-.footer a {
-    color: #fff;
-
-    text-decoration: none;
-
-    display: block;
-
-    margin-top: 8px;
-
-    transition: opacity 0.2s ease;
-}
-
-.footer a:hover {
-    opacity: 0.8;
-}
-
-.footer a i {
-    width: 18px;
-    text-align: center;
-    display: inline-block;
-}
-
-.footer-bottom {
-    text-align: center;
-
-    margin-top: 30px;
-
-    padding-top: 20px;
-
-    font-size: 14px;
-
-    border-top: 1px solid rgba(255,255,255,0.15);
-
-    opacity: 0.9;
-}
-
-/* =========================
-MOBILE
-========================= */
-@media (max-width: 768px) {
-
-    section {
-        padding: 30px 15px;
-    }
-
-    .logo img {
-        height: 55px;
-    }
-}
-
-.menu.active {
-    right: 0;
-}
-
-body.menu-open {
-    overflow: hidden;
-}
-
-/* =========================
-BEFORE / AFTER SECTION (ISOLATED)
-========================= */
-
+/* ==========================================================================
+   BEFORE / AFTER SLIDER
+   ========================================================================== */
 .ba-section {
     padding: 60px 20px;
     text-align: center;
@@ -802,120 +515,67 @@ BEFORE / AFTER SECTION (ISOLATED)
     margin: 0 auto;
 }
 
-.ba-header h2 {
-    margin-bottom: 8px;
-}
+.ba-header h2 { margin-bottom: 8px; }
+.ba-header p { opacity: 0.8; margin-bottom: 25px; }
+.ba-slider { position: relative; overflow: hidden; }
+.ba-track { display: flex; transition: transform 0.4s ease; width: 100%; }
+.ba-item { min-width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.ba-image { position: relative; border-radius: 12px; overflow: hidden; }
+.ba-image img { width: 100%; height: 280px; object-fit: cover; display: block; }
 
-.ba-header p {
-    opacity: 0.8;
-    margin-bottom: 25px;
-}
+.ba-label { position: absolute; top: 10px; left: 10px; padding: 6px 10px; font-size: 12px; border-radius: 6px; color: #ffffff; }
+.ba-label.before { background: #b00020; }
+.ba-label.after { background: #007a3d; }
 
-/* SLIDER WRAPPER */
-.ba-slider {
-    position: relative;
-    overflow: hidden;
-}
+.ba-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #ffffff; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 2; }
+.ba-btn.prev { left: 10px; }
+.ba-btn.next { right: 10px; }
 
-/* TRACK */
-.ba-track {
-    display: flex;
-    transition: transform 0.4s ease;
-    width: 100%;
-}
-
-/* EACH SLIDE */
-.ba-item {
-    min-width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-/* IMAGE BLOCK */
-.ba-image {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.ba-image img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    display: block;
-}
-
-/* LABELS */
-.ba-label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 6px 10px;
-    font-size: 12px;
-    border-radius: 6px;
-    color: #fff;
-}
-
-.ba-label.before {
-    background: #b00020;
-}
-
-.ba-label.after {
-    background: #007a3d;
-}
-
-/* BUTTONS */
-.ba-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: #fff;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 2;
-}
-
-.ba-btn.prev {
-    left: 10px;
-}
-
-.ba-btn.next {
-    right: 10px;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-    .ba-item {
-        grid-template-columns: 1fr;
-    }
-
-    .ba-image img {
-        height: 220px;
-    }
-}
 /* ==========================================================================
-   FOOTER ÅTERSTÄLLNING: TVINGA FRAM GENOMGÅENDE CENTRERING
+   FOOTER STANDARD & ÅTERSTÄLLNING (STALSTARK CENTRERING)
    ========================================================================== */
-footer, 
-.site-footer, 
-.footer-section, 
-.main-footer,
-footer *,
-.site-footer * {
+.footer {
+    background: #002b5c; /* Matchar din lyxiga mörkblå */
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+.footer-block h3 { margin-bottom: 12px; font-size: 18px; }
+.footer-block p { margin-top: 8px; opacity: 0.95; }
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-top: 8px;
+    transition: opacity 0.2s ease;
+}
+.footer a:hover { opacity: 0.8; }
+.footer a i { width: 18px; text-align: center; display: inline-block; }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    opacity: 0.9;
+}
+
+/* HÅRDKORNING SÄKRING AV FOOTER-CENTRERING */
+footer, .site-footer, .footer-section, .main-footer, footer *, .site-footer * {
     text-align: center !important;
 }
-
-/* Om din footer använder flexbox/grid (t.ex. för ikoner eller länkar), 
-   ser detta till att även de radas upp perfekt i mitten */
-footer .footer-content,
-footer .footer-container,
-footer .footer-grid,
-.site-footer .container {
+footer .footer-content, footer .footer-container, footer .footer-grid, .site-footer .container {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -924,15 +584,41 @@ footer .footer-grid,
     width: 100% !important;
     gap: 15px !important;
 }
-
-/* Säkrar att eventuella sociala ikoner eller länklistor också centreras */
-footer ul, 
-footer .social-links, 
-footer .footer-links {
+footer ul, footer .social-links, footer .footer-links {
     display: inline-flex !important;
     justify-content: center !important;
     padding: 0 !important;
     margin: 0 auto !important;
     list-style: none !important;
     gap: 20px !important;
+}
+
+/* ==========================================================================
+   MOBIL RESPONSIVITET (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    section { padding: 30px 15px; }
+    .logo img { height: 55px; }
+    .ba-item { grid-template-columns: 1fr; }
+    .ba-image img { height: 220px; }
+    
+    .quick-action {
+        padding: 40px 20px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+    }
+    .quick-action h2 { font-size: 1.75rem !important; }
+    .quick-action .services-container { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+    .quick-action .service-item { padding: 12px !important; background: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 8px !important; text-align: center !important; }
+    
+    #hero h1 { font-size: 30px; line-height: 1.2; }
+    .hero-subtitle { font-size: 16px; }
+    #hero { min-height: 320px; padding: 40px 15px; }
+    .hero-container { max-width: 100%; }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    #hero { min-height: 260px; padding: 30px 20px; }
+    .hero-subtitle { margin-top: 10px; }
+    .cta-button { margin-top: 15px; }
 }
