@@ -1192,3 +1192,135 @@ body {
         line-height: 1.4 !important;
     }
 }
+/* ==========================================================================
+   PORTFOLIO SLIDER LAYOUT (DEN SAKNADE BITEN)
+   ========================================================================== */
+
+/* Huvudsektionen för galleriet */
+.portfolio-section {
+    padding: 60px 20px !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Själva karusellens yttre ram */
+.portfolio-slider {
+    position: relative !important;
+    max-width: 800px !important; /* Perfekt premium-bredd för bildvisning */
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Containern som döljer de bilder som inte visas just nu */
+.portfolio-track-container {
+    overflow: hidden !important; /* DETTA stoppar att hela sidan går att slida i sidled */
+    width: 100% !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 43, 92, 0.3) !important;
+}
+
+/* Det långa spåret där bilderna ligger i bredd */
+.portfolio-track {
+    display: flex !important; /* Lägger bilderna i en horisontell rad */
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important; /* Mjuk, lyxig animation */
+    width: 100% !important;
+}
+
+/* Varje enskild bild-slide */
+.portfolio-item {
+    min-width: 100% !important; /* Tvingar varje slide att ta exakt 100% av visningsfönstret */
+    flex-shrink: 0 !important;
+    position: relative !important;
+    background-color: #00234a !important;
+}
+
+/* Bild-styling */
+.portfolio-item img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 500px !important; /* Förhindrar att vertikala bilder blir gigantiska */
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* Textremsan på bilden */
+.portfolio-caption {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(0, 43, 92, 0.85) !important; /* Din mörkblå färg med snygg transparens */
+    color: #ffffff !important;
+    padding: 15px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* ==========================================================================
+   SLIDER-KNAPPAR (PREV & NEXT)
+   ========================================================================== */
+.portfolio-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: #ffffff !important;
+    color: #002b5c !important;
+    border: none !important;
+    width: 45px !important;
+    height: 45px !important;
+    border-radius: 50% !important;
+    font-size: 1.8rem !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 10 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease !important;
+}
+
+.portfolio-btn:hover {
+    background-color: #002b5c !important;
+    color: #ffffff !important;
+}
+
+/* Placerar pilarna strax utanför bildkanten på desktop för en renare look */
+.portfolio-btn.prev {
+    left: -22px !important;
+}
+
+.portfolio-btn.next {
+    right: -22px !important;
+}
+
+/* --- MOBILANPASSNING FÖR BILDSPEL --- */
+@media (max-width: 768px) {
+    .portfolio-section {
+        padding: 40px 15px !important;
+    }
+    
+    /* Flyttar in pilarna på mobilen så de inte hamnar utanför skärmen */
+    .portfolio-btn {
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 1.4rem !important;
+    }
+    
+    .portfolio-btn.prev {
+        left: 8px !important;
+    }
+    
+    .portfolio-btn.next {
+        right: 8px !important;
+    }
+    
+    .portfolio-caption {
+        font-size: 0.95rem !important;
+        padding: 12px !important;
+    }
+}
