@@ -656,3 +656,34 @@ footer ul, footer .social-links, footer .footer-links {
     .hero-subtitle { margin-top: 10px; }
     .cta-button { margin-top: 15px; }
 }
+/* ==========================================================================
+   FIX: CENTRERING & DRIFT-KORRIGERING FÖR SLIDERS
+   ========================================================================== */
+
+/* 1. Nollställ spåren - Ta bort eventuella mellanrum (gap) som förstör matematiken */
+.ba-track, 
+.portfolio-track {
+    display: flex !important;
+    gap: 0 !important; /* VIKTIGT: En gap på t.ex. 10px gör att slidern felar med 10px per klick! */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. Lås varje slide till EXAKT 100% bredd av behållaren */
+.ba-item, 
+.portfolio-item {
+    width: 100% !important;
+    min-width: 100% !important; /* Tvingar elementet att inte krympa */
+    max-width: 100% !important;
+    flex-shrink: 0 !important;  /* Förhindrar att flexbox klämmer ihop bilderna */
+    margin: 0 !important;       /* Inga yttre marginaler som knuffar bilden åt sidan */
+    box-sizing: border-box !important; /* Räknar in eventuell padding i bredden */
+}
+
+/* 3. Se till att bilderna inuti fyller ut utan att trycka ut kanterna */
+.ba-item img, 
+.portfolio-item img {
+    width: 100% !important;
+    display: block !important;
+    object-fit: cover; /* Ser till att bilden behåller sina proportioner */
+}
