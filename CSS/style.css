@@ -526,12 +526,21 @@ button {
 
 /* Huvudrubrik - Centrerad, mörkblå och lite mer distinkt */
 .faq-section h2 {
-    text-align: center !important;
-    color: #002b5c !important;
-    font-size: 2.4rem !important;
+    color: #ffffff !important; /* Tvingar texten att bli vit */
+    font-size: 2.2rem !important;
     font-weight: 700 !important;
-    margin: 0 0 50px 0 !important;
-    letter-spacing: -0.02em !important;
+    display: inline-block !important; /* VIKTIGT: Gör att ramen kramar om texten istället för att sträcka sig över hela skärmen */
+    margin: 0 auto 50px auto !important;
+    padding: 15px 40px !important; /* Ger ett lyxigt utrymme mellan texten och ramen */
+    
+    /* EN RAM SOM STICKER UT */
+    border: 3px solid #ffffff !important; /* En tydlig, solid vit ram */
+    border-radius: 12px !important; /* Moderna, lagom rundade hörn */
+    background-color: rgba(255, 255, 255, 0.08) !important; /* En subtil ljusning bakom texten så den poppar */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important; /* En skugga som lyfter ut hela rubriken från bakgrunden */
+    
+    letter-spacing: -0.01em !important;
+    text-align: center !important;
 }
 
 /* Varje enskilt FAQ-kort - Uppdaterad med exklusivt djup och vänsterkant */
