@@ -131,6 +131,39 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ==========================================================================
+    // 3B. PORTFOLIO SLIDER (GALLERIA & TYÖNÄYTTEET) - *NY*
+    // ==========================================================================
+    const portfolioSection = document.querySelector(".portfolio-section");
+
+    if (portfolioSection) {
+
+        let pIndex = 0;
+
+        const pTrack = portfolioSection.querySelector(".portfolio-track");
+        const pItems = portfolioSection.querySelectorAll(".portfolio-item");
+        const pNextBtn = portfolioSection.querySelector(".portfolio-btn.next");
+        const pPrevBtn = portfolioSection.querySelector(".portfolio-btn.prev");
+
+        if (pTrack && pItems.length && pNextBtn && pPrevBtn) {
+
+            function updatePortfolio() {
+                pTrack.style.transform = `translateX(-${pIndex * 100}%)`;
+            }
+
+            pNextBtn.addEventListener("click", () => {
+                pIndex = (pIndex + 1) % pItems.length;
+                updatePortfolio();
+            });
+
+            pPrevBtn.addEventListener("click", () => {
+                pIndex = (pIndex - 1 + pItems.length) % pItems.length;
+                updatePortfolio();
+            });
+
+        }
+    }
+
+    // ==========================================================================
     // 4. KONTAKTFORMULÄR TRIGGER
     // ==========================================================================
     const form = document.querySelector("form");
