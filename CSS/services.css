@@ -784,22 +784,155 @@ body {
 }
 
 /* Knapparnas placering */
+/* ==========================================================================
+   GLOBAL SERVICES: MIKSI VALITA MEIDÄT & INTEGRERAD PREMIUM CTA (KORRIGERAD)
+   ========================================================================== */
+.service-trust-section {
+    padding: 60px 20px !important;
+    max-width: 1100px !important;
+    margin: 40px auto !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+    font-family: system-ui, -apple-system, sans-serif !important;
+    background-color: #002b5c !important; /* Säkerställer blå bakgrund på sektionen */
+}
+
+.service-trust-section *, 
+.service-trust-section *::before, 
+.service-trust-section *::after {
+    box-sizing: border-box !important;
+}
+
+/* Intro-header och Badge överst */
+.service-trust-section .trust-intro-header {
+    margin-bottom: 40px !important;
+}
+
+/* FIX 1: STÖRRE TRUST BADGE */
+.service-trust-section .trust-badge {
+    display: inline-block !important;
+    background-color: #ffffff !important; /* Vit bakgrund för kontrast */
+    color: #002b5c !important; /* Blå text inuti badgen */
+    padding: 8px 20px !important;
+    border-radius: 50px !important;
+    font-size: 1.1rem !important; /* Gjort den mycket större */
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 15px !important;
+    text-transform: uppercase !important;
+}
+
+/* FIX 2: MINDRE RUBRIK MED VIT TEXT */
+.service-trust-section .trust-main-title {
+    color: #ffffff !important; /* Ändrat till VIT text */
+    font-size: 2rem !important; /* Krympt storleken något för elegans */
+    font-weight: 700 !important;
+    margin: 0 !important;
+}
+
+/* FIX 3: ALLA 4 KORT PÅ EN RAD I DESKTOP & LIGGANDE LÄGE */
+.service-trust-section .trust-grid-container {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; /* Tvingar 4 i bredd */
+    gap: 20px !important;
+    padding: 0 !important;
+    margin-bottom: 60px !important;
+}
+
+/* Stilrena vita kort med blå text inuti */
+.service-trust-section .trust-card-item {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    padding: 30px 15px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.service-trust-section .trust-card-item:hover {
+    transform: translateY(-4px) !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+}
+
+.service-trust-section .trust-card-icon {
+    width: 55px !important;
+    height: 55px !important;
+    background-color: #f0f4f8 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 15px !important;
+}
+
+.service-trust-section .trust-card-icon i {
+    color: #002b5c !important;
+    font-size: 1.3rem !important;
+}
+
+.service-trust-section .trust-card-item h3 {
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    color: #002b5c !important;
+    margin: 0 0 8px 0 !important;
+}
+
+.service-trust-section .trust-card-item p {
+    color: #002b5c !important;
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   FINAL CTA BOX
+   -------------------------------------------------------------------------- */
+.service-trust-section .trust-final-cta-box {
+    text-align: center !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 20px !important;
+    padding: 50px 30px !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
+}
+
+.service-trust-section .cta-lead-text {
+    color: #002b5c !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    margin: 0 0 10px 0 !important;
+}
+
+.service-trust-section .trust-final-cta-box h2 {
+    font-size: 2rem !important;
+    color: #002b5c !important;
+    font-weight: 700 !important;
+    margin: 0 0 12px 0 !important;
+}
+
+.service-trust-section .cta-subtitle {
+    font-size: 1.05rem !important;
+    color: #002b5c !important;
+    margin: 0 0 30px 0 !important;
+}
+
 .service-trust-section .cta-dual-buttons {
     display: flex !important;
     justify-content: center !important;
     gap: 15px !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 25px !important;
     flex-wrap: wrap !important;
 }
-/* ==========================================================================
-   GLOBAL SERVICES: BUTTONS & MOBILE ADJUSTMENTS (Fortsättning)
-   ========================================================================== */
 
-/* Primär Knapp (Stark, fylld mörkblå) */
 .service-trust-section .cta-button.primary-cta {
     background-color: #002b5c !important;
     color: #ffffff !important;
-    padding: 15px 32px !important;
+    padding: 14px 28px !important;
     border-radius: 10px !important;
     font-size: 1rem !important;
     font-weight: 600 !important;
@@ -807,81 +940,76 @@ body {
     display: inline-flex !important;
     align-items: center !important;
     gap: 10px !important;
-    transition: background-color 0.2s ease, transform 0.2s ease !important;
     border: 2px solid #002b5c !important;
 }
 
-.service-trust-section .cta-button.primary-cta:hover {
-    background-color: #001834 !important; /* Mörkare vid hover */
-    border-color: #001834 !important;
-    transform: translateY(-2px) !important;
-}
-
-/* Sekundär Knapp (Stilren outline) */
 .service-trust-section .cta-button.secondary-cta {
     background-color: transparent !important;
     color: #002b5c !important;
     border: 2px solid #002b5c !important;
-    padding: 15px 32px !important;
+    padding: 14px 28px !important;
     border-radius: 10px !important;
     font-size: 1rem !important;
     font-weight: 600 !important;
     text-decoration: none !important;
     display: inline-flex !important;
     align-items: center !important;
-    transition: background-color 0.2s ease, transform 0.2s ease !important;
 }
 
-.service-trust-section .cta-button.secondary-cta:hover {
-    background-color: #f0f4f8 !important;
-    transform: translateY(-2px) !important;
-}
-
-/* Trygghetstext i botten */
 .service-trust-section .form-hint {
     font-size: 0.9rem !important;
     color: #002b5c !important;
-    opacity: 0.8 !important;
-    margin: 0 !important;
 }
 
 .service-trust-section .form-hint i {
-    color: #28a745 !important; /* Grön bock för trygghetssignal */
+    color: #28a745 !important;
     margin-right: 5px !important;
 }
 
-/* --- MOBILANPASSNING (TRUST SECTION) --- */
+/* ==========================================================================
+   FIX 4: RESPONSIVITET FÖR BÅDE LIGGANDE OCH STÅENDE MOBIL
+   ========================================================================== */
+
+/* Surfplattor och mindre skärmar (Allmän mobiljustering) */
 @media (max-width: 768px) {
-    .service-trust-section {
-        padding: 50px 15px !important;
-    }
+    .service-trust-section { padding: 40px 15px !important; }
+    .service-trust-section .trust-main-title { font-size: 1.6rem !important; }
+    .service-trust-section .trust-final-cta-box { padding: 35px 20px !important; }
+    .service-trust-section .trust-final-cta-box h2 { font-size: 1.5rem !important; }
+    .service-trust-section .cta-dual-buttons { flex-direction: column !important; gap: 10px !important; }
+    .service-trust-section .cta-button { width: 100% !important; justify-content: center !important; }
+}
 
-    .service-trust-section .trust-main-title {
-        font-size: 1.8rem !important;
-    }
-
+/* ENBART FÖR STÅENDE MOBIL (Gör rutorna hälften så stora / 2 i rad) */
+@media (max-width: 550px) and (orientation: portrait) {
     .service-trust-section .trust-grid-container {
-        grid-template-columns: 1fr !important;
-        gap: 15px !important;
-        margin-bottom: 45px !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* Tvingar 2 i bredd istället för 1 */
+        gap: 10px !important; /* Tätare mellanrum */
     }
-    
-    .service-trust-section .trust-final-cta-box {
-        padding: 35px 20px !important;
+
+    .service-trust-section .trust-card-item {
+        padding: 15px 10px !important; /* Halverad padding inuti korten */
+        border-radius: 10px !important;
     }
-    
-    .service-trust-section .trust-final-cta-box h2 {
-        font-size: 1.6rem !important;
+
+    .service-trust-section .trust-card-icon {
+        width: 40px !important; /* Mindre ikon-cirkel */
+        height: 40px !important;
+        margin-bottom: 10px !important;
     }
-    
-    .service-trust-section .cta-dual-buttons {
-        flex-direction: column !important;
-        gap: 12px !important;
+
+    .service-trust-section .trust-card-icon i {
+        font-size: 1.1rem !important;
     }
-    
-    .service-trust-section .cta-button {
-        width: 100% !important;
-        justify-content: center !important;
+
+    .service-trust-section .trust-card-item h3 {
+        font-size: 0.95rem !important; /* Mindre text */
+        margin-bottom: 4px !important;
+    }
+
+    .service-trust-section .trust-card-item p {
+        font-size: 0.75rem !important; /* Mycket mer kompakt beskrivning */
+        line-height: 1.2 !important;
     }
 }
 
