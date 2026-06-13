@@ -49,7 +49,7 @@ header {
 }
 
 /* ==========================================================================
-   HAMBURGER & SIDEBAR MENY (PREMIUM UPDATE)
+   HAMBURGER & SIDEBAR MENY (PREMIUM UPDATE - STRUKTURFIXAD)
    ========================================================================== */
 .hamburger {
     display: flex;
@@ -73,7 +73,7 @@ header {
     right: -300px;
     width: 260px;
     height: 100vh;
-    background: #002b5c; /* Samma mörkblå bas */
+    background: #002b5c; /* Mörkblå bas */
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -82,14 +82,15 @@ header {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     z-index: 1200;
-    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.3); /* Ger perfekt djup över blåa sidor */
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.3); 
     border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .menu a {
-    color: #ffffff;
+    color: #ffffff !important;
     text-decoration: none;
     font-weight: 600;
+    pointer-events: auto !important; /* Säkerställer klickbarhet */
 }
 
 .menu-section {
@@ -106,6 +107,7 @@ header {
     text-align: center;
 }
 
+/* Bakgrundsmasken */
 .menu-overlay {
     position: fixed;
     inset: 0;
@@ -118,7 +120,7 @@ header {
 
 .menu-overlay.active {
     opacity: 1;
-    pointer-events: all;
+    pointer-events: all !important;
 }
 
 .menu.active {
@@ -128,6 +130,29 @@ header {
 body.menu-open {
     overflow: hidden;
 }
+
+/* ==========================================================================
+   SMART DOSERING: FLYTTAR LAGREN ENBART NÄR MENYN ÄR ÖPPEN
+   ========================================================================== */
+/* När menyn är aktiv spränger vi lådan och lyfter upp nav/header över overlayen */
+body.menu-open header,
+body.menu-open nav {
+    position: relative;
+    z-index: 99999 !important; /* Lyfter hela sidhuvudet över den mörka masken */
+}
+
+body.menu-open .menu {
+    z-index: 100000 !important; /* Sätter menyn absolut högst upp */
+}
+
+body.menu-open .hamburger {
+    z-index: 100000 !important; /* Gör att du kan klicka på hamburgaren för att stänga */
+}
+
+body.menu-open .menu-overlay {
+    z-index: 99990 !important; /* Lägger sig under menyn, men över resten av sajten */
+}
+
 
 /* ==========================================================================
    HERO BLOCK
