@@ -1416,23 +1416,116 @@ h1, h2, h3, h4, h5, h6, p, li, span, label, td, th, a {
 
 
 /* ==========================================================================
-   ÅTERSTÄLLNING AV KNAPPAR (SÅ DE INTE BLIR OLÄSLIGA I VITA BOXAR)
+   UPPDATERAD TRUST-SEKTION (Smidiga kort & exakt responsivitet)
    ========================================================================== */
-/* Eftersom vi tvingade allt i vita boxar att få blå text, måste vi se till 
-   att knappar med blå bakgrund fortfarande har kvar sin vita text. */
 
-.service-trust-section .cta-button.primary-cta {
-    background-color: #002b5c !important;
-    border-color: #002b5c !important;
-}
-.service-trust-section .cta-button.primary-cta * {
-    color: #ffffff !important; /* Vit text på den mörkblå knappen */
+/* Huvudcontainern för hela sektionen */
+.service-trust-section {
+    padding: 60px 20px !important;
+    background-color: #002b5c !important; /* Din mörkblå bakgrund */
+    text-align: center !important;
 }
 
-.service-trust-section .cta-button.secondary-cta {
-    background-color: transparent !important;
-    border-color: #002b5c !important;
+/* 1. STÖRRE TRUST BADGE */
+.trust-badge {
+    display: inline-block !important;
+    font-size: 1.15rem !important; /* Gjort den märkbart större */
+    font-weight: 700 !important;
+    color: #002b5c !important; /* Blå text inuti den vita badgen */
+    background-color: #ffffff !important;
+    padding: 8px 20px !important;
+    border-radius: 50px !important;
+    margin-bottom: 18px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
 }
-.service-trust-section .cta-button.secondary-cta * {
-    color: #002b5c !important; /* Blå text på transparent knapp */
+
+/* 2. MINDRE HUVUDRUBRIK MED VIT TEXT */
+.trust-main-title {
+    font-size: 2.2rem !important; /* Mindre och mer elegant storlek */
+    color: #ffffff !important; /* Tvingad vit text */
+    margin: 0 auto 40px auto !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+}
+
+/* 3. LAYOUT FÖR SKÄRMAR I LIGGANDE LÄGE & DESKTOP (Alla 4 på en rad) */
+.trust-grid-container {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; /* Tvingar alla 4 kort att ligga i en rad */
+    gap: 20px !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+}
+
+/* Standardkort (Desktop / Liggande mobil & surfplatta) */
+.trust-card-item {
+    background-color: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 30px 20px !important;
+    text-align: center !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+    box-sizing: border-box !important;
+}
+
+/* Tvinga allt inuti korten att bli blått (eftersom bakgrunden är vit) */
+.trust-card-item * {
+    color: #002b5c !important;
+}
+
+.trust-card-icon i {
+    font-size: 2.2rem !important;
+    margin-bottom: 15px !important;
+    display: inline-block !important;
+}
+
+.trust-card-item h3 {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important;
+}
+
+.trust-card-item p {
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+}
+
+
+/* ==========================================================================
+   4. MOBILANPASSNING (ENBART FÖR STÅENDE MOBIL)
+   ========================================================================== */
+@media (max-width: 550px) and (orientation: portrait) {
+    
+    .trust-main-title {
+        font-size: 1.6rem !important; /* Ännu lite mindre rubrik på mobil */
+        margin-bottom: 25px !important;
+    }
+
+    /* Gör rutorna hälften så stora genom att sätta 2 i rad istället för att stapla dem */
+    .trust-grid-container {
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 10px !important; /* Tätare mellanrum för att spara plats */
+    }
+
+    /* Halvera storleken på innehållet inuti korten för att matcha den nya bredden */
+    .trust-card-item {
+        padding: 15px 10px !important; /* Mycket mer kompakt padding */
+        border-radius: 8px !important;
+    }
+
+    .trust-card-icon i {
+        font-size: 1.4rem !important; /* Krympt ikon */
+        margin-bottom: 6px !important;
+    }
+
+    .trust-card-item h3 {
+        font-size: 0.95rem !important; /* Mindre textstorlek på titeln */
+        margin-bottom: 4px !important;
+    }
+
+    .trust-card-item p {
+        font-size: 0.75rem !important; /* Extremt kompakt brödtext */
+        line-height: 1.2 !important;
+    }
 }
