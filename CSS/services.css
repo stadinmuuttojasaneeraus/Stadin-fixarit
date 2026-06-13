@@ -1324,3 +1324,97 @@ body {
         padding: 12px !important;
     }
 }
+/* ==========================================================================
+   GLOBAL MÄSTERSTYRNING: BLÅ BAKGRUND & VIT TEXT OVERALLT
+   ========================================================================== */
+html, body {
+    background-color: #002b5c !important; /* Din mörkblå signaturfärg */
+    color: #ffffff !important;
+}
+
+/* Tvingar all standardtext, rubriker och listor på sidan att bli vita */
+h1, h2, h3, h4, h5, h6, p, li, span, label, td, th, a {
+    color: #ffffff !important;
+}
+
+
+/* ==========================================================================
+   UNDANTAG: SEKTIONER MED VIT BAKGRUND (HÄR BLIR TEXTEN BLÅ)
+   ========================================================================== */
+
+/* --- 1. Förtroendekort & CTA-box (Miksi valita meidät) --- */
+.service-trust-section .trust-card-item,
+.service-trust-section .trust-final-cta-box {
+    background-color: #ffffff !important;
+}
+/* Gör all text inuti dessa vita boxar blå */
+.service-trust-section .trust-card-item *,
+.service-trust-section .trust-final-cta-box * {
+    color: #002b5c !important;
+}
+
+
+/* --- 2. B2B Informationssektioner (Yrityksille) --- */
+.b2b-info-section, 
+.b2b-info-section.alt-bg {
+    background-color: #ffffff !important; /* Gör även den ljusgrå alternativ-bakgrunden krispigt vit */
+    border-color: #e2e8f0 !important;
+}
+/* Gör all text i B2B-infon blå */
+.b2b-info-section *,
+.b2b-info-section h2,
+.b2b-info-section p,
+.b2b-premium-list li,
+.b2b-premium-list li i {
+    color: #002b5c !important;
+}
+
+
+/* --- 3. B2B Prislista & Prisrader --- */
+.service-pricing-section.b2b-pricing {
+    background-color: #ffffff !important;
+}
+/* Gör rubriker och introduktionstext blå i B2B-prissättningen */
+.service-pricing-section.b2b-pricing *,
+.service-pricing-section.b2b-pricing .pricing-main-title,
+.service-pricing-section.b2b-pricing .pricing-intro,
+.b2b-pricing .pricing-quick-action h2,
+.b2b-pricing .cta-subtitle,
+.b2b-pricing .form-hint {
+    color: #002b5c !important;
+}
+/* Raderna inuti prislistan (behåller en mycket mjuk gråblå ton för kontrast, men med blå text) */
+.b2b-pricing .pricing-row {
+    background-color: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+}
+.b2b-pricing .pricing-row * {
+    color: #002b5c !important;
+}
+/* Den lilla "+ ALV" texten görs något mörkare blågrå för hierarki */
+.b2b-pricing .vat-label {
+    color: #475569 !important;
+}
+
+
+/* ==========================================================================
+   ÅTERSTÄLLNING AV KNAPPAR (SÅ DE INTE BLIR OLÄSLIGA I VITA BOXAR)
+   ========================================================================== */
+/* Eftersom vi tvingade allt i vita boxar att få blå text, måste vi se till 
+   att knappar med blå bakgrund fortfarande har kvar sin vita text. */
+
+.service-trust-section .cta-button.primary-cta {
+    background-color: #002b5c !important;
+    border-color: #002b5c !important;
+}
+.service-trust-section .cta-button.primary-cta * {
+    color: #ffffff !important; /* Vit text på den mörkblå knappen */
+}
+
+.service-trust-section .cta-button.secondary-cta {
+    background-color: transparent !important;
+    border-color: #002b5c !important;
+}
+.service-trust-section .cta-button.secondary-cta * {
+    color: #002b5c !important; /* Blå text på transparent knapp */
+}
