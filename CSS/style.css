@@ -540,30 +540,100 @@ button {
 }
 
 /* ==========================================================================
-   BEFORE / AFTER SLIDER
+   UNIVERSELL PREMIUM SLIDER (MASTER TEMPLATE COMPONENT)
    ========================================================================== */
-.ba-section {
-    padding: 60px 20px;
-    text-align: center;
-    max-width: 1100px;
-    margin: 0 auto;
+.universal-slider-section {
+    width: 100% !important;
+    max-width: 1000px !important; /* Justera efter hur bred du vill att slidern ska vara */
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
 }
 
-.ba-header h2 { margin-bottom: 8px; }
-.ba-header p { opacity: 0.8; margin-bottom: 25px; }
-.ba-slider { position: relative; overflow: hidden; }
-.ba-track { display: flex; transition: transform 0.4s ease; width: 100%; }
-.ba-item { min-width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-.ba-image { position: relative; border-radius: 12px; overflow: hidden; }
-.ba-image img { width: 100%; height: 280px; object-fit: cover; display: block; }
+.slider-container {
+    position: relative !important;
+    overflow: hidden !important; /* Gömmer bilderna som ligger utanför ramen */
+    border-radius: 16px !important;
+    box-shadow: 0 15px 35px rgba(0, 43, 92, 0.1) !important;
+    background: #f1f5f9 !important;
+}
 
-.ba-label { position: absolute; top: 10px; left: 10px; padding: 6px 10px; font-size: 12px; border-radius: 6px; color: #ffffff; }
-.ba-label.before { background: #b00020; }
-.ba-label.after { background: #007a3d; }
+/* Själva tåget som rör sig */
+.slider-track {
+    display: flex !important;
+    gap: 0 !important; /* Extremt viktigt för att förhindra förskjutning! */
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important; /* Mjuk skjut-effekt */
+}
 
-.ba-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #ffffff; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; z-index: 2; }
-.ba-btn.prev { left: 10px; }
-.ba-btn.next { right: 10px; }
+/* Varje individuell bildruta */
+.slider-item {
+    min-width: 100% !important;
+    max-width: 100% !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.slider-item img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 550px !important; /* Förhindrar att stående bilder blir gigantiska */
+    display: block !important;
+    object-fit: cover !important; /* Klipp till snyggt om bilderna har olika proportioner */
+}
+
+/* ==========================================================================
+   SLIDER KNAPPAR (PREMIUM FLYTANDE PILAR)
+   ========================================================================== */
+.slider-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 48px !important;
+    height: 48px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    color: #002b5c !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    transition: background 0.2s, color 0.2s, transform 0.2s !important;
+    z-index: 10 !important;
+}
+
+.slider-btn:hover {
+    background: #002b5c !important;
+    color: #ffffff !important;
+}
+
+.slider-btn.prev { left: 20px !important; }
+.slider-btn.next { right: 20px !important; }
+
+/* Justering för de solida pilarna inuti knapparna */
+.slider-btn i {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", sans-serif !important;
+    font-weight: 900 !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Mobilanpassning */
+@media (max-width: 768px) {
+    .universal-slider-section { padding: 0 10px !important; }
+    .slider-btn { width: 40px !important; height: 40px !important; }
+    .slider-btn.prev { left: 10px !important; }
+    .slider-btn.next { right: 10px !important; }
+}
+
 
 /* ==========================================================================
    FOOTER STANDARD & ÅTERSTÄLLNING (STALSTARK CENTRERING)
@@ -655,35 +725,4 @@ footer ul, footer .social-links, footer .footer-links {
     #hero { min-height: 260px; padding: 30px 20px; }
     .hero-subtitle { margin-top: 10px; }
     .cta-button { margin-top: 15px; }
-}
-/* ==========================================================================
-   FIX: CENTRERING & DRIFT-KORRIGERING FÖR SLIDERS
-   ========================================================================== */
-
-/* 1. Nollställ spåren - Ta bort eventuella mellanrum (gap) som förstör matematiken */
-.ba-track, 
-.portfolio-track {
-    display: flex !important;
-    gap: 0 !important; /* VIKTIGT: En gap på t.ex. 10px gör att slidern felar med 10px per klick! */
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* 2. Lås varje slide till EXAKT 100% bredd av behållaren */
-.ba-item, 
-.portfolio-item {
-    width: 100% !important;
-    min-width: 100% !important; /* Tvingar elementet att inte krympa */
-    max-width: 100% !important;
-    flex-shrink: 0 !important;  /* Förhindrar att flexbox klämmer ihop bilderna */
-    margin: 0 !important;       /* Inga yttre marginaler som knuffar bilden åt sidan */
-    box-sizing: border-box !important; /* Räknar in eventuell padding i bredden */
-}
-
-/* 3. Se till att bilderna inuti fyller ut utan att trycka ut kanterna */
-.ba-item img, 
-.portfolio-item img {
-    width: 100% !important;
-    display: block !important;
-    object-fit: cover; /* Ser till att bilden behåller sina proportioner */
 }
