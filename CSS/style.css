@@ -1049,3 +1049,241 @@ footer ul, footer .social-links, footer .footer-links {
     text-transform: capitalize !important; /* Gör första bokstaven stor automatiskt */
 }
    
+/* ==========================================================================
+   PREMIUM SERVICE PRICING SECTION
+   ========================================================================== */
+
+/* Huvudsektionen */
+.service-pricing-section {
+    width: 100% !important;
+    max-width: 1000px !important;
+    margin: 60px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    font-family: sans-serif !important; /* Ändra till din globala font om önskas */
+}
+
+/* Huvudrubrik */
+.pricing-main-title {
+    color: #002b5c !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 12px !important;
+}
+
+/* Introduktionstext */
+.pricing-intro {
+    color: #475569 !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    max-width: 700px !important;
+    margin: 0 auto 40px auto !important;
+}
+
+/* Wrapper som lägger Priskort och Skattebox bredvid varandra på dator */
+.pricing-content-wrapper {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 24px !important;
+    justify-content: center !important;
+    align-items: stretch !important; /* Gör att båda boxarna blir exakt lika höga */
+    margin-bottom: 50px !important;
+}
+
+/* ==========================================================================
+   PRISKORTET (VÄNSTER BOX)
+   ========================================================================== */
+.pricing-card-container {
+    flex: 1 !important;
+    min-width: 300px !important;
+    max-width: 460px !important;
+}
+
+.pricing-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 43, 92, 0.08) !important;
+    border-radius: 16px !important; /* Matchar sliderns rundning */
+    padding: 35px 30px !important;
+    text-align: center !important;
+    box-shadow: 0 10px 25px rgba(0, 43, 92, 0.04) !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Ikon-cirkeln ovanför priset */
+.card-icon-circle {
+    width: 60px !important;
+    height: 60px !important;
+    background: rgba(0, 43, 92, 0.05) !important;
+    color: #002b5c !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+}
+
+.pricing-card h3 {
+    color: #002b5c !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 12px 0 !important;
+}
+
+.pricing-card p {
+    color: #64748b !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin: 0 !important;
+}
+
+/* ==========================================================================
+   KOTITALOUSVÄHENNYS / HUSHÅLLSAVDRAG (HÖGER BOX)
+   ========================================================================== */
+.tax-deduction-box {
+    flex: 1 !important;
+    min-width: 300px !important;
+    max-width: 460px !important;
+    background: #f8fafc !important; /* Ljus, fräsch grå/blå bakgrund */
+    border: 1px dashed rgba(0, 43, 92, 0.15) !important; /* Streckad kant för kupong-känsla */
+    border-radius: 16px !important;
+    padding: 35px 30px !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.01) !important;
+    height: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    gap: 20px !important;
+    align-items: flex-start !important;
+}
+
+/* Procent-ikonen */
+.tax-deduction-box i {
+    font-size: 28px !important;
+    color: #22c55e !important; /* Din gröna accentfärg */
+    margin-top: 4px !important;
+}
+
+.tax-deduction-box p {
+    color: #475569 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+.tax-deduction-box strong {
+    color: #002b5c !important;
+    font-size: 1.1rem !important;
+    display: inline-block !important;
+    margin-bottom: 6px !important;
+}
+
+/* ==========================================================================
+   FINAL CTA / SNABB-ACTION (NEDRE SEKTION)
+   ========================================================================== */
+.pricing-quick-action {
+    text-align: center !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 43, 92, 0.08) !important;
+    border-radius: 16px !important;
+    padding: 40px 30px !important;
+    max-width: 944px !important; /* Matchar den totala bredden av de övre boxarna */
+    margin: 0 auto !important;
+    box-shadow: 0 15px 35px rgba(0, 43, 92, 0.06) !important;
+    box-sizing: border-box !important;
+}
+
+.pricing-quick-action h2 {
+    color: #002b5c !important;
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 8px 0 !important;
+}
+
+.cta-subtitle {
+    color: #64748b !important;
+    font-size: 1rem !important;
+    margin: 0 0 25px 0 !important;
+}
+
+/* Container för knappen */
+.cta-container-bottom {
+    margin-bottom: 20px !important;
+}
+
+/* Den gröna Premium-knappen */
+.pricing-quick-action .cta-button {
+    display: inline-block !important;
+    background: #22c55e !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 14px 35px !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    border-radius: 50px !important; /* Runda hörn för modern känsla */
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3) !important;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.pricing-quick-action .cta-button:hover {
+    background: #16a34a !important; /* Lite mörkare grön vid hover */
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4) !important;
+}
+
+/* Småikoner under knappen (Trygghetspunkter) */
+.form-hint {
+    color: #64748b !important;
+    font-size: 0.88rem !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+}
+
+.form-hint i {
+    color: #22c55e !important;
+    margin-right: 2px !important;
+}
+
+/* ==========================================================================
+   MOBILANPASSNING (768px och nedåt)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .pricing-main-title {
+        font-size: 1.6rem !important;
+    }
+    .pricing-intro {
+        font-size: 1rem !important;
+        margin-bottom: 30px !important;
+    }
+    .pricing-content-wrapper {
+        gap: 16px !important;
+    }
+    .pricing-card, .tax-deduction-box {
+        padding: 25px 20px !important;
+    }
+    .tax-deduction-box {
+        flex-direction: column !important; /* Staplar ikonen över texten på mobilen */
+        gap: 10px !important;
+    }
+    .pricing-quick-action {
+        padding: 30px 20px !important;
+    }
+    .pricing-quick-action h2 {
+        font-size: 1.35rem !important;
+    }
+    .pricing-quick-action .cta-button {
+        width: 100% !important; /* Knappen tar upp hela bredden på mobilen för enklare klick */
+        box-sizing: border-box !important;
+        text-align: center !important;
+    }
+}
+   
