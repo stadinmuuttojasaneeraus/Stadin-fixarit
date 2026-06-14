@@ -97,71 +97,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+        // ==========================================================================
+    // 3. UNIVERSELL SMART SLIDER (MASTER MALL LOGIK)
     // ==========================================================================
-    // 3. BEFORE / AFTER SLIDER
-    // ==========================================================================
-    const baSection = document.querySelector(".ba-section");
+    const universalSliders = document.querySelectorAll(".universal-slider-section");
 
-    if (baSection) {
-
+    universalSliders.forEach(slider => {
         let index = 0;
 
-        const track = baSection.querySelector(".ba-track");
-        const items = baSection.querySelectorAll(".ba-item");
-        const nextBtn = baSection.querySelector(".ba-btn.next");
-        const prevBtn = baSection.querySelector(".ba-btn.prev");
+        const track = slider.querySelector(".slider-track");
+        const items = slider.querySelectorAll(".slider-item");
+        const nextBtn = slider.querySelector(".slider-btn.next");
+        const prevBtn = slider.querySelector(".slider-btn.prev");
 
+        // Kontrollera att alla nödvändiga delar finns i just denna slider innan vi startar
         if (track && items.length && nextBtn && prevBtn) {
 
-            function update() {
+            function updateSlider() {
                 track.style.transform = `translateX(-${index * 100}%)`;
             }
 
             nextBtn.addEventListener("click", () => {
-                index = (index + 1) % items.length;
-                update();
+                index = (index + 1) % items.length; // Går till nästa (eller börjar om på 0)
+                updateSlider();
             });
 
             prevBtn.addEventListener("click", () => {
-                index = (index - 1 + items.length) % items.length;
-                update();
+                index = (index - 1 + items.length) % items.length; // Går bakåt (eller hoppar till sista)
+                updateSlider();
             });
-
         }
-    }
-
-    // ==========================================================================
-    // 3B. PORTFOLIO SLIDER (GALLERIA & TYÖNÄYTTEET) - *NY*
-    // ==========================================================================
-    const portfolioSection = document.querySelector(".portfolio-section");
-
-    if (portfolioSection) {
-
-        let pIndex = 0;
-
-        const pTrack = portfolioSection.querySelector(".portfolio-track");
-        const pItems = portfolioSection.querySelectorAll(".portfolio-item");
-        const pNextBtn = portfolioSection.querySelector(".portfolio-btn.next");
-        const pPrevBtn = portfolioSection.querySelector(".portfolio-btn.prev");
-
-        if (pTrack && pItems.length && pNextBtn && pPrevBtn) {
-
-            function updatePortfolio() {
-                pTrack.style.transform = `translateX(-${pIndex * 100}%)`;
-            }
-
-            pNextBtn.addEventListener("click", () => {
-                pIndex = (pIndex + 1) % pItems.length;
-                updatePortfolio();
-            });
-
-            pPrevBtn.addEventListener("click", () => {
-                pIndex = (pIndex - 1 + pItems.length) % pItems.length;
-                updatePortfolio();
-            });
-
-        }
-    }
+    });
+  
 
     // ==========================================================================
     // 4. KONTAKTFORMULÄR TRIGGER
