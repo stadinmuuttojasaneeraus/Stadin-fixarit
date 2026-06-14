@@ -727,30 +727,145 @@ footer ul, footer .social-links, footer .footer-links {
     .cta-button { margin-top: 15px; }
 }
 /* ==========================================================================
-   ABOUT PAGE SPECIFIC: BADGE SECTON STYLING
+   ABOUT PAGE: PREMIUM TRUST BADGES MASTER STYLING
    ========================================================================== */
+
+/* Huvudcontainer för hela sektionen på About-sidan */
 .about-trust-container {
     margin: 50px auto !important;
     text-align: center !important;
     width: 100% !important;
     max-width: 1000px !important;
+    box-sizing: border-box !important;
 }
 
+/* Sektionsrubriken med den gröna linjen under */
 .about-trust-container .badges-title {
-    color: #002b5c !important; /* Din mörkblå färg */
+    color: #002b5c !important; /* Din mörkblå signaturfärg */
     font-size: 1.6rem !important;
     font-weight: 700 !important;
     margin-bottom: 25px !important;
     position: relative !important;
 }
 
-/* En liten designdetalj: ett diskret streck under rubriken */
 .about-trust-container .badges-title::after {
     content: "" !important;
     display: block !important;
     width: 50px !important;
     height: 3px !important;
-    background: #22c55e !important; /* Den gröna färgen som röd tråd */
+    background: #22c55e !important; /* Grön accentfärg som röd tråd */
     margin: 8px auto 0 !important;
     border-radius: 2px !important;
 }
+
+/* Flex-wrapper för själva märkena */
+.trust-badges-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0 10px !important;
+    box-sizing: border-box !important;
+}
+
+/* Den individuella runda "piller"-knappen */
+.trust-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 43, 92, 0.08) !important;
+    padding: 8px 20px !important;
+    border-radius: 50px !important;
+    box-shadow: 0 4px 12px rgba(0, 43, 92, 0.03) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Subtil lyft-effekt vid hover */
+.trust-badge:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 15px rgba(0, 43, 92, 0.08) !important;
+}
+
+/* Texten inuti märket */
+.trust-badge .badge-text {
+    color: #002b5c !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important; /* Förhindrar fula radbrytningar */
+}
+
+/* ==========================================================================
+   LOGOTYPER & IKONER (Symmetrisk skalning & centrering)
+   ========================================================================== */
+
+/* Låser höjden för alla bild-loggor så de blir exakt lika stora */
+.trust-badge .badge-logo-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 24px !important; 
+}
+
+/* Om en badge har dubbla loggor (Oras & Grohe) */
+.trust-badge .double-logos {
+    gap: 10px !important;
+}
+
+/* Själva bildinställningarna för loggorna */
+.trust-badge .brand-img {
+    height: 100% !important;
+    width: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+}
+
+/* Fallback-cirkel för Font Awesome-ikoner (t.ex. Huoltomies) */
+.trust-badge .badge-icon-wrapper {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 12px !important;
+}
+
+.trust-badge .service-badge {
+    background: rgba(34, 197, 94, 0.1) !important; /* Mjuk grön ton */
+    color: #16a34a !important;
+}
+
+.trust-badge .badge-icon-wrapper i {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", sans-serif !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+}
+
+/* ==========================================================================
+   MOBILANPASSNING
+   ========================================================================== */
+@media (max-width: 768px) {
+    .about-trust-container {
+        margin: 40px auto !important;
+    }
+    .about-trust-container .badges-title {
+        font-size: 1.4rem !important;
+    }
+    .trust-badges-container { 
+        gap: 10px !important; 
+    }
+    .trust-badge { 
+        padding: 6px 14px !important; 
+        gap: 8px !important; 
+    }
+    .trust-badge .badge-logo-wrapper { 
+        height: 18px !important; /* Skalar ner loggorna snyggt på mobilen */
+    } 
+    .trust-badge .badge-text { 
+        font-size: 0.85rem !important; 
+    }
+}
+
