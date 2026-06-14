@@ -611,11 +611,89 @@ button {
     background: #002b5c !important;
     color: #ffffff !important;
 }
+/* ==========================================================================
+   CONFLICT-FREE PREMIUM SLIDER (MASTER TEMPLATE COMPONENT)
+   ========================================================================== */
+.universal-slider-section {
+    width: 100% !important;
+    max-width: 1000px !important; /* Sliderns maxbredd på datorskärm */
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important; /* Säkerhetsspärr för sidan */
+}
+
+.slider-container {
+    position: relative !important;
+    width: 100% !important;
+    overflow: hidden !important; /* Denna klipper bort allt utanför ramen */
+    border-radius: 16px !important;
+    box-shadow: 0 15px 35px rgba(0, 43, 92, 0.1) !important;
+    background: #f1f5f9 !important;
+}
+
+/* Tåget som rör sig - nollställd från alla flex-konflikter */
+.slider-track {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Varje bildruta LÅSES till exakt 100% av containerns bredd */
+.slider-item {
+    flex: 0 0 100% !important; /* Tvingar rutan att vara EXAKT bredden av slidern */
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* BILD-FIXEN: Låst höjd stoppar bild-explosioner */
+.slider-item img {
+    width: 100% !important;
+    height: 480px !important; /* Fast premium-höjd på dator. Ändra till vad du vill ha! */
+    display: block !important;
+    object-fit: cover !important; /* Klipp och centrerar bilden automatiskt oavsett originalstorlek */
+    object-position: center !important;
+}
+
+/* ==========================================================================
+   SLIDER KNAPPAR (FLYTANDE PILAR)
+   ========================================================================== */
+.slider-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 48px !important;
+    height: 48px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    color: #002b5c !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    transition: background 0.2s, color 0.2s, transform 0.2s !important;
+    z-index: 10 !important;
+}
+
+.slider-btn:hover {
+    background: #002b5c !important;
+    color: #ffffff !important;
+}
 
 .slider-btn.prev { left: 20px !important; }
 .slider-btn.next { right: 20px !important; }
 
-/* Justering för de solida pilarna inuti knapparna */
 .slider-btn i {
     font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", sans-serif !important;
     font-weight: 900 !important;
@@ -626,10 +704,22 @@ button {
     justify-content: center !important;
 }
 
-/* Mobilanpassning */
+/* ==========================================================================
+   MOBILANPASSNING (Skalar ner höjden så skärmen inte fylls helt)
+   ========================================================================== */
 @media (max-width: 768px) {
-    .universal-slider-section { padding: 0 10px !important; }
-    .slider-btn { width: 40px !important; height: 40px !important; }
+    .universal-slider-section { 
+        padding: 0 10px !important; 
+    }
+    
+    .slider-item img {
+        height: 280px !important; /* Snygg, mer kompakt höjd på mobilen */
+    }
+
+    .slider-btn { 
+        width: 40px !important; 
+        height: 40px !important; 
+    }
     .slider-btn.prev { left: 10px !important; }
     .slider-btn.next { right: 10px !important; }
 }
