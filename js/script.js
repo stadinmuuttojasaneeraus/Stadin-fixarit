@@ -36,46 +36,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-        // ==========================================================================
-    // 2. FAQ ACCORDION & ROLLOUT LOGIK (SKOTTSÄKRAD)
+            // ==========================================================================
+    // 2. FAQ ACCORDION & ROLLOUT LOGIK (SKOTTSÄKRAD VERSION)
     // ==========================================================================
-    const faqSections = document.querySelectorAll(".faq-section");
+    const mainToggle = document.querySelector(".faq-main-toggle");
+    const rolloutContainer = document.querySelector(".faq-rollout-container");
 
-    faqSections.forEach(section => {
-        const mainToggle = section.querySelector(".faq-main-toggle");
-        const rolloutContainer = section.querySelector(".faq-rollout-container");
-        const items = section.querySelectorAll(".faq-item");
-        const oldButton = section.querySelector(".js-faq-toggle");
+    // Öppna och stäng hela FAQ-paketet när man klickar på huvudknappen
+    if (mainToggle && rolloutContainer) {
+        mainToggle.addEventListener("click", function () {
+            this.classList.toggle("is-open");
+            rolloutContainer.classList.toggle("is-open");
+        });
+    }
 
-        // FIX 1: Om huvudknappen finns, styr vi hela containern oberoende av ordning
-        if (mainToggle && rolloutContainer) {
-            mainToggle.addEventListener("click", function() {
-                this.classList.toggle("is-open");
-                rolloutContainer.classList.toggle("is-open");
-            });
-
-            // Tvinga alla frågor att bli redo inuti den dolda containern
-            items.forEach(item => item.classList.add("visible"));
-        } else {
-            // FIX 2: Gamla logiken körs BARA om huvudknappen saknas på sidan
-            const limit = parseInt(section.dataset.faq) || 4;
-            items.forEach((item, index) => {
-                if (index < limit) item.classList.add("visible");
-            });
-            if (oldButton && items.length <= limit) {
-                oldButton.style.display = "none";
-            }
-        }
-
-        // FIX 3: Öppna/stäng individuella svar när man klickar på en fråga
-        items.forEach(item => {
-            const question = item.querySelector(".faq-question");
-            if (!question) return;
-
+    // Öppna och stäng varje enskilt svar (.faq-answer) inuti listan
+    const faqItems = document.querySelectorAll(".faq-section .faq-item");
+    faqItems.forEach(item => {
+        const question = item.querySelector(".faq-question");
+        if (question) {
             question.addEventListener("click", () => {
                 item.classList.toggle("active");
             });
-        });
+        }
     });
   
     // ==========================================================================
