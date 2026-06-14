@@ -726,3 +726,31 @@ footer ul, footer .social-links, footer .footer-links {
     .hero-subtitle { margin-top: 10px; }
     .cta-button { margin-top: 15px; }
 }
+/* ==========================================================================
+   ABOUT PAGE SPECIFIC: BADGE SECTON STYLING
+   ========================================================================== */
+.about-trust-container {
+    margin: 50px auto !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 1000px !important;
+}
+
+.about-trust-container .badges-title {
+    color: #002b5c !important; /* Din mörkblå färg */
+    font-size: 1.6rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 25px !important;
+    position: relative !important;
+}
+
+/* En liten designdetalj: ett diskret streck under rubriken */
+.about-trust-container .badges-title::after {
+    content: "" !important;
+    display: block !important;
+    width: 50px !important;
+    height: 3px !important;
+    background: #22c55e !important; /* Den gröna färgen som röd tråd */
+    margin: 8px auto 0 !important;
+    border-radius: 2px !important;
+}
