@@ -422,96 +422,109 @@ button {
 }
 
 /* ==========================================================================
-   FAQ SECTION
+   FAQ SECTION: ULTRA-KOMPAKT & PREMIUM STYLING
    ========================================================================== */
+
+/* Huvudcontainern - Nedstrupt bredd för ett smidigare flöde */
 .faq-section {
-    padding: 80px 20px !important;
-    max-width: 900px !important;
+    padding: 40px 15px !important; /* Krympt från 80px för att spara vertikal yta */
+    max-width: 620px !important;   /* Strypt från 900px för att bli mycket mer kompakt */
     margin: 0 auto !important;
     box-sizing: border-box !important;
     text-align: center !important;
 }
 
+/* 1. RUBRIKEN: Kapad på mitten, slimmad och av med den klumpiga ramen */
 .faq-section h2 {
     color: #ffffff !important;
-    font-size: 2.2rem !important;
+    font-size: 1.6rem !important;   /* Mer sofistikerad storlek (ner från 2.2rem) */
     font-weight: 700 !important;
     display: block !important;
-    width: max-content !important;
-    max-width: 90% !important;
-    margin: 0 auto 50px auto !important;
-    padding: 15px 40px !important;
-    border: 3px solid #ffffff !important;
-    border-radius: 12px !important;
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25) !important;
+    max-width: 380px !important;    /* Hårt kapad på längden/bredden */
+    margin: 0 auto 30px auto !important;
+    padding: 10px 20px !important;  /* Minimalt med tomrum */
+    border: 1px solid rgba(255, 255, 255, 0.25) !important; /* Ultratunn elegant linje istället för 3px klump */
+    border-radius: 30px !important; /* Rundad pillerform som matchar knappar */
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
     text-align: center !important;
 }
 
+/* 2. FRÅGELÅDORNA (KORTEN) */
 .faq-section .faq-item {
     background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    border-left: 4px solid rgba(0, 43, 92, 0.1) !important;
-    border-radius: 16px !important;
-    margin-bottom: 18px !important;
+    border: 1px solid rgba(0, 43, 92, 0.1) !important; /* Tunn, ren ram runt hela boxen */
+    border-left: 4px solid rgba(0, 43, 92, 0.15) !important;
+    border-radius: 12px !important; /* Något mindre rundning för en skarpare look */
+    margin-bottom: 12px !important;  /* Tätare mellan frågorna */
     overflow: hidden !important;
-    box-shadow: 0 10px 25px rgba(0, 43, 92, 0.03) !important;
+    box-shadow: 0 4px 12px rgba(0, 43, 92, 0.02) !important;
     display: none;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
 }
 
 .faq-section .faq-item.visible {
     display: block !important;
 }
 
+/* Hover-effekt på kortet */
 .faq-section .faq-item:hover {
-    transform: translateY(-2px) !important;
+    transform: translateY(-1px) !important; /* Subtil lyftning istället för stort hopp */
     border-left-color: #002b5c !important;
+    border-color: rgba(0, 43, 92, 0.2) !important;
 }
 
+/* Aktivt öppet kort */
 .faq-section .faq-item.active {
     border-color: #002b5c !important;
     border-left-color: #002b5c !important;
-    background-color: #f8fafc !important;
+    background-color: #f8fafc !important; /* Ljus fräsch toning när den är öppen */
 }
 
+/* 3. SJÄLVA FRÅGEKNAPPEN (Inuti kortet) */
 .faq-section .faq-question {
     width: 100% !important;
     background: transparent !important;
     border: none !important;
-    padding: 24px 28px !important;
+    padding: 14px 20px !important; /* Halverad padding (ner från 24px/28px) = extremt mycket nättare */
     text-align: left !important;
-    font-size: 1.15rem !important;
+    font-size: 0.98rem !important;  /* Något mindre och skarpare text */
     font-weight: 600 !important;
     color: #002b5c !important;
     cursor: pointer !important;
     display: flex !important;
     align-items: center !important;
-    gap: 18px !important;
+    gap: 12px !important; /* Mindre glapp mellan ikon och text */
 }
 
+/* Cirkeln runt ikonen - Krympt från klumpiga 44px till nätta 34px */
 .faq-section .faq-question i {
     color: #002b5c !important;
-    font-size: 1.1rem !important;
-    width: 44px !important;
-    height: 44px !important;
+    font-size: 0.95rem !important;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
     background-color: #f1f5f9 !important;
     border-radius: 50% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     flex-shrink: 0 !important;
-    transition: all 0.3s ease !important;
+    transition: background-color 0.2s, color 0.2s !important;
 }
 
+/* Färgskifte på ikonen vid hover/aktiv */
 .faq-section .faq-item:hover .faq-question i,
 .faq-section .faq-item.active .faq-question i {
     background-color: #002b5c !important;
     color: #ffffff !important;
 }
 
+/* 4. SVARET */
 .faq-section .faq-answer {
     display: none; 
-    padding: 0 28px 24px 90px !important;
+    padding: 0 20px 14px 66px !important; /* Indraget justerat för att matcha den mindre ikonen */
+    text-align: left !important;
 }
 
 .faq-section .faq-item.active .faq-answer {
@@ -519,25 +532,48 @@ button {
 }
 
 .faq-section .faq-answer p {
-    line-height: 1.7 !important;
-    color: #002b5c !important;
+    line-height: 1.5 !important;
+    color: #475569 !important; /* Något mjukare mörkgrå för bättre läsbarhet i svar */
     margin: 0 !important;
-    font-size: 1.02rem !important;
+    font-size: 0.88rem !important;
 }
 
+/* 5. HUVUDKNAPPEN LÄNGST NER (Visa mer / Rulla ut) */
 .faq-section .faq-button {
-    display: block !important;
+    display: inline-block !important; /* Gör att den bara tar upp sin egen textbredd */
     background-color: #002b5c !important;
     border: none !important;
     color: #ffffff !important;
-    font-size: 1.05rem !important;
+    font-size: 0.95rem !important;
     font-weight: 600 !important;
-    padding: 16px 45px !important;
-    border-radius: 30px !important;
+    padding: 10px 30px !important; /* Slimmad knapp istället för jätteklump */
+    border-radius: 50px !important; /* Snygg modern pillerform */
     cursor: pointer !important;
-    margin: 40px auto 0 auto !important;
-    box-shadow: 0 4px 15px rgba(0, 43, 92, 0.2) !important;
+    margin: 25px auto 0 auto !important;
+    box-shadow: 0 4px 12px rgba(0, 43, 92, 0.15) !important;
+    transition: background 0.2s !important;
 }
+
+.faq-section .faq-button:hover {
+    background-color: #001e42 !important;
+}
+
+/* MOBILJUSTERING: Ser till att det inte blir för trångt på små skärmar */
+@media (max-width: 480px) {
+    .faq-section h2 {
+        max-width: 90% !important;
+        font-size: 1.35rem !important;
+    }
+    .faq-section .faq-question {
+        padding: 12px 14px !important;
+        font-size: 0.9rem !important;
+    }
+    .faq-section .faq-answer {
+        padding: 0 14px 12px 60px !important;
+    }
+}
+
+
 
 /* ==========================================================================
    UNIVERSELL PREMIUM SLIDER (MASTER TEMPLATE COMPONENT)
