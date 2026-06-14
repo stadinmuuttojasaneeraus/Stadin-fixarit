@@ -433,30 +433,40 @@ button {
     text-align: center !important;
 }
 
+/* Huvudknappen: Större text, fylligare och med en krispig vit ram */
 .faq-main-toggle {
     width: 100% !important;
-    background: #002b5c !important;
+    background: #002b5c !important; /* Din mörkblå färg */
     color: #ffffff !important;
-    border: none !important;
+    
+    /* Den nya vita ramen */
+    border: 2px solid #ffffff !important; 
     border-radius: 50px !important;
-    padding: 14px 25px !important;
-    font-size: 1.05rem !important;
-    font-weight: 700 !important;
+    
+    /* Lite mer padding för att ge den större texten utrymme */
+    padding: 16px 30px !important; 
+    
+    /* Större och fylligare text */
+    font-size: 1.25rem !important; 
+    font-weight: 800 !important; /* Gör texten riktigt fet och tydlig */
+    letter-spacing: 0.5px !important; /* Ger texten ett snyggt djup */
+    
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
     cursor: pointer !important;
-    box-shadow: 0 8px 20px rgba(0, 43, 92, 0.15) !important;
+    
+    /* En lite starkare skugga så att den vita ramen lyfter från bakgrunden */
+    box-shadow: 0 10px 25px rgba(0, 43, 92, 0.25) !important;
+    transition: background 0.2s ease, transform 0.2s ease !important;
 }
 
-.faq-main-toggle .arrow-icon {
-    transition: transform 0.3s ease !important;
-    font-size: 14px !important;
+/* En diskret och snygg effekt när man håller muspekaren över knappen */
+.faq-main-toggle:hover {
+    background: #001e42 !important;
+    transform: translateY(-1px) !important;
 }
 
-.faq-main-toggle.is-open .arrow-icon {
-    transform: rotate(180deg) !important;
-}
 
 /* Gömmer containern utan låst !important */
 .faq-rollout-container {
