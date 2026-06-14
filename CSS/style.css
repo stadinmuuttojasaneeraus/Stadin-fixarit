@@ -665,6 +665,92 @@ button {
 }
 
 /* ==========================================================================
+   EXKLUSIV FIX: UNIVERSELL SLIDER (SÄKRAD MOT BILD-EXPLOSIONER)
+   ========================================================================== */
+.universal-slider-section {
+    width: 100% !important;
+    max-width: 1000px !important; /* Sliderns maxbredd på dator */
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+.slider-container {
+    position: relative !important;
+    width: 100% !important;
+    overflow: hidden !important; /* Klipper stenhårt bort allt som sticker ut */
+    border-radius: 16px !important;
+    box-shadow: 0 15px 35px rgba(0, 43, 92, 0.1) !important;
+    background: #f1f5f9 !important;
+}
+
+/* FIXEN: Vi låser spårets bredd till 100% av skärmen och lägger bilderna på rad */
+.slider-track {
+    display: block !important;       /* HEJDÅ FLEXBOX: Detta stoppar jättekrocken */
+    width: 100% !important;          /* Låser basbredden till containerns bredd */
+    white-space: nowrap !important;  /* Tvingar alla slides att stanna på en enda lång rad */
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* Varje slide blir nu tvingad att hålla sig till exakt containerns bredd */
+.slider-item {
+    display: inline-block !important; /* Ligger nu bredvid varandra tack vare nowrap på föräldern */
+/* ==========================================================================
+   HELA SLIDER-STYLEN: SÄKRAD MOT BILD-EXPLOSIONER OCH FLEX-KONFLIKTER
+   ========================================================================== */
+
+/* 1. Yttre sektion - Centrerar slidern på sidan */
+.universal-slider-section {
+    width: 100% !important;
+    max-width: 1000px !important; /* Sliderns maxbredd på datorskärm */
+    margin: 40px auto !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+}
+
+/* 2. Containern - Denna klipper stenhårt bort allt som hamnar utanför ramen */
+.slider-container {
+    position: relative !important;
+    width: 100% !important;
+    overflow: hidden !important; /* MAGIN HÄR: Döljer bilderna som väntar på sin tur */
+    border-radius: 16px !important;
+    box-shadow: 0 15px 35px rgba(0, 43, 92, 0.1) !important;
+    background: #f1f5f9 !important;
+}
+
+/* 3. Spåret - Tvingar alla bilder att ställa sig i en osynlig kö till höger */
+.slider-track {
+    display: block !important;       /* Stänger av Flexbox helt för att undvika konflikter */
+    width: 100% !important;
+    white-space: nowrap !important;  /* Tvingar bilderna att stanna på EN rad istället för att hoppa ner */
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+/* 4. Individuella rutor - Blir exakt så breda som containern (t.ex. 1000px) */
+.slider-item {
+    display: inline-block !important; /* Ligger sida vid sida tack vare nowrap på spåret */
+    width: 100% !important;           /* Tar upp exakt 100% av .slider-container */
+    vertical-align: top !important;
+    white-space: normal !important;   /* Återställer textinställningar inuti */
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* 5. Bild-kontroll - Tvingar jättebilder att beskäras snyggt istället för att trycka ut sidan */
+.slider-item img {
+    width: 100% !important;
+    height: 480px !important;         /* Fast höjd på dator */
+    display: block !important;
+    object-fit: cover !important;     /* Beskär bilden som ett fotografi istället för att töja ut den */
+    object-position: center !important;
+}
+
+/* ==========================================================================
    SLIDER KNAPPAR (FLYTANDE PILAR)
    ========================================================================== */
 .slider-btn {
@@ -682,8 +768,8 @@ button {
     align-items: center !important;
     justify-content: center !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-    transition: background 0.2s, color 0.2s, transform 0.2s !important;
     z-index: 10 !important;
+    transition: background 0.2s, color 0.2s !important;
 }
 
 .slider-btn:hover {
@@ -698,24 +784,18 @@ button {
     font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", sans-serif !important;
     font-weight: 900 !important;
     font-size: 18px !important;
-    line-height: 1 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
 }
 
 /* ==========================================================================
-   MOBILANPASSNING (Skalar ner höjden så skärmen inte fylls helt)
+   MOBILANPASSNING (Skalar ner höjden så skärmen inte fylls)
    ========================================================================== */
 @media (max-width: 768px) {
     .universal-slider-section { 
         padding: 0 10px !important; 
     }
-    
     .slider-item img {
-        height: 280px !important; /* Snygg, mer kompakt höjd på mobilen */
+        height: 280px !important; /* Skalar ner höjden snyggt på mobilen */
     }
-
     .slider-btn { 
         width: 40px !important; 
         height: 40px !important; 
@@ -723,8 +803,7 @@ button {
     .slider-btn.prev { left: 10px !important; }
     .slider-btn.next { right: 10px !important; }
 }
-
-
+   
 /* ==========================================================================
    FOOTER STANDARD & ÅTERSTÄLLNING (STALSTARK CENTRERING)
    ========================================================================== */
