@@ -36,16 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-        // ==========================================================================
-    // 2. FAQ ACCORDION & ROLLOUT LOGIK (KROCK-SÄKRAD)
+    // ==========================================================================
+    // 2. FAQ ACCORDION & ROLLOUT LOGIK (UPPDATERAD)
     // ==========================================================================
     
-    // Del A: Huvudknappen som rullar ut hela listan
+    // Del A: Öppna/stäng hela FAQ-blocket via huvudknappen
     const faqMainToggles = document.querySelectorAll(".faq-main-toggle");
     
     faqMainToggles.forEach(toggle => {
         toggle.addEventListener("click", function() {
             this.classList.toggle("is-open");
+            // Hittar containern som ligger direkt efter knappen
             const rolloutContainer = this.nextElementSibling;
             if (rolloutContainer && rolloutContainer.classList.contains("faq-rollout-container")) {
                 rolloutContainer.classList.toggle("is-open");
@@ -53,29 +54,48 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Del B: Hantera de enskilda frågorna inuti
+    // Del B: Hantera enskilda frågor och eventuell intern "Visa mer"-begränsning
     const faqSections = document.querySelectorAll(".faq-section");
 
     faqSections.forEach(section => {
         const items = section.querySelectorAll(".faq-item");
         const button = section.querySelector(".js-faq-toggle");
-        const hasMainToggle = section.querySelector(".faq-main-toggle");
 
         if (!items.length) return;
 
-        // SMART FIX: Om huvudknappen finns, tvinga inte fram de 4 första frågorna på skärmen direkt!
-        if (hasMainToggle) {
-            items.forEach(item => item.classList.add("visible"));
-        } else {
-            // Annars körs din gamla logik (visar de 4 första om huvudknapp saknas)
-            const limit = parseInt(section.dataset.faq) || 4;
-            items.forEach((item, index) => {
-                if (index < limit) item.classList.add("visible");
-            });
-            if (button && items.length <= limit) button.style.display = "none";
+        const limit = parseInt(section.dataset.faq) || 4;
+        let expanded = false;
+
+        // Om du inte använder rollout-containern på en sida, körs den gamla limit-logiken
+        items.forEach((item, index) => {
+            if (index < limit) {
+                item.classList.add("visible");
+            }
+        });
+
+        if (button && items.length <= limit) {
+            button.style.display = "none";
         }
 
-        // Öppna och stänga enskilda svar när man klickar på en fråga
+        if (button) {
+            button.addEventListener("click", () => {
+                expanded = !expanded;
+                items.forEach((item, index) => {
+                    if (expanded) {
+                        item.classList.add("visible");
+                        button.textContent = "Näytä vähemmän";
+                    } else {
+                        if (index >= limit) {
+                            item.classList.remove("visible");
+                            item.classList.remove("active");
+                        }
+                        button.textContent = "Näytä lisää kysymyksiä";
+                    }
+                });
+            });
+        }
+
+        // Öppna och stänga enskilda frågor (.faq-item)
         items.forEach(item => {
             const question = item.querySelector(".faq-question");
             if (!question) return;
@@ -85,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
-  
 
     // ==========================================================================
     // 3. UNIVERSELL SMART SLIDER
