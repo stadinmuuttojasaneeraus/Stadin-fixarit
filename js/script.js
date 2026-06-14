@@ -36,30 +36,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-            // ==========================================================================
-    // 2. FAQ ACCORDION & ROLLOUT LOGIK (SKOTTSÄKRAD VERSION)
+                // ==========================================================================
+    // 2. FAQ ACCORDION & ROLLOUT LOGIK (Utrullning fixad)
     // ==========================================================================
-    const mainToggle = document.querySelector(".faq-main-toggle");
-    const rolloutContainer = document.querySelector(".faq-rollout-container");
+    const faqSections = document.querySelectorAll(".faq-section");
 
-    // Öppna och stäng hela FAQ-paketet när man klickar på huvudknappen
-    if (mainToggle && rolloutContainer) {
-        mainToggle.addEventListener("click", function () {
-            this.classList.toggle("is-open");
-            rolloutContainer.classList.toggle("is-open");
-        });
-    }
+    faqSections.forEach(section => {
+        const mainToggle = section.querySelector(".faq-main-toggle");
+        const rolloutContainer = section.querySelector(".faq-rollout-container");
 
-    // Öppna och stäng varje enskilt svar (.faq-answer) inuti listan
-    const faqItems = document.querySelectorAll(".faq-section .faq-item");
-    faqItems.forEach(item => {
-        const question = item.querySelector(".faq-question");
-        if (question) {
-            question.addEventListener("click", () => {
-                item.classList.toggle("active");
+        // Öppna/stäng hela listan
+        if (mainToggle && rolloutContainer) {
+            mainToggle.addEventListener("click", function () {
+                this.classList.toggle("is-open");
+                rolloutContainer.classList.toggle("is-open");
             });
         }
+
+        // Öppna/stäng enskilda frågor
+        const faqItems = section.querySelectorAll(".faq-item");
+        faqItems.forEach(item => {
+            const question = item.querySelector(".faq-question");
+            if (question) {
+                question.addEventListener("click", function() {
+                    item.classList.toggle("active");
+                });
+            }
+        });
     });
+  
   
     // ==========================================================================
     // 3. UNIVERSELL SMART SLIDER
