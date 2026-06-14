@@ -1038,3 +1038,14 @@ footer ul, footer .social-links, footer .footer-links {
     }
 }
 
+/* Styling för bildtexterna under varje slide */
+.slider-caption {
+    text-align: center !important;
+    padding: 15px 10px !important;
+    color: #002b5c !important; /* Din mörkblå färg */
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    background: #ffffff !important;
+    text-transform: capitalize !important; /* Gör första bokstaven stor automatiskt */
+}
+   
