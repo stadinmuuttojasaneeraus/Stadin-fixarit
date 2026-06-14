@@ -243,41 +243,53 @@
     </div>
 </section>
 
-<!-- PORTFOLIO SLIDER SECTION -->
-<section class="portfolio-section">
+<!-- ==========================================================================
+     UNIVERSAL SLIDER SECTION (Galleria & Työnäytteet)
+     ========================================================================= -->
+<section class="universal-slider-section">
   
-  <!-- Här använder vi dina exakta klasser så att layouten matchar resten av sajten -->
+  <!-- Sektionsrubrik (Dina befintliga klasser) -->
   <div class="feature-section-header">
     <h2>Galleria & Työnäytteet</h2>
     <p class="feature-section-subtitle">Katso esimerkkejä laadukkaista lopputuloksistamme</p>
   </div>
 
-  <div class="portfolio-slider">
-    <button class="portfolio-btn prev" aria-label="Edellinen">‹</button>
-    <div class="portfolio-track-container">
-      <div class="portfolio-track">
-        
-        <!-- Slide 1 -->
-        <div class="portfolio-item">
-          <img src="../images/koti.webp" alt="Työnäyte 1" loading="lazy">
-          <div class="portfolio-caption">kalustoiden asennus</div>
-        </div>
-        
-        <!-- Slide 2 -->
-        <div class="portfolio-item">
-          <img src="../images/koti1.webp" alt="Työnäyte 2" loading="lazy">
-          <div class="portfolio-caption">viemäreiden puhdistus</div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="portfolio-item">
-          <img src="../images/koti3.webp" alt="Työnäyte 3" loading="lazy">
-          <div class="portfolio-caption">seinä asennukset</div>
-        </div>
-
+  <!-- Huvudcontainern som döljer allt utanför ramen -->
+  <div class="slider-container">
+    
+    <!-- Vänsterpil (Flyter ovanpå tack vare position: absolute) -->
+    <button class="slider-btn prev" aria-label="Edellinen">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    
+    <!-- Spåret som håller alla slides på en enda lång rad -->
+    <div class="slider-track">
+      
+      <!-- Slide 1 -->
+      <div class="slider-item">
+        <img src="../images/koti.webp" alt="Työnäyte 1" loading="lazy">
+        <div class="slider-caption">Kalusteiden asennus</div>
       </div>
+      
+      <!-- Slide 2 -->
+      <div class="slider-item">
+        <img src="../images/koti1.webp" alt="Työnäyte 2" loading="lazy">
+        <div class="slider-caption">Viemäreiden puhdistus</div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slider-item">
+        <img src="../images/koti3.webp" alt="Työnäyte 3" loading="lazy">
+        <div class="slider-caption">Seinäasennukset</div>
+      </div>
+
     </div>
-    <button class="portfolio-btn next" aria-label="Seuraava">›</button>
+
+    <!-- Högerpil -->
+    <button class="slider-btn next" aria-label="Seuraava">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    
   </div>
 </section>
     
