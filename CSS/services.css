@@ -1633,3 +1633,129 @@ h1, h2, h3, h4, h5, h6, p, li, span, label, td, th, a {
         line-height: 1.2 !important;
     }
 }
+/* ==========================================================================
+   UNIFIED PRICING & DEDUCTION BANNER WITH CTA (Footersäker & Platt)
+   ========================================================================== */
+.info-banner-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    clear: both !important; /* Totalgaranti för att footern inte hoppar upp */
+    background: #f8fafc !important; /* Ljus, fräsch och modern bakgrund */
+    padding: 60px 20px !important;
+    box-sizing: border-box !important;
+    border-top: 1px solid rgba(0, 43, 92, 0.06) !important;
+    border-bottom: 1px solid rgba(0, 43, 92, 0.06) !important;
+}
+
+/* Huvudbehållaren för de två infoblocken */
+.info-banner-wrapper {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 40px !important;
+}
+
+.info-banner-block {
+    flex: 1 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    text-align: left !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.info-banner-icon i {
+    color: #22c55e !important; /* Din snygga gröna färg */
+    font-size: 1.4rem !important;
+    width: 45px !important;
+    height: 45px !important;
+    background: rgba(34, 197, 94, 0.1) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-shrink: 0 !important;
+}
+
+.info-banner-text h3 {
+    color: #002b5c !important; /* Din mörkblå premiumfärg */
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+    margin: 0 0 8px 0 !important;
+}
+
+.info-banner-text p {
+    color: #475569 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+.info-banner-divider {
+    width: 1px !important;
+    height: 100px !important;
+    background-color: rgba(0, 43, 92, 0.1) !important;
+    align-self: center !important;
+    flex-shrink: 0 !important;
+}
+
+/* CTA-OMRÅDET LÄNGST NER I SEKTIONEN */
+.info-banner-cta-box {
+    max-width: 700px !important;
+    margin: 40px auto 0 auto !important;
+    text-align: center !important;
+    border-top: 1px dashed rgba(0, 43, 92, 0.15) !important; /* Ett fint streck som separerar text/CTA från blocken ovan */
+    padding-top: 30px !important;
+}
+
+.info-banner-cta-box p {
+    color: #002b5c !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important; /* Gör texten fyllig och läsvänlig */
+    line-height: 1.5 !important;
+    margin: 0 0 20px 0 !important;
+}
+
+/* Din gröna CTA-knapp */
+.info-banner-btn {
+    display: inline-block !important;
+    background: #22c55e !important; /* Grön */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    padding: 12px 35px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    border-radius: 50px !important;
+    box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3) !important;
+    transition: background 0.2s, transform 0.2s !important;
+}
+
+.info-banner-btn:hover {
+    background: #16a34a !important;
+    transform: translateY(-1px) !important;
+}
+
+/* RESPONSIVITET */
+@media (max-width: 768px) {
+    .info-banner-wrapper {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    
+    .info-banner-block {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .info-banner-divider {
+        display: none !important;
+    }
+    
+    .info-banner-cta-box {
+        margin-top: 30px !important;
+    }
+}
