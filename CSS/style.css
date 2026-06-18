@@ -860,136 +860,105 @@ button {
 }
    
 /* ==========================================================================
-   FOOTER MASTER STYLING (STÅLSTARK CENTRERING)
+   RESPONSIV PROFFS-FOOTER (Mobil: Centrerad | Desktop: Vänsterställda kolumner)
    ========================================================================== */
-.site-footer {
-    background: #002b5c !important; /* Din lyxiga mörkblå */
-    color: #ffffff !important;
-    padding: 60px 20px 30px 20px !important;
-    text-align: center !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-    clear: both !important; /* Förhindrar att sektioner ovanför krockar */
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px 20px 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Behållaren för kolumnerna */
-.site-footer .footer-container {
-    max-width: 1100px !important;
-    margin: 0 auto !important;
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
-    gap: 40px !important;
-    align-items: start !important;
-    justify-content: center !important;
+/* 1. MOBIL-LAYOUT (Standard / Default) */
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Staplas vertikalt på mobilen */
+    align-items: center;    /* Centrerar blocken på mobilen */
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* De enskilda blocken - Tvingar allt innehåll till absolut center */
-.site-footer .footer-block {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; /* Horisontell centrering av flex-element */
-    text-align: center !important;  /* Textcentrering */
+.footer-block {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;     /* Centrerar texten på mobilen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centrerar länkarna på mobilen */
 }
 
-/* Rubriker i footern */
-.site-footer .footer-block h3 {
-    color: #ffffff !important;
-    font-size: 1.2rem !important;
-    font-weight: 700 !important;
-    margin: 0 0 16px 0 !important;
-    letter-spacing: 0.5px !important;
+.footer-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
 }
 
-/* Vanliga textrader */
-.site-footer .footer-block p {
-    color: rgba(255, 255, 255, 0.9) !important;
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    margin: 0 0 8px 0 !important;
+.footer-block p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.5;
 }
 
-/* Klickbara länkar (Telefon, E-post, Sociala medier) */
-.site-footer .footer-block a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    font-size: 0.95rem !important;
-    display: flex !important;         /* Använder flex för att låsa ikon + text på samma rad */
-    align-items: center !important;    /* Centrerar ikon och text vertikalt mot varandra */
-    justify-content: center !important; /* Centrerar hela raden i blocket */
-    gap: 10px !important;              /* Perfekt avstånd mellan ikon och text */
-    margin-bottom: 12px !important;
-    transition: opacity 0.2s ease !important;
-    width: fit-content !important;     /* Gör att hover-effekten bara triggas på själva texten */
+.footer-block a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 6px 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Centrerar ikon + text på mobilen */
+    gap: 10px;
 }
 
-.site-footer .footer-block a:hover {
-    opacity: 0.75 !important;
+.footer-block a:hover {
+    opacity: 1;
+    color: #ffcc00; /* Valfritt: snygg hover-färg om du vill matcha logotyp/detaljer */
 }
 
-/* Justering för ikonerna så de tar lika mycket plats och centrerar */
-.site-footer .footer-block a i {
-    font-size: 1.1rem !important;
-    width: 20px !important;
-    text-align: center !important;
-    display: inline-block !important;
+.footer-block i {
+    font-size: 1.05rem;
+    width: 20px;
+    text-align: center;
 }
 
-/* Bottenraden (Copyright) */
-.site-footer .footer-bottom {
-    max-width: 1100px !important;
-    margin: 50px auto 0 auto !important;
-    padding-top: 25px !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-    text-align: center !important;
-}
-
-.site-footer .footer-bottom p {
-    color: rgba(255, 255, 255, 0.55) !important;
-    font-size: 0.85rem !important;
-    margin: 0 !important;
-}
-
-/* RESPONSIVITET: Snygg, centrerad lista på mindre skärmar */
-@media (max-width: 768px) {
-    .site-footer {
-        padding: 50px 20px 25px 20px !important;
+/* 2. DESKTOP-LAYOUT (Slår igång på skärmar bredare än 768px) */
+@media (min-width: 769px) {
+    .footer-container {
+        flex-direction: row;         /* Lägger kolumnerna på rad */
+        justify-content: space-between; /* Sprider ut dem jämnt */
+        align-items: flex-start;     /* Linjerar topparna på kolumnerna */
+        gap: 30px;
     }
-    .site-footer .footer-container {
-        grid-template-columns: 1fr !important; /* Blir en enda rak kolumn på mobil */
-        gap: 35px !important;
+
+    .footer-block {
+        text-align: left;            /* Vänsterställer texten */
+        align-items: flex-start;     /* Vänsterställer blockets innehåll */
     }
+
+    .footer-block a {
+        justify-content: flex-start; /* Trycker ut ikonen till vänster om texten */
+    }
+}
+
+/* Bottendelen med upphovsrätt (alltid centrerad) */
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.85rem;
+    opacity: 0.5;
+    width: 100%;
 }
    
-/* ==========================================================================
-   MOBIL RESPONSIVITET (MEDIA QUERIES)
-   ========================================================================== */
-@media (max-width: 768px) {
-    section { padding: 30px 15px; }
-    .logo img { height: 55px; }
-    .ba-item { grid-template-columns: 1fr; }
-    .ba-image img { height: 220px; }
-    
-    .quick-action {
-        padding: 40px 20px !important;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-    }
-    .quick-action h2 { font-size: 1.75rem !important; }
-    .quick-action .services-container { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
-    .quick-action .service-item { padding: 12px !important; background: #ffffff !important; border: 1px solid #e2e8f0 !important; border-radius: 8px !important; text-align: center !important; }
-    
-    #hero h1 { font-size: 30px; line-height: 1.2; }
-    .hero-subtitle { font-size: 16px; }
-    #hero { min-height: 320px; padding: 40px 15px; }
-    .hero-container { max-width: 100%; }
-}
 
-@media (max-width: 900px) and (orientation: landscape) {
-    #hero { min-height: 260px; padding: 30px 20px; }
-    .hero-subtitle { margin-top: 10px; }
-    .cta-button { margin-top: 15px; }
-}
 /* ==========================================================================
    ABOUT PAGE: PREMIUM TRUST BADGES MASTER STYLING
    ========================================================================== */
