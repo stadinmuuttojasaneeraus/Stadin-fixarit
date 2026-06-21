@@ -870,11 +870,11 @@ button {
     box-sizing: border-box;
 }
 
-/* 1. MOBIL-LAYOUT (Standard / Default) */
+/* 1. MOBIL-LAYOUT (Standardinställning för mindre skärmar) */
 .footer-container {
     display: flex;
-    flex-direction: column; /* Staplas vertikalt på mobilen */
-    align-items: center;    /* Centrerar blocken på mobilen */
+    flex-direction: column; /* Staplar blocken vertikalt */
+    align-items: center;    /* Centrerar innehållet på skärmen */
     gap: 40px;
     max-width: 1100px;
     margin: 0 auto;
@@ -883,10 +883,10 @@ button {
 .footer-block {
     width: 100%;
     max-width: 300px;
-    text-align: center;     /* Centrerar texten på mobilen */
+    text-align: center;     /* Centrerar all brödtext */
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Centrerar länkarna på mobilen */
+    align-items: center;    /* Centrerar länkarna i blocket */
 }
 
 .footer-block h3 {
@@ -913,13 +913,13 @@ button {
     transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
-    justify-content: center; /* Centrerar ikon + text på mobilen */
+    justify-content: center; /* Håller ikon + text centrerad tillsammans */
     gap: 10px;
 }
 
 .footer-block a:hover {
     opacity: 1;
-    color: #ffcc00; /* Valfritt: snygg hover-färg om du vill matcha logotyp/detaljer */
+    color: #ffcc00; /* Snygg guld/gul hover-effekt som matchar loggan */
 }
 
 .footer-block i {
@@ -928,31 +928,31 @@ button {
     text-align: center;
 }
 
-/* 2. DESKTOP-LAYOUT (Slår igång på skärmar bredare än 768px) */
+/* 2. DESKTOP-LAYOUT (Slår automatiskt om vid skärmar över 768px bredd) */
 @media (min-width: 769px) {
     .footer-container {
-        flex-direction: row;         /* Lägger kolumnerna på rad */
-        justify-content: space-between; /* Sprider ut dem jämnt */
-        align-items: flex-start;     /* Linjerar topparna på kolumnerna */
+        flex-direction: row;            /* Lägger kolumnerna bredvid varandra */
+        justify-content: space-between; /* Sprider ut dem jämnt över bredden */
+        align-items: flex-start;        /* Justerar så alla toppar linjerar */
         gap: 30px;
     }
 
     .footer-block {
-        text-align: left;            /* Vänsterställer texten */
-        align-items: flex-start;     /* Vänsterställer blockets innehåll */
+        text-align: left;               /* Vänsterställer texten för ett stramt utseende */
+        align-items: flex-start;        /* Flyttar hela innehållsblocket till vänster */
     }
 
     .footer-block a {
-        justify-content: flex-start; /* Trycker ut ikonen till vänster om texten */
+        justify-content: flex-start;    /* Trycker ut ikonerna till vänster om texten */
     }
 }
 
-/* Bottendelen med upphovsrätt (alltid centrerad) */
+/* Bottendelen för Copyright (alltid centrerad, oavsett skärm) */
 .footer-bottom {
     text-align: center;
     margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Tunt, elegant streck */
     font-size: 0.85rem;
     opacity: 0.5;
     width: 100%;
