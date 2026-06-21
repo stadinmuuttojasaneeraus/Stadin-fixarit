@@ -859,105 +859,6 @@ button {
     .slider-btn.next { right: 10px !important; }
 }
    
-/* ==========================================================================
-   RESPONSIV PROFFS-FOOTER (Mobil: Centrerad | Desktop: Vänsterställda kolumner)
-   ========================================================================== */
-.footer {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 60px 20px 30px 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* 1. MOBIL-LAYOUT (Standardinställning för mindre skärmar) */
-.footer-container {
-    display: flex;
-    flex-direction: column; /* Staplar blocken vertikalt */
-    align-items: center;    /* Centrerar innehållet på skärmen */
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer-block {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;     /* Centrerar all brödtext */
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* Centrerar länkarna i blocket */
-}
-
-.footer-block h3 {
-    font-size: 1.2rem;
-    margin-bottom: 18px;
-    font-weight: 600;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-}
-
-.footer-block p {
-    margin: 6px 0;
-    font-size: 0.95rem;
-    opacity: 0.8;
-    line-height: 1.5;
-}
-
-.footer-block a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 6px 0;
-    font-size: 0.95rem;
-    opacity: 0.8;
-    transition: all 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center; /* Håller ikon + text centrerad tillsammans */
-    gap: 10px;
-}
-
-.footer-block a:hover {
-    opacity: 1;
-    color: #ffcc00; /* Snygg guld/gul hover-effekt som matchar loggan */
-}
-
-.footer-block i {
-    font-size: 1.05rem;
-    width: 20px;
-    text-align: center;
-}
-
-/* 2. DESKTOP-LAYOUT (Slår automatiskt om vid skärmar över 768px bredd) */
-@media (min-width: 769px) {
-    .footer-container {
-        flex-direction: row;            /* Lägger kolumnerna bredvid varandra */
-        justify-content: space-between; /* Sprider ut dem jämnt över bredden */
-        align-items: flex-start;        /* Justerar så alla toppar linjerar */
-        gap: 30px;
-    }
-
-    .footer-block {
-        text-align: left;               /* Vänsterställer texten för ett stramt utseende */
-        align-items: flex-start;        /* Flyttar hela innehållsblocket till vänster */
-    }
-
-    .footer-block a {
-        justify-content: flex-start;    /* Trycker ut ikonerna till vänster om texten */
-    }
-}
-
-/* Bottendelen för Copyright (alltid centrerad, oavsett skärm) */
-.footer-bottom {
-    text-align: center;
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Tunt, elegant streck */
-    font-size: 0.85rem;
-    opacity: 0.5;
-    width: 100%;
-}
-   
 
 /* ==========================================================================
    ABOUT PAGE: PREMIUM TRUST BADGES MASTER STYLING
@@ -1111,5 +1012,104 @@ button {
     font-size: 1.1rem !important;
     background: #ffffff !important;
     text-transform: capitalize !important; /* Gör första bokstaven stor automatiskt */
+}
+   
+/* ==========================================================================
+   SKOTTSÄKER PROFFS-FOOTER (Låst mot externa CSS-krockar)
+   ========================================================================== */
+.footer {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    padding: 60px 20px 30px 20px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 1. MOBILEN (Alltid helt centrerat på höjden) */
+.footer-container {
+    display: flex !important;
+    flex-direction: column !important; /* Stapla vertikalt */
+    align-items: center !important;    /* Centrera blocken på skärmen */
+    gap: 40px !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;         /* Centrerar containern på sidan */
+}
+
+.footer-block {
+    width: 100% !important;
+    max-width: 300px !important;
+    text-align: center !important;     /* Centrera texten */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;    /* Centrera länkarna */
+}
+
+.footer-block h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 18px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    letter-spacing: 0.5px !important;
+}
+
+.footer-block p {
+    margin: 6px 0 !important;
+    font-size: 0.95rem !important;
+    opacity: 0.8 !important;
+    line-height: 1.5 !important;
+}
+
+.footer-block a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    margin: 6px 0 !important;
+    font-size: 0.95rem !important;
+    opacity: 0.8 !important;
+    transition: all 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important; /* Centrera ikon + text */
+    gap: 10px !important;
+}
+
+.footer-block a:hover {
+    opacity: 1 !important;
+    color: #ffcc00 !important;
+}
+
+.footer-block i {
+    font-size: 1.05rem !important;
+    width: 20px !important;
+    text-align: center !important;
+}
+
+/* 2. DATOR / DESKTOP (Slår om till kolumner i mitten av skärmen) */
+@media (min-width: 769px) {
+    .footer-container {
+        flex-direction: row !important;       /* Lägg på rad */
+        justify-content: center !important;   /* Centrera gruppen av kolumner på skärmen */
+        align-items: flex-start !important;   /* Linjera topparna */
+        gap: 80px !important;                 /* Snyggt och brett mellanrum mellan kolumnerna */
+    }
+
+    .footer-block {
+        text-align: left !important;          /* Vänsterställ texten inuti kolumnen för proffslook */
+        align-items: flex-start !important;   /* Flytta länkarna till vänsterkant */
+    }
+
+    .footer-block a {
+        justify-content: flex-start !important; /* Ikonen hamnar till vänster om texten */
+    }
+}
+
+/* Upphovsrätt i botten (Alltid centrerad) */
+.footer-bottom {
+    text-align: center !important;
+    margin-top: 50px !important;
+    padding-top: 20px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    font-size: 0.85rem !important;
+    opacity: 0.5 !important;
+    width: 100% !important;
 }
    
