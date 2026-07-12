@@ -1014,111 +1014,107 @@ button {
     text-transform: capitalize !important; /* Gör första bokstaven stor automatiskt */
 }
    
-/* ==========================================================================
-   SKOTTSÄKER PROFFS-FOOTER (STRICT CENTERING VERSION)
+ /* ==========================================================================
+   TOTAL-NUKE: STRIKT CENTRERAD FOOTER (ALLA SKÄRMAR)
    ========================================================================== */
-html body .footer {
+
+/* 1. Targeta ALLA tänkbara footer-IDn och klasser för att stjäla temat makt */
+#footer, #colophon, .site-footer, footer, .footer {
     background-color: #1a1a1a !important;
     color: #ffffff !important;
     padding: 60px 20px 30px 20px !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    text-align: center !important; /* Tvingar global centrering av all text */
+    text-align: center !important; /* Tvingar text-centrering överallt */
 }
 
-/* 1. CONTAINER - Centrerar blocken på skärmen */
-html body .footer-container {
+/* 2. Containern som håller blocken */
+#footer .footer-container, 
+#colophon .footer-container, 
+footer .footer-container, 
+.footer .footer-container {
     display: flex !important;
-    flex-direction: column !important; /* Stapla vertikalt på mobil */
-    align-items: center !important;    /* Centrerar blocken horisontellt */
+    flex-direction: column !important; /* Stapla vertikalt som bas */
+    align-items: center !important;    /* Centrera i flex-miljö */
     justify-content: center !important;
-    gap: 40px !important;
     max-width: 1100px !important;
-    margin: 0 auto !important;         
+    margin: 0 auto !important;         /* Tvingar containern till mitten av skärmen */
+    float: none !important;            /* Tar bort eventuella gamla flyt-regler */
 }
 
-/* 2. BLOCK - Centrerar allt innehåll inuti varje kolumn */
-html body .footer-block {
+/* 3. Blocken (de tre olika textgrupperna) */
+.footer-block {
     width: 100% !important;
     max-width: 300px !important;
-    text-align: center !important;     /* Centrerar textrader */
+    margin: 0 auto 30px auto !important; /* Automatiska marginaler tvingar blocket till mitten */
+    text-align: center !important;     
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;    /* Centrerar flex-barn (länkar och ikoner) */
+    align-items: center !important;    /* Centrerar länkarna inuti */
     justify-content: center !important;
 }
+.footer-block:last-child {
+    margin-bottom: 0 !important;
+}
 
-html body .footer-block h3 {
-    font-size: 1.2rem !important;
-    margin-bottom: 18px !important;
-    font-weight: 600 !important;
-    color: #ffffff !important;
-    letter-spacing: 0.5px !important;
+/* 4. Tvinga rubriker, paragrafer och länkar att ligga i mitten */
+.footer-block h3, 
+.footer-block p, 
+.footer-block a {
     text-align: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;  /* Skottsäker centrering av enskilda rader */
+    margin-right: auto !important; /* Skottsäker centrering av enskilda rader */
     width: 100% !important;
 }
 
-html body .footer-block p {
-    margin: 6px 0 !important;
-    font-size: 0.95rem !important;
-    opacity: 0.8 !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-    width: 100% !important;
-}
-
-/* 3. LÄNKAR - Centrerar ikon + text i linje */
-html body .footer-block a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    margin: 6px 0 !important;
-    font-size: 0.95rem !important;
-    opacity: 0.8 !important;
-    transition: all 0.2s ease !important;
+/* Specifik fix för länkarna så att ikon + text ligger centrerat tillsammans */
+.footer-block a {
     display: inline-flex !important;
     align-items: center !important;
-    justify-content: center !important; /* Centrerar innehållet i länken */
     gap: 10px !important;
-    width: fit-content !important; 
+    color: #ffffff !important;
+    text-decoration: none !important;
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    opacity: 0.8 !important;
+    width: fit-content !important; /* Krymper ytan till bara textens bredd för snygg hover */
 }
 
-html body .footer-block a:hover {
+.footer-block a:hover {
     opacity: 1 !important;
     color: #ffcc00 !important;
 }
 
-html body .footer-block i {
+.footer-block i {
     font-size: 1.05rem !important;
     width: 20px !important;
     text-align: center !important;
 }
 
 /* ==========================================================================
-   DESKTOP (Lägger blocken på rad men behåller STRIKT centrering)
+   DESKTOP-LÄGE (Läggs på rad men behåller 100% centrering)
    ========================================================================== */
 @media (min-width: 769px) {
-    html body .footer-container {
-        flex-direction: row !important;       /* Lägg blocken bredvid varandra */
-        justify-content: center !important;   /* Centrerar hela raden av block på skärmen */
-        align-items: flex-start !important;   /* Linjera topparna */
-        gap: 80px !important;                 
+    #footer .footer-container, 
+    #colophon .footer-container, 
+    footer .footer-container, 
+    .footer .footer-container {
+        flex-direction: row !important;       /* Lägg på rad på PC */
+        justify-content: center !important;   /* Centrera raden på skärmen */
+        align-items: flex-start !important;   
     }
 
-    /* Tvingar blocken och länkarna att förbli centrerade även på stor skärm */
-    html body .footer-block {
-        text-align: center !important;        
-        align-items: center !important;       
-    }
-
-    html body .footer-block a {
-        justify-content: center !important;   
+    /* Nollställ mobilmarginalen undertill men behåll sidocentreringen */
+    .footer-block {
+        margin: 0 40px !important; /* Ger ett snyggt avstånd mellan de centrerade blocken */
     }
 }
 
-/* Upphovsrätt i botten (Alltid strikt centrerad) */
-html body .footer-bottom {
+/* Upphovsrättstexten längst ner */
+.footer-bottom, .footer-bottom p {
     text-align: center !important;
-    margin-top: 50px !important;
+    margin: 50px auto 0 auto !important;
     padding-top: 20px !important;
     border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
     font-size: 0.85rem !important;
