@@ -242,41 +242,56 @@
         </a>
     </div>
 </section>
-     
-<!-- BEFORE & AFTER SLIDER -->
-<section class="ba-section">
-  <div class="ba-header">
-    <h2>Ennen & jälkeen</h2>
-    <p>Katso esimerkkejä toteutetuista töistä</p>
+<!-- ==========================================================================
+     UNIVERSAL SLIDER SECTION (Galleria & Työnäytteet - Hautakivipalvelut)
+     ========================================================================= -->
+<section class="universal-slider-section">
+  
+  <!-- Sektio-otsikko -->
+  <div class="feature-section-header">
+    <h2>Galleria & Työnäytteet</h2>
+    <p class="feature-section-subtitle">Katso esimerkkejä hautakivien hoito- ja kunnostustöistämme</p>
   </div>
 
-  <div class="ba-slider">
-    <button class="ba-btn prev" aria-label="Edellinen">‹</button>
-    <div class="ba-track">
-      <div class="ba-item">
-        <div class="ba-image">
-          <img src="../images/before1.webp" alt="Ennen työ" loading="lazy">
-          <span class="ba-label before">Ennen</span>
-        </div>
-        <div class="ba-image">
-          <img src="../images/after1.webp" alt="Jälkeen työ" loading="lazy">
-          <span class="ba-label after">Jälkeen</span>
-        </div>
+  <!-- Pääcontainer, joka piilottaa raamin ulkopuoliset osat -->
+  <div class="slider-container">
+    
+    <!-- Vasen nuoli -->
+    <button class="slider-btn prev" aria-label="Edellinen">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    
+    <!-- Liukurata, joka pitää kaikki kuvaelementit yhdellä pitkällä rivillä -->
+    <div class="slider-track">
+      
+      <!-- Kuva 1: Puhdistus / Pesu -->
+      <div class="slider-item">
+        <img src="../images/hautakiven-puhdistus.webp" alt="Hautakiven puhdistus ja pesu sammaleesta ja jäkälästä" loading="lazy">
+        <div class="slider-caption">Hautakiven puhdistus</div>
       </div>
-      <div class="ba-item">
-        <div class="ba-image">
-          <img src="../images/before2.webp" alt="Ennen työ" loading="lazy">
-          <span class="ba-label before">Ennen</span>
-        </div>
-        <div class="ba-image">
-          <img src="../images/after2.webp" alt="Jälkeen työ" loading="lazy">
-          <span class="ba-label after">Jälkeen</span>
-        </div>
+      
+      <!-- Kuva 2: Oikaisu -->
+      <div class="slider-item">
+        <img src="../images/hautakiven-oikaisu.webp" alt="Kallistuneen ja vajonneen hautakiven oikaisu ja tuenta" loading="lazy">
+        <div class="slider-caption">Hautakiven oikaisu</div>
       </div>
+
+      <!-- Kuva 3: Entisöinti / Kultaus -->
+      <div class="slider-item">
+        <img src="../images/hautakiven-entisointi.webp" alt="Hautakiven tekstien ja kultausten perusteellinen kunnostus" loading="lazy">
+        <div class="slider-caption">Tekstien ja kultausten entisöinti</div>
+      </div>
+
     </div>
-    <button class="ba-btn next" aria-label="Seuraava">›</button>
+
+    <!-- Oikea nuoli -->
+    <button class="slider-btn next" aria-label="Seuraava">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    
   </div>
 </section>
+    
     
     <!-- FEATURE BOXES SECTION (HAUTAKIVIPALVELUT - PREMIUM VERSION MED FA-ICONS & LUE LISÄÄ) -->
 <section class="feature-box-section">
@@ -358,174 +373,108 @@
     <p class="feature-lead">
         Tarjoamme hienotunteiset ja ammattitaitoiset hautakivipalvelut Helsingissä ja koko pääkaupunkiseudulla – aina yksittäisistä puhdistuksista ja oikaisuista jatkuviin kausiluonteisiin hoitosopimuksiin.
     </p>
-</section>
-      
+</section>      
 
-<!-- UNIK TJÄNSTESIDA-PRISSEKTION (Helt integrerad & premium) -->
-<section class="service-pricing-section">
-    
-    <!-- INTRO -->
-    <h2 class="pricing-main-title">Selkeä ja joustava hinnoittelu</h2>
-    <p class="pricing-intro">
-        Sopimuksemme ovat aina täysin läpinäkyviä – ilman piilokuluja ja yllätyksiä. Hautakivipalveluiden hinta sovitaan aina kohteen koon, kunnon ja työn laajuuden mukaan selkeästi etukäteen.
-    </p>
-
-    <!-- INNEHÅLLSCONTAINER (Håller ihop prislista och skatteavdrag) -->
-    <div class="pricing-content-wrapper">
+<!-- UNIK TJÄNSTESIDA-PRISSEKTION (Helt integrerad & premium - Hautakivipalvelut) -->
+<section class="info-banner-section">
+    <div class="info-banner-wrapper">
         
-        <!-- Prislista kopplad direkt till dina klasser i CSS -->
-        <div class="pricing-list-container">
-            <div class="pricing-row">
-                <span class="price-name"><i class="fas fa-shower"></i> Hautakiven puhdistus ja pesu</span>
-                <span class="price-amount">alkaen 80 €</span>
+        <div class="info-banner-block">
+            <div class="info-banner-icon">
+                <i class="fas fa-euro-sign"></i>
             </div>
-            <div class="pricing-row">
-                <span class="price-name"><i class="fas fa-level-up-alt"></i> Hautakiven oikaisu ja suoristus</span>
-                <span class="price-amount">alkaen 100 €</span>
-            </div>
-            <div class="pricing-row">
-                <span class="price-name"><i class="fas fa-file-contract"></i> Muu huolto, ylläpito ja hoitosopimukset</span>
-                <span class="price-amount custom-price">Sopimuksen mukaan</span>
+            <div class="info-banner-text">
+                <h3>Selkeä hinnoittelu</h3>
+                <p>Hautakivipalvelumme perustuvat läpinäkyvään tuntihintaan <strong>alkaen 55 €/h</strong> (sis. alv) ilman piilokuluja. Laajemmissa entisöinneissä saat selkeän kiinteän tarjouksen.</p>
             </div>
         </div>
-        
-        <!-- Starkt säljargument om hushållsavdraget -->
-        <div class="tax-deduction-box">
-            <i class="fas fa-percentage"></i>
-            <p>
-                <strong>Muista hyödyntää kotitalousvähennys!</strong> <br>
-                Hautakiven oikaisu-, kunnostus- ja huoltotyöt oikeuttavat merkittävään veroetuun verotuksessasi. Raportointimme on selkeää, joten vähennyksen hakeminen Verohallinolta on sinulle erittäin helppoa ja vaivatonta.
-            </p>
+
+        <div class="info-banner-divider"></div>
+
+        <div class="info-banner-block">
+            <div class="info-banner-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="info-banner-text">
+                <h3>Kunnioittava palvelu</h3>
+                <p>Hoidamme jokaisen kunnostus- ja huoltotyön hautausmaalla äärimmäisellä huolellisuudella, hienotunteisuudella ja kunnioituksella paikan arvokkuutta kohtaan.</p>
+            </div>
         </div>
-        
+
     </div>
 
-    <!-- INTEGRERAD PREMIUM FINAL CTA -->
-    <div class="pricing-quick-action">
-        <h2>Tarvitsetko hautakiven huoltoa tai oikaisua?</h2>
-        <p class="cta-subtitle">Ota yhteyttä – palaamme asiaan nopeasti ja hienotunteisesti hinta-arvion kanssa.</p>
-    
-        <div class="cta-container-bottom">
-            <a href="../fi/index.html#yhteystiedot" class="cta-button">
-                Pyydä tarjous
-            </a>
-        </div>
-    
-        <p class="form-hint">
-            <i class="fas fa-check-circle"></i> Kunnioittava työ • Selkeä hinta • Nopea vastaus
-        </p>
+    <div class="info-banner-cta-box">
+        <p>Kaipaako läheisesi hautakivi puhdistusta, oikaisua tai tekstin uusimista? Ota yhteyttä ja pyydä tarjous luotettavalta ammattilaiselta!</p>
+        <a href="../fi/index.html#yhteystiedot" class="info-banner-btn">Ota yhteyttä tästä</a>
     </div>
-
 </section>
-       
-<!-- SEKTION: FAQ FOR HAUTAKIVIPALVELUT (10 FRÅGOR) -->
-<section class="faq-section" data-faq="4">
-    <h2>Usein kysytyt kysymykset</h2>
-
-    <!-- 1. Mitä palvelu sisältää? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-monument"></i> Mitä palvelu sisältää?
-        </button>
-        <div class="faq-answer">
-            <p>Hautakivipalvelumme kattavat hautakivien pesun ja puhdistuksen, kallistuneiden tai painuneiden kivien oikaisut ja suoristukset, tarvittavat pohja- ja perustustyöt, kaiverrusten huollot sekä hautapaikan kausiluonteisen tai jatkuvan hoidon ja siistimisen.</p>
-        </div>
-    </div>
-
-    <!-- 2. Toimitteko kaikilla hautausmailla? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-map-marker-alt"></i> Toimitteko kaikilla hautausmailla?
-        </button>
-        <div class="faq-answer">
-            <p>Kyllä, toimimme laajasti kaikilla hautausmailla Helsingissä, Espoossa, Vantaalla, Kauniaisissa ja koko pääkaupunkiseudulla. Tunnemme hautausmaiden säännöt ja ohjeistukset ja toimimme aina tiukasti niiden mukaisesti.</p>
-        </div>
-    </div>
-
-    <!-- 3. Kuinka nopeasti työ tehdään? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-bolt"></i> Kuinka nopeasti työ tehdään?
-        </button>
-        <div class="faq-answer">
-            <p>Työt suoritetaan aina joustavasti ja täsmällisesti sopimuksen mukaan. Useimmiten pienemmät huollot ja oikaisut valmistuvat noin viikon kuluessa tilauksesta, riippuen kuitenkin sen hetkisestä sesongista sekä sääolosuhteista.</p>
-        </div>
-    </div>
-
-    <!-- 4. Onko työ arvokasta ja kunnioittavaa? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-heart"></i> Onko työ hienotunteista ja kunnioittavaa?
-        </button>
-        <div class="faq-answer">
-            <p>Kyllä, ehdottomasti. Kaikki hautakiviin ja hautoihin liittyvät ylläpito- ja kunnostustyöt suoritetaan äärimmäisellä hienotunteisuudella, pieteetillä ja ammattitaidolla hautausmaan rauhaa kunnioittaen.</p>
-        </div>
-    </div>
-
-    <!-- 5. Onko toimintanne vakuutettua? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-shield-alt"></i> Onko hautakiven oikaisu- ja huoltotyö vakuutettu?
-        </button>
-        <div class="faq-answer">
-            <p>Kyllä on. Kaikki suorittamamme työt ja hautausmaalla tapahtuva toimintamme on kattavasti vastuuvakuutettua. Käsittelemme hautakiviä ja muistomerkkejä äärimmäisellä varovaisuudella ja ammattitaidolla, joten voit luottaa kohteet käsiimme täysin turvallisesti.</p>
-        </div>
-    </div>
-
-    <!-- 6. Ovatko hautakivipalvelut kotitalousvähennyskelpoisia? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-file-invoice-dollar"></i> Ovatko hautakivipalvelut kotitalousvähennyskelpoisia?
-        </button>
-        <div class="faq-answer">
-            <p>Kyllä! Hautakiven kunnostus, suoristus, pesu ja muut hautapaikan hoitotyöt kuuluvat verottajan hyväksymän kotitalousvähennyksen piiriin. Lähetämme työn valmistuttua selkeän, eritellyn laskun, jonka tiedot ilmoittamalla saat vähennettyä huomattavan osan työn hinnasta verotuksessasi.</p>
-        </div>
-    </div>
-
-    <!-- 7. Tarvitseeko minun hankkia luvat hautausmaalta ennen työn aloitusta? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-file-contract"></i> Tarvitseeko minun hankkia luvat työlle etukäteen?
-        </button>
-        <div class="faq-answer">
-            <p>Ei tarvitse huolehtia siitä. Me tunnemme eri seurakuntien ja hautausmaiden käytännöt ja varmistamme tarvittaessa lupien ja sääntöjen mukaisuuden ennen työn aloittamista. Sinun tarvitsee vain ilmoittaa meille hautapaikan tiedot (hautausmaa, kortteli ja paikan numero).</p>
-        </div>
-    </div>
-
-    <!-- 8. Mitä menetelmiä käytätte hautakiven puhdistukseen? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-shower"></i> Mitä menetelmiä käytätte hautakiven puhdistukseen?
-        </button>
-        <div class="faq-answer">
-            <p>Puhdistamme ja pesemme kivet aina materiaalia säästävällä, mutta tehokkaalla menetelmällä ilman vahvoja kemikaaleja, jotka voisivat vahingoittaa kiven pintaa, kaiverruksia tai ympäröivää luontoa. Poistamme sammaleen, jäkälän ja ilmansaasteet huolellisesti käsityönä.</p>
-        </div>
-    </div>
-
-    <!-- 9. Teettekö hautakivien oikaisuja myös talvella? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-snowflake"></i> Teettekö hautakivien oikaisuja myös talvella?
-        </button>
-        <div class="faq-answer">
-            <p>Hautakivien oikaisut, suoristukset ja pohjatyöt edellyttävät sulatonta maaperää, joten niitä tehdään pääsääntöisesti keväästä myöhäiseen syksyyn (roudattomaan aikaan). Voit kuitenkin tehdä tilauksen tai pyytää tarjouksen talvella, jolloin käynti varataan heti kevään ensimmäisille viikoille.</p>
-        </div>
-    </div>
-
-    <!-- 10. Miten hinnoittelu määräytyy ja voiko hinta muuttua? -->
-    <div class="faq-item">
-        <button class="faq-question" type="button">
-            <i class="fas fa-euro-sign"></i> Miten hinnoittelu määräytyy ja mistä tiedän tarkan hinnan?
-        </button>
-        <div class="faq-answer">
-            <p>Hinnoittelumme on täysin läpinäkyvää ja perustuu kiinteisiin lähtöhintoihin (kuten pesu alkaen 80 € ja oikaisu alkaen 100 €). Annamme tarkan ja sitovan hinnan aina etukäteen ennen työn aloitusta hautakiven koon ja kunnon mukaan, joten mitään yllättäviä piilokuluja ei tule.</p>
-        </div>
-    </div>
+          
+ <!-- ==========================================================================
+ SEKTION: COMPACT FAQ WITH ROLLOUT & CUSTOM QUESTION BOX (Hautakivipalvelut)
+  ========================================================================== -->
+<section class="faq-section">
     
-    <button class="faq-button js-faq-toggle" type="button">Näytä lisää kysymyksiä</button>
-    
+    <button class="faq-main-toggle" type="button">
+        <span><i class="fas fa-comments"></i> Usein kysytyt kysymykset (FAQ)</span>
+        <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
+
+    <div class="faq-rollout-container">
+        
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-box-open"></i> Mitä hautakivipalveluihin kuuluu?
+            </button>
+            <div class="faq-answer">
+                <p>Toteutamme ammattitaitoisesti hautakivien pesut ja puhdistukset sammaleesta sekä jäkälästä, kallistuneiden tai vajonneiden kivien oikaisut ja tuennat, sekä tekstien ja kultausten entisöinnit.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-map-marker-alt"></i> Millä hautausmailla toimitte?
+            </button>
+            <div class="faq-answer">
+                <p>Toimimme joustavasti kaikilla hautausmailla Helsingissä, Espoossa, Vantaalla, Kauniaisissa ja koko pääkaupunkiseudun alueella sopimuksen mukaan.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-file-invoice-dollar"></i> Voiko hautakiven kunnostuksesta saada kotitalousvähennystä?
+            </button>
+            <div class="faq-answer">
+                <p>Verohallinnon sääntöjen mukaan hautausmaalla tehtävät työt eivät valitettavasti oikeuta kotitalousvähennykseen, sillä työ ei sijoitu omaan asuntoon tai pihaan. Siksi pyrimme aina pitämään hinnoittelumme mahdollisimman selkeänä ja edullisena.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-sun"></i> Mihin aikaan vuodesta työt suoritetaan?
+            </button>
+            <div class="faq-answer">
+                <p>Kivien pesut ja oikaisut tehdään keväästä syksyyn, kun maa on sulanut. Tekstien maalaukset ja kultaukset vaativat täysin kuivan ja lämpimän sään, jotta lopputuloksesta tulee kestävä ja kaunis.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-euro-sign"></i> Miten työn hinta määräytyy?
+            </button>
+            <div class="faq-answer">
+                <p>Yksinkertaiset puhdistukset ja oikaisut voidaan tehdä tuntihinnalla (alkaen 55 €/h sis. alv). Jos kivi vaatii useita työvaiheita, kuten pesun, oikaisun ja kultauksen uusimisen, laskemme sinulle selkeän kiinteän pakettitarjouksen.</p>
+            </div>
+        </div>
+
+        <div class="faq-ask-box">
+            <h4>Etkö löytänyt etsimääsi vastausta?</h4>
+            <p>Ei hätää! Lähetä kysymyksesi tai kuvaile hautakiven kunnostustarve meille – vastaamme sinulle nopeasti.</p>
+            <a href="../fi/index.html#yhteystiedot" class="faq-ask-btn">Kysy meiltä tästä</a>
+        </div>
+
+    </div>
 </section>
-    
+        
 <!-- INTEGRERAD PREMIUM TRUST & FINAL CTA (Sista sektionen innan footern) -->
 <section class="service-trust-section premium-footer-trigger">
     
@@ -581,6 +530,7 @@
     </div>
 
 </section>
+    
    </main>
    <!-- ==========================================================================
    14. MASTER TEMPLATE: FOOTER (CENTRERAD & RESPONSIV)
