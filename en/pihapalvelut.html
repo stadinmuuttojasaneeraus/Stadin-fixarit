@@ -99,19 +99,6 @@
 }
 </script>
 
-<!-- Crisp chat -->
-<script>
-    window.$crisp = [];
-    window.CRISP_WEBSITE_ID = "c980afcf-02e9-4bbd-a864-83d0c5dd70b5";
-    (function () {
-        const d = document;
-        const s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = true;
-        d.head.appendChild(s);
-    })();
-</script>
-
 </head>
 
 <body class="pihapalvelut">
@@ -159,356 +146,395 @@
 
 <div class="menu-overlay" id="overlay"></div>
 
-<!-- HERO -->
+
 <section id="hero" style="background-image:url('../images/pihapalvelut.jpg');">
     <div class="hero-container">
-        <h1>Garden and Yard Services in Helsinki</h1>
+        <div class="hero-content">
+            <h1>Yard Services and Gardening with Professional Skill</h1>
+            <p class="hero-subtitle">
+               A beautiful and well-kept yard without the effort – we handle lawn mowing, hedges, and cleanups for you neatly and reliably.
+            </p>
+            <a href="../en/index.html#yhteystiedot" class="cta-button">
+                Request a quote – we reply quickly
+            </a>
+        </div>
+    </div>
+</section>
 
-        <p>
-            We keep your yard clean and well-maintained all year round – reliable and professional service in Helsinki and the capital region.
+<!-- SEKTION 1: MITEN VOIMME OLLA AVUKSI? -->
+<section class="quick-action services-grid-block">
+    
+    <div class="services-header-wrapper">
+        <h2>How can we help?</h2>
+        <p class="services-intro-text">
+            We help with all small and large yard maintenance tasks – quickly, reliably, and with solid professional skill.
         </p>
+    </div>
 
+    <div class="services-premium-intro-paragraph">
+        <p>
+            Do you need help with regular lawn mowing, trimming hedges, or does your yard need a thorough spring or autumn cleanup? Do you want to get rid of weeds or do your plantings need expert care? 
+            <strong>In that case, you have come to the right place.</strong> We handle all yard maintenance and gardening tasks for you in one go, completely free of stress or heavy labor.
+        </p>
+        <p id="scroll-trigger" class="highlight-text strong-white-text" style="cursor: pointer;">
+            Read more about our versatile services below! <i class="fa-solid fa-arrow-down" style="margin-left: 5px;"></i>
+        </p>
+    </div>
+     
+</section>
+    
+<!-- SEKTION 3: NÄIN PALVELU TOIMII -->
+<section class="how-it-works-section">
+    
+    <div class="how-it-works-header-wrapper">
+        <h2>How the service works</h2>
+        <p class="section-lead-text">
+            Ordering our service has been made as effortless as possible for you – we handle everything from start to finish through three clear steps.
+        </p>
+    </div>
+
+    <div class="services-container">
+        <!-- 1. Ota yhteyttä -->
+        <div class="service-item">
+            <div class="step-icon-circle">
+                <i class="fa-solid fa-message"></i>
+            </div>
+            <h3>1. Contact us and request a free quote – with no obligations.</h3>
+            <p>Submit your yard care requests easily via the online form or contact us by phone or text message.</p>
+        </div>
+
+        <!-- 2. Saat tarjouksen -->
+        <div class="service-item">
+            <div class="step-icon-circle">
+                <i class="fa-solid fa-file-invoice"></i>
+            </div>
+            <h3>2. We will either provide an estimate or book a time to visit your home.</h3>
+            <p>We offer either a clear cost estimate with no surprise fees or a flexible hourly rate based on your needs.</p>
+        </div>
+
+        <!-- 3. Hoidamme työn -->
+        <div class="service-item">
+            <div class="step-icon-circle">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3>3. We do the work as agreed and keep you updated throughout the process.</h3>
+            <p>We always guarantee the quality of our work. We arrive punctually at the agreed time and make your yard clean and well-kept in one go.</p>
+        </div>
+    </div>
+
+    <div class="cta-container-bottom">
         <a href="../en/index.html#yhteystiedot" class="cta-button">
-            Request a Quote
+            <i class="fa-solid fa-paper-plane"></i> Get started – request a quote today
         </a>
     </div>
 </section>
 
-<!-- QUICK TRUST SERVICES -->
-<section class="quick-trust-services">
+<!-- UNIVERSAL SLIDER SECTION (Galleria & Työnäytteet) -->
+<section class="universal-slider-section">
+  
+  <div class="feature-section-header">
+    <h2>Gallery & Work Samples</h2>
+    <p class="feature-section-subtitle">See examples of our high-quality and neat results</p>
+  </div>
 
-    <p class="quick-trust-services-highlight">
-        We Offer
-    </p>
+  <div class="slider-container">
+    
+    <button class="slider-btn prev" aria-label="Previous">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    
+    <div class="slider-track">
+      
+      <!-- Slide 1 -->
+      <div class="slider-item">
+        <img src="../images/piha1.webp" alt="Lawn mowing" loading="lazy">
+        <div class="slider-caption">Lawn mowing and care</div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="slider-item">
+        <img src="../images/piha2.webp" alt="Hedge trimming" loading="lazy">
+        <div class="slider-caption">Hedge shaping</div>
+      </div>
 
-    <div class="quick-trust-services-grid">
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-bolt"></i>
-            <span>Fast Service</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-receipt"></i>
-            <span>Household Tax Deduction</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-            <span>Versatile Services</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-shield-halved"></i>
-            <span>Insured Work</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-euro-sign"></i>
-            <span>Transparent Pricing</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Capital Region</span>
-        </div>
+      <!-- Slide 3 -->
+      <div class="slider-item">
+        <img src="../images/piha3.webp" alt="Yard cleanup" loading="lazy">
+        <div class="slider-caption">Spring and autumn yard cleanup</div>
+      </div>
 
     </div>
 
+    <button class="slider-btn next" aria-label="Next">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    
+  </div>
 </section>
+    
+<!-- FEATURE BOXES SECTION -->
+<section class="feature-box-section" id="palvelut">
+    <div class="feature-section-header">
+        <h2>Yard & Gardening Services</h2>
+        <p class="feature-section-subtitle">Careful, insured, and reliable professional help for all your yard and garden needs year-round.</p>
+    </div>
 
-<!-- WHAT WE DO -->
-<section class="what-we-do">
-
-    <h2>What Is Included in Our Garden and Yard Services?</h2>
-
-    <p>
-        We handle all types of yard maintenance efficiently and reliably – whether you need regular upkeep or one-time cleaning and maintenance work.
-    </p>
-
-    <div class="service-grid">
-
-        <div class="service-item">
-            <i class="fa-solid fa-tree"></i>
-            Tree Removal and Pruning
+    <div class="feature-container">
+        
+        <!-- 1. Nurmikon ja kasvuston säännöllinen hoito -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+            <div class="feature-text">
+                <h3>Lawn and Plant Care Services</h3>
+                <p>Comprehensive and regular maintenance ensures that lawns, bushes, and trees remain vibrant, healthy, and pristine throughout the growing season.</p>
+                
+                <div class="universal-expand-content">
+                    <p>We tailor maintenance procedures to the needs of your yard's vegetation. Our service includes professional lawn mowing, fertilizing, liming, aeration, and plant disease prevention. Through long-term care, we guarantee a lush, green lawn and a thriving garden that increases the value of the entire property.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Read more</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-scissors"></i>
-            Hedge and Tree Trimming
+        <!-- 2. Puiden ja pensaiden kaato, karsinta ja poiskuljetus -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-scissors"></i></div>
+            <div class="feature-text">
+                <h3>Tree and Bush Felling, Pruning, and Removal</h3>
+                <p>Professional tree felling, maintenance pruning, and hedge cutting back are always performed safely, including the removal of all garden waste.</p>
+                
+                <div class="universal-expand-content">
+                    <p>Whether it's felling a dangerous tree casting too much shadow, pruning damaged branches, or shaping an overgrown hedge, we carry out the work with modern and safe equipment. We always ensure complete safety and clean up thoroughly, transporting all branches, trunks, and cuttings directly to proper recycling for you.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Read more</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-leaf"></i>
-            Lawn Mowing and Yard Maintenance
+        <!-- 3. Puiden ja pensaiden istutustyöt -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-tree"></i></div>
+            <div class="feature-text">
+                <h3>Tree and Bush Planting Works</h3>
+                <p>We plan and execute the planting of new trees, ornamental shrubs, and hedge plants correctly to guarantee the best growing conditions.</p>
+                
+                <div class="universal-expand-content">
+                    <p>Correct planting methods and high-quality soil are crucial for plants to thrive. We take care of soil improvement, correct planting depth, fertilization, and initial watering for you. We help you choose the plant species best suited to the conditions of your plot, bringing long-lasting beauty, privacy, and structure to your yard.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Read more</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-broom"></i>
-            Yard Cleaning and Raking
+        <!-- 4. Ulkopintojen ekologiset pesupalvelut -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-bucket"></i></div>
+            <div class="feature-text">
+                <h3>Ecological Washing of Terraces, Facades, and Roofs</h3>
+                <p>We clean your property's exterior surfaces effectively and gently using eco-friendly, biodegradable, and surface-protecting detergents.</p>
+                
+                <div class="universal-expand-content">
+                    <p>We remove dirt, moss, algae, and other weather-induced growth from terraces, facade materials, and roof surfaces. Our ecological methods deep-clean surfaces and leave long-lasting protection against new growth, without wearing down materials or harming your yard's delicate plantings or soil.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Read more</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-snowflake"></i>
-            Snow Removal and Winter Maintenance
+        <!-- 5. Kulkureittien ja kattojen talvikunnossapito -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-snowflake"></i></div>
+            <div class="feature-text">
+                <h3>Winter Maintenance of Pathways and Roofs</h3>
+                <p>Prevent damage and ensure safety by taking care of snow removal on driveways, de-icing/gritting, and snow loads on roofs.</p>
+                
+                <div class="universal-expand-content">
+                    <p>We look after your property's safety even in winter's challenging conditions. Our services include efficient snow plowing of driveways and pathways, manual snow shoveling from your doorstep, regular sanding/salting to prevent slipping, and controlled, supervised snow removal from roofs before it poses a threat to structures or passersby.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Read more</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-road"></i>
-            Sanding and Safe Walkways
-        </div>
-
-        <div class="service-item service-item--full">
-            <i class="fa-solid fa-seedling"></i>
-            <span>As well as other small yard maintenance and upkeep tasks</span>
+        <!-- 6. Monipuoliset pihatyöt ja tontin puhtaanapito -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-broom"></i></div>
+            <div class="feature-text">
+                <h3>Versatile Yard Work and General Property Tidiness</h3>
+                <p>We offer flexible help with all seasonal yard chores, such as leaf raking, trash pickup, and tidying the general appearance of outdoor areas.</p>
+                
+                <div class="universal-expand-content">
+                    <p>We ensure your plot looks presentable year-round. We perform efficient spring and autumn leaf raking, clearing of fallen branches, sweeping of brickwork and tiles, and removal of any loose litter. No maintenance task is too small for us – we make sure your outdoor areas always remain clean, safe, and welcoming.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Read more</button>
+            </div>
         </div>
 
     </div>
 
-    <p class="highlight-text">
-        Everything can be taken care of in a single visit – quickly and hassle-free.
-    </p>
-
-</section>
-
-<!-- HOW IT WORKS -->
-<section>
-    <h2>How the Service Works</h2>
-
-    <div class="trust-grid">
-
-        <div class="trust-card">
-            <h3><i class="fa-solid fa-message"></i> 1. Contact Us</h3>
-            <p>Tell us what you need and we will do our best to find the right solution.</p>
-        </div>
-
-        <div class="trust-card">
-            <h3><i class="fa-solid fa-file-invoice"></i> 2. Receive a Quote</h3>
-            <p>Clear pricing quickly. No hidden fees.</p>
-        </div>
-
-        <div class="trust-card">
-            <h3><i class="fa-solid fa-screwdriver-wrench"></i> 3. We Complete the Work</h3>
-            <p>We arrive at the agreed time and carry out the work safely and professionally.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- MID CTA -->
-<section style="text-align:center;">
-
-    <h2>Easy and Reliable Yard Maintenance</h2>
-
-    <p>Contact us today – receive a quote with no obligations.</p>
-
-    <a href="../en/index.html#yhteystiedot" class="cta-button">
-        Request a Quick Quote
-    </a>
-
-    <p class="cta-subtext">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>Fast Response • Insured Work • Transparent Pricing</span>
-    </p>
-
-</section>
-
-    <!-- FEATURE BOXES -->
-<section>
-
-    <h2>Garden and Property Maintenance Services</h2>
-
-    <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-tree"></i></div>
-        <div>
-            <h3>Tree Removal and Pruning</h3>
-            <p>
-                We handle tree removal and branch pruning safely and professionally.
-                Every job is carried out carefully and with respect for the surrounding environment.
-            </p>
-        </div>
-    </div>
-
-    <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-scissors"></i></div>
-        <div>
-            <h3>Shrub and Tree Maintenance</h3>
-            <p>
-                We trim and maintain shrubs and smaller trees to keep your garden neat, healthy, and well maintained all year round.
-            </p>
-        </div>
-    </div>
-
-    <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
-        <div>
-            <h3>Lawn Care and Mowing</h3>
-            <p>
-                Regular lawn mowing and garden maintenance keep your outdoor areas tidy and well cared for throughout the growing season.
-            </p>
-        </div>
-    </div>
-
-    <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-snowflake"></i></div>
-        <div>
-            <h3>Winter Maintenance and Snow Removal</h3>
-            <p>
-                We take care of snow removal and sanding to keep gardens, driveways, and walkways safe during winter conditions.
-            </p>
-        </div>
-    </div>
-
-    <p style="margin-top:20px;">
-        We provide comprehensive garden and property maintenance services in Helsinki and across the Capital Region — from regular upkeep to one-time seasonal work.
-    </p>
-
-</section>
-
-<!-- PRICING -->
-<section>
-    <h2>Pricing</h2>
-
-    <p>
-        We always agree on pricing in advance — either hourly billing or a fixed total price depending on the scope of the work.
-    </p>
-
-    <div class="price-box">
-        <p><strong>Garden and yard work starting from €55/hour</strong></p>
-        <p>
-            We can agree on either hourly billing or a fixed total price depending on the work required.
-        </p>
-    </div>
-
-    <p class="highlight-text">
-        No hidden costs — clear pricing agreed before the work begins or straightforward hourly billing.
+    <p class="feature-lead">
+        Our comprehensive property and gardening services adapt flexibly to your needs in all seasons. We offer reliable, professional, and insured assistance for all yard maintenance and renovation work.
     </p>
 </section>
+  
 
-<!-- FINAL CTA -->
-<section style="text-align:center;">
+<!-- UNIK TJÄNSTESIDA-PRISSEKTION -->
+<section class="info-banner-section">
+    <div class="info-banner-wrapper">
+        
+        <div class="info-banner-block">
+            <div class="info-banner-icon">
+                <i class="fas fa-euro-sign"></i>
+            </div>
+            <div class="info-banner-text">
+                <h3>Clear Pricing</h3>
+                <p>Our services are based on a transparent hourly rate <strong>starting from €55/h</strong> (incl. VAT) with no hidden fees. For larger jobs, you will receive a fixed quote.</p>
+            </div>
+        </div>
 
-    <h2>Would You Like Us to Take Care of Your Garden?</h2>
+        <div class="info-banner-divider"></div>
 
-    <p>Request a quote today — we respond quickly.</p>
+        <div class="info-banner-block">
+            <div class="info-banner-icon">
+                <i class="fas fa-percentage"></i>
+            </div>
+            <div class="info-banner-text">
+                <h3>Household Tax Deduction -35%</h3>
+                <p>All standard yard and garden maintenance work we perform is eligible for a significant household tax deduction. You will receive a clear invoice from us to submit directly to the Tax Administration.</p>
+            </div>
+        </div>
 
-    <a href="../en/index.html#yhteystiedot" class="cta-button">
-        Request a Quote
-    </a>
+    </div>
 
-    <p class="cta-subtext">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>Fast Response • Fully Insured Work • Transparent Pricing</span>
-    </p>
-
+    <div class="info-banner-cta-box">
+        <p>Do you need professional help in the garden? Contact us and book a reliable professional for your yard today!</p>
+        <a href="../en/index.html#yhteystiedot" class="info-banner-btn">Contact us here</a>
+    </div>
 </section>
+   
 
-<!-- FAQ -->
+
+<!-- SEKTION: COMPACT FAQ WITH ROLLOUT -->
 <section class="faq-section">
+    
+    <button class="faq-main-toggle" type="button">
+        <span><i class="fas fa-comments"></i> Frequently Asked Questions (FAQ)</span>
+        <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
 
-    <h2>Frequently Asked Questions</h2>
+    <div class="faq-rollout-container">
+        
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-box-open"></i> What exactly is included in the yard services?
+            </button>
+            <div class="faq-answer">
+                <p>Our services include lawn mowing, trimming of hedges and ornamental shrubs, raking, spring and autumn yard cleanups, weeding, and minor planting works.</p>
+            </div>
+        </div>
 
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-seedling"></i> What Is Included in Your Garden and Yard Services?</h3>
-        <p>
-            Our garden and yard services include year-round outdoor maintenance such as lawn mowing, shrub and tree care,
-            leaf raking, yard cleaning, as well as snow removal and sanding during winter.
-            We handle both one-time jobs and ongoing maintenance work.
-        </p>
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-map-marker-alt"></i> Do you operate in my area?
+            </button>
+            <div class="faq-answer">
+                <p>Yes. We operate flexibly in Helsinki, Espoo, Vantaa, Kauniainen, and the entire metropolitan area. We arrive directly at the location as agreed.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-file-invoice-dollar"></i> Are yard works eligible for a household tax deduction?
+            </button>
+            <div class="faq-answer">
+                <p>Yes, standard yard and garden maintenance works qualify for a significant 35% household tax deduction. You will receive a pre-itemized invoice from us for the Tax Administration.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-shield-alt"></i> Does your company have insurance against accidental damage?
+            </button>
+            <div class="faq-answer">
+                <p>Yes, absolutely. All of our operations and the work we perform are comprehensively covered by liability insurance.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-euro-sign"></i> How is the pricing for yard maintenance determined?
+            </button>
+            <div class="faq-answer">
+                <p>Our pricing is completely transparent. The work is based on a clear hourly rate (starting from €55/h incl. VAT) or a fixed quote for larger projects (such as trimming large hedges).</p>
+            </div>
+        </div>
+
+        <div class="faq-ask-box">
+            <h4>Didn't find the answer you were looking for?</h4>
+            <p>No worries! Send your question to us – we will reply to you quickly.</p>
+            <a href="../en/index.html#yhteystiedot" class="faq-ask-btn">Ask us here</a>
+        </div>
+
+    </div>
+</section>
+    
+
+<!-- INTEGRERAD PREMIUM TRUST & FINAL CTA -->
+<section class="service-trust-section premium-footer-trigger">
+    
+    <!-- INTRO -->
+    <div class="trust-intro-header">
+        <span class="trust-badge">Why choose us?</span>
+        <h2 class="trust-main-title">Your partner for yard and home projects</h2>
     </div>
 
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-location-dot"></i> Do You Operate in My Area?</h3>
-        <p>
-            Yes. We operate in Helsinki, Espoo, Vantaa, Kauniainen, and throughout the entire Capital Region.
-            We arrive quickly and always as agreed.
-        </p>
+    <!-- INNEHÅLLSCONTAINER -->
+    <div class="trust-grid-container">
+        <div class="trust-card-item">
+            <div class="trust-card-icon"><i class="fas fa-comments"></i></div>
+            <h3>Communication</h3>
+            <p>Fast, clear, and smooth communication from start to finish. We are Finnish- and Swedish-speaking professionals, and we also serve clients in English.</p>
+        </div>
+        <div class="trust-card-item">
+            <div class="trust-card-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Professionalism</h3>
+            <p>Strong and versatile experience in various outdoor and yard maintenance works to ensure high-quality and plant-friendly results.</p>
+        </div>
+        <div class="trust-card-item">
+            <div class="trust-card-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Quality</h3>
+            <p>A neat, pristine, and always safe result. All work we perform is under warranty, and our company has valid liability insurance for our customers' safety.</p>
+        </div>
+        <div class="trust-card-item">
+            <div class="trust-card-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Speed</h3>
+            <p>Our goal is to handle the project smoothly from start to finish. The customer always comes first, and we never compromise on quality.</p>
+        </div>
     </div>
 
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-bolt"></i> How Quickly Can the Work Be Done?</h3>
-        <p>
-            In many cases, we can complete the work the same or following day.
-            For urgent garden work, we always aim to arrange a visit as quickly as possible.
-        </p>
-    </div>
-
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-circle-question"></i> I’m Not Sure What Needs to Be Done — Can You Help?</h3>
-        <p>
-            Absolutely. You can contact us even without a detailed plan — we will assess the situation and recommend suitable work based on the condition of your garden or yard.
-        </p>
-    </div>
-
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-shield-halved"></i> Is the Work Insured?</h3>
-        <p>
-            Yes. All our work is covered by liability insurance, ensuring every job is carried out safely and professionally.
+    <!-- HIGH-CONVERSION FINAL CTA -->
+    <div class="trust-final-cta-box">
+        <p class="cta-lead-text">Shall we start planning today? We reply to messages quickly.</p>
+        <h2>Need help with yard and garden care?</h2>
+        <p class="cta-subtitle">Contact us easily – we reply quickly and tailor the work precisely to your needs.</p>
+        
+        <div class="cta-dual-buttons">
+            <a href="../en/index.html#yhteystiedot" class="cta-button primary-cta">
+                <i class="fas fa-paper-plane"></i> Request a quote
+            </a>
+            <a href="../en/index.html#palvelut" class="cta-button secondary-cta">
+                View all services
+            </a>
+        </div>
+    
+        <p class="form-hint">
+            <i class="fas fa-check-circle"></i> Fast response • Clear pricing • Insured work
         </p>
     </div>
 
 </section>
 
-<!-- TRUST -->
-<section class="trust-section">
-
-    <h2>Why Choose Us</h2>
-
-    <div class="trust-grid">
-
-        <div class="trust-card">
-            <i class="fa-solid fa-comments"></i>
-            <h3>Clear Communication</h3>
-            <p>
-                We speak fluent Finnish, Swedish, and English when needed, making communication easy and straightforward.
-            </p>
-        </div>
-
-        <div class="trust-card">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <h3>Professional Expertise</h3>
-            <p>
-                We have hands-on experience in garden maintenance and property upkeep — every job is completed carefully from start to finish.
-            </p>
-        </div>
-
-        <div class="trust-card">
-            <i class="fa-solid fa-shield-halved"></i>
-            <h3>Insurance and Safety</h3>
-            <p>
-                All our work is fully insured, and we always prioritise safety in every project we carry out.
-            </p>
-        </div>
-
-        <div class="trust-card">
-            <i class="fa-solid fa-bolt"></i>
-            <h3>Reliability and Scheduling</h3>
-            <p>
-                We stick to agreed schedules and complete the work without unnecessary delays or complications.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- FINAL CTA -->
-<section style="text-align:center;">
-
-    <h2>Want a Clean and Well-Maintained Garden?</h2>
-
-    <p>Contact us today — we respond quickly.</p>
-
-    <a href="../en/index.html#yhteystiedot" class="cta-button">
-        Request a Quote
-    </a>
-
-    <p class="cta-subtext">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>Fast Response • Fully Insured Work • Transparent Pricing</span>
-    </p>
-
-</section>
 
 <footer class="footer">
 
