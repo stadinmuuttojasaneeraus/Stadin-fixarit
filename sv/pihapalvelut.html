@@ -98,18 +98,6 @@
 }
 </script>
 
-<!-- Crisp chat -->
-<script>
-    window.$crisp = [];
-    window.CRISP_WEBSITE_ID = "c980afcf-02e9-4bbd-a864-83d0c5dd70b5";
-    (function () {
-        const d = document;
-        const s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = true;
-        d.head.appendChild(s);
-    })();
-</script>
 
 </head>
 
@@ -158,321 +146,395 @@
 
 <div class="menu-overlay" id="overlay"></div>
 
-<!-- HERO -->
+<main>
 <section id="hero" style="background-image:url('../images/pihapalvelut.jpg');">
     <div class="hero-container">
-        <h1>Trädgårds- och gårdstjänster i Helsingfors</h1>
+        <div class="hero-content">
+            <h1>Gårdstjänster och trädgårdsskötsel med yrkeskunskap</h1>
+            <p class="hero-subtitle">
+               En vacker och välskött gård utan besvär – vi sköter gräsklippning, häckar och städning åt dig, snyggt och pålitligt.
+            </p>
+            <a href="../sv/index.html#yhteystiedot" class="cta-button">
+                Begär offert – vi svarar snabbt
+            </a>
+        </div>
+    </div>
+</section>
 
-        <p>
-            Vi håller din gård ren och välskött året runt – pålitligt och professionellt i Helsingfors och huvudstadsregionen.
+<!-- SEKTION 1: MITEN VOIMME OLLA AVUKSI? -->
+<section class="quick-action services-grid-block">
+    
+    <div class="services-header-wrapper">
+        <h2>Hur kan vi hjälpa dig?</h2>
+        <p class="services-intro-text">
+            Vi hjälper till med alla små och stora skötselarbeten på gården – snabbt, pålitligt och med gedigen yrkeskunskap.
         </p>
+    </div>
 
+    <div class="services-premium-intro-paragraph">
+        <p>
+            Behöver du hjälp med regelbunden gräsklippning, formklippning av häckar eller behöver gården en grundlig vår- eller höststädning? Vill du bli av med ogräs eller behöver dina planteringar professionell skötsel? 
+            <strong>I så fall har du kommit helt rätt.</strong> Vi sköter alla gårds- och trädgårdsarbeten åt dig på en gång, helt utan stress eller tungt arbete.
+        </p>
+        <p id="scroll-trigger" class="highlight-text strong-white-text" style="cursor: pointer;">
+            Läs mer om våra mångsidiga tjänster nedan! <i class="fa-solid fa-arrow-down" style="margin-left: 5px;"></i>
+        </p>
+    </div>
+     
+</section>
+    
+<!-- SEKTION 3: NÄIN PALVELU TOIMII -->
+<section class="how-it-works-section">
+    
+    <div class="how-it-works-header-wrapper">
+        <h2>Så här fungerar tjänsten</h2>
+        <p class="section-lead-text">
+            Att bestellen våra tjänster har gjorts så enkelt som möjligt för dig – vi sköter allt från början till slut genom tre tydliga steg.
+        </p>
+    </div>
+
+    <div class="services-container">
+        <!-- 1. Ota yhteyttä -->
+        <div class="service-item">
+            <div class="step-icon-circle">
+                <i class="fa-solid fa-message"></i>
+            </div>
+            <h3>1. Kontakta oss och begär en kostnadsfri offert – du binder dig inte till något.</h3>
+            <p>Lämna dina önskemål för gården enkelt via webbformuläret eller kontakta oss per telefon eller sms.</p>
+        </div>
+
+        <!-- 2. Saat tarjouksen -->
+        <div class="service-item">
+            <div class="step-icon-circle">
+                <i class="fa-solid fa-file-invoice"></i>
+            </div>
+            <h3>2. Vi ger dig antingen ett kostnadsförslag eller bokar in en tid för besök.</h3>
+            <p>Vi erbjuder antingen ett tydligt kostnadsförslag utan överraskande utgifter eller en flexibel timdebitering utifrån dina behov.</p>
+        </div>
+
+        <!-- 3. Hoidamme työn -->
+        <div class="service-item">
+            <div class="step-icon-circle">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3>3. Vi utför arbetet enligt överenskommelse och håller dig uppdaterad hela vägen.</h3>
+            <p>Vi ger alltid garanti på kvaliteten av vårt arbete. Vi anländer punktligt på den överenskomna tiden och gör din gård snygg och välskött på en gång.</p>
+        </div>
+    </div>
+
+    <div class="cta-container-bottom">
         <a href="../sv/index.html#yhteystiedot" class="cta-button">
-            Be om offert
+            <i class="fa-solid fa-paper-plane"></i> Börja här – begär en offert redan idag
         </a>
     </div>
 </section>
 
-<!-- QUICK TRUST SERVICES -->
-<section class="quick-trust-services">
+<!-- UNIVERSAL SLIDER SECTION (Galleria & Työnäytteet) -->
+<section class="universal-slider-section">
+  
+  <div class="feature-section-header">
+    <h2>Galleri & Arbetsprov</h2>
+    <p class="feature-section-subtitle">Se exempel på våra kvalitativa och snygga slutresultat</p>
+  </div>
 
-    <p class="quick-trust-services-highlight">
-        Vi erbjuder
-    </p>
+  <div class="slider-container">
+    
+    <button class="slider-btn prev" aria-label="Föregående">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    
+    <div class="slider-track">
+      
+      <!-- Slide 1 -->
+      <div class="slider-item">
+        <img src="../images/piha1.webp" alt="Gräsklippning" loading="lazy">
+        <div class="slider-caption">Gräsklippning och gårdsskötsel</div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="slider-item">
+        <img src="../images/piha2.webp" alt="Häckklippning" loading="lazy">
+        <div class="slider-caption">Formklippning av häckar</div>
+      </div>
 
-    <div class="quick-trust-services-grid">
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-bolt"></i>
-            <span>Snabb service</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-receipt"></i>
-            <span>Hushållsavdrag</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-            <span>Mångsidiga tjänster</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-shield-halved"></i>
-            <span>Försäkrat arbete</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-euro-sign"></i>
-            <span>Transparent prissättning</span>
-        </div>
-
-        <div class="quick-trust-services-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Huvudstadsregionen</span>
-        </div>
+      <!-- Slide 3 -->
+      <div class="slider-item">
+        <img src="../images/piha3.webp" alt="Gårdsstädning" loading="lazy">
+        <div class="slider-caption">Vår- och höststädning av gården</div>
+      </div>
 
     </div>
 
+    <button class="slider-btn next" aria-label="Nästa">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    
+  </div>
 </section>
+    
+<!-- FEATURE BOXES SECTION -->
+<section class="feature-box-section" id="palvelut">
+    <div class="feature-section-header">
+        <h2>Gårds- och trädgårdstjänster</h2>
+        <p class="feature-section-subtitle">Noggrann, försäkrad och pålitlig professionell hjälp för alla gårdens och trädgårdens behov året runt.</p>
+    </div>
 
-<!-- WHAT WE DO -->
-<section class="what-we-do">
-
-    <h2>Vad ingår i våra trädgårdstjänster?</h2>
-
-    <p>
-        Vi utför trädgårdsarbeten effektivt och pålitligt – både löpande underhåll och enstaka insatser.
-    </p>
-
-    <div class="service-grid">
-
-        <div class="service-item">
-            <i class="fa-solid fa-tree"></i>
-            Fällning och beskärning av träd
+    <div class="feature-container">
+        
+        <!-- 1. Nurmikon ja kasvuston säännöllinen hoito -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+            <div class="feature-text">
+                <h3>Skötsel av gräsmatta och växtlighet</h3>
+                <p>En omfattande och regelbunden skötsel säkerställer att gräsmatta, buskar och träd förblir livskraftiga, friska och representativa under hela växtsäsongen.</p>
+                
+                <div class="universal-expand-content">
+                    <p>Vi skräddarsyr skötselåtgärderna efter behoven hos gårdens växtlighet. Vår tjänst omfattar professionell gräsklippning, gödsling, kalkning, luftning samt förebyggande av växtsjukdomar. Genom långsiktig skötsel garanterar vi en tät, grön gräsmatta och en blommande trädgård som höjer hela fastighetens värde.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Läs mer</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-scissors"></i>
-            Beskärning och ansning av buskar och träd
+        <!-- 2. Puiden ja pensaiden kaato, karsinta ja poiskuljetus -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-scissors"></i></div>
+            <div class="feature-text">
+                <h3>Fällning, beskärning och bortforsling av träd och buskar</h3>
+                <p>Professionell trädfällning, underhållsbeskärning samt nedskärning av häckar utförs alltid säkert, inklusive bortforsling av trädgårdsavfall.</p>
+                
+                <div class="universal-expand-content">
+                    <p>Oavsett om det gäller fällning av ett träd som skuggar tomten eller utgör en fara, beskärning av skadade grenar eller formning av en vildvuxen häck, utför vi arbetet med modern och säker utrustning. Vi garanterar alltid fullständig arbetssäkerhet och städar noggrant upp efter oss genom att transportera bort alla grenar, stammar och klippavfall direkt till lämplig återvinning.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Läs mer</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-leaf"></i>
-            Gräsklippning och trädgårdsskötsel
+        <!-- 3. Puiden ja pensaiden istutustyöt -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-tree"></i></div>
+            <div class="feature-text">
+                <h3>Planteringsarbeten för träd och buskar</h3>
+                <p>Vi planerar och utför planteringar av nya träd, prydnadsbuskar och häckplantor på ett fackmannamässigt sätt för att garantera bästa möjliga tillväxtförhållanden.</p>
+                
+                <div class="universal-expand-content">
+                    <p>Rätt planteringsmetod och högkvalitativ jord är avgörande faktorer för att växterna ska trivas. Vi tar hand om jordförbättring, rätt planteringsdjup, gödsling och den första bevattningen åt dig. Vi hjälper dig att välja de växtarter som passar bäst för förhållandena på din tomt, vilket ger din gård långvarig skönhet, insynsskydd och struktur.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Läs mer</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-broom"></i>
-            Gårdsstädning och krattning
+        <!-- 4. Ulkopintojen ekologiset pesupalvelut -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-bucket"></i></div>
+            <div class="feature-text">
+                <h3>Ekologisk tvätt av terrasser, fasader och tak</h3>
+                <p>Vi rengör fastighetens yttre ytor effektivt och skonsamt med miljövänliga, biologiskt nedbrytbara och skyddande rengöringsmedel.</p>
+                
+                <div class="universal-expand-content">
+                    <p>Vi tar bort smuts, mossa, alger och annan väderpåverkad påväxt från terrasser, fasadmaterial och takytor. Våra ekologiska metoder rengör ytorna på djupet och lämnar ett långvarigt skydd mot ny påväxt, utan att slita på materialen eller skada gårdens känsliga planteringar eller mark.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Läs mer</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-snowflake"></i>
-            Snöröjning och vinterunderhåll
+        <!-- 5. Kulkureittien ja kattojen talvikunnossapito -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-snowflake"></i></div>
+            <div class="feature-text">
+                <h3>Vinterunderhåll av gångvägar och tak</h3>
+                <p>Förebygg skador och garantera fastighetens säkerhet genom att sköta snöröjning på uppfarter, halkbekämpning samt snölaster på tak.</p>
+                
+                <div class="universal-expand-content">
+                    <p>Vi tar hand om din fastighets säkerhet även under vinterns utmanande förhållanden. Våra tjänster inkluderar effektiv snöplogning av kör- och gångvägar, manuell snöskottning fram till dörren, regelbunden sandning för halkbekämpning samt kontrollerad och övervakad snöskottning från tak innan den utgör en fara för konstruktioner eller förbipasserande.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Läs mer</button>
+            </div>
         </div>
 
-        <div class="service-item">
-            <i class="fa-solid fa-road"></i>
-            Sandning och säkra gångvägar
-        </div>
-
-        <div class="service-item service-item--full">
-            <i class="fa-solid fa-seedling"></i>
-            <span>Samt andra mindre trädgårds- och underhållsarbeten</span>
+        <!-- 6. Monipuoliset pihatyöt ja tontin puhtaanapito -->
+        <div class="feature-box">
+            <div class="feature-icon"><i class="fa-solid fa-broom"></i></div>
+            <div class="feature-text">
+                <h3>Mångsidiga gårdsarbeten och skötsel av tomtens allmänna renlighet</h3>
+                <p>Vi erbjuder flexibel hjälp med alla säsongsbetonade gårdsarbeten, som lövkrattning, skräpplockning och uppfräschning av utomhusområdenas allmänna utseende.</p>
+                
+                <div class="universal-expand-content">
+                    <p>Vi ser till att din tomt är representativ året runt. Vi utför effektiv vår- och höstkrattning, röjning av nedfallna grenar, sopning av stenläggningar och plattor samt borttagning av alla typer av skräp. Inget underhållsarbete är för litet för oss – vi ser till att dina utomhusytor alltid förblir rena, säkra och inbjudande.</p>
+                </div>
+                
+                <button class="universal-trigger" type="button">Läs mer</button>
+            </div>
         </div>
 
     </div>
 
-    <p class="highlight-text">
-        Allt sköts vid ett och samma besök – snabbt och smidigt.
-    </p>
-
-</section>
-
-<!-- HOW IT WORKS -->
-<section>
-    <h2>Så fungerar tjänsten</h2>
-
-    <div class="trust-grid">
-
-        <div class="trust-card">
-            <h3><i class="fa-solid fa-message"></i> 1. Kontakta oss</h3>
-            <p>Berätta vad du önskar och vi gör vårt yttersta för att hitta en passande lösning.</p>
-        </div>
-
-        <div class="trust-card">
-            <h3><i class="fa-solid fa-file-invoice"></i> 2. Få offert</h3>
-            <p>Tydligt pris snabbt. Utan dolda avgifter.</p>
-        </div>
-
-        <div class="trust-card">
-            <h3><i class="fa-solid fa-screwdriver-wrench"></i> 3. Vi utför arbetet</h3>
-            <p>Vi kommer på avtalad tid och utför jobbet, tryggt och säkert.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- MID CTA -->
-<section style="text-align:center;">
-
-    <h2>Smidig och pålitlig trädgårdsskötsel</h2>
-
-    <p>Kontakta oss – få pris utan förpliktelser.</p>
-
-    <a href="../sv/index.html#yhteystiedot" class="cta-button">
-        Be om snabb offert
-    </a>
-
-    <p class="cta-subtext">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>Snabb respons • Försäkrat arbete • Tydliga priser</span>
-    </p>
-
-</section>
-
-<!-- FEATURE BOXES -->
-<section>
-
-    <h2>Trädgårds- och underhållstjänster</h2>
-
-    <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-tree"></i></div>
-        <div>
-            <h3>Fällning och beskärning av träd</h3>
-            <p>Vi utför trädfällning och beskärning säkert och professionellt.</p>
-        </div>
-    </div>
-
-    <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-scissors"></i></div>
-        <div>
-            <h3>Skötsel av buskar och träd</h3>
-            <p>Vi beskär och snyggar till buskar och mindre träd för en välskött trädgård.</p>
-        </div>
-    </div>
-
-    <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
-        <div>
-            <h3>Gräsklippning</h3>
-            <p>Regelbunden gräsklippning håller tomten i gott skick hela säsongen.</p>
-        </div>
-    </div>
-
-    <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-snowflake"></i></div>
-        <div>
-            <h3>Vinterunderhåll</h3>
-            <p>Vi sköter snöröjning och halkbekämpning så att tomten är säker även på vintern.</p>
-        </div>
-    </div>
-
-    <p style="margin-top:20px;">
-        Vi erbjuder kompletta trädgårdstjänster i Helsingfors och huvudstadsregionen – från löpande underhåll till enstaka säsongsarbeten.
-    </p>
-
-</section>
-
-<!-- PRICING -->
-<section>
-    <h2>Priser</h2>
-
-    <p>Vi kommer alltid överens om pris i förväg – antingen timpris eller fast pris beroende på arbetet.</p>
-
-    <div class="price-box">
-        <p><strong>Trädgårdsarbete från 55 €/h</strong></p>
-        <p>Timpris eller fast pris enligt överenskommelse.</p>
-    </div>
-
-    <p class="highlight-text">
-        Inga dolda kostnader – tydligt pris innan arbetet börjar.
+    <p class="feature-lead">
+        Våra omfattande fastighets- och trädgårdstjänster anpassar sig flexibelt efter dina behov under alla årstider. Vi erbjuder pålitlig, professionell och försäkrad hjälp för alla underhålls- och renoveringsarbeten på gården.
     </p>
 </section>
+  
 
-<!-- FINAL CTA -->
-<section style="text-align:center;">
+<!-- UNIK TJÄNSTESIDA-PRISSEKTION -->
+<section class="info-banner-section">
+    <div class="info-banner-wrapper">
+        
+        <div class="info-banner-block">
+            <div class="info-banner-icon">
+                <i class="fas fa-euro-sign"></i>
+            </div>
+            <div class="info-banner-text">
+                <h3>Tydlig prissättning</h3>
+                <p>Våra tjänster baseras på ett transparent timpris <strong>från 55 €/h</strong> (inkl. moms) utan dolda kostnader. För större arbeten får du en fast offert.</p>
+            </div>
+        </div>
 
-    <h2>Ska vi ta hand om din trädgård?</h2>
+        <div class="info-banner-divider"></div>
 
-    <p>Be om offert – vi svarar snabbt.</p>
+        <div class="info-banner-block">
+            <div class="info-banner-icon">
+                <i class="fas fa-percentage"></i>
+            </div>
+            <div class="info-banner-text">
+                <h3>Hushållsavdrag -35%</h3>
+                <p>Alla vanliga gårds- och trädgårdsarbeten vi utför berättigar till ett betydande hushållsavdrag. Du får en tydlig faktura av oss som kan skickas direkt till Skatteförvaltningen.</p>
+            </div>
+        </div>
 
-    <a href="../sv/index.html#yhteystiedot" class="cta-button">
-        Be om offert
-    </a>
+    </div>
 
-    <p class="cta-subtext">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>Snabb respons • Försäkrat arbete • Tydliga priser</span>
-    </p>
-
+    <div class="info-banner-cta-box">
+        <p>Behöver du professionell hjälp i trädgården? Kontakta oss och boka en pålitlig hantverkare till din gård redan idag!</p>
+        <a href="../sv/index.html#yhteystiedot" class="info-banner-btn">Kontakta oss här</a>
+    </div>
 </section>
-
-<!-- FAQ -->
+            
+  <!-- SEKTION: COMPACT FAQ WITH ROLLOUT -->
 <section class="faq-section">
+    
+    <button class="faq-main-toggle" type="button">
+        <span><i class="fas fa-comments"></i> Vanliga frågor (FAQ)</span>
+        <i class="fas fa-chevron-down arrow-icon"></i>
+    </button>
 
-    <h2>Vanliga frågor</h2>
-
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-seedling"></i> Vad ingår i tjänsten?</h3>
-        <p>Gräsklippning, röjning, krattning, träd- och buskunderhåll samt vinterarbeten.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-location-dot"></i> Arbetar ni i mitt område?</h3>
-        <p>Ja, vi arbetar i hela huvudstadsregionen.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-bolt"></i> Hur snabbt kan ni komma?</h3>
-        <p>Vår målsättning är att komma samma eller nästkommande dag vid brådskande ärenden annars så snart det passar er.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-circle-question"></i> Jag vet inte vad som behövs – kan ni hjälpa?</h3>
-        <p>Ja, vi hjälper dig bedöma vad som behövs göras samt lämna en gratis offert.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3><i class="fa-solid fa-shield-halved"></i> Är arbetet försäkrat?</h3>
-        <p>Ja, allt arbete är fullt försäkrat och utförs på ett säkert sätt.</p>
-    </div>
-
-</section>
-
-<!-- TRUST -->
-<section class="trust-section">
-
-    <h2>Varför välja oss?</h2>
-
-    <div class="trust-grid">
-
-        <div class="trust-card">
-            <i class="fa-solid fa-comments"></i>
-            <h3>Tydlig kommunikation</h3>
-            <p>Vi talar flytande svenska och finska samt engelska vid behov.</p>
+    <div class="faq-rollout-container">
+        
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-box-open"></i> Vad ingår exakt i gårdstjänsterna?
+            </button>
+            <div class="faq-answer">
+                <p>I våra tjänster ingår bland annat gräsklippning, klippning av häckar och prydnadsbuskar, lövkrattning, vår- och höststädning av gården, ogräsrensning samt mindre planteringsarbeten.</p>
+            </div>
         </div>
 
-        <div class="trust-card">
-            <i class="fa-solid fa-graduation-cap"></i>
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-map-marker-alt"></i> Arbetar ni i mitt område?
+            </button>
+            <div class="faq-answer">
+                <p>Ja. Vi är flexibelt verksamma i Helsingfors, Esbo, Vanda, Grankulla och i hela huvudstadsregionen. Vi anländer direkt till platsen enligt överenskommelse.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-file-invoice-dollar"></i> Ger gårdsarbeten rätt till hushållsavdrag?
+            </button>
+            <div class="faq-answer">
+                <p>Ja, vanliga gårds- och trädgårdsarbeten berättigar till ett betydande hushållsavdrag på 35 % i beskattningen. Du får en färdigt specificerad faktura av oss för Skatteförvaltningen.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-shield-alt"></i> Har ert företag försäkring för eventuella skador?
+            </button>
+            <div class="faq-answer">
+                <p>Ja, absolut. All vår verksamhet och alla arbeten vi utför är omfattande ansvarsförsäkrade.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" type="button">
+                <i class="fas fa-euro-sign"></i> Hur bestäms priset för gårdsarbeten?
+            </button>
+            <div class="faq-answer">
+                <p>Vår prissättning är helt transparent. Arbetena baseras på ett tydligt timpris (från 55 €/h inkl. moms) eller en fast offert för större helheter (som klippning av stora häckar).</p>
+            </div>
+        </div>
+
+        <div class="faq-ask-box">
+            <h4>Hittade du inte svaret du letade efter?</h4>
+            <p>Ingen fara! Skicka din fråga till oss – vi svarar dig snabbt.</p>
+            <a href="../sv/index.html#yhteystiedot" class="faq-ask-btn">Fråga oss här</a>
+        </div>
+
+    </div>
+</section>
+    
+
+<!-- INTEGRERAD PREMIUM TRUST & FINAL CTA -->
+<section class="service-trust-section premium-footer-trigger">
+    
+    <!-- INTRO -->
+    <div class="trust-intro-header">
+        <span class="trust-badge">Varför välja oss?</span>
+        <h2 class="trust-main-title">Din partner för jobb på gården och i hemmet</h2>
+    </div>
+
+    <!-- INNEHÅLLSCONTAINER -->
+    <div class="trust-grid-container">
+        <div class="trust-card-item">
+            <div class="trust-card-icon"><i class="fas fa-comments"></i></div>
+            <h3>Kommunikation</h3>
+            <p>Snabb, tydlig och smidig kommunikation från början till slut. Vi är svensk- och finskspråkiga yrkespersoner, och betjänar kunder även på engelska.</p>
+        </div>
+        <div class="trust-card-item">
+            <div class="trust-card-icon"><i class="fas fa-graduation-cap"></i></div>
             <h3>Yrkeskunskap</h3>
-            <p>Erfaret team inom trädgårds- och fastighetsarbeten.</p>
+            <p>Stark och mångsidig erfarenhet av olika utomhus- och gårdsskötselarbeten för att säkerställa ett högkvalitativt och för växterna gynnsamt slutresultat.</p>
         </div>
-
-        <div class="trust-card">
-            <i class="fa-solid fa-shield-halved"></i>
-            <h3>Försäkring och säkerhet</h3>
-            <p>Allt arbete är försäkrat och görs på ett säkert och fackmannamässigt sätt.</p>
+        <div class="trust-card-item">
+            <div class="trust-card-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Kvalitet</h3>
+            <p>Ett snyggt, välskött och alltid säkert slutresultat. Alla arbeten vi utför har garanti, och vårt företag har en giltig ansvarsförsäkring för våra kunders trygghet.</p>
         </div>
-
-        <div class="trust-card">
-            <i class="fa-solid fa-bolt"></i>
-            <h3>Tillförlitlighet</h3>
-            <p>Vi håller avtalade tider och levererar enligt överenskommelse.</p>
+        <div class="trust-card-item">
+            <div class="trust-card-icon"><i class="fas fa-bolt"></i></div>
+            <h3>Snabbhet</h3>
+            <p>Vårt mål är att sköta projektet smidigt från början till slut. Kunden är alltid i fokus, och vi gör aldrig avkall på kvaliteten.</p>
         </div>
+    </div>
 
+    <!-- HIGH-CONVERSION FINAL CTA -->
+    <div class="trust-final-cta-box">
+        <p class="cta-lead-text">Ska vi börja planeringen redan idag? Vi svarar snabbt på meddelanden.</p>
+        <h2>Behöver du hjälp med gårds- och trädgårdsskötsel?</h2>
+        <p class="cta-subtitle">Kontakta oss enkelt – vi svarar snabbt och anpassar arbetet helt efter dina behov.</p>
+        
+        <div class="cta-dual-buttons">
+            <a href="../sv/index.html#yhteystiedot" class="cta-button primary-cta">
+                <i class="fas fa-paper-plane"></i> Begär offert
+            </a>
+            <a href="../sv/index.html#palvelut" class="cta-button secondary-cta">
+                Visa alla tjänster
+            </a>
+        </div>
+    
+        <p class="form-hint">
+            <i class="fas fa-check-circle"></i> Snabbt svar • Tydligt pris • Försäkrat arbete
+        </p>
     </div>
 
 </section>
 
-<!-- FINAL CTA -->
-<section style="text-align:center;">
-
-    <h2>Vill du ha en snygg trädgård?</h2>
-
-    <p>Kontakta oss – vi svarar snabbt.</p>
-
-    <a href="../fi/index.html#yhteystiedot" class="cta-button">
-        Be om offert
-    </a>
-
-    <p class="cta-subtext">
-        <i class="fa-solid fa-circle-check"></i>
-        <span>Snabb respons • Försäkrat arbete • Tydliga priser</span>
-    </p>
-
-</section>
+</main>
+   
 
 <footer class="footer">
 
